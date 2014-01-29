@@ -1,0 +1,493 @@
+<html>
+<head>
+<title>Pagina de Pagamento</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+<!--
+.VerdeGrande {	 
+	font-size: 12px; 
+	color: #006666;
+}
+.PretoGrande {	 
+	font-size: 12px; 
+	color: #000000;
+}
+.VermelhoGrande {
+	font-size: 12px; 
+	color: #FF0000;
+}
+.PretoPequeno {
+	font-size: 10px; 
+	color: #000000;
+}
+.FonteFormulario {
+	font-size: 14px; 
+	color: #000000;
+}
+.EscolhaCartao {
+	 
+	font-size: 14px; 
+	color: #000000;
+	padding-top:8px;	
+}
+
+.imgBandeiras{
+	position:relative;
+	vertical-align:text-bottom;
+	float:left;
+	margin-left: 35px;
+	margin-top: 3px;
+}
+
+.PurchaseData{
+	position:relative;
+	padding-left:64px;
+	padding-top: 8px;	
+}
+label{	
+	width: 150px;
+	float:left;
+}
+.link{	 
+	font-size: 10px; 		
+}
+
+.TextBoxCompras {	 
+	font-size: 14px; 
+	color: #000000;
+}
+.InfoCartao {	 
+	font-size: 18px; 
+	color: #666666; 
+	padding: 5px;
+}
+
+.CinzaMedio {	 
+	font-size: 14px; 
+	color: #666666; 
+	padding: 5px;
+}
+
+#TipoVendaValue{
+	color:#FFFFFF;
+	font-size: 14px;
+	font-weight: bold;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	display:none;
+}
+
+#ValorDocumentoExibicao{
+	font-size: 12px;
+}
+#QuantidadeParcelas{
+	font-size: 12px;
+}
+.smallError{	
+	font-size: 10px;
+	color:#F00;	
+}
+
+fieldset{
+	min-width:400px;
+	border-radius: 8px;
+}
+
+body {
+	font-family: Arial, Helvetica, Verdana, sans-serif;
+	background-color: #ffffff;
+	font-size: 16px;}
+-->
+</style>
+<script language="javascript">
+<!--
+function loadForm(){
+	var cboBandeira = document.getElementById('frmPedido').Bandeira;
+	cboBandeira.value='';
+	VerificaFormaPagto();
+}
+
+function VerificaFormaPagto()
+{
+	var objForm = document.getElementById('frmPedido');
+	var objDivNumeroCartao = document.getElementById('divNumeroCartao');
+	var objDivSelCard = document.getElementById('divSelCard');
+	var objDivDataVal = document.getElementById('DivDataVal');
+	var objDivCodSeg = document.getElementById('divCodSeg');
+	var objDivNumParc = document.getElementById('divNumParc');
+	var objDivDadosCartao = document.getElementById('divDadosCartao');
+	var objdivMsgCreditNum = document.getElementById('divMsgCreditNum');
+
+	document.getElementById('NumeroCartao').maxLength = 16;
+	document.getElementById('CodigoSeguranca').maxLength = 3;
+	
+	//Set default
+	objDivDadosCartao.style.display = 'block';
+	objDivNumeroCartao.style.display = 'block';
+	objdivMsgCreditNum.style.display = 'none';
+	objDivDataVal.style.display = 'block';
+	objDivCodSeg.style.display = 'block';
+
+
+	//Hide layers related with images.
+	document.getElementById("img_visa").style.display = "none";
+	document.getElementById("img_mastercard").style.display = "none";
+	document.getElementById("img_amex").style.display = "none";
+	/*
+	document.getElementById("img_diners").style.display = "none";		
+	document.getElementById("img_hipercard").style.display = "none";
+	document.getElementById("img_aura").style.display = "none";
+	*/
+	
+	//Clear all data code whether the value has changed.
+	document.getElementById('NumeroCartao').value = '';
+	document.getElementById('CodigoSeguranca').value = '';
+	
+    switch (objForm.Bandeira.options[objForm.Bandeira.selectedIndex].value)
+    {
+		case 'VISA':
+         //Visa
+			//objdivMsgCreditNum.style.display = 'block';
+			//document.getElementById('NumeroCartao').maxLength = 6;
+			document.getElementById("img_visa").style.display = "block";
+			document.forms[0].FormaPagto.value = 'VISA';			
+			break;
+		case 'MASTERCARD':
+			//Master
+			document.forms[0].FormaPagto.value = 'MASTERCARD';
+			document.getElementById("img_mastercard").style.display = "block";
+			break;
+		/*
+		case 'DINERS':
+			//Diners
+			document.getElementById("img_diners").style.display = "block";			
+			document.forms[0].FormaPagto.value = 'DINERS';
+			break;
+		*/
+		case 'AMEX':
+			//Amex
+			document.getElementById("img_amex").style.display = "block";
+			document.getElementById('CodigoSeguranca').maxLength = 4;
+			document.getElementById('NumeroCartao').maxLength = 15;
+			document.forms[0].FormaPagto.value = 'AMEX';
+			break;		
+		/*
+		case 'HIPERCARD':
+			//Hipercard
+			document.getElementById("img_hipercard").style.display = "block";			
+			document.forms[0].FormaPagto.value = 'HIPERCARD';
+         break;		
+		case 'AURA':		
+			//Aura
+			document.getElementById("img_aura").style.display = "block";			
+			document.forms[0].FormaPagto.value = 'AURA';
+			break;		
+		*/
+		default:
+			objDivDadosCartao.style.display = 'none';
+			objDivNumeroCartao.style.display = 'none';
+			objdivMsgCreditNum.style.display = 'none';
+			objDivDataVal.style.display = 'none';
+			objDivCodSeg.style.display = 'none';
+			document.forms[0].FormaPagto.value = '';
+			Bandeira.focus();
+			return(false);
+    }
+}
+
+function teclado(qtdeCaracter, tecla)
+{
+	var quantidade, tecla;
+	quantidade = document.getElementById(qtdeCaracter);
+
+	if (quantidade.maxLength > quantidade.value.length)
+	  quantidade.value = quantidade.value + tecla;
+}
+
+function backspace(qtdeCaracter)
+{
+	var quantidade = document.getElementById(qtdeCaracter);	
+	quantidade.value = quantidade.value.substring(0, quantidade.value.length - 1);	
+}
+
+function validatePayment()
+{
+	var validated = true;
+	var objMsgCreditNum = document.getElementById('divMsgCreditNum');
+	var objMsgDate = document.getElementById('divMsgDate');
+	var objMsgSecNum = document.getElementById('divMsgSecNum');
+	
+	var objNumDigitCC = document.getElementById('NumDigitCC');
+	var objNumDigitSec = document.getElementById('NumDigitSec');
+
+	var objNumeroCartao = document.getElementById('NumeroCartao');
+	var objMesValidade = document.getElementById('MesValidade');
+	var objAnoValidade = document.getElementById('AnoValidade');
+	var objCodigoSeguranca = document.getElementById('CodigoSeguranca');
+	
+	objMsgCreditNum.style.display = 'none';
+	objMsgMonth.style.display = 'none';
+	objMsgYear.style.display = 'none';
+	objMsgSecNum.style.display = 'none';
+	
+	// Credit card nomber must have all digits
+	if(objNumeroCartao.value.length < objNumeroCartao.maxLength ){
+		objNumDigitCC.innerHTML = objNumeroCartao.maxLength;
+		objMsgCreditNum.style.display = 'block';
+		validated = false;
+	}
+	
+	// Months must have been chosen.
+	if(objMesValidade.value.length == 0 || objAnoValidade.value.length == 0){
+		objMsgDate.style.display = 'block';
+		validated = false;	
+	}
+
+	// Year must have been chosen.
+	if(objAnoValidade.value.length == 0){
+		objMsgYear.style.display = 'block';
+		validated = false;	
+	}
+	
+	// Security code must have all digits
+	if(objCodigoSeguranca.value.length < objCodigoSeguranca.maxLength ){
+		objNumDigitSec.innerHTML = objCodigoSeguranca.maxLength;
+		objMsgSecNum.style.display = 'block';
+		validated = false;
+	}	
+
+	return (validated);
+}
+
+function formatSaleType(){
+	var lblTipoVenda = document.getElementById("TipoVendaValue");
+	var codTipoVenda = document.getElementById("CodTipoVenda");
+	
+	if( parseInt(codTipoVenda.value) > 0)				
+		lblTipoVenda.style.background = "#046FC6";
+	else		
+		lblTipoVenda.style.background = "#06A602";	
+}
+
+function showPurchaseInfo(){
+	document.getElementById("lblNumeroDocumento").innerHTML = document.getElementById("NumeroDocumento").value;
+	document.getElementById("lblValorDocumentoExibicao").innerHTML = document.getElementById("ValorDocumentoExibicao").value;
+	document.getElementById("lblQuantidadeParcelas").innerHTML = document.getElementById("QuantidadeParcelasExibicao").value;
+	document.getElementById("lblTipoVenda").innerHTML = document.getElementById("TipoVenda").value;
+	if (!document.getElementById("MesValidade").value || !document.getElementById("AnoValidade").value)
+	document.getElementById("lblExpireDate").innerHTML = document.getElementById("MesValidade").value + " / " + document.getElementById("AnoValidade").value;
+}
+
+//-->
+</script>
+</head>
+
+<body text="#000000" class="VermelhoGrande" onLoad="javascript:loadForm();"> 
+<form name="frmPedido" action="https://teste.aprovafacil.com/cgi-bin/STAC/skoposeditora/APC" method="POST" id="frmPedido" onSubmit="return validatePayment();">
+    <INPUT type="hidden" id="ValorTotalCredito" name="ValorTotalCredito" value="<#ValorTotalCredito>">
+    <INPUT type="hidden" id="ValorDocumento" name="ValorDocumento" value="<#ValorDocumento>">
+    <INPUT type="hidden" id="QuantidadeParcelas" name="QuantidadeParcelas" value="<#QuantidadeParcelas>">
+    <INPUT type="hidden" id="QuantidadeParcelasExibicao" name="QuantidadeParcelasExibicao" value="<#QuantidadeParcelasExibicao>">
+    <INPUT type="hidden" id="NumeroDocumento" name="NumeroDocumento" value="<#NumeroDocumento>">
+    <INPUT type="hidden" id="ParcelamentoAdministradora" name="ParcelamentoAdministradora" value="">   
+    <INPUT type="hidden" id="AVS" name="AVS" value="">
+    <INPUT type="hidden" id="URLImagemSuperior" name="URLImagemSuperior" value="">
+    <INPUT type="hidden" id="FrameRetorno" name="FrameRetorno" value="">
+    <INPUT type="hidden" id="Idioma" name="Idioma" value="">
+    <INPUT type="hidden" id="VisaElectron" name="VisaElectron" value="">
+    <INPUT type="hidden" id="BancoEmissor" name="BancoEmissor" value="">
+    <INPUT type="hidden" id="Moeda" name="Moeda" value="">
+    <INPUT type="hidden" id="PreAutorizacao" name="PreAutorizacao" value="">
+    <INPUT type="hidden" id="ValorEntrada" name="ValorEntrada" value="">
+    <input type="hidden" id="FormaPagto" name="FormaPagto" value="">
+    <input type="hidden" id="ValorDocumentoExibicao" name="ValorDocumentoExibicao" value="<#ValorDocumentoExibicao>">
+    <input type="hidden" id="TipoVenda" name="TipoVenda" value="<#TipoVenda>">
+    <input type="hidden" id="CodTipoVenda" name="CodTipoVenda" value="<#CodTipoVenda>">
+    <input type="hidden" id="AnoValidade" name="AnoValidade" value="<#AnoValidade>">
+    <input type="hidden" id="MesValidade" name="MesValidade" value="<#MesValidade>">
+    <input type="hidden" id="ValorParcela" name="ValorParcela" value="<#ValorParcela>">
+
+<table  width="50%" align="center">
+	<tr >
+		<td colspan="2" class="FonteFormulario">
+			<p><a href="http://teste.cartaoskopos.ometzgroup.com.br/"><img src="https://teste.aprovafacil.com/cgi-bin/STAC/skoposeditora/IMG?ImagemID=logo_skopos.png" border=0 align="absmiddle" title="Voltar para Buscar Or&ccedil;amento"></a></p>
+		</td>
+	</tr>
+	<tr>
+		<td class="FonteFormulario">
+        	
+			<fieldset>
+				<legend>Dados da Compra</legend>
+                <div id="PaymentData">					
+                    <div id="PurchaseValue" class="InfoCartao">
+                        <p id="TipoVendaValue">&nbsp;&nbsp;
+                           Tipo Venda:&nbsp;<b id="lblTipoVenda"></b>
+						</p>
+                        <p>&nbsp;&nbsp;
+                            N&uacute;mero de Or&ccedil;amento:&nbsp;<b id="lblNumeroDocumento"></b>
+						</p>
+						<p>&nbsp;&nbsp;
+                            Valor Pagamento Cart&atilde;o:&nbsp;<b id="lblValorDocumentoExibicao"></b>
+						</p>
+						<p>&nbsp;&nbsp;
+                           N&uacute;mero de Parcelas:&nbsp;<b id="lblQuantidadeParcelas"></b>
+						</p>
+                            <script>
+                            	showPurchaseInfo();
+								formatSaleType();
+                            </script>
+                    </div>
+				</div>
+			</fieldset>
+		</td>
+	</tr>
+</table>
+<table id="CreditCardOptions" class="FonteFormulario" width="50%" align="center">
+	<tr>
+		<td>
+			<fieldset>
+				<legend>Selecione o Cart&atilde;o</legend>
+				<div align="left" class="EscolhaCartao">Selecione o Cart&atilde;o: &nbsp;
+                    <select size="1" name="Bandeira" class="TextBoxCompras" onChange="VerificaFormaPagto();" id="Bandeira">
+                        <option value = "" selected>Selecione...</option>
+                        <option value="VISA">Cart&atilde;o de Cr&eacute;dito Visa</option>
+                        <option value="MASTERCARD">Cart&atilde;o de Cr&eacute;dito Mastercard</option>
+                        <option value="AMEX">Cart&atilde;o de Cr&eacute;dito Amex</option>
+                    </select>                    
+				</div>                
+			</fieldset>
+		</td>
+	</tr>
+</table>
+<table width="50%" align="center">
+	<tr>
+		<td class="FonteFormulario">
+			<div id="divDadosCartao" style="display:none;">
+				<fieldset>
+					<legend>Informe os Dados do Cart&atilde;o</legend>
+<!-- Layer Bandeiras -->
+					<div id="img_visa" style="display:none" class="imgBandeiras"><img src="https://teste.aprovafacil.com/cgi-bin/STAC/skoposeditora/IMG?ImagemID=credit_visa.png"></div>
+					<div id="img_mastercard" style="display:none" class="imgBandeiras"><img src="https://teste.aprovafacil.com/cgi-bin/STAC/skoposeditora/IMG?ImagemID=credit_mastercard.png"></div>                
+					<div id="img_amex" style="display:none" class="imgBandeiras"><img src="https://teste.aprovafacil.com/cgi-bin/STAC/skoposeditora/IMG?ImagemID=credit_amex.png"></div>
+					
+<!-- Layer Numero do Cartao -->
+					<div id="divNumeroCartao" style="display:none;"> 
+						<table width="100%">
+							<tr> 
+								<td align="right" class="FonteFormulario">N&uacute;mero:</td>
+								<td width="70%">									
+                                    <input type="text" id="NumeroCartao" name="NumeroCartao" size="25" class="TextBoxCompras" readonly>&nbsp;&nbsp;&nbsp; 									
+                                    <span id="divMsgCreditNum" style="display:none;" class="smallError">Deve digitar os <span id="NumDigitCC"></span> d&iacute;gitos do Cart&atilde;o</span>
+								 </td>
+							</tr>
+							<tr> 
+								<td height="2" align="right" class="FonteFormulario"></td>
+								<td width="70%" height="2"> 
+									<table cellSpacing=0 cellPadding=0 width=214 border=0>
+										<tr><td colSpan=7><img height=14 src="https://teste.aprovafacil.com/cgi-bin/STAC/skoposeditora/IMG?ImagemID=teclado_topo.gif" width=213 border=0></td></tr>
+										<TR>
+                                            <TD rowSpan=2><IMG height=50 width=84 src=https://teste.aprovafacil.com/cgi-bin/STAC/skoposeditora/IMG?ImagemID=teclado_esquerda_cadeado.gif border=0></TD>
+											<TD><IMG style="CURSOR: hand" height=24 width=24 border=0 src=https://teste.aprovafacil.com/cgi-bin/STAC/skoposeditora/IMG?ImagemID=teclado_1.gif onClick="teclado('NumeroCartao', 1);"></TD>
+											<TD><IMG style="CURSOR: hand" height=24 width=24 border=0 src=https://teste.aprovafacil.com/cgi-bin/STAC/skoposeditora/IMG?ImagemID=teclado_2.gif onClick="teclado('NumeroCartao', 2);"></TD>
+											<TD><IMG style="CURSOR: hand" height=24 width=24 border=0 src=https://teste.aprovafacil.com/cgi-bin/STAC/skoposeditora/IMG?ImagemID=teclado_3.gif onClick="teclado('NumeroCartao', 3);"></TD>
+											<TD><IMG style="CURSOR: hand" height=24 width=48 border=0 src=https://teste.aprovafacil.com/cgi-bin/STAC/skoposeditora/IMG?ImagemID=teclado_limpa.gif onClick="document.forms[0].NumeroCartao.value='';"></TD>
+											<TD rowSpan=2><IMG height=50 width=9 src=https://teste.aprovafacil.com/cgi-bin/STAC/skoposeditora/IMG?ImagemID=teclado_direita.gif border=0></TD>
+										</TR>
+										<TR>
+											<TD><IMG style="CURSOR: hand" height=24 width=24 border=0 src=https://teste.aprovafacil.com/cgi-bin/STAC/skoposeditora/IMG?ImagemID=teclado_4.gif onClick="teclado('NumeroCartao', 4);"></TD>
+											<TD><IMG style="CURSOR: hand" height=24 width=24 border=0 src=https://teste.aprovafacil.com/cgi-bin/STAC/skoposeditora/IMG?ImagemID=teclado_5.gif onClick="teclado('NumeroCartao', 5);"></TD>
+											<TD><IMG style="CURSOR: hand" height=24 width=24 border=0 src=https://teste.aprovafacil.com/cgi-bin/STAC/skoposeditora/IMG?ImagemID=teclado_6.gif onClick="teclado('NumeroCartao', 6);"></TD>
+											<TD><IMG style="CURSOR: hand" height=24 width=48 border=0 src=https://teste.aprovafacil.com/cgi-bin/STAC/skoposeditora/IMG?ImagemID=teclado_back.gif onClick="backspace('NumeroCartao');"></TD>
+										</TR>
+										<TR>
+											<TD><IMG height=26 width=84 src=https://teste.aprovafacil.com/cgi-bin/STAC/skoposeditora/IMG?ImagemID=teclado_esquerda.gif border=0></TD>
+                                        	<TD><IMG style="CURSOR: hand" height=24 width=24 border=0 src=https://teste.aprovafacil.com/cgi-bin/STAC/skoposeditora/IMG?ImagemID=teclado_7.gif onClick="teclado('NumeroCartao', 7);"></TD>  
+                                            <TD><IMG style="CURSOR: hand" height=24 width=24 border=0 src=https://teste.aprovafacil.com/cgi-bin/STAC/skoposeditora/IMG?ImagemID=teclado_8.gif onClick="teclado('NumeroCartao', 8);"></TD>
+											<TD><IMG style="CURSOR: hand" height=24 width=24 border=0 src=https://teste.aprovafacil.com/cgi-bin/STAC/skoposeditora/IMG?ImagemID=teclado_9.gif onClick="teclado('NumeroCartao', 9);"></TD>											
+											<TD><IMG style="CURSOR: hand" height=24 width=48 border=0 src=https://teste.aprovafacil.com/cgi-bin/STAC/skoposeditora/IMG?ImagemID=teclado_0.gif onClick="teclado('NumeroCartao', 0);"></TD>
+											<TD><IMG height=26 width=9 src=https://teste.aprovafacil.com/cgi-bin/STAC/skoposeditora/IMG?ImagemID=teclado_direita.gif border=0></TD>
+										</TR>
+
+										<tr><td colSpan=7><img height=8 width=213 border=0 src=https://teste.aprovafacil.com/cgi-bin/STAC/skoposeditora/IMG?ImagemID=teclado_base.gif></td></tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+					</div>
+<!-- Layer Numero do Cartao Fim -->
+<!-- Layer Data Validade -->
+					<div id="DivDataVal" style="display:none;">
+						<table width="100%">
+							<tr> 
+								<td align="right" class="FonteFormulario">Data de Validade:</td>
+								<td width="70%"> 
+									<span id="lblExpireDate" class="TextBoxCompras"></span>
+                                 	<span id="divMsgDate" style="display:none;" class="smallError">Data vencimento n&atilde;o pode ser vazia</span>
+								</td>
+						 	</tr>
+						</table>
+					</div>
+<!-- Layer Data de Validade Fim -->
+<!-- Layer Codigo de Seguranca -->
+					<div id="divCodSeg" style="display:none;">
+						<table width="100%">
+							<tr> 
+								<td height="2" align="right" class="FonteFormulario">C&oacute;digo de Seguran&ccedil;a:</td>
+								<td width="70%" height="2"> 
+									<input type="text" id="CodigoSeguranca" name="CodigoSeguranca" size="5"  maxlength="3" class="TextBoxCompras" readonly>                                    
+									<a href="javascript:void window.open('https://www.aprovafacil.com/imagensclientes/cartao_visa_amex.gif','codigo','width=440,height=398,scrollbars=no,resizable=no,toolbar=no')" ><span class="link" >O que &eacute; c&oacute;digo de seguran&ccedil;a?</span></a>
+                                    <span id="divMsgSecNum" style="display:none;" class="smallError">Deve digitar os <span id="NumDigitSec"></span> d&iacute;gitos do Cart&atilde;o</span>
+								</td>
+							</tr>
+							<tr> 
+								<td height="2" align="right" class="FonteFormulario"></td>
+								<td width="70%" height="2"> 
+																		<table cellSpacing=0 cellPadding=0 width=214 border=0>
+										<tr><td colSpan=7><img height=14 src="https://teste.aprovafacil.com/cgi-bin/STAC/skoposeditora/IMG?ImagemID=teclado_topo.gif" width=213 border=0></td></tr>
+										<TR>
+                                            <TD rowSpan=2><IMG height=50 width=84 src=https://teste.aprovafacil.com/cgi-bin/STAC/skoposeditora/IMG?ImagemID=teclado_esquerda_cadeado.gif border=0></TD>
+											<TD><IMG style="CURSOR: hand" height=24 width=24 border=0 src=https://teste.aprovafacil.com/cgi-bin/STAC/skoposeditora/IMG?ImagemID=teclado_1.gif onClick="teclado('CodigoSeguranca', 1);"></TD>
+											<TD><IMG style="CURSOR: hand" height=24 width=24 border=0 src=https://teste.aprovafacil.com/cgi-bin/STAC/skoposeditora/IMG?ImagemID=teclado_2.gif onClick="teclado('CodigoSeguranca', 2);"></TD>
+											<TD><IMG style="CURSOR: hand" height=24 width=24 border=0 src=https://teste.aprovafacil.com/cgi-bin/STAC/skoposeditora/IMG?ImagemID=teclado_3.gif onClick="teclado('CodigoSeguranca', 3);"></TD>
+											<TD><IMG style="CURSOR: hand" height=24 width=48 border=0 src=https://teste.aprovafacil.com/cgi-bin/STAC/skoposeditora/IMG?ImagemID=teclado_limpa.gif onClick="document.forms[0].CodigoSeguranca.value='';"></TD>
+											<TD rowSpan=2><IMG height=50 width=9 src=https://teste.aprovafacil.com/cgi-bin/STAC/skoposeditora/IMG?ImagemID=teclado_direita.gif border=0></TD>
+										</TR>
+										<TR>
+											<TD><IMG style="CURSOR: hand" height=24 width=24 border=0 src=https://teste.aprovafacil.com/cgi-bin/STAC/skoposeditora/IMG?ImagemID=teclado_4.gif onClick="teclado('CodigoSeguranca', 4);"></TD>
+											<TD><IMG style="CURSOR: hand" height=24 width=24 border=0 src=https://teste.aprovafacil.com/cgi-bin/STAC/skoposeditora/IMG?ImagemID=teclado_5.gif onClick="teclado('CodigoSeguranca', 5);"></TD>
+											<TD><IMG style="CURSOR: hand" height=24 width=24 border=0 src=https://teste.aprovafacil.com/cgi-bin/STAC/skoposeditora/IMG?ImagemID=teclado_6.gif onClick="teclado('CodigoSeguranca', 6);"></TD>
+											<TD><IMG style="CURSOR: hand" height=24 width=48 border=0 src=https://teste.aprovafacil.com/cgi-bin/STAC/skoposeditora/IMG?ImagemID=teclado_back.gif onClick="backspace('CodigoSeguranca');"></TD>
+										</TR>
+										<TR>
+											<TD><IMG height=26 width=84 src=https://teste.aprovafacil.com/cgi-bin/STAC/skoposeditora/IMG?ImagemID=teclado_esquerda.gif border=0></TD>
+                                        	<TD><IMG style="CURSOR: hand" height=24 width=24 border=0 src=https://teste.aprovafacil.com/cgi-bin/STAC/skoposeditora/IMG?ImagemID=teclado_7.gif onClick="teclado('CodigoSeguranca', 7);"></TD>  
+                                            <TD><IMG style="CURSOR: hand" height=24 width=24 border=0 src=https://teste.aprovafacil.com/cgi-bin/STAC/skoposeditora/IMG?ImagemID=teclado_8.gif onClick="teclado('CodigoSeguranca', 8);"></TD>
+											<TD><IMG style="CURSOR: hand" height=24 width=24 border=0 src=https://teste.aprovafacil.com/cgi-bin/STAC/skoposeditora/IMG?ImagemID=teclado_9.gif onClick="teclado('CodigoSeguranca', 9);"></TD>											
+											<TD><IMG style="CURSOR: hand" height=24 width=48 border=0 src=https://teste.aprovafacil.com/cgi-bin/STAC/skoposeditora/IMG?ImagemID=teclado_0.gif onClick="teclado('CodigoSeguranca', 0);"></TD>
+											<TD><IMG height=26 width=9 src=https://teste.aprovafacil.com/cgi-bin/STAC/skoposeditora/IMG?ImagemID=teclado_direita.gif border=0></TD>
+										</TR>
+
+										<tr><td colSpan=7><img height=8 width=213 border=0 src=https://teste.aprovafacil.com/cgi-bin/STAC/skoposeditora/IMG?ImagemID=teclado_base.gif></td></tr>
+									</table>
+
+								</td>
+							</tr>
+						</table>
+					</div>
+<!-- Layer Codigo de Seguranca Fim -->
+					<table width="100%">
+                        <tr>
+                            <td height="3" align="center" valign="bottom" class="FonteFormulario">
+                                <!--input type="submit" value="Processar" name="cmdFinalizarCompra" class="FonteFormulario"-->
+                                <button id="btnProcessPayment">Solicitar Aprova&ccedil;&atilde;o</button>
+                            </td>
+                        </tr>
+					</table>
+				</fieldset>
+			</div>
+		</td>
+	</tr>
+</table>
+</form>
+</body>
+</html>

@@ -1,0 +1,327 @@
+<html>
+<head>
+<title>Pagina de Pagamento</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+<!--
+.VerdeGrande {font-family: Verdana; font-size: 12px; color: #006666;}
+.PretoGrande {font-family: Verdana; font-size: 12px; color: #000000;}
+.VermelhoGrande {font-family: Verdana; font-size: 12px; color: #FF0000;}
+.PretoPequeno {font-family: Verdana; font-size: 10px; color: #000000;}
+.FonteFormulario {font-family: Verdana; font-size: 11px; color: #000000;}
+.TextBoxCompras {font-family: Verdana; font-size: 12px; color: #000000;}
+.CinzaPequeno {font-family: Verdana; font-size: 10px; color: #666666; padding: 5px;}
+.style3 {font-size: 10px}
+body {background-color: #ffffff;}
+-->
+</style>
+<script language="javascript">
+<!--
+function VerificaFormaPagto()
+  {
+  var objForm = document.getElementById('frmPedido');
+  var objDivNumeroCartao = document.getElementById('divNumeroCartao');
+  var objDivSelCard = document.getElementById('divSelCard');
+  var objDivMesVal = document.getElementById('divMesVal');
+  var objDivAnoVal = document.getElementById('divAnoVal');
+  var objDivCodSeg = document.getElementById('divCodSeg');
+  var objDivNumParc = document.getElementById('divNumParc');
+  var objDivDadosCartao = document.getElementById('divDadosCartao');
+  var objdivMsgCartaoVisa = document.getElementById('divMsgCartaoVisa');
+
+  document.getElementById('NumeroCartao').maxLength = 20;
+
+    switch (objForm.Bandeira.options[objForm.Bandeira.selectedIndex].value)
+      {
+      case 'VISA':
+         //Visa
+         objDivDadosCartao.style.display = 'block';
+         objDivNumeroCartao.style.display = 'block';
+	 objdivMsgCartaoVisa.style.display = 'block';
+         objDivMesVal.style.display = 'none';
+         objDivAnoVal.style.display = 'none';
+         objDivCodSeg.style.display = 'none';
+	 document.getElementById('NumeroCartao').maxLength = 6;
+	 document.forms[0].FormaPagto.value = 'VISA';
+         break;
+      case 'MASTERCARD':
+         //Master
+         objDivDadosCartao.style.display = 'block';
+         objDivNumeroCartao.style.display = 'none';
+	 objdivMsgCartaoVisa.style.display = 'none';
+         objDivMesVal.style.display = 'none';
+         objDivAnoVal.style.display = 'none';
+         objDivCodSeg.style.display = 'none';
+	 document.forms[0].FormaPagto.value = 'MASTERCARD';
+         break;
+      case 'DINERS':
+         //Diners
+         objDivDadosCartao.style.display = 'block';
+         objDivNumeroCartao.style.display = 'none';
+	 objdivMsgCartaoVisa.style.display = 'none';
+         objDivMesVal.style.display = 'none';
+         objDivAnoVal.style.display = 'none';
+         objDivCodSeg.style.display = 'none';
+ 	 document.forms[0].FormaPagto.value = 'DINERS';
+         break;
+      case 'AMEX':
+         //Amex
+         objDivDadosCartao.style.display = 'block';
+         objDivNumeroCartao.style.display = 'block';
+	 objdivMsgCartaoVisa.style.display = 'none';
+         objDivMesVal.style.display = 'block';
+         objDivAnoVal.style.display = 'block';
+         objDivCodSeg.style.display = 'block';
+	 document.forms[0].FormaPagto.value = 'AMEX';
+         break;		
+      case 'HIPERCARD':
+         //Hipercard
+         objDivDadosCartao.style.display = 'block';
+         objDivNumeroCartao.style.display = 'block';
+	 objdivMsgCartaoVisa.style.display = 'none';
+         objDivMesVal.style.display = 'block';
+         objDivAnoVal.style.display = 'block';
+         objDivCodSeg.style.display = 'block';
+	 document.forms[0].FormaPagto.value = 'HIPERCARD';
+         break;		
+      case 'AURA':
+         //Aura
+         objDivDadosCartao.style.display = 'block';
+         objDivNumeroCartao.style.display = 'block';
+	 objdivMsgCartaoVisa.style.display = 'none';
+         objDivMesVal.style.display = 'block';
+         objDivAnoVal.style.display = 'block';
+         objDivCodSeg.style.display = 'block';
+	 document.forms[0].FormaPagto.value = 'AURA';
+         break;		
+      default:
+         objDivDadosCartao.style.display = 'none';
+         objDivNumeroCartao.style.display = 'none';
+	 objdivMsgCartaoVisa.style.display = 'none';
+         objDivMesVal.style.display = 'none';
+         objDivAnoVal.style.display = 'none';
+         objDivCodSeg.style.display = 'none';
+	 document.forms[0].FormaPagto.value = '';
+         Bandeira.focus();
+         return(false);
+      }
+}
+
+function EfetuaPOST()
+{
+	var objForm = document.getElementById('frmPedido');
+	var mpg_popup;
+	if ((objForm.Bandeira.options[objForm.Bandeira.selectedIndex].value) == "VISA")
+	{
+		mpg_popup = window.open("", "mpg_popup","toolbar=0,location=0,directories=0,status=1,menubar=0,scrollbars=0,resizable=0,screenX=0,screenY=0,left=0,top=0,width=800,height=600");
+		document.getElementById('frmPedido').target = 'mpg_popup';
+		window.location = "http://www.seusite.com.br/htmls/redirecionaCBP.html";
+		return(true);
+	}
+	else
+	{
+		document.getElementById('frmPedido').target = '_self';
+		return(true);		
+	} 	 
+}
+
+function teclado(qtdeCaracter, tecla)
+{
+	var quantidade, tecla;
+	quantidade = document.getElementById(qtdeCaracter);
+
+	if (quantidade.maxLength > quantidade.value.length)
+
+	  quantidade.value = quantidade.value + tecla;
+}
+//-->
+</script>
+</head>
+<body text="#000000" class="VermelhoGrande"> 
+<table  width="50%" align="center">
+	<tr >
+		<td colspan="2" class="FonteFormulario">
+			<p><a href="http://www.urldasualoja.com.br"><img src="https://www.aprovafacil.com/cgi-bin/<#UsuarioExtrato>/IMG?ImagemID=logoloja.png" border=0 align="absmiddle" title="Descri&ccedil;&atilde;o da Sua Loja"></a></p>
+		</td>
+	</tr>
+	<tr>
+		<td class="FonteFormulario">
+			<fieldset>
+				<legend>Dados da Compra</legend>
+				<table  border="0" >
+					<form name="frmPedido" action="<#URLAprovacao>" onSubmit="EfetuaPOST();" method="POST" id="frmPedido">
+					<input type=hidden name=ValorDocumento value="<#ValorDocumento>">
+					<input type=hidden name=QuantidadeParcelas value="<#QuantidadeParcelas>">
+					<input type=hidden name=NumeroDocumento value="<#NumeroDocumento>">
+					<input type=hidden name=FormaPagto value="">
+					<#ParametrosCliente>
+					<tr align="center" > 
+						<td height="1" colspan="2" class="CinzaPequeno">
+				  			<p>&nbsp;&nbsp;<font size="2" face="Arial">O valor total da sua compra &eacute;:&nbsp;</font><b><#ValorDocumentoExibicao></b><font face="Arial" size="2">&nbsp;a ser pago em:&nbsp;</font><b><#QuantidadeParcelas></b><font face="Arial" size="2">&nbsp;parcela(s).</font><br>
+						</td>
+					</tr>
+				</table>
+			</fieldset>
+		</td>
+	</tr>
+</table>
+<table width="50%" align="center">
+	<tr>
+		<td class="FonteFormulario">
+			<fieldset>
+				<legend>Selecione o Cart&atilde;o</legend>
+				<table>
+					<tr> 
+                				<td width="30%" align="right" class="FonteFormulario">Selecione o Cart&atilde;o: </td>
+				                <td width="70%" height="50">
+							<select size="1" name="Bandeira" class="TextBoxCompras" onChange="VerificaFormaPagto();" id=Bandeira>
+								<option selected>Selecione...</option>
+								<option value="VISA">Cart&atilde;o de Cr&eacute;dito Visa</option>
+								<option value="MASTERCARD">Cart&atilde;o de Cr&eacute;dito Mastercard</option>
+								<option value="DINERS">Cart&atilde;o de Cr&eacute;dito Diners</option>
+								<option value="AMEX">Cart&atilde;o de Cr&eacute;dito Amex</option>
+								<option value="HIPERCARD">Cart&atilde;o de Cr&eacute;dito Hipercard</option>
+								<option value="AURA">Cart&atilde;o de Cr&eacute;dito Aura</option>
+							</select>                    
+						</td>
+    					</tr>
+				</table>
+			</fieldset>
+		</td>
+	</tr>
+</table>
+<table width="50%" align="center">
+	<tr>
+		<td class="FonteFormulario">
+			<div id="divDadosCartao" style="display:none;">
+				<fieldset>
+					<legend>Informe os Dados do Cart&atilde;o</legend>
+<!-- Layer Numero do Cartao -->
+					<div id="divNumeroCartao" style="display:none;"> 
+						<table width="100%">
+							<tr> 
+								<td align="right" class="FonteFormulario">N&uacute;mero:</td>
+								<td width="70%">
+									<input type="text" id="NumeroCartao" name="NumeroCartao" size="20" class="TextBoxCompras" readonly>&nbsp;&nbsp;&nbsp;<input type="button" value="Limpar" name="cmdLimparNumeroCartao" onclick="document.forms[0].NumeroCartao.value='';"
+ 									<div id="divMsgCartaoVisa" style="display:none;"><span class="style3" >Somente os 6 primeiros d&iacute;gitos do Cart&atilde;o</span></div>
+								 </td>
+							</tr>
+							<tr> 
+								<td height="2" align="right" class="FonteFormulario"></td>
+								<td width="70%" height="2"> 
+									<table cellSpacing=0 cellPadding=0 width=131 border=0>
+										<tr><td colSpan=7><img height=14 src="https://www.aprovafacil.com/imagensclientes/teclado/teclado_topo.gif" width=131 border=0></td></tr>
+										<TR>
+											<TD rowSpan=2><IMG height=28 width=63 src=https://www.aprovafacil.com/imagensclientes/teclado/teclado_esquerda.gif border=0></TD>
+											<TD><IMG style="CURSOR: hand" height=14 width=12 border=0 src=https://www.aprovafacil.com/imagensclientes/teclado/teclado_3.gif onclick="teclado('NumeroCartao', 3);"></TD>
+											<TD><IMG style="CURSOR: hand" height=14 width=12 border=0 src=https://www.aprovafacil.com/imagensclientes/teclado/teclado_2.gif onclick="teclado('NumeroCartao', 2);"></TD>
+
+											<TD><IMG style="CURSOR: hand" height=14 width=12 border=0 src=https://www.aprovafacil.com/imagensclientes/teclado/teclado_0.gif onclick="teclado('NumeroCartao', 0);"></TD>
+											<TD><IMG style="CURSOR: hand" height=14 width=12 border=0 src=https://www.aprovafacil.com/imagensclientes/teclado/teclado_8.gif onclick="teclado('NumeroCartao', 8);"></TD>
+											<TD><IMG style="CURSOR: hand" height=14 width=12 border=0 src=https://www.aprovafacil.com/imagensclientes/teclado/teclado_4.gif onclick="teclado('NumeroCartao', 4);"></TD>
+											<TD rowSpan=2><IMG height=28 width=8 src=https://www.aprovafacil.com/imagensclientes/teclado/teclado_direita.gif border=0></TD>
+										</TR>
+										<TR>
+											<TD><IMG style="CURSOR: hand" height=14 width=12 border=0 src=https://www.aprovafacil.com/imagensclientes/teclado/teclado_9.gif onclick="teclado('NumeroCartao', 9);"></TD>
+											<TD><IMG style="CURSOR: hand" height=14 width=12 border=0 src=https://www.aprovafacil.com/imagensclientes/teclado/teclado_1.gif onclick="teclado('NumeroCartao', 1);"></TD>
+											<TD><IMG style="CURSOR: hand" height=14 width=12 border=0 src=https://www.aprovafacil.com/imagensclientes/teclado/teclado_5.gif onclick="teclado('NumeroCartao', 5);"></TD>
+											<TD><IMG style="CURSOR: hand" height=14 width=12 border=0 src=https://www.aprovafacil.com/imagensclientes/teclado/teclado_7.gif onclick="teclado('NumeroCartao', 7);"></TD>
+
+											<TD><IMG style="CURSOR: hand" height=14 width=12 border=0 src=https://www.aprovafacil.com/imagensclientes/teclado/teclado_6.gif onclick="teclado('NumeroCartao', 6);"></TD>
+										</TR>
+										<tr><td colSpan=7><img height=8 width=131 border=0 src=https://www.aprovafacil.com/imagensclientes/teclado/teclado_base.gif></td></tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+					</div>
+<!-- Layer Numero do Cartao Fim -->
+<!-- Layer Mes Validade -->
+					<div id="divMesVal" style="display:none;">
+						<table width="100%">
+							<tr> 
+								<td align="right" class="FonteFormulario">M&ecirc;s de Validade:</td>
+								<td width="70%"> 
+									<select name="MesValidade" class="TextBoxCompras">
+										<option selected></option>
+										<option value="01">01</option>
+										<option value="02">02</option>
+										<option value="03">03</option>
+										<option value="04">04</option>
+										<option value="05">05</option>
+										<option value="06">06</option>
+										<option value="07">07</option>
+										<option value="08">08</option>
+										<option value="09">09</option>
+										<option value="10">10</option>
+										<option value="11">11</option>
+										<option value="12">12</option>
+									</select>
+								</td>
+						 	</tr>
+						</table>
+					</div>
+<!-- Layer Mes de Validade Fim -->
+<!-- Layer Ano Validade -->
+					<div id="divAnoVal" style="display:none;"> 
+						<table width="100%">	                       	
+							<tr> 
+								<td align="right" class="FonteFormulario">Ano de Validade:</td>
+								<td width="70%"> 
+									<select name="AnoValidade" class="TextBoxCompras">
+										<option><#AnosValidos></option>
+									</select>
+								</td>
+							</tr>
+						</table>
+					</div>
+<!-- Layer Ano de Validade Fim -->
+<!-- Layer Codigo de Seguranca -->
+					<div id="divCodSeg" style="display:none;">
+						<table width="100%">
+							<tr> 
+								<td height="2" align="right" class="FonteFormulario">C&oacute;digo de Seguran&ccedil;a:</td>
+								<td width="70%" height="2"> 
+									<input type="text" name="CodigoSeguranca" size="5"  maxlength="4" class="TextBoxCompras">
+									<a href="javascript:void window.open('https://www.aprovafacil.com/imagensclientes/cartao_visa_amex.gif','codigo','width=440,height=398,scrollbars=no,resizable=no,toolbar=no')" ><span class="style3" >O que &eacute; c&oacute;digo de seguran&ccedil;a?</span></a></td>
+								</td>
+							</tr>
+							<tr> 
+								<td height="2" align="right" class="FonteFormulario"></td>
+								<td width="70%" height="2"> 
+									<table cellSpacing=0 cellPadding=0 width=131 border=0>
+										<tr><td colSpan=7><img height=14 src="https://www.aprovafacil.com/imagensclientes/teclado/teclado_topo.gif" width=131 border=0></td></tr>
+										<tr>
+											<td rowSpan=2><img height=28 width=63 src=https://www.aprovafacil.com/imagensclientes/teclado/teclado_esquerda.gif border=0></td>
+											<td><img style="CURSOR: hand" height=14 width=12 border=0 src=https://www.aprovafacil.com/imagensclientes/teclado/teclado_3.gif onclick="document.forms[0].CodigoSeguranca.value = document.forms[0].CodigoSeguranca.value + 3;"></td>
+											<td><img style="CURSOR: hand" height=14 width=12 border=0 src=https://www.aprovafacil.com/imagensclientes/teclado/teclado_2.gif onclick="document.forms[0].CodigoSeguranca.value = document.forms[0].CodigoSeguranca.value + 2;"></td>
+											<td><img style="CURSOR: hand" height=14 width=12 border=0 src=https://www.aprovafacil.com/imagensclientes/teclado/teclado_0.gif onclick="document.forms[0].CodigoSeguranca.value = document.forms[0].CodigoSeguranca.value + 0;"></td>
+											<td><img style="CURSOR: hand" height=14 width=12 border=0 src=https://www.aprovafacil.com/imagensclientes/teclado/teclado_8.gif onclick="document.forms[0].CodigoSeguranca.value = document.forms[0].CodigoSeguranca.value + 8;"></td>
+											<td><img style="CURSOR: hand" height=14 width=12 border=0 src=https://www.aprovafacil.com/imagensclientes/teclado/teclado_4.gif onclick="document.forms[0].CodigoSeguranca.value = document.forms[0].CodigoSeguranca.value + 4;"></td>
+											<td rowSpan=2><img height=28 width=8 src=https://www.aprovafacil.com/imagensclientes/teclado/teclado_direita.gif border=0></td>
+										</tr>
+										<tr>
+											<td><img style="CURSOR: hand" height=14 width=12 border=0 src=https://www.aprovafacil.com/imagensclientes/teclado/teclado_9.gif onclick="document.forms[0].CodigoSeguranca.value = document.forms[0].CodigoSeguranca.value + 9;"></td>
+											<td><img style="CURSOR: hand" height=14 width=12 border=0 src=https://www.aprovafacil.com/imagensclientes/teclado/teclado_1.gif onclick="document.forms[0].CodigoSeguranca.value = document.forms[0].CodigoSeguranca.value + 1;"></td>
+											<td><img style="CURSOR: hand" height=14 width=12 border=0 src=https://www.aprovafacil.com/imagensclientes/teclado/teclado_5.gif onclick="document.forms[0].CodigoSeguranca.value = document.forms[0].CodigoSeguranca.value + 5;"></td>
+											<td><img style="CURSOR: hand" height=14 width=12 border=0 src=https://www.aprovafacil.com/imagensclientes/teclado/teclado_7.gif onclick="document.forms[0].CodigoSeguranca.value = document.forms[0].CodigoSeguranca.value + 7;"></td>
+											<td><img style="CURSOR: hand" height=14 width=12 border=0 src=https://www.aprovafacil.com/imagensclientes/teclado/teclado_6.gif onclick="document.forms[0].CodigoSeguranca.value = document.forms[0].CodigoSeguranca.value + 6;"></td>
+										</tr>
+										<tr><td colSpan=7><img height=8 width=131 border=0 src=https://www.aprovafacil.com/imagensclientes/teclado/teclado_base.gif></td></tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+					</div>
+<!-- Layer Codigo de Seguranca Fim -->
+					<table width="100%">
+			                        <tr><td height="3" align="center" valign="bottom" class="FonteFormulario"><input type="submit" value="Processar" name="cmdFinalizarCompra" class="FonteFormulario"></td></tr>
+					</table>
+				</fieldset>
+			</div>
+		</td>
+	</tr>
+</table>
+</form>
+</body>
+</html>

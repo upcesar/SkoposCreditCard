@@ -1,0 +1,201 @@
+@charset "utf-8";
+/* CSS Document */
+.VerdeGrande {
+	font-size: 12px; 
+	color: #006666;
+}
+.PretoGrande {
+	font-size: 12px; 
+	color: #000000;
+}
+.VermelhoGrande {
+	font-size: 12px; 
+	color: #FF0000;
+}
+.PretoPequeno {
+	font-size: 10px; 
+	color: #000000;
+}
+.FonteFormulario {
+	font-size: 11px; 
+	color: #000000;
+}
+.EscolhaCartao {
+	font-size: 11px; 
+	color: #000000;
+	padding-top:8px;	
+}
+
+.imgBandeiras{
+	position:absolute;
+	vertical-align:text-bottom;
+	float:left;
+	margin-left: 35px;
+	margin-top: 30px;
+}
+
+.PurchaseData{
+	position:relative;
+	margin-left: 64px;
+	margin-top: 8px;	
+}
+.CustomerData{
+	position:relative;
+	margin-left: 4px;
+	margin-top: 8px;	
+	font-size: 12px;
+}
+.textlabel{	
+	width: 190px;
+	float:left;
+	font-size: 12px; 
+}
+.centered_buttons{
+	float:left;
+	margin-left: 50px;
+}
+
+.tipSetSaleType{
+	float:left;
+	width: 687px;
+	margin-left:75px;
+}
+
+.version{
+    float: right;
+    margin-right: 30px;
+    margin-top: -70px;
+    font-size: 12px;
+}
+
+.columnDialog {
+	padding-left: 12px;
+	float:left;
+	width: 280px;
+	font-size: 11px;
+	margin-top: 10px;
+	padding-bottom:5px;
+}
+
+.msgPayment{
+	margin-left:30px;
+	font-size:14px;
+	font-weight:bold;
+}
+
+.optNumParcela {
+	padding-top: 5px;
+}
+
+
+
+.fillColumnDialog {
+float:right;
+width:20px;
+background:#c9c;
+}
+
+.line_separator{
+	float:left;
+	margin-top:10px;
+	margin-bottom:10px;	
+	width:380px;
+	vertical-align:bottom;
+}
+
+.link{
+	font-size: 10px; 		
+}
+
+.TextBoxCompras {
+	font-size: 12px; 
+	color: #000000;
+}
+.CinzaPequeno {
+	font-size: 9px; 
+	color: #666666; 
+	padding: 5px;
+}
+
+#imgLoading{
+	color:#999999;
+	margin-left:3px;	
+}
+#ValorDocumentoExibicao{
+	font-size: 12px;
+}
+#QuantidadeParcelas{
+	font-size: 12px;
+}
+
+#txtTransaction{
+	position:relative;
+	font-size:12px;
+	font-weight:normal;
+	border:#000 thick;
+	height: 96px;
+}
+
+.textStatus {
+	font-size:12px;
+	margin-left:12px;
+	margin-top: 36px;
+}
+
+#imgTransaction{
+	float:left;
+	width: 200px;
+	height:100px;
+}
+
+.marginButton{
+	margin-left:15px;
+}
+
+.buttonsetDenied {
+	margin-top:-4px;
+	margin-left:10px;
+}
+
+.buttonsetDeniedElement {
+	position:relative;
+	font-size:10px;
+	top: 24px;
+	margin-right:10px;
+}
+
+.buttonsetApproved {
+	margin-top: 20px;
+	margin-left: 255px;
+}
+
+.ammountDialog{
+	font-weight:bold;
+}
+
+#imgDenied{
+	float:right;
+	margin: 24px, 24px;
+}
+
+.smallError{	
+	font-size: 12px;
+	color:#F00;
+	text-align:center;
+	margin-top:6px;
+}
+
+.img-construction{
+	height:360px;
+	width:360px;
+}
+
+body {
+	font-family: Arial, Helvetica, Verdana, sans-serif;
+	background-color: #ffffff;
+	font-size: 12px;
+}
+fieldset{
+	min-width:700px;
+	border-radius: 8px;
+}
