@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Ink/Util/String/1/lib.js - Ink.js</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+    <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><img src="../yuidoclogo.png" title="Ink.js"></h1>
+            
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: latest</em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <h2 class="off-left">APIs</h2>
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+            <li><a href="#api-modules">Modules</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="../classes/Ink.html">Ink</a></li>
+            
+                <li><a href="../classes/Ink.Dom.Browser.html">Ink.Dom.Browser</a></li>
+            
+                <li><a href="../classes/Ink.Dom.Css.html">Ink.Dom.Css</a></li>
+            
+                <li><a href="../classes/Ink.Dom.Element.html">Ink.Dom.Element</a></li>
+            
+                <li><a href="../classes/Ink.Dom.Event.html">Ink.Dom.Event</a></li>
+            
+                <li><a href="../classes/Ink.Dom.FormSerialize.html">Ink.Dom.FormSerialize</a></li>
+            
+                <li><a href="../classes/Ink.Dom.Loaded.html">Ink.Dom.Loaded</a></li>
+            
+                <li><a href="../classes/Ink.Dom.Selector.html">Ink.Dom.Selector</a></li>
+            
+                <li><a href="../classes/Ink.Namespace.ClassModule.html">Ink.Namespace.ClassModule</a></li>
+            
+                <li><a href="../classes/Ink.Namespace.StaticModule.html">Ink.Namespace.StaticModule</a></li>
+            
+                <li><a href="../classes/Ink.Net.Ajax.html">Ink.Net.Ajax</a></li>
+            
+                <li><a href="../classes/Ink.Net.JsonP.html">Ink.Net.JsonP</a></li>
+            
+                <li><a href="../classes/Ink.UI.Animate_1.html">Ink.UI.Animate_1</a></li>
+            
+                <li><a href="../classes/Ink.UI.Carousel_1.html">Ink.UI.Carousel_1</a></li>
+            
+                <li><a href="../classes/Ink.UI.Close.html">Ink.UI.Close</a></li>
+            
+                <li><a href="../classes/Ink.UI.Common.html">Ink.UI.Common</a></li>
+            
+                <li><a href="../classes/Ink.UI.DatePicker.html">Ink.UI.DatePicker</a></li>
+            
+                <li><a href="../classes/Ink.UI.Draggable.html">Ink.UI.Draggable</a></li>
+            
+                <li><a href="../classes/Ink.UI.Dropdown.html">Ink.UI.Dropdown</a></li>
+            
+                <li><a href="../classes/Ink.UI.Droppable.html">Ink.UI.Droppable</a></li>
+            
+                <li><a href="../classes/Ink.UI.FormValidator.html">Ink.UI.FormValidator</a></li>
+            
+                <li><a href="../classes/Ink.UI.FormValidator_2.html">Ink.UI.FormValidator_2</a></li>
+            
+                <li><a href="../classes/Ink.UI.ImageQuery.html">Ink.UI.ImageQuery</a></li>
+            
+                <li><a href="../classes/Ink.UI.Modal.html">Ink.UI.Modal</a></li>
+            
+                <li><a href="../classes/Ink.UI.Pagination.html">Ink.UI.Pagination</a></li>
+            
+                <li><a href="../classes/Ink.UI.ProgressBar.html">Ink.UI.ProgressBar</a></li>
+            
+                <li><a href="../classes/Ink.UI.SmoothScroller.html">Ink.UI.SmoothScroller</a></li>
+            
+                <li><a href="../classes/Ink.UI.SortableList.html">Ink.UI.SortableList</a></li>
+            
+                <li><a href="../classes/Ink.UI.Spy.html">Ink.UI.Spy</a></li>
+            
+                <li><a href="../classes/Ink.UI.Stacker_1.html">Ink.UI.Stacker_1</a></li>
+            
+                <li><a href="../classes/Ink.UI.Sticky.html">Ink.UI.Sticky</a></li>
+            
+                <li><a href="../classes/Ink.UI.Swipe.html">Ink.UI.Swipe</a></li>
+            
+                <li><a href="../classes/Ink.UI.Table.html">Ink.UI.Table</a></li>
+            
+                <li><a href="../classes/Ink.UI.Tabs.html">Ink.UI.Tabs</a></li>
+            
+                <li><a href="../classes/Ink.UI.TagField.html">Ink.UI.TagField</a></li>
+            
+                <li><a href="../classes/Ink.UI.Toggle.html">Ink.UI.Toggle</a></li>
+            
+                <li><a href="../classes/Ink.UI.Tooltip.html">Ink.UI.Tooltip</a></li>
+            
+                <li><a href="../classes/Ink.UI.TreeView.html">Ink.UI.TreeView</a></li>
+            
+                <li><a href="../classes/Ink.Util.Array.html">Ink.Util.Array</a></li>
+            
+                <li><a href="../classes/Ink.Util.BinPack.html">Ink.Util.BinPack</a></li>
+            
+                <li><a href="../classes/Ink.Util.Cookie.html">Ink.Util.Cookie</a></li>
+            
+                <li><a href="../classes/Ink.Util.Date.html">Ink.Util.Date</a></li>
+            
+                <li><a href="../classes/Ink.Util.Dumper.html">Ink.Util.Dumper</a></li>
+            
+                <li><a href="../classes/Ink.Util.I18n.html">Ink.Util.I18n</a></li>
+            
+                <li><a href="../classes/Ink.Util.Json.html">Ink.Util.Json</a></li>
+            
+                <li><a href="../classes/Ink.Util.String.html">Ink.Util.String</a></li>
+            
+                <li><a href="../classes/Ink.Util.Url.html">Ink.Util.Url</a></li>
+            
+                <li><a href="../classes/Ink.Util.Validator.html">Ink.Util.Validator</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+                <li><a href="../modules/Ink.Dom.Browser_1.html">Ink.Dom.Browser_1</a></li>
+            
+                <li><a href="../modules/Ink.Dom.Css_1.html">Ink.Dom.Css_1</a></li>
+            
+                <li><a href="../modules/Ink.Dom.Element_1.html">Ink.Dom.Element_1</a></li>
+            
+                <li><a href="../modules/Ink.Dom.Event_1.html">Ink.Dom.Event_1</a></li>
+            
+                <li><a href="../modules/Ink.Dom.FormSerialize.html">Ink.Dom.FormSerialize</a></li>
+            
+                <li><a href="../modules/Ink.Dom.Loaded_1.html">Ink.Dom.Loaded_1</a></li>
+            
+                <li><a href="../modules/Ink.Dom.Selector_1.html">Ink.Dom.Selector_1</a></li>
+            
+                <li><a href="../modules/Ink.Namespace.ClassModule_1.html">Ink.Namespace.ClassModule_1</a></li>
+            
+                <li><a href="../modules/Ink.Namespace.StaticModule_1.html">Ink.Namespace.StaticModule_1</a></li>
+            
+                <li><a href="../modules/Ink.Net.Ajax_1.html">Ink.Net.Ajax_1</a></li>
+            
+                <li><a href="../modules/Ink.Net.JsonP_1.html">Ink.Net.JsonP_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Animate_1.html">Ink.UI.Animate_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Carousel_1.html">Ink.UI.Carousel_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Close_1.html">Ink.UI.Close_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Common_1.html">Ink.UI.Common_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.DatePicker_1.html">Ink.UI.DatePicker_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Dropdown_1.html">Ink.UI.Dropdown_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Droppable_1.html">Ink.UI.Droppable_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.FormValidator_1.html">Ink.UI.FormValidator_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.FormValidator_2.html">Ink.UI.FormValidator_2</a></li>
+            
+                <li><a href="../modules/Ink.UI.ImageQuery_1.html">Ink.UI.ImageQuery_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Modal_1.html">Ink.UI.Modal_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Pagination_1.html">Ink.UI.Pagination_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.ProgressBar_1.html">Ink.UI.ProgressBar_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.SmoothScroller_1.html">Ink.UI.SmoothScroller_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.SortableList_1.html">Ink.UI.SortableList_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Spy_1.html">Ink.UI.Spy_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Stacker_1.html">Ink.UI.Stacker_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Sticky_1.html">Ink.UI.Sticky_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Swipe.html">Ink.UI.Swipe</a></li>
+            
+                <li><a href="../modules/Ink.UI.Table_1.html">Ink.UI.Table_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Tabs_1.html">Ink.UI.Tabs_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Toggle_1.html">Ink.UI.Toggle_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Tooltip_1.html">Ink.UI.Tooltip_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.TreeView_1.html">Ink.UI.TreeView_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Array_1.html">Ink.Util.Array_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.BinPack_1.html">Ink.Util.BinPack_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Cookie_1.html">Ink.Util.Cookie_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Date_1.html">Ink.Util.Date_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Dumper_1.html">Ink.Util.Dumper_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.I18n_1.html">Ink.Util.I18n_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Json_1.html">Ink.Util.Json_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.String_1.html">Ink.Util.String_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Url_1.html">Ink.Util.Url_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Validator_1.html">Ink.Util.Validator_1</a></li>
+            
+                <li><a href="../modules/Ink_1.html">Ink_1</a></li>
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+
+
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1 class="file-heading">File: Ink/Util/String/1/lib.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+/**
+ * @module Ink.Util.String_1
+ * @author inkdev AT sapo.pt
+ * @version 1
+ */
+Ink.createModule(&#x27;Ink.Util.String&#x27;, &#x27;1&#x27;, [], function() {
+
+    &#x27;use strict&#x27;;
+
+    /**
+     * String Manipulation Utilities
+     *
+     * @class Ink.Util.String
+     * @version 1
+     * @static
+     */
+    var InkUtilString = {
+
+        /**
+         * List of special chars
+         * 
+         * @property _chars
+         * @type {Array}
+         * @private
+         * @readOnly
+         * @static
+         */
+        _chars: [&#x27;&amp;&#x27;,&#x27;à&#x27;,&#x27;á&#x27;,&#x27;â&#x27;,&#x27;ã&#x27;,&#x27;ä&#x27;,&#x27;å&#x27;,&#x27;æ&#x27;,&#x27;ç&#x27;,&#x27;è&#x27;,&#x27;é&#x27;,
+                &#x27;ê&#x27;,&#x27;ë&#x27;,&#x27;ì&#x27;,&#x27;í&#x27;,&#x27;î&#x27;,&#x27;ï&#x27;,&#x27;ð&#x27;,&#x27;ñ&#x27;,&#x27;ò&#x27;,&#x27;ó&#x27;,&#x27;ô&#x27;,
+                &#x27;õ&#x27;,&#x27;ö&#x27;,&#x27;ø&#x27;,&#x27;ù&#x27;,&#x27;ú&#x27;,&#x27;û&#x27;,&#x27;ü&#x27;,&#x27;ý&#x27;,&#x27;þ&#x27;,&#x27;ÿ&#x27;,&#x27;À&#x27;,
+                &#x27;Á&#x27;,&#x27;Â&#x27;,&#x27;Ã&#x27;,&#x27;Ä&#x27;,&#x27;Å&#x27;,&#x27;Æ&#x27;,&#x27;Ç&#x27;,&#x27;È&#x27;,&#x27;É&#x27;,&#x27;Ê&#x27;,&#x27;Ë&#x27;,
+                &#x27;Ì&#x27;,&#x27;Í&#x27;,&#x27;Î&#x27;,&#x27;Ï&#x27;,&#x27;Ð&#x27;,&#x27;Ñ&#x27;,&#x27;Ò&#x27;,&#x27;Ó&#x27;,&#x27;Ô&#x27;,&#x27;Õ&#x27;,&#x27;Ö&#x27;,
+                &#x27;Ø&#x27;,&#x27;Ù&#x27;,&#x27;Ú&#x27;,&#x27;Û&#x27;,&#x27;Ü&#x27;,&#x27;Ý&#x27;,&#x27;Þ&#x27;,&#x27;€&#x27;,&#x27;\&quot;&#x27;,&#x27;ß&#x27;,&#x27;&lt;&#x27;,
+                &#x27;&gt;&#x27;,&#x27;¢&#x27;,&#x27;£&#x27;,&#x27;¤&#x27;,&#x27;¥&#x27;,&#x27;¦&#x27;,&#x27;§&#x27;,&#x27;¨&#x27;,&#x27;©&#x27;,&#x27;ª&#x27;,&#x27;«&#x27;,
+                &#x27;¬&#x27;,&#x27;\xad&#x27;,&#x27;®&#x27;,&#x27;¯&#x27;,&#x27;°&#x27;,&#x27;±&#x27;,&#x27;²&#x27;,&#x27;³&#x27;,&#x27;´&#x27;,&#x27;µ&#x27;,&#x27;¶&#x27;,
+                &#x27;·&#x27;,&#x27;¸&#x27;,&#x27;¹&#x27;,&#x27;º&#x27;,&#x27;»&#x27;,&#x27;¼&#x27;,&#x27;½&#x27;,&#x27;¾&#x27;],
+
+        /**
+         * List of the special characters&#x27; html entities
+         * 
+         * @property _entities
+         * @type {Array}
+         * @private
+         * @readOnly
+         * @static
+         */
+        _entities: [&#x27;amp&#x27;,&#x27;agrave&#x27;,&#x27;aacute&#x27;,&#x27;acirc&#x27;,&#x27;atilde&#x27;,&#x27;auml&#x27;,&#x27;aring&#x27;,
+                    &#x27;aelig&#x27;,&#x27;ccedil&#x27;,&#x27;egrave&#x27;,&#x27;eacute&#x27;,&#x27;ecirc&#x27;,&#x27;euml&#x27;,&#x27;igrave&#x27;,
+                    &#x27;iacute&#x27;,&#x27;icirc&#x27;,&#x27;iuml&#x27;,&#x27;eth&#x27;,&#x27;ntilde&#x27;,&#x27;ograve&#x27;,&#x27;oacute&#x27;,
+                    &#x27;ocirc&#x27;,&#x27;otilde&#x27;,&#x27;ouml&#x27;,&#x27;oslash&#x27;,&#x27;ugrave&#x27;,&#x27;uacute&#x27;,&#x27;ucirc&#x27;,
+                    &#x27;uuml&#x27;,&#x27;yacute&#x27;,&#x27;thorn&#x27;,&#x27;yuml&#x27;,&#x27;Agrave&#x27;,&#x27;Aacute&#x27;,&#x27;Acirc&#x27;,
+                    &#x27;Atilde&#x27;,&#x27;Auml&#x27;,&#x27;Aring&#x27;,&#x27;AElig&#x27;,&#x27;Ccedil&#x27;,&#x27;Egrave&#x27;,&#x27;Eacute&#x27;,
+                    &#x27;Ecirc&#x27;,&#x27;Euml&#x27;,&#x27;Igrave&#x27;,&#x27;Iacute&#x27;,&#x27;Icirc&#x27;,&#x27;Iuml&#x27;,&#x27;ETH&#x27;,&#x27;Ntilde&#x27;,
+                    &#x27;Ograve&#x27;,&#x27;Oacute&#x27;,&#x27;Ocirc&#x27;,&#x27;Otilde&#x27;,&#x27;Ouml&#x27;,&#x27;Oslash&#x27;,&#x27;Ugrave&#x27;,
+                    &#x27;Uacute&#x27;,&#x27;Ucirc&#x27;,&#x27;Uuml&#x27;,&#x27;Yacute&#x27;,&#x27;THORN&#x27;,&#x27;euro&#x27;,&#x27;quot&#x27;,&#x27;szlig&#x27;,
+                    &#x27;lt&#x27;,&#x27;gt&#x27;,&#x27;cent&#x27;,&#x27;pound&#x27;,&#x27;curren&#x27;,&#x27;yen&#x27;,&#x27;brvbar&#x27;,&#x27;sect&#x27;,&#x27;uml&#x27;,
+                    &#x27;copy&#x27;,&#x27;ordf&#x27;,&#x27;laquo&#x27;,&#x27;not&#x27;,&#x27;shy&#x27;,&#x27;reg&#x27;,&#x27;macr&#x27;,&#x27;deg&#x27;,&#x27;plusmn&#x27;,
+                    &#x27;sup2&#x27;,&#x27;sup3&#x27;,&#x27;acute&#x27;,&#x27;micro&#x27;,&#x27;para&#x27;,&#x27;middot&#x27;,&#x27;cedil&#x27;,&#x27;sup1&#x27;,
+                    &#x27;ordm&#x27;,&#x27;raquo&#x27;,&#x27;frac14&#x27;,&#x27;frac12&#x27;,&#x27;frac34&#x27;],
+
+        /**
+         * List of accented chars
+         * 
+         * @property _accentedChars
+         * @type {Array}
+         * @private
+         * @readOnly
+         * @static
+         */
+        _accentedChars:[&#x27;à&#x27;,&#x27;á&#x27;,&#x27;â&#x27;,&#x27;ã&#x27;,&#x27;ä&#x27;,&#x27;å&#x27;,
+                        &#x27;è&#x27;,&#x27;é&#x27;,&#x27;ê&#x27;,&#x27;ë&#x27;,
+                        &#x27;ì&#x27;,&#x27;í&#x27;,&#x27;î&#x27;,&#x27;ï&#x27;,
+                        &#x27;ò&#x27;,&#x27;ó&#x27;,&#x27;ô&#x27;,&#x27;õ&#x27;,&#x27;ö&#x27;,
+                        &#x27;ù&#x27;,&#x27;ú&#x27;,&#x27;û&#x27;,&#x27;ü&#x27;,
+                        &#x27;ç&#x27;,&#x27;ñ&#x27;,
+                        &#x27;À&#x27;,&#x27;Á&#x27;,&#x27;Â&#x27;,&#x27;Ã&#x27;,&#x27;Ä&#x27;,&#x27;Å&#x27;,
+                        &#x27;È&#x27;,&#x27;É&#x27;,&#x27;Ê&#x27;,&#x27;Ë&#x27;,
+                        &#x27;Ì&#x27;,&#x27;Í&#x27;,&#x27;Î&#x27;,&#x27;Ï&#x27;,
+                        &#x27;Ò&#x27;,&#x27;Ó&#x27;,&#x27;Ô&#x27;,&#x27;Õ&#x27;,&#x27;Ö&#x27;,
+                        &#x27;Ù&#x27;,&#x27;Ú&#x27;,&#x27;Û&#x27;,&#x27;Ü&#x27;,
+                        &#x27;Ç&#x27;,&#x27;Ñ&#x27;],
+
+        /**
+         * List of the accented chars (above), but without the accents
+         * 
+         * @property _accentedRemovedChars
+         * @type {Array}
+         * @private
+         * @readOnly
+         * @static
+         */
+        _accentedRemovedChars:[&#x27;a&#x27;,&#x27;a&#x27;,&#x27;a&#x27;,&#x27;a&#x27;,&#x27;a&#x27;,&#x27;a&#x27;,
+                               &#x27;e&#x27;,&#x27;e&#x27;,&#x27;e&#x27;,&#x27;e&#x27;,
+                               &#x27;i&#x27;,&#x27;i&#x27;,&#x27;i&#x27;,&#x27;i&#x27;,
+                               &#x27;o&#x27;,&#x27;o&#x27;,&#x27;o&#x27;,&#x27;o&#x27;,&#x27;o&#x27;,
+                               &#x27;u&#x27;,&#x27;u&#x27;,&#x27;u&#x27;,&#x27;u&#x27;,
+                               &#x27;c&#x27;,&#x27;n&#x27;,
+                               &#x27;A&#x27;,&#x27;A&#x27;,&#x27;A&#x27;,&#x27;A&#x27;,&#x27;A&#x27;,&#x27;A&#x27;,
+                               &#x27;E&#x27;,&#x27;E&#x27;,&#x27;E&#x27;,&#x27;E&#x27;,
+                               &#x27;I&#x27;,&#x27;I&#x27;,&#x27;I&#x27;,&#x27;I&#x27;,
+                               &#x27;O&#x27;,&#x27;O&#x27;,&#x27;O&#x27;,&#x27;O&#x27;,&#x27;O&#x27;,
+                               &#x27;U&#x27;,&#x27;U&#x27;,&#x27;U&#x27;,&#x27;U&#x27;,
+                               &#x27;C&#x27;,&#x27;N&#x27;],
+        /**
+         * Object that contains the basic HTML unsafe chars, as keys, and their HTML entities as values
+         * 
+         * @property _htmlUnsafeChars
+         * @type {Object}
+         * @private
+         * @readOnly
+         * @static
+         */
+        _htmlUnsafeChars:{&#x27;&lt;&#x27;:&#x27;&amp;lt;&#x27;,&#x27;&gt;&#x27;:&#x27;&amp;gt;&#x27;,&#x27;&amp;&#x27;:&#x27;&amp;amp;&#x27;,&#x27;&quot;&#x27;:&#x27;&amp;quot;&#x27;,&quot;&#x27;&quot;:&#x27;&amp;apos;&#x27;},
+
+        /**
+         * Convert first letter of a word to upper case &lt;br /&gt;
+         * If param as more than one word, it converts first letter of all words that have more than 2 letters
+         *
+         * @method ucFirst
+         * @param {String} string
+         * @param {Boolean} [firstWordOnly=false] capitalize only first word.
+         * @return {String} string camel cased
+         * @public
+         * @static
+         *
+         * @example
+         *      InkString.ucFirst(&#x27;hello world&#x27;); // -&gt; &#x27;Hello World&#x27;
+         *      InkString.ucFirst(&#x27;hello world&#x27;, true); // -&gt; &#x27;Hello world&#x27;
+         */
+        ucFirst: function(string, firstWordOnly) {
+            var replacer = firstWordOnly ? /(^|\s)(\w)(\S{2,})/ : /(^|\s)(\w)(\S{2,})/g;
+            return string ? String(string).replace(replacer, function(_, $1, $2, $3){
+                return $1 + $2.toUpperCase() + $3.toLowerCase();
+            }) : string;
+        },
+
+        /**
+         * Remove spaces and new line from biggin and ends of string
+         *
+         * @method trim
+         * @param {String} string
+         * @return {String} string trimmed
+         * @public
+         * @static
+         */
+        trim: function(string)
+        {
+            if (typeof string === &#x27;string&#x27;) {
+                return string.replace(/^\s+|\s+$|\n+$/g, &#x27;&#x27;);
+            }
+            return string;
+        },
+
+        /**
+         * Removes HTML tags of string
+         *
+         * @method stripTags
+         * @param {String} string
+         * @param {String} allowed
+         * @return {String} String stripped from HTML tags, leaving only the allowed ones (if any)
+         * @public
+         * @static
+         * @example
+         *     &lt;script&gt;
+         *          var myvar=&#x27;isto e um texto &lt;b&gt;bold&lt;/b&gt; com imagem &lt;img src=&quot;&quot;&gt; e br &lt;br /&gt; um &lt;p&gt;paragrafo&lt;/p&gt;&#x27;;
+         *          SAPO.Utility.String.stripTags(myvar, &#x27;b,u&#x27;);
+         *     &lt;/script&gt;
+         */
+        stripTags: function(string, allowed)
+        {
+            if (allowed &amp;&amp; typeof allowed === &#x27;string&#x27;) {
+                var aAllowed = InkUtilString.trim(allowed).split(&#x27;,&#x27;);
+                var aNewAllowed = [];
+                var cleanedTag = false;
+                for(var i=0; i &lt; aAllowed.length; i++) {
+                    if(InkUtilString.trim(aAllowed[i]) !== &#x27;&#x27;) {
+                        cleanedTag = InkUtilString.trim(aAllowed[i].replace(/(&lt;|\&gt;)/g, &#x27;&#x27;).replace(/\s/, &#x27;&#x27;));
+                        aNewAllowed.push(&#x27;(&lt;&#x27;+cleanedTag+&#x27;\\s[^&gt;]+&gt;|&lt;(\\s|\\/)?(\\s|\\/)?&#x27;+cleanedTag+&#x27;&gt;)&#x27;);
+                    }
+                }
+                var strAllowed = aNewAllowed.join(&#x27;|&#x27;);
+                var reAllowed = new RegExp(strAllowed, &quot;i&quot;);
+
+                var aFoundTags = string.match(new RegExp(&quot;&lt;[^&gt;]*&gt;&quot;, &quot;g&quot;));
+
+                for(var j=0; j &lt; aFoundTags.length; j++) {
+                    if(!aFoundTags[j].match(reAllowed)) {
+                        string = string.replace((new RegExp(aFoundTags[j], &quot;gm&quot;)), &#x27;&#x27;);
+                    }
+                }
+                return string;
+            } else {
+                return string.replace(/&lt;[^\&gt;]+\&gt;/g, &#x27;&#x27;);
+            }
+        },
+
+        /**
+         * Convert listed characters to HTML entities
+         *
+         * @method htmlEntitiesEncode
+         * @param {String} string
+         * @return {String} string encoded
+         * @public
+         * @static
+         */
+        htmlEntitiesEncode: function(string)
+        {
+            if (string &amp;&amp; string.replace) {
+                var re = false;
+                for (var i = 0; i &lt; InkUtilString._chars.length; i++) {
+                    re = new RegExp(InkUtilString._chars[i], &quot;gm&quot;);
+                    string = string.replace(re, &#x27;&amp;&#x27; + InkUtilString._entities[i] + &#x27;;&#x27;);
+                }
+            }
+            return string;
+        },
+
+        /**
+         * Convert listed HTML entities to character
+         *
+         * @method htmlEntitiesDecode
+         * @param {String} string
+         * @return {String} string decoded
+         * @public
+         * @static
+         */
+        htmlEntitiesDecode: function(string)
+        {
+            if (string &amp;&amp; string.replace) {
+                var re = false;
+                for (var i = 0; i &lt; InkUtilString._entities.length; i++) {
+                    re = new RegExp(&quot;&amp;&quot;+InkUtilString._entities[i]+&quot;;&quot;, &quot;gm&quot;);
+                    string = string.replace(re, InkUtilString._chars[i]);
+                }
+                string = string.replace(/&amp;#[^;]+;?/g, function($0){
+                    if ($0.charAt(2) === &#x27;x&#x27;) {
+                        return String.fromCharCode(parseInt($0.substring(3), 16));
+                    }
+                    else {
+                        return String.fromCharCode(parseInt($0.substring(2), 10));
+                    }
+                });
+            }
+            return string;
+        },
+
+        /**
+         * Encode a string to UTF8
+         *
+         * @method utf8Encode
+         * @param {String} string
+         * @return {String} string utf8 encoded
+         * @public
+         * @static
+         */
+        utf8Encode: function(string) {
+            /*jshint bitwise:false*/
+            string = string.replace(/\r\n/g,&quot;\n&quot;);
+            var utfstring = &quot;&quot;;
+
+            for (var n = 0; n &lt; string.length; n++) {
+
+                var c = string.charCodeAt(n);
+
+                if (c &lt; 128) {
+                    utfstring += String.fromCharCode(c);
+                }
+                else if((c &gt; 127) &amp;&amp; (c &lt; 2048)) {
+                    utfstring += String.fromCharCode((c &gt;&gt; 6) | 192);
+                    utfstring += String.fromCharCode((c &amp; 63) | 128);
+                }
+                else {
+                    utfstring += String.fromCharCode((c &gt;&gt; 12) | 224);
+                    utfstring += String.fromCharCode(((c &gt;&gt; 6) &amp; 63) | 128);
+                    utfstring += String.fromCharCode((c &amp; 63) | 128);
+                }
+
+            }
+            return utfstring;
+        },
+
+        /**
+         * Make a string shorter without cutting words
+         *
+         * @method shortString
+         * @param {String} str
+         * @param {Number} n - number of chars of the short string
+         * @return {String} string shortened
+         * @public
+         * @static
+         */
+        shortString: function(str,n) {
+          var words = str.split(&#x27; &#x27;);
+          var resultstr = &#x27;&#x27;;
+          for(var i = 0; i &lt; words.length; i++ ){
+            if((resultstr + words[i] + &#x27; &#x27;).length&gt;=n){
+              resultstr += &#x27;&amp;hellip;&#x27;;
+              break;
+              }
+            resultstr += words[i] + &#x27; &#x27;;
+            }
+          return resultstr;
+        },
+
+        /**
+         * Truncates a string, breaking words and adding ... at the end
+         *
+         * @method truncateString
+         * @param {String} str
+         * @param {Number} length - length limit for the string. String will be
+         *        at most this big, ellipsis included.
+         * @return {String} string truncated
+         * @public
+         * @static
+         */
+        truncateString: function(str, length) {
+            if(str.length - 1 &gt; length) {
+                return str.substr(0, length - 1) + &quot;\u2026&quot;;
+            } else {
+                return str;
+            }
+        },
+
+        /**
+         * Decode a string from UTF8
+         *
+         * @method utf8Decode
+         * @param {String} string
+         * @return {String} string utf8 decoded
+         * @public
+         * @static
+         */
+        utf8Decode: function(utfstring) {
+            /*jshint bitwise:false*/
+            var string = &quot;&quot;;
+            var i = 0, c = 0, c2 = 0, c3 = 0;
+
+            while ( i &lt; utfstring.length ) {
+
+                c = utfstring.charCodeAt(i);
+
+                if (c &lt; 128) {
+                    string += String.fromCharCode(c);
+                    i++;
+                }
+                else if((c &gt; 191) &amp;&amp; (c &lt; 224)) {
+                    c2 = utfstring.charCodeAt(i+1);
+                    string += String.fromCharCode(((c &amp; 31) &lt;&lt; 6) | (c2 &amp; 63));
+                    i += 2;
+                }
+                else {
+                    c2 = utfstring.charCodeAt(i+1);
+                    c3 = utfstring.charCodeAt(i+2);
+                    string += String.fromCharCode(((c &amp; 15) &lt;&lt; 12) | ((c2 &amp; 63) &lt;&lt; 6) | (c3 &amp; 63));
+                    i += 3;
+                }
+
+            }
+            return string;
+        },
+
+        /**
+         * Convert all accented chars to char without accent.
+         *
+         * @method removeAccentedChars
+         * @param {String} string
+         * @return {String} string without accented chars
+         * @public
+         * @static
+         */
+        removeAccentedChars: function(string)
+        {
+            var newString = string;
+            var re = false;
+            for (var i = 0; i &lt; InkUtilString._accentedChars.length; i++) {
+                re = new RegExp(InkUtilString._accentedChars[i], &quot;gm&quot;);
+                newString = newString.replace(re, &#x27;&#x27; + InkUtilString._accentedRemovedChars[i] + &#x27;&#x27;);
+            }
+            return newString;
+        },
+
+        /**
+         * Count the number of occurrences of a specific needle in a haystack
+         *
+         * @method substrCount
+         * @param {String} haystack
+         * @param {String} needle
+         * @return {Number} Number of occurrences
+         * @public
+         * @static
+         */
+        substrCount: function(haystack,needle)
+        {
+            return haystack ? haystack.split(needle).length - 1 : 0;
+        },
+
+        /**
+         * Eval a JSON string to a JS object
+         *
+         * @method evalJSON
+         * @param {String} strJSON
+         * @param {Boolean} sanitize
+         * @return {Object} JS Object
+         * @public
+         * @static
+         */
+        evalJSON: function(strJSON, sanitize) {
+            /* jshint evil:true */
+            if( (typeof sanitize === &#x27;undefined&#x27; || sanitize === null) || InkUtilString.isJSON(strJSON)) {
+                try {
+                    if(typeof(JSON) !== &quot;undefined&quot; &amp;&amp; typeof(JSON.parse) !== &#x27;undefined&#x27;){
+                        return JSON.parse(strJSON);
+                    }
+                    return eval(&#x27;(&#x27;+strJSON+&#x27;)&#x27;);
+                } catch(e) {
+                    throw new Error(&#x27;ERROR: Bad JSON string...&#x27;);
+                }
+            }
+        },
+
+        /**
+         * Checks if a string is a valid JSON object (string encoded)
+         *
+         * @method isJSON
+         * @param {String} str
+         * @return {Boolean}
+         * @public
+         * @static
+         */
+        isJSON: function(str)
+        {
+            str = str.replace(/\\./g, &#x27;@&#x27;).replace(/&quot;[^&quot;\\\n\r]*&quot;/g, &#x27;&#x27;);
+            return (/^[,:{}\[\]0-9.\-+Eaeflnr-u \n\r\t]*$/).test(str);
+        },
+
+        /**
+         * Escapes unsafe html chars to their entities
+         *
+         * @method htmlEscapeUnsafe
+         * @param {String} str String to escape
+         * @return {String} Escaped string
+         * @public
+         * @static
+         */
+        htmlEscapeUnsafe: function(str){
+            var chars = InkUtilString._htmlUnsafeChars;
+            return str !== null ? String(str).replace(/[&lt;&gt;&amp;&#x27;&quot;]/g,function(c){return chars[c];}) : str;
+        },
+
+        /**
+         * Normalizes whitespace in string.
+         * String is trimmed and sequences of many
+         * Whitespaces are collapsed.
+         *
+         * @method normalizeWhitespace
+         * @param {String} str String to normalize
+         * @return {String} string normalized
+         * @public
+         * @static
+         */
+        normalizeWhitespace: function(str){
+            return str !== null ? InkUtilString.trim(String(str).replace(/\s+/g,&#x27; &#x27;)) : str;
+        },
+
+        /**
+         * Converts string to unicode
+         *
+         * @method toUnicode
+         * @param {String} str
+         * @return {String} string unicoded
+         * @public
+         * @static
+         */
+        toUnicode: function(str) {
+            if (typeof str === &#x27;string&#x27;) {
+                var unicodeString = &#x27;&#x27;;
+                var inInt = false;
+                var theUnicode = false;
+                var total = str.length;
+                var i=0;
+
+                while(i &lt; total)
+                {
+                    inInt = str.charCodeAt(i);
+                    if( (inInt &gt;= 32 &amp;&amp; inInt &lt;= 126) ||
+                            inInt === 8 ||
+                            inInt === 9 ||
+                            inInt === 10 ||
+                            inInt === 12 ||
+                            inInt === 13 ||
+                            inInt === 32 ||
+                            inInt === 34 ||
+                            inInt === 47 ||
+                            inInt === 58 ||
+                            inInt === 92) {
+
+                        /*
+                        if(inInt == 34 || inInt == 92 || inInt == 47) {
+                            theUnicode = &#x27;\\&#x27;+str.charAt(i);
+                        } else {
+                        }
+                        */
+                        if(inInt === 8) {
+                            theUnicode = &#x27;\\b&#x27;;
+                        } else if(inInt === 9) {
+                            theUnicode = &#x27;\\t&#x27;;
+                        } else if(inInt === 10) {
+                            theUnicode = &#x27;\\n&#x27;;
+                        } else if(inInt === 12) {
+                            theUnicode = &#x27;\\f&#x27;;
+                        } else if(inInt === 13) {
+                            theUnicode = &#x27;\\r&#x27;;
+                        } else {
+                            theUnicode = str.charAt(i);
+                        }
+                    } else {
+                        theUnicode = str.charCodeAt(i).toString(16)+&#x27;&#x27;.toUpperCase();
+                        while (theUnicode.length &lt; 4) {
+                            theUnicode = &#x27;0&#x27; + theUnicode;
+                        }
+                        theUnicode = &#x27;\\u&#x27; + theUnicode;
+                    }
+                    unicodeString += theUnicode;
+
+                    i++;
+                }
+                return unicodeString;
+            }
+        },
+
+        /**
+         * Escapes a unicode character. returns \xXX if hex smaller than 0x100, otherwise \uXXXX
+         *
+         * @method escape
+         * @param {String} c Char
+         * @return {String} escaped char
+         * @public
+         * @static
+         */
+
+        /**
+         * @param {String} c char
+         */
+        escape: function(c) {
+            var hex = (c).charCodeAt(0).toString(16).split(&#x27;&#x27;);
+            if (hex.length &lt; 3) {
+                while (hex.length &lt; 2) { hex.unshift(&#x27;0&#x27;); }
+                hex.unshift(&#x27;x&#x27;);
+            }
+            else {
+                while (hex.length &lt; 4) { hex.unshift(&#x27;0&#x27;); }
+                hex.unshift(&#x27;u&#x27;);
+            }
+
+            hex.unshift(&#x27;\\&#x27;);
+            return hex.join(&#x27;&#x27;);
+        },
+
+        /**
+         * Unescapes a unicode character escape sequence
+         *
+         * @method unescape
+         * @param {String} es Escape sequence
+         * @return {String} String des-unicoded
+         * @public
+         * @static
+         */
+        unescape: function(es) {
+            var idx = es.lastIndexOf(&#x27;0&#x27;);
+            idx = idx === -1 ? 2 : Math.min(idx, 2);
+            //console.log(idx);
+            var hexNum = es.substring(idx);
+            //console.log(hexNum);
+            var num = parseInt(hexNum, 16);
+            return String.fromCharCode(num);
+        },
+
+        /**
+         * Escapes a string to unicode characters
+         *
+         * @method escapeText
+         * @param {String} txt
+         * @param {Array} [whiteList]
+         * @return {String} Escaped to Unicoded string
+         * @public
+         * @static
+         */
+        escapeText: function(txt, whiteList) {
+            if (whiteList === undefined) {
+                whiteList = [&#x27;[&#x27;, &#x27;]&#x27;, &#x27;\&#x27;&#x27;, &#x27;,&#x27;];
+            }
+            var txt2 = [];
+            var c, C;
+            for (var i = 0, f = txt.length; i &lt; f; ++i) {
+                c = txt[i];
+                C = c.charCodeAt(0);
+                if (C &lt; 32 || C &gt; 126 &amp;&amp; whiteList.indexOf(c) === -1) {
+                    c = InkUtilString.escape(c);
+                }
+                txt2.push(c);
+            }
+            return txt2.join(&#x27;&#x27;);
+        },
+
+        /**
+         * Regex to check escaped strings
+         *
+         * @property escapedCharRegex
+         * @type {Regex}
+         * @public
+         * @readOnly
+         * @static
+         */
+        escapedCharRegex: /(\\x[0-9a-fA-F]{2})|(\\u[0-9a-fA-F]{4})/g,
+
+        /**
+         * Unescapes a string
+         *
+         * @method unescapeText
+         * @param {String} txt
+         * @return {String} Unescaped string
+         * @public
+         * @static
+         */
+        unescapeText: function(txt) {
+            /*jshint boss:true */
+            var m;
+            while (m = InkUtilString.escapedCharRegex.exec(txt)) {
+                m = m[0];
+                txt = txt.replace(m, InkUtilString.unescape(m));
+                InkUtilString.escapedCharRegex.lastIndex = 0;
+            }
+            return txt;
+        },
+
+        /**
+         * Compares two strings
+         *
+         * @method strcmp
+         * @param {String} str1
+         * @param {String} str2
+         * @return {Number}
+         * @public
+         * @static
+         */
+        strcmp: function(str1, str2) {
+            return ((str1 === str2) ? 0 : ((str1 &gt; str2) ? 1 : -1));
+        },
+
+        /**
+         * Splits long string into string of, at most, maxLen (that is, all but last have length maxLen,
+         * last can measure maxLen or less)
+         *
+         * @method packetize
+         * @param {String} string string to divide
+         * @param {Number} maxLen packet size
+         * @return {Array} string divided
+         * @public
+         * @static
+         */
+        packetize: function(str, maxLen) {
+            var len = str.length;
+            var parts = new Array( Math.ceil(len / maxLen) );
+            var chars = str.split(&#x27;&#x27;);
+            var sz, i = 0;
+            while (len) {
+                sz = Math.min(maxLen, len);
+                parts[i++] = chars.splice(0, sz).join(&#x27;&#x27;);
+                len -= sz;
+            }
+            return parts;
+        }
+    };
+
+    return InkUtilString;
+
+});
+
+    </pre>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+</body>
+</html>

@@ -1,9 +1,15 @@
 //jQuery definition
 $(function($){
+	rsTrans = {};
+
+	$("#divMsgSelecao").hide();
+	$("#btnSearchCollect").button();
+	$("#btnRecollect").button();	
 	$("#btnBackQuote").button();
 	$("#btnRetryPayment").button();
 	$("#btnPrint").button();
 	$("#btnProcessPayment").button();
+	$("#lblCollectAmmount").autoNumeric('init');
 	$("#btnProcessPayment").click(
 		function(event){
 			var validated = validatePayment();
@@ -26,12 +32,196 @@ $(function($){
 		}
 	);
 	
+	$("#btnSearchCollect").click(
+		function(event){
+			var valid = validateCustomer();
+			if(valid){				
+				$("#btnSearchCollect").prop('disabled','disabled');
+				searchCustomer(true);
+			}
+			else{
+				$("#CustomerData").hide();				
+			}
+			clearControls();
+			
+			event.preventDefault();			
+		}
+	);
 	
+	$('body').on('change', '#cboPaymentForm', function() {
+    	var i = $(this).prop('selectedIndex') - 1; 
+    	if(i >= 0){
+    		$("#lblCollectDate").html(rsTrans[$(this).val()].DATA_COBRANCA);
+    		$("#lblCollectAmmount").autoNumeric('set',rsTrans[$(this).val()].SALDO);
+    		$("#AnoUltimaParcela").val(rsTrans[$("#cboPaymentForm").val()].ANO_ULTIMA_PARCELA);
+			$("#MesUltimaParcela").val(rsTrans[$("#cboPaymentForm").val()].MES_ULTIMA_PARCELA);    		
+			$("#TransacaoAnt").val($("#cboPaymentForm").val());
+			
+    	}
+    	else{
+    		$("#lblCollectDate").html("-");
+    		$("#lblCollectAmmount").autoNumeric('set', 0);
+			$("#AnoUltimaParcela").val('');
+			$("#MesUltimaParcela").val('');
+			$("#TransacaoAnt").val('');
+			$("#TipoVenda").val('RECOBRANCA');
+			
+    	}
+    	$("#TipoVenda").val('RECOBRANCA - TRANSACAO ANTERIOR ' + $("#TransacaoAnt").val());
+    	//rsTrans    	
+	});
+	
+	$("#btnRecollect").click(
+		function(event){
+			
+			
+			found = $("body").find("#cboPaymentForm").length;
+			var i = $("#cboPaymentForm").prop('selectedIndex');
+			if(i > 0 | found == 0){				 
+				var valid = validateRecollect(found);
+				if(valid){
+					$("#ValorDocumento").val($("#lblCollectAmmount").autoNumeric('get'));
+					$("#ValorDocumentoExibicao").val($("#lblCollectAmmount").html());
+					
+					$("#MesValidade").val($("#cboExpireMonth").val());
+					$("#AnoValidade").val($("#cboExpireYear").val());
+					
+					if(found > 0)
+						$("#NumeroDocumento").val(rsTrans[$("#cboPaymentForm").val()].ORCAMENTO);
+					else
+						$("#NumeroDocumento").val($('#old_cc').text().trim().substr(5,6).trim());
+				}
+				else
+					event.preventDefault();
+			}
+			else{
+				showError("#divMsgSelecao");
+				event.preventDefault();
+			}
+			
+		}
+	);
 
-})
 
-function VerificaFormaPagto()
-{
+});
+
+function validateRecollect(){
+	var validEmptyExpDate =  validateEmptyExpireDate();
+	var validExpDate =  validateExpireDate();
+	var validLastIntmt = validateExpLastInstallment();
+	
+	
+	return(validEmptyExpDate && validExpDate && validLastIntmt); 
+}
+
+function validateExpLastInstallment(){
+	var curDate = 0;
+	var selectedDate = 0;
+	
+	expDate = (12 * $("#AnoUltimaParcela").val() ) + $("#MesUltimaParcela").val();
+	selectedDate = (12 * $("#cboExpireYear").val() ) + $("#cboExpireMonth").val();
+	
+	if(selectedDate < expDate){
+		$("#divMsgExpireDate").html("Vencimento cart&atilde;o deve ser maior ou igual a " + $("#MesUltimaParcela").val() + "/" + $("#AnoUltimaParcela").val());
+		showError("#divMsgExpireDate");
+		return false;
+	}
+	return true;
+	
+}
+
+function searchTransaction() {
+	var ser_data = $("#frmCustomerParam").serialize();
+	
+	$("#msgWait").html("Procurando dados de transa&ccedil;&otilde;es...");
+	
+	$.ajax(
+			{
+			url: "searchPendingRecurring.php",
+			type: "POST",
+			timeout: 600000, 
+			data: ser_data, 
+			dataType: "json"			
+			}
+
+		)
+		.done(function(returnData) { 			
+			var rs = returnData.queryresult;
+			
+			var nl2br = function(str, is_xhtml) {
+				var breakTag = (is_xhtml || typeof is_xhtml === 'undefined') ? '<br />' : '<br>';
+				return (str + '').replace(/([^>\r\n]?)(\r\n|\n\r|\r|\n)/g, '$1' + breakTag + '$2');
+			};			
+			if(returnData.reccount > 0){			
+				populateTransaction(rs, returnData.reccount);
+				$("#ContractData").show();
+				$("#txtCustNum").val('');		//Clear Quote value for new input.
+				$("#txtNumBrand").val('');		//Store value for payment process.				
+			}
+			else{
+				$("#divMsgContractSearch").html(rs);
+				$("#divMsgContractSearch").show();
+				$("#custcode").html("");		
+			}
+			
+		})
+		.fail(function(xhr, ajaxOptions, thrownError) {
+			var msgerr = "<h1 class = 'mediumError'>Erro carregando a p&aacute;gina solicitada. <br>" + 
+									"Status: " + xhr.status + "<br>" +
+									"Detalhe Erro: " + thrownError +
+									"</h1>";
+			alert(msgerr);
+			$('#divMsgCustomer').html("");
+			$('#divMsgCustomer').html(msgerr);
+			$("#custcode").html("");
+		})
+		.always(function() { 						
+			$("#imgLoading").hide();
+			$("#txtCustNum").select();
+			$("#btnSearchCollect").removeAttr('disabled');
+			});	
+}
+
+function populateTransaction(rs, reccount){
+	
+	$("#old_cc").html("");
+	contentCombo = "";
+	
+	rsTrans.length = 0;
+
+	
+	if(reccount > 1){
+		
+		contentCombo += '<select id="cboPaymentForm" ><option selected />';
+						
+		$.each(rs, function(){
+			contentCombo += '<option id="tran_' + this.TRANSACAO + '" value = "' + this.TRANSACAO + '">ORC ' + this.ORCAMENTO + ' | CARTAO ' + this.MASK_CC + '</option>';
+			rsTrans[this.TRANSACAO] = { "ORCAMENTO": this.ORCAMENTO, 
+										"DATA_COBRANCA" : this.DATA_COBRANCA, 
+										"MES_ULTIMA_PARCELA" : this.MES_ULTIMA_PARCELA, 
+										"ANO_ULTIMA_PARCELA" : this.ANO_ULTIMA_PARCELA,
+										"SALDO" : this.SALDO
+										};
+			}
+		);
+		
+		contentCombo += '</select>';
+		
+		
+	}
+	else{
+		contentCombo = 'ORC <span id="numOrcamento">' + rs[0].ORCAMENTO + '</span> | CARTAO ' + rs[0].MASK_CC;
+		$("#lblCollectDate").html(rs[0].DATA_COBRANCA);		
+		$("#lblCollectAmmount").autoNumeric('set', rs[0].SALDO);
+		$("#ValorDocumento").val(rs[0].SALDO);
+		$("#ValorDocumentoExibicao").val($("#lblCollectAmmount").autoNumeric('get'));
+	}
+	$("#old_cc").html(contentCombo);
+	
+}
+
+function VerificaFormaPagto() {
+	
 	var objForm = document.getElementById('frmPedido');
 	var objDivNumeroCartao = document.getElementById('divNumeroCartao');
 	var objDivSelCard = document.getElementById('divSelCard');
@@ -201,4 +391,3 @@ function backspace(qtdeCaracter)
 	var quantidade = document.getElementById(qtdeCaracter);	
 	quantidade.value = quantidade.value.substring(0, quantidade.value.length - 1);	
 }
-//-->

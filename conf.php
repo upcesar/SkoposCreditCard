@@ -16,7 +16,7 @@ define('CUT_OFF_1', '05');  		// Primeiro
 define('CUT_OFF_2', '15');			// Segundo
 define('CUT_OFF_3', '25');			// Terceiro
 
-define('MAX_YEAR_EXPIRE', 7);			// For credit card chooser.
+define('MAX_YEAR_EXPIRE', 10);			// For credit card chooser.
 
 define('MAX_QUOTES_NUMBER_INTERES', 17);	// Maximum number of quote to select.
 define('MAX_QUOTES_NO_INTEREST', 12);		// Maximum number of quote without rate charges.
@@ -34,25 +34,31 @@ define ('DOWN_PAYMENT', 20);			// % down payment on recurrent sale.
 
 //Enviroment Setting
 define ('AMBIENTE_DB', 'HOM');
-//define ('AMBIENTE_DB', 'PRO');
 
 define ('BASE_URL','http://cesar.web.mindset/cartao_skopos/dev/');
 define ('IMG_FOLDER',BASE_URL.'img/');
 
 define('UPLOAD_ROOT_FOLDER', 'files/');
+define('UPLOAD_MAX_SIZE', 3145728);	//  Maximum file size for uploading expressed in byte, that means 3 MB.
+
 
 define('VALIDATE_WS_ONSTART', false);
 
-if(AMBIENTE_DB == 'HOM')
+if(AMBIENTE_DB == 'HOM'){
 	define ('P10_WSDL','http://187.94.60.37:8002/ws/WS_DETALHE_CARTAO.apw?WSDL');
-else
+	define ('PAYMENT_GATEWAY', 'https://teste.aprovafacil.com/cgi-bin/STAC/skoposeditora/');
+	define ('RECURRING_GATEWAY', 'https://teste.aprovafacil.com/cgi-bin/APFW/skoposeditora/APC');
+}
+else{
 	define ('P10_WSDL','http://187.94.60.35:8002/ws/WS_DETALHE_CARTAO.apw?WSDL');
+	define ('PAYMENT_GATEWAY', 'https://www.aprovafacil.com/cgi-bin/STAC/skoposeditora/');
+	define ('RECURRING_GATEWAY', 'https://teste.aprovafacil.com/cgi-bin/APFW/skoposeditora/APC');
+}
 
 //CONSTANT FOR CONTRACT WEB SERVICE.
 define ('P10_WSDL_CONTRACT', str_replace('WS_DETALHE_CARTAO','WS_CONTRATO_CARTAO', P10_WSDL));
 
 set_include_path(CLASS_PATH.PATH_SEPARATOR.get_include_path());
-define ('PAYMENT_GATEWAY', 'https://teste.aprovafacil.com/cgi-bin/STAC/skoposeditora/');
 //define ('PAYMENT_GATEWAY', BASE_URL.'processpayment/');
 
 define ('PAYMENT_RETURN', BASE_URL.'retorno/');
@@ -65,5 +71,6 @@ require_once 'class/validations.php';
 require_once 'class/ArrayToTable.php';
 require_once 'class/default.php';
 require_once 'class/formatContent.php';
+require_once 'class/phpmailer/PHPMailerAutoload.php';
 
 ?>

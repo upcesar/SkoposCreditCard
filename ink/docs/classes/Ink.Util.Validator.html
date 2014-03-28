@@ -1,0 +1,4466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Ink.Util.Validator - Ink.js</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+    <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><img src="../yuidoclogo.png" title="Ink.js"></h1>
+            
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: latest</em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <h2 class="off-left">APIs</h2>
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+            <li><a href="#api-modules">Modules</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="../classes/Ink.html">Ink</a></li>
+            
+                <li><a href="../classes/Ink.Dom.Browser.html">Ink.Dom.Browser</a></li>
+            
+                <li><a href="../classes/Ink.Dom.Css.html">Ink.Dom.Css</a></li>
+            
+                <li><a href="../classes/Ink.Dom.Element.html">Ink.Dom.Element</a></li>
+            
+                <li><a href="../classes/Ink.Dom.Event.html">Ink.Dom.Event</a></li>
+            
+                <li><a href="../classes/Ink.Dom.FormSerialize.html">Ink.Dom.FormSerialize</a></li>
+            
+                <li><a href="../classes/Ink.Dom.Loaded.html">Ink.Dom.Loaded</a></li>
+            
+                <li><a href="../classes/Ink.Dom.Selector.html">Ink.Dom.Selector</a></li>
+            
+                <li><a href="../classes/Ink.Namespace.ClassModule.html">Ink.Namespace.ClassModule</a></li>
+            
+                <li><a href="../classes/Ink.Namespace.StaticModule.html">Ink.Namespace.StaticModule</a></li>
+            
+                <li><a href="../classes/Ink.Net.Ajax.html">Ink.Net.Ajax</a></li>
+            
+                <li><a href="../classes/Ink.Net.JsonP.html">Ink.Net.JsonP</a></li>
+            
+                <li><a href="../classes/Ink.UI.Animate_1.html">Ink.UI.Animate_1</a></li>
+            
+                <li><a href="../classes/Ink.UI.Carousel_1.html">Ink.UI.Carousel_1</a></li>
+            
+                <li><a href="../classes/Ink.UI.Close.html">Ink.UI.Close</a></li>
+            
+                <li><a href="../classes/Ink.UI.Common.html">Ink.UI.Common</a></li>
+            
+                <li><a href="../classes/Ink.UI.DatePicker.html">Ink.UI.DatePicker</a></li>
+            
+                <li><a href="../classes/Ink.UI.Draggable.html">Ink.UI.Draggable</a></li>
+            
+                <li><a href="../classes/Ink.UI.Dropdown.html">Ink.UI.Dropdown</a></li>
+            
+                <li><a href="../classes/Ink.UI.Droppable.html">Ink.UI.Droppable</a></li>
+            
+                <li><a href="../classes/Ink.UI.FormValidator.html">Ink.UI.FormValidator</a></li>
+            
+                <li><a href="../classes/Ink.UI.FormValidator_2.html">Ink.UI.FormValidator_2</a></li>
+            
+                <li><a href="../classes/Ink.UI.ImageQuery.html">Ink.UI.ImageQuery</a></li>
+            
+                <li><a href="../classes/Ink.UI.Modal.html">Ink.UI.Modal</a></li>
+            
+                <li><a href="../classes/Ink.UI.Pagination.html">Ink.UI.Pagination</a></li>
+            
+                <li><a href="../classes/Ink.UI.ProgressBar.html">Ink.UI.ProgressBar</a></li>
+            
+                <li><a href="../classes/Ink.UI.SmoothScroller.html">Ink.UI.SmoothScroller</a></li>
+            
+                <li><a href="../classes/Ink.UI.SortableList.html">Ink.UI.SortableList</a></li>
+            
+                <li><a href="../classes/Ink.UI.Spy.html">Ink.UI.Spy</a></li>
+            
+                <li><a href="../classes/Ink.UI.Stacker_1.html">Ink.UI.Stacker_1</a></li>
+            
+                <li><a href="../classes/Ink.UI.Sticky.html">Ink.UI.Sticky</a></li>
+            
+                <li><a href="../classes/Ink.UI.Swipe.html">Ink.UI.Swipe</a></li>
+            
+                <li><a href="../classes/Ink.UI.Table.html">Ink.UI.Table</a></li>
+            
+                <li><a href="../classes/Ink.UI.Tabs.html">Ink.UI.Tabs</a></li>
+            
+                <li><a href="../classes/Ink.UI.TagField.html">Ink.UI.TagField</a></li>
+            
+                <li><a href="../classes/Ink.UI.Toggle.html">Ink.UI.Toggle</a></li>
+            
+                <li><a href="../classes/Ink.UI.Tooltip.html">Ink.UI.Tooltip</a></li>
+            
+                <li><a href="../classes/Ink.UI.TreeView.html">Ink.UI.TreeView</a></li>
+            
+                <li><a href="../classes/Ink.Util.Array.html">Ink.Util.Array</a></li>
+            
+                <li><a href="../classes/Ink.Util.BinPack.html">Ink.Util.BinPack</a></li>
+            
+                <li><a href="../classes/Ink.Util.Cookie.html">Ink.Util.Cookie</a></li>
+            
+                <li><a href="../classes/Ink.Util.Date.html">Ink.Util.Date</a></li>
+            
+                <li><a href="../classes/Ink.Util.Dumper.html">Ink.Util.Dumper</a></li>
+            
+                <li><a href="../classes/Ink.Util.I18n.html">Ink.Util.I18n</a></li>
+            
+                <li><a href="../classes/Ink.Util.Json.html">Ink.Util.Json</a></li>
+            
+                <li><a href="../classes/Ink.Util.String.html">Ink.Util.String</a></li>
+            
+                <li><a href="../classes/Ink.Util.Url.html">Ink.Util.Url</a></li>
+            
+                <li><a href="../classes/Ink.Util.Validator.html">Ink.Util.Validator</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+                <li><a href="../modules/Ink.Dom.Browser_1.html">Ink.Dom.Browser_1</a></li>
+            
+                <li><a href="../modules/Ink.Dom.Css_1.html">Ink.Dom.Css_1</a></li>
+            
+                <li><a href="../modules/Ink.Dom.Element_1.html">Ink.Dom.Element_1</a></li>
+            
+                <li><a href="../modules/Ink.Dom.Event_1.html">Ink.Dom.Event_1</a></li>
+            
+                <li><a href="../modules/Ink.Dom.FormSerialize.html">Ink.Dom.FormSerialize</a></li>
+            
+                <li><a href="../modules/Ink.Dom.Loaded_1.html">Ink.Dom.Loaded_1</a></li>
+            
+                <li><a href="../modules/Ink.Dom.Selector_1.html">Ink.Dom.Selector_1</a></li>
+            
+                <li><a href="../modules/Ink.Namespace.ClassModule_1.html">Ink.Namespace.ClassModule_1</a></li>
+            
+                <li><a href="../modules/Ink.Namespace.StaticModule_1.html">Ink.Namespace.StaticModule_1</a></li>
+            
+                <li><a href="../modules/Ink.Net.Ajax_1.html">Ink.Net.Ajax_1</a></li>
+            
+                <li><a href="../modules/Ink.Net.JsonP_1.html">Ink.Net.JsonP_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Animate_1.html">Ink.UI.Animate_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Carousel_1.html">Ink.UI.Carousel_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Close_1.html">Ink.UI.Close_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Common_1.html">Ink.UI.Common_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.DatePicker_1.html">Ink.UI.DatePicker_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Dropdown_1.html">Ink.UI.Dropdown_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Droppable_1.html">Ink.UI.Droppable_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.FormValidator_1.html">Ink.UI.FormValidator_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.FormValidator_2.html">Ink.UI.FormValidator_2</a></li>
+            
+                <li><a href="../modules/Ink.UI.ImageQuery_1.html">Ink.UI.ImageQuery_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Modal_1.html">Ink.UI.Modal_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Pagination_1.html">Ink.UI.Pagination_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.ProgressBar_1.html">Ink.UI.ProgressBar_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.SmoothScroller_1.html">Ink.UI.SmoothScroller_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.SortableList_1.html">Ink.UI.SortableList_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Spy_1.html">Ink.UI.Spy_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Stacker_1.html">Ink.UI.Stacker_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Sticky_1.html">Ink.UI.Sticky_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Swipe.html">Ink.UI.Swipe</a></li>
+            
+                <li><a href="../modules/Ink.UI.Table_1.html">Ink.UI.Table_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Tabs_1.html">Ink.UI.Tabs_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Toggle_1.html">Ink.UI.Toggle_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Tooltip_1.html">Ink.UI.Tooltip_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.TreeView_1.html">Ink.UI.TreeView_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Array_1.html">Ink.Util.Array_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.BinPack_1.html">Ink.Util.BinPack_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Cookie_1.html">Ink.Util.Cookie_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Date_1.html">Ink.Util.Date_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Dumper_1.html">Ink.Util.Dumper_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.I18n_1.html">Ink.Util.I18n_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Json_1.html">Ink.Util.Json_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.String_1.html">Ink.Util.String_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Url_1.html">Ink.Util.Url_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Validator_1.html">Ink.Util.Validator_1</a></li>
+            
+                <li><a href="../modules/Ink_1.html">Ink_1</a></li>
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+
+
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1>Ink.Util.Validator Class</h1>
+<div class="box meta">
+    
+
+    
+
+    
+        <div class="foundat">
+            Defined in: <a href="../files/Ink_Util_Validator_1_lib.js.html#l10"><code>Ink&#x2F;Util&#x2F;Validator&#x2F;1&#x2F;lib.js:10</code></a>
+        </div>
+    
+
+    
+        
+            Module: <a href="../modules/Ink.Util.Validator_1.html">Ink.Util.Validator_1</a>
+        
+    
+
+    
+</div>
+
+
+
+<div class="box intro">
+    <p>Set of functions to provide validation</p>
+
+</div>
+
+
+
+<div id="classdocs" class="tabview">
+    <ul class="api-class-tabs">
+        <li class="api-class-tab index"><a href="#index">Index</a></li>
+
+        
+            <li class="api-class-tab methods"><a href="#methods">Methods</a></li>
+        
+        
+            <li class="api-class-tab properties"><a href="#properties">Properties</a></li>
+        
+        
+        
+    </ul>
+
+    <div>
+        <div id="index" class="api-class-tabpanel index">
+            <h2 class="off-left">Item Index</h2>
+
+            
+                <div class="index-section methods">
+                    <h3>Methods</h3>
+
+                    <ul class="index-list methods">
+                        
+                            <li class="index-item method private">
+                                <a href="#method__daysInMonth">_daysInMonth</a>
+
+                                
+                                    <span class="flag static">static</span>
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method private">
+                                <a href="#method__isLeapYear">_isLeapYear</a>
+
+                                
+                                    <span class="flag static">static</span>
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method private">
+                                <a href="#method__isValidDate">_isValidDate</a>
+
+                                
+                                    <span class="flag static">static</span>
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_ascii">ascii</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_checkCharacterGroups">checkCharacterGroups</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public">
+                                <a href="#method_codPostal">codPostal</a>
+
+                                
+                                    <span class="flag static">static</span>
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_createRegExp">createRegExp</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public">
+                                <a href="#method_isAOPhone">isAOPhone</a>
+
+                                
+                                    <span class="flag static">static</span>
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public">
+                                <a href="#method_isColor">isColor</a>
+
+                                
+                                    <span class="flag static">static</span>
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public">
+                                <a href="#method_isCVPhone">isCVPhone</a>
+
+                                
+                                    <span class="flag static">static</span>
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public">
+                                <a href="#method_isDate">isDate</a>
+
+                                
+                                    <span class="flag static">static</span>
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public">
+                                <a href="#method_isMZPhone">isMZPhone</a>
+
+                                
+                                    <span class="flag static">static</span>
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public">
+                                <a href="#method_isPhone">isPhone</a>
+
+                                
+                                    <span class="flag static">static</span>
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public">
+                                <a href="#method_isPortuguesePhone">isPortuguesePhone</a>
+
+                                
+                                    <span class="flag static">static</span>
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public">
+                                <a href="#method_isPTPhone">isPTPhone</a>
+
+                                
+                                    <span class="flag static">static</span>
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public">
+                                <a href="#method_isTLPhone">isTLPhone</a>
+
+                                
+                                    <span class="flag static">static</span>
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_latin1">latin1</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public">
+                                <a href="#method_mail">mail</a>
+
+                                
+                                    <span class="flag static">static</span>
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public">
+                                <a href="#method_mail">mail</a>
+
+                                
+                                    <span class="flag static">static</span>
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_number">number</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_unicode">unicode</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public">
+                                <a href="#method_url">url</a>
+
+                                
+                                    <span class="flag static">static</span>
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_validationFunctions.ip">validationFunctions.ip</a>
+
+                                
+                                
+                            </li>
+                        
+                    </ul>
+                </div>
+            
+
+            
+                <div class="index-section properties">
+                    <h3>Properties</h3>
+
+                    <ul class="index-list properties">
+                        
+                            <li class="index-item property private">
+                                <a href="#property__characterGroups">_characterGroups</a>
+
+                                
+                                    <span class="flag static">static</span>
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property private">
+                                <a href="#property__countryCodes">_countryCodes</a>
+
+                                
+                                    <span class="flag static">static</span>
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property private">
+                                <a href="#property__creditCardSpecs">_creditCardSpecs</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property private">
+                                <a href="#property__dateParsers">_dateParsers</a>
+
+                                
+                                    <span class="flag static">static</span>
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property private">
+                                <a href="#property__indicativosAO">_indicativosAO</a>
+
+                                
+                                    <span class="flag static">static</span>
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property private">
+                                <a href="#property__indicativosCV">_indicativosCV</a>
+
+                                
+                                    <span class="flag static">static</span>
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property private">
+                                <a href="#property__indicativosMZ">_indicativosMZ</a>
+
+                                
+                                    <span class="flag static">static</span>
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property private">
+                                <a href="#property__indicativosPT">_indicativosPT</a>
+
+                                
+                                    <span class="flag static">static</span>
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property private">
+                                <a href="#property__indicativosTL">_indicativosTL</a>
+
+                                
+                                    <span class="flag static">static</span>
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property private">
+                                <a href="#property__internacionalAO">_internacionalAO</a>
+
+                                
+                                    <span class="flag static">static</span>
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property private">
+                                <a href="#property__internacionalCV">_internacionalCV</a>
+
+                                
+                                    <span class="flag static">static</span>
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property private">
+                                <a href="#property__internacionalMZ">_internacionalMZ</a>
+
+                                
+                                    <span class="flag static">static</span>
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property private">
+                                <a href="#property__internacionalPT">_internacionalPT</a>
+
+                                
+                                    <span class="flag static">static</span>
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property private">
+                                <a href="#property__internacionalTL">_internacionalTL</a>
+
+                                
+                                    <span class="flag static">static</span>
+                                
+                                
+                            </li>
+                        
+                    </ul>
+                </div>
+            
+
+            
+
+            
+        </div>
+
+        
+            <div id="methods" class="api-class-tabpanel">
+                <h2 class="off-left">Methods</h2>
+
+                
+                    <div id="method__daysInMonth" class="method item private">
+    <h3 class="name"><code>_daysInMonth</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>_m</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>_y</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type">Number</span>
+        </span>
+    
+
+    
+
+    
+        <span class="flag private">private</span>
+    
+
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/Ink_Util_Validator_1_lib.js.html#l482"><code>Ink&#x2F;Util&#x2F;Validator&#x2F;1&#x2F;lib.js:482</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Calculates the number of days in a given month of a given year</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">_m</code>
+                        <span class="type">Number</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <ul>
+<li>month (1 to 12)</li>
+</ul>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">_y</code>
+                        <span class="type">Number</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <ul>
+<li>year</li>
+</ul>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type">Number</span>:
+                    
+                    <p>Returns the number of days in a given month of a given year</p>
+
+                
+            </div>
+        </div>
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>Ink.requireModules([&#39;Ink.Util.Validator_1&#39;], function( InkValidator ){
+    console.log( InkValidator._daysInMonth( 2, 2004 ) ); // Result: 29
+    console.log( InkValidator._daysInMonth( 2, 2006 ) ); // Result: 28
+});</code></pre>
+
+            </div>
+        </div>
+    
+</div>
+
+                
+                    <div id="method__isLeapYear" class="method item private">
+    <h3 class="name"><code>_isLeapYear</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>year</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type">Boolean</span>
+        </span>
+    
+
+    
+
+    
+        <span class="flag private">private</span>
+    
+
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/Ink_Util_Validator_1_lib.js.html#l437"><code>Ink&#x2F;Util&#x2F;Validator&#x2F;1&#x2F;lib.js:437</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Checks if a year is Leap &quot;Bissexto&quot;</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">year</code>
+                        <span class="type">Number</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>Year to be checked</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type">Boolean</span>:
+                    
+                    <p>True if it is a leap year.</p>
+
+                
+            </div>
+        </div>
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>Ink.requireModules([&#39;Ink.Util.Validator_1&#39;], function( InkValidator ){
+    console.log( InkValidator._isLeapYear( 2004 ) ); // Result: true
+    console.log( InkValidator._isLeapYear( 2006 ) ); // Result: false
+});</code></pre>
+
+            </div>
+        </div>
+    
+</div>
+
+                
+                    <div id="method__isValidDate" class="method item private">
+    <h3 class="name"><code>_isValidDate</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>year</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>month</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>day</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type">Boolean</span>
+        </span>
+    
+
+    
+
+    
+        <span class="flag private">private</span>
+    
+
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/Ink_Util_Validator_1_lib.js.html#l520"><code>Ink&#x2F;Util&#x2F;Validator&#x2F;1&#x2F;lib.js:520</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Checks if a date is valid</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">year</code>
+                        <span class="type">Number</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">month</code>
+                        <span class="type">Number</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">day</code>
+                        <span class="type">Number</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type">Boolean</span>:
+                    
+                    <p>True if it&#39;s a valid date</p>
+
+                
+            </div>
+        </div>
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>Ink.requireModules([&#39;Ink.Util.Validator_1&#39;], function( InkValidator ){
+    console.log( InkValidator._isValidDate( 2004, 2, 29 ) ); // Result: true
+    console.log( InkValidator._isValidDate( 2006, 2, 29 ) ); // Result: false
+});</code></pre>
+
+            </div>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_ascii" class="method item">
+    <h3 class="name"><code>ascii</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>s</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code class="optional">[options={}]</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/Ink_Util_Validator_1_lib.js.html#l340"><code>Ink&#x2F;Util&#x2F;Validator&#x2F;1&#x2F;lib.js:340</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Checks that a field only contains only ASCII alphanumeric
+characters. Takes options for allowing singleline whitespace,
+cross-line whitespace and punctuation.</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">s</code>
+                        <span class="type">String</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>The validation string</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name optional">[options={}]</code>
+                        <span class="type">Object</span>
+                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>Optional configuration object</p>
+
+                    </div>
+
+                    
+                        <ul class="params-list">
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[*]</code>
+                                    <span class="type"></span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>See createRegexp</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="method_checkCharacterGroups" class="method item">
+    <h3 class="name"><code>checkCharacterGroups</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>s</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code class="optional">[groups={}]</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code class="optional">[options.*]</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/Ink_Util_Validator_1_lib.js.html#l298"><code>Ink&#x2F;Util&#x2F;Validator&#x2F;1&#x2F;lib.js:298</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Checks if a field has the required groups. Takes an options object for further configuration.</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">s</code>
+                        <span class="type">String</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>The validation string</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name optional">[groups={}]</code>
+                        <span class="type">Object</span>
+                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>What groups are included.</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name optional">[options.*]</code>
+                        <span class="type">Object</span>
+                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>See createRegexp</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="method_codPostal" class="method item public">
+    <h3 class="name"><code>codPostal</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>cp1</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>cp2</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>returnBothResults</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type">Boolean</span>
+        </span>
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/Ink_Util_Validator_1_lib.js.html#l923"><code>Ink&#x2F;Util&#x2F;Validator&#x2F;1&#x2F;lib.js:923</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Validates if a zip code is valid in Portugal</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">cp1</code>
+                        <span class="type">Number | String</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">cp2</code>
+                        <span class="type">Optional Number | String</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">returnBothResults</code>
+                        <span class="type">Optional Boolean</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type">Boolean</span>:
+                    
+                    <p>True if it&#39;s a valid zip code</p>
+
+                
+            </div>
+        </div>
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>Ink.requireModules([&#39;Ink.Util.Validator_1&#39;], function( InkValidator ){
+    console.log( InkValidator.codPostal( &#39;1069&#39;, &#39;300&#39; ) );        // Result: true
+    console.log( InkValidator.codPostal( &#39;1069&#39;, &#39;300&#39;, true ) );  // Result: [true, true]
+});</code></pre>
+
+            </div>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_createRegExp" class="method item">
+    <h3 class="name"><code>createRegExp</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>Groups...</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/Ink_Util_Validator_1_lib.js.html#l262"><code>Ink&#x2F;Util&#x2F;Validator&#x2F;1&#x2F;lib.js:262</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Create a regular expression for several character groups.</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">Groups...</code>
+                        <span class="type">Object</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p> Groups to build regular expressions for. Possible keys are:</p>
+<ul>
+<li><strong>numbers</strong>: 0-9</li>
+<li><strong>asciiAlpha</strong>: a-z, A-Z</li>
+<li><strong>latin1Alpha</strong>: asciiAlpha, plus printable characters in latin-1</li>
+<li><strong>unicodeAlpha</strong>: unicode alphanumeric characters.</li>
+<li><strong>space</strong>: &#39; &#39;, the space character.</li>
+<li><strong>dash</strong>: dash character.</li>
+<li><strong>underscore</strong>: underscore character.</li>
+<li><strong>nicknamePunctuation</strong>: dash, dot, underscore</li>
+<li><strong>singleLineWhitespace</strong>: space and tab (whitespace which only spans one line).</li>
+<li><strong>newline</strong>: newline character (&#39;\n&#39;)</li>
+<li><strong>whitespace</strong>: whitespace characters in the ASCII character set.</li>
+<li><strong>asciiPunctuation</strong>: punctuation characters in the ASCII character set.</li>
+<li><strong>latin1Punctuation</strong>: punctuation characters in latin-1.</li>
+<li><strong>unicodePunctuation</strong>: punctuation characters in unicode.</li>
+</ul>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="method_isAOPhone" class="method item public">
+    <h3 class="name"><code>isAOPhone</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>phone</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type">Boolean</span>
+        </span>
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/Ink_Util_Validator_1_lib.js.html#l729"><code>Ink&#x2F;Util&#x2F;Validator&#x2F;1&#x2F;lib.js:729</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Checks if a phone is valid in Angola</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">phone</code>
+                        <span class="type">Number</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>Phone number to be checked</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type">Boolean</span>:
+                    
+                    <p>True if it&#39;s a valid Angolan Phone</p>
+
+                
+            </div>
+        </div>
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>Ink.requireModules([&#39;Ink.Util.Validator_1&#39;], function( InkValidator ){
+    console.log( InkValidator.isAOPhone( &#39;244222396385&#39; ) );     // Result: true
+    console.log( InkValidator.isAOPhone( &#39;00244222396385&#39; ) );   // Result: true
+    console.log( InkValidator.isAOPhone( &#39;+244222396385&#39; ) );    // Result: true
+    console.log( InkValidator.isAOPhone( &#39;1&#39; ) );                // Result: false
+});</code></pre>
+
+            </div>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_isColor" class="method item public">
+    <h3 class="name"><code>isColor</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>str</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type">Boolean</span>
+        </span>
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/Ink_Util_Validator_1_lib.js.html#l1041"><code>Ink&#x2F;Util&#x2F;Validator&#x2F;1&#x2F;lib.js:1041</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Checks if a string is a valid color</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">str</code>
+                        <span class="type">String</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>Color string to be checked</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type">Boolean</span>:
+                    
+                    <p>True if it&#39;s a valid color string</p>
+
+                
+            </div>
+        </div>
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>Ink.requireModules([&#39;Ink.Util.Validator_1&#39;], function( InkValidator ){
+    console.log( InkValidator.isColor( &#39;#FF00FF&#39; ) );        // Result: true
+    console.log( InkValidator.isColor( &#39;amdafasfs&#39; ) );      // Result: false
+});</code></pre>
+
+            </div>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_isCVPhone" class="method item public">
+    <h3 class="name"><code>isCVPhone</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>phone</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type">Boolean</span>
+        </span>
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/Ink_Util_Validator_1_lib.js.html#l683"><code>Ink&#x2F;Util&#x2F;Validator&#x2F;1&#x2F;lib.js:683</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Checks if a phone is valid in Cabo Verde</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">phone</code>
+                        <span class="type">Number</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>Phone number to be checked</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type">Boolean</span>:
+                    
+                    <p>True if it&#39;s a valid Cape Verdean Phone</p>
+
+                
+            </div>
+        </div>
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>Ink.requireModules([&#39;Ink.Util.Validator_1&#39;], function( InkValidator ){
+    console.log( InkValidator.isCVPhone( &#39;2610303&#39; ) );        // Result: true
+    console.log( InkValidator.isCVPhone( &#39;002382610303&#39; ) );   // Result: true
+    console.log( InkValidator.isCVPhone( &#39;+2382610303&#39; ) );    // Result: true
+    console.log( InkValidator.isCVPhone( &#39;1&#39; ) );              // Result: false
+});</code></pre>
+
+            </div>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_isDate" class="method item public">
+    <h3 class="name"><code>isDate</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>format</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>dateStr</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type">Boolean</span>
+        </span>
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/Ink_Util_Validator_1_lib.js.html#l989"><code>Ink&#x2F;Util&#x2F;Validator&#x2F;1&#x2F;lib.js:989</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Checks is a date is valid in a given format</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">format</code>
+                        <span class="type">String</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <ul>
+<li>defined in _dateParsers</li>
+</ul>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">dateStr</code>
+                        <span class="type">String</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <ul>
+<li>date string</li>
+</ul>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type">Boolean</span>:
+                    
+                    <p>True if it&#39;s a valid date and in the specified format</p>
+
+                
+            </div>
+        </div>
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>Ink.requireModules([&#39;Ink.Util.Validator_1&#39;], function( InkValidator ){
+    console.log( InkValidator.isDate( &#39;yyyy-mm-dd&#39;, &#39;2012-05-21&#39; ) );        // Result: true
+});</code></pre>
+
+            </div>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_isMZPhone" class="method item public">
+    <h3 class="name"><code>isMZPhone</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>phone</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type">Boolean</span>
+        </span>
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/Ink_Util_Validator_1_lib.js.html#l776"><code>Ink&#x2F;Util&#x2F;Validator&#x2F;1&#x2F;lib.js:776</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Checks if a phone is valid in Mozambique</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">phone</code>
+                        <span class="type">Number</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>Phone number to be checked</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type">Boolean</span>:
+                    
+                    <p>True if it&#39;s a valid Mozambican Phone</p>
+
+                
+            </div>
+        </div>
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>Ink.requireModules([&#39;Ink.Util.Validator_1&#39;], function( InkValidator ){
+    console.log( InkValidator.isMZPhone( &#39;21426861&#39; ) );        // Result: true
+    console.log( InkValidator.isMZPhone( &#39;0025821426861&#39; ) );   // Result: true
+    console.log( InkValidator.isMZPhone( &#39;+25821426861&#39; ) );    // Result: true
+    console.log( InkValidator.isMZPhone( &#39;1&#39; ) );              // Result: false
+});</code></pre>
+
+            </div>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_isPhone" class="method item public">
+    <h3 class="name"><code>isPhone</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>phone</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>country</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type">Boolean</span>
+        </span>
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/Ink_Util_Validator_1_lib.js.html#l873"><code>Ink&#x2F;Util&#x2F;Validator&#x2F;1&#x2F;lib.js:873</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Validates the function in all country codes available or in the ones set in the second param</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">phone</code>
+                        <span class="type">String</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>number</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">country</code>
+                        <span class="type">Optional String | Array</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>or array of countries to validate</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type">Boolean</span>:
+                    
+                    <p>True if it&#39;s a valid phone in any country available</p>
+
+                
+            </div>
+        </div>
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>Ink.requireModules([&#39;Ink.Util.Validator_1&#39;], function( InkValidator ){
+    console.log( InkValidator.isPhone( &#39;6703331234&#39; ) );        // Result: true
+});</code></pre>
+
+            </div>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_isPortuguesePhone" class="method item public">
+    <h3 class="name"><code>isPortuguesePhone</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>phone</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type">Boolean</span>
+        </span>
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/Ink_Util_Validator_1_lib.js.html#l662"><code>Ink&#x2F;Util&#x2F;Validator&#x2F;1&#x2F;lib.js:662</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Alias function for isPTPhone</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">phone</code>
+                        <span class="type">Number</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>Phone number to be checked</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type">Boolean</span>:
+                    
+                    <p>True if it&#39;s a valid Portuguese Phone</p>
+
+                
+            </div>
+        </div>
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>Ink.requireModules([&#39;Ink.Util.Validator_1&#39;], function( InkValidator ){
+    console.log( InkValidator.isPortuguesePhone( &#39;213919264&#39; ) );        // Result: true
+    console.log( InkValidator.isPortuguesePhone( &#39;00351213919264&#39; ) );   // Result: true
+    console.log( InkValidator.isPortuguesePhone( &#39;+351213919264&#39; ) );    // Result: true
+    console.log( InkValidator.isPortuguesePhone( &#39;1&#39; ) );                // Result: false
+});</code></pre>
+
+            </div>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_isPTPhone" class="method item public">
+    <h3 class="name"><code>isPTPhone</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>phone</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type">Boolean</span>
+        </span>
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/Ink_Util_Validator_1_lib.js.html#l615"><code>Ink&#x2F;Util&#x2F;Validator&#x2F;1&#x2F;lib.js:615</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Checks if a phone is valid in Portugal</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">phone</code>
+                        <span class="type">Number</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>Phone number to be checked</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type">Boolean</span>:
+                    
+                    <p>True if it&#39;s a valid Portuguese Phone</p>
+
+                
+            </div>
+        </div>
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>Ink.requireModules([&#39;Ink.Util.Validator_1&#39;], function( InkValidator ){
+    console.log( InkValidator.isPTPhone( &#39;213919264&#39; ) );        // Result: true
+    console.log( InkValidator.isPTPhone( &#39;00351213919264&#39; ) );   // Result: true
+    console.log( InkValidator.isPTPhone( &#39;+351213919264&#39; ) );    // Result: true
+    console.log( InkValidator.isPTPhone( &#39;1&#39; ) );                // Result: false
+});</code></pre>
+
+            </div>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_isTLPhone" class="method item public">
+    <h3 class="name"><code>isTLPhone</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>phone</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type">Boolean</span>
+        </span>
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/Ink_Util_Validator_1_lib.js.html#l826"><code>Ink&#x2F;Util&#x2F;Validator&#x2F;1&#x2F;lib.js:826</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Checks if a phone is valid in Timor</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">phone</code>
+                        <span class="type">Number</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>Phone number to be checked</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type">Boolean</span>:
+                    
+                    <p>True if it&#39;s a valid phone from Timor-Leste</p>
+
+                
+            </div>
+        </div>
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>Ink.requireModules([&#39;Ink.Util.Validator_1&#39;], function( InkValidator ){
+    console.log( InkValidator.isTLPhone( &#39;6703331234&#39; ) );     // Result: true
+    console.log( InkValidator.isTLPhone( &#39;006703331234&#39; ) );   // Result: true
+    console.log( InkValidator.isTLPhone( &#39;+6703331234&#39; ) );    // Result: true
+    console.log( InkValidator.isTLPhone( &#39;1&#39; ) );              // Result: false
+});</code></pre>
+
+            </div>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_latin1" class="method item">
+    <h3 class="name"><code>latin1</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>s</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code class="optional">[options={}]</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/Ink_Util_Validator_1_lib.js.html#l324"><code>Ink&#x2F;Util&#x2F;Validator&#x2F;1&#x2F;lib.js:324</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Checks that a field only contains only latin-1 alphanumeric
+characters. Takes options for allowing singleline whitespace,
+cross-line whitespace and punctuation.</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">s</code>
+                        <span class="type">String</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>The validation string</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name optional">[options={}]</code>
+                        <span class="type">Object</span>
+                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>Optional configuration object</p>
+
+                    </div>
+
+                    
+                        <ul class="params-list">
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[*]</code>
+                                    <span class="type"></span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>See createRegexp</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="method_mail" class="method item public">
+    <h3 class="name"><code>mail</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/Ink_Util_Validator_1_lib.js.html#l573"><code>Ink&#x2F;Util&#x2F;Validator&#x2F;1&#x2F;lib.js:573</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Deprecated. Alias for email(). Use it instead.</p>
+
+    </div>
+
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="method_mail" class="method item public">
+    <h3 class="name"><code>mail</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>email</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type">Boolean</span>
+        </span>
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/Ink_Util_Validator_1_lib.js.html#l549"><code>Ink&#x2F;Util&#x2F;Validator&#x2F;1&#x2F;lib.js:549</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Checks if a email is valid</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">email</code>
+                        <span class="type">String</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type">Boolean</span>:
+                    
+                    <p>True if it&#39;s a valid e-mail</p>
+
+                
+            </div>
+        </div>
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>Ink.requireModules([&#39;Ink.Util.Validator_1&#39;], function( InkValidator ){
+    console.log( InkValidator.email( &#39;agfsdfgfdsgdsf&#39; ) ); // Result: false
+    console.log( InkValidator.email( &#39;inkdev\u0040sapo.pt&#39; ) ); // Result: true (where \u0040 is at sign)
+});</code></pre>
+
+            </div>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_number" class="method item">
+    <h3 class="name"><code>number</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>numb</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code class="optional">[options]</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/Ink_Util_Validator_1_lib.js.html#l356"><code>Ink&#x2F;Util&#x2F;Validator&#x2F;1&#x2F;lib.js:356</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Checks that the number is a valid number</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">numb</code>
+                        <span class="type">String</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>The number</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name optional">[options]</code>
+                        <span class="type">Object</span>
+                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>Further options</p>
+
+                    </div>
+
+                    
+                        <ul class="params-list">
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[decimalSep=&#x27;.&#x27;]</code>
+                                    <span class="type"></span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>Allow decimal separator.</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[thousandSep=&quot;,&quot;]</code>
+                                    <span class="type"></span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>Strip this character from the number.</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[negative=false]</code>
+                                    <span class="type"></span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>Allow negative numbers.</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[decimalPlaces=null]</code>
+                                    <span class="type"></span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>Maximum number of decimal places. Use <code>0</code> for an integer number.</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[max=null]</code>
+                                    <span class="type"></span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>Maximum number</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[min=null]</code>
+                                    <span class="type"></span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>Minimum number</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[returnNumber=false]</code>
+                                    <span class="type"></span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>When this option is true, return the number itself when the value is valid.</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="method_unicode" class="method item">
+    <h3 class="name"><code>unicode</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>s</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code class="optional">[options={}]</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/Ink_Util_Validator_1_lib.js.html#l310"><code>Ink&#x2F;Util&#x2F;Validator&#x2F;1&#x2F;lib.js:310</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Checks whether a field contains unicode printable characters. Takes an
+options object for further configuration</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">s</code>
+                        <span class="type">String</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>The validation string</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name optional">[options={}]</code>
+                        <span class="type">Object</span>
+                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>Optional configuration object</p>
+
+                    </div>
+
+                    
+                        <ul class="params-list">
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">[*]</code>
+                                    <span class="type"></span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    <p>See createRegexp</p>
+
+                                </div>
+
+                                
+                            </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="method_url" class="method item public">
+    <h3 class="name"><code>url</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>url</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code class="optional">[full]</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type">Boolean</span>
+        </span>
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/Ink_Util_Validator_1_lib.js.html#l582"><code>Ink&#x2F;Util&#x2F;Validator&#x2F;1&#x2F;lib.js:582</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Checks if a url is valid</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">url</code>
+                        <span class="type">String</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>URL to be checked</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name optional">[full]</code>
+                        <span class="type">Boolean</span>
+                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>If true, validates a full URL (one that should start with &#39;http&#39;)</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type">Boolean</span>:
+                    
+                    <p>True if the given URL is valid</p>
+
+                
+            </div>
+        </div>
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>Ink.requireModules([&#39;Ink.Util.Validator_1&#39;], function( InkValidator ){
+    console.log( InkValidator.url( &#39;www.sapo.pt&#39; ) );                // Result: true
+    console.log( InkValidator.url( &#39;http://www.sapo.pt&#39;, true ) );   // Result: true
+    console.log( InkValidator.url( &#39;meh&#39; ) );                        // Result: false
+});</code></pre>
+
+            </div>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_validationFunctions.ip" class="method item">
+    <h3 class="name"><code>validationFunctions.ip</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>value</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>ipType</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type">Boolean</span>
+        </span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/Ink_Util_Validator_1_lib.js.html#l1130"><code>Ink&#x2F;Util&#x2F;Validator&#x2F;1&#x2F;lib.js:1130</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Checks if the value is a valid IP. Supports ipv4 and ipv6</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">value</code>
+                        <span class="type">String</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>Value to be checked</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">ipType</code>
+                        <span class="type">String</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>Type of IP to be validated. The values are: ipv4, ipv6. By default is ipv4.</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type">Boolean</span>:
+                    
+                    <p>True if the value is a valid IP address. False if not.</p>
+
+                
+            </div>
+        </div>
+    
+
+    
+</div>
+
+                
+            </div>
+        
+
+        
+            <div id="properties" class="api-class-tabpanel">
+                <h2 class="off-left">Properties</h2>
+
+                
+                    <div id="property__characterGroups" class="property item private">
+    <h3 class="name"><code>_characterGroups</code></h3>
+    <span class="type">Object</span>
+
+    
+
+    
+        <span class="flag private">private</span>
+    
+
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/Ink_Util_Validator_1_lib.js.html#l229"><code>Ink&#x2F;Util&#x2F;Validator&#x2F;1&#x2F;lib.js:229</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Regular expression groups for several groups of characters</p>
+<p><a href="http://en.wikipedia.org/wiki/C0_Controls_and_Basic_Latin">http://en.wikipedia.org/wiki/C0_Controls_and_Basic_Latin</a>
+<a href="http://en.wikipedia.org/wiki/Plane_%28Unicode%29#Basic_Multilingual_Plane">http://en.wikipedia.org/wiki/Plane_%28Unicode%29#Basic_Multilingual_Plane</a>
+<a href="http://en.wikipedia.org/wiki/ISO_8859-1">http://en.wikipedia.org/wiki/ISO_8859-1</a></p>
+
+    </div>
+
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property__countryCodes" class="property item private">
+    <h3 class="name"><code>_countryCodes</code></h3>
+    <span class="type">Array</span>
+
+    
+
+    
+        <span class="flag private">private</span>
+    
+
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/Ink_Util_Validator_1_lib.js.html#l19"><code>Ink&#x2F;Util&#x2F;Validator&#x2F;1&#x2F;lib.js:19</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>List of country codes avaible for isPhone function</p>
+
+    </div>
+
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property__creditCardSpecs" class="property item private">
+    <h3 class="name"><code>_creditCardSpecs</code></h3>
+    <span class="type">Object</span>
+
+    
+
+    
+        <span class="flag private">private</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/Ink_Util_Validator_1_lib.js.html#l1155"><code>Ink&#x2F;Util&#x2F;Validator&#x2F;1&#x2F;lib.js:1155</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Credit Card specifications, to be used in the credit card verification.</p>
+
+    </div>
+
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property__dateParsers" class="property item private">
+    <h3 class="name"><code>_dateParsers</code></h3>
+    <span class="type">Object</span>
+
+    
+
+    
+        <span class="flag private">private</span>
+    
+
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/Ink_Util_Validator_1_lib.js.html#l462"><code>Ink&#x2F;Util&#x2F;Validator&#x2F;1&#x2F;lib.js:462</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Object with the date formats available for validation</p>
+
+    </div>
+
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property__indicativosAO" class="property item private">
+    <h3 class="name"><code>_indicativosAO</code></h3>
+    <span class="type">Object</span>
+
+    
+
+    
+        <span class="flag private">private</span>
+    
+
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/Ink_Util_Validator_1_lib.js.html#l164"><code>Ink&#x2F;Util&#x2F;Validator&#x2F;1&#x2F;lib.js:164</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>List of all Angola number prefixes</p>
+
+    </div>
+
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property__indicativosCV" class="property item private">
+    <h3 class="name"><code>_indicativosCV</code></h3>
+    <span class="type">Object</span>
+
+    
+
+    
+        <span class="flag private">private</span>
+    
+
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/Ink_Util_Validator_1_lib.js.html#l136"><code>Ink&#x2F;Util&#x2F;Validator&#x2F;1&#x2F;lib.js:136</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>List of all Cabo Verde number prefixes</p>
+
+    </div>
+
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property__indicativosMZ" class="property item private">
+    <h3 class="name"><code>_indicativosMZ</code></h3>
+    <span class="type">Object</span>
+
+    
+
+    
+        <span class="flag private">private</span>
+    
+
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/Ink_Util_Validator_1_lib.js.html#l189"><code>Ink&#x2F;Util&#x2F;Validator&#x2F;1&#x2F;lib.js:189</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>List of all Mozambique number prefixes</p>
+
+    </div>
+
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property__indicativosPT" class="property item private">
+    <h3 class="name"><code>_indicativosPT</code></h3>
+    <span class="type">Object</span>
+
+    
+
+    
+        <span class="flag private">private</span>
+    
+
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/Ink_Util_Validator_1_lib.js.html#l47"><code>Ink&#x2F;Util&#x2F;Validator&#x2F;1&#x2F;lib.js:47</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>List of all portuguese number prefixes</p>
+
+    </div>
+
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property__indicativosTL" class="property item private">
+    <h3 class="name"><code>_indicativosTL</code></h3>
+    <span class="type">Object</span>
+
+    
+
+    
+        <span class="flag private">private</span>
+    
+
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/Ink_Util_Validator_1_lib.js.html#l215"><code>Ink&#x2F;Util&#x2F;Validator&#x2F;1&#x2F;lib.js:215</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>List of all Timor number prefixes</p>
+
+    </div>
+
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property__internacionalAO" class="property item private">
+    <h3 class="name"><code>_internacionalAO</code></h3>
+    <span class="type">Number</span>
+
+    
+
+    
+        <span class="flag private">private</span>
+    
+
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/Ink_Util_Validator_1_lib.js.html#l153"><code>Ink&#x2F;Util&#x2F;Validator&#x2F;1&#x2F;lib.js:153</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>International number for angola</p>
+
+    </div>
+
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property__internacionalCV" class="property item private">
+    <h3 class="name"><code>_internacionalCV</code></h3>
+    <span class="type">Number</span>
+
+    
+
+    
+        <span class="flag private">private</span>
+    
+
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/Ink_Util_Validator_1_lib.js.html#l125"><code>Ink&#x2F;Util&#x2F;Validator&#x2F;1&#x2F;lib.js:125</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>International number for Cabo Verde</p>
+
+    </div>
+
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property__internacionalMZ" class="property item private">
+    <h3 class="name"><code>_internacionalMZ</code></h3>
+    <span class="type">Number</span>
+
+    
+
+    
+        <span class="flag private">private</span>
+    
+
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/Ink_Util_Validator_1_lib.js.html#l178"><code>Ink&#x2F;Util&#x2F;Validator&#x2F;1&#x2F;lib.js:178</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>International number for mozambique</p>
+
+    </div>
+
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property__internacionalPT" class="property item private">
+    <h3 class="name"><code>_internacionalPT</code></h3>
+    <span class="type">Number</span>
+
+    
+
+    
+        <span class="flag private">private</span>
+    
+
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/Ink_Util_Validator_1_lib.js.html#l35"><code>Ink&#x2F;Util&#x2F;Validator&#x2F;1&#x2F;lib.js:35</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>International number for portugal</p>
+
+    </div>
+
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property__internacionalTL" class="property item private">
+    <h3 class="name"><code>_internacionalTL</code></h3>
+    <span class="type">Number</span>
+
+    
+
+    
+        <span class="flag private">private</span>
+    
+
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/Ink_Util_Validator_1_lib.js.html#l204"><code>Ink&#x2F;Util&#x2F;Validator&#x2F;1&#x2F;lib.js:204</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>International number for Timor</p>
+
+    </div>
+
+    
+
+    
+
+    
+</div>
+
+                
+            </div>
+        
+
+        
+
+        
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+</body>
+</html>

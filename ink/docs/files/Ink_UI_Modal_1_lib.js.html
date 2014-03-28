@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Ink/UI/Modal/1/lib.js - Ink.js</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+    <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><img src="../yuidoclogo.png" title="Ink.js"></h1>
+            
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: latest</em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <h2 class="off-left">APIs</h2>
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+            <li><a href="#api-modules">Modules</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="../classes/Ink.html">Ink</a></li>
+            
+                <li><a href="../classes/Ink.Dom.Browser.html">Ink.Dom.Browser</a></li>
+            
+                <li><a href="../classes/Ink.Dom.Css.html">Ink.Dom.Css</a></li>
+            
+                <li><a href="../classes/Ink.Dom.Element.html">Ink.Dom.Element</a></li>
+            
+                <li><a href="../classes/Ink.Dom.Event.html">Ink.Dom.Event</a></li>
+            
+                <li><a href="../classes/Ink.Dom.FormSerialize.html">Ink.Dom.FormSerialize</a></li>
+            
+                <li><a href="../classes/Ink.Dom.Loaded.html">Ink.Dom.Loaded</a></li>
+            
+                <li><a href="../classes/Ink.Dom.Selector.html">Ink.Dom.Selector</a></li>
+            
+                <li><a href="../classes/Ink.Namespace.ClassModule.html">Ink.Namespace.ClassModule</a></li>
+            
+                <li><a href="../classes/Ink.Namespace.StaticModule.html">Ink.Namespace.StaticModule</a></li>
+            
+                <li><a href="../classes/Ink.Net.Ajax.html">Ink.Net.Ajax</a></li>
+            
+                <li><a href="../classes/Ink.Net.JsonP.html">Ink.Net.JsonP</a></li>
+            
+                <li><a href="../classes/Ink.UI.Animate_1.html">Ink.UI.Animate_1</a></li>
+            
+                <li><a href="../classes/Ink.UI.Carousel_1.html">Ink.UI.Carousel_1</a></li>
+            
+                <li><a href="../classes/Ink.UI.Close.html">Ink.UI.Close</a></li>
+            
+                <li><a href="../classes/Ink.UI.Common.html">Ink.UI.Common</a></li>
+            
+                <li><a href="../classes/Ink.UI.DatePicker.html">Ink.UI.DatePicker</a></li>
+            
+                <li><a href="../classes/Ink.UI.Draggable.html">Ink.UI.Draggable</a></li>
+            
+                <li><a href="../classes/Ink.UI.Dropdown.html">Ink.UI.Dropdown</a></li>
+            
+                <li><a href="../classes/Ink.UI.Droppable.html">Ink.UI.Droppable</a></li>
+            
+                <li><a href="../classes/Ink.UI.FormValidator.html">Ink.UI.FormValidator</a></li>
+            
+                <li><a href="../classes/Ink.UI.FormValidator_2.html">Ink.UI.FormValidator_2</a></li>
+            
+                <li><a href="../classes/Ink.UI.ImageQuery.html">Ink.UI.ImageQuery</a></li>
+            
+                <li><a href="../classes/Ink.UI.Modal.html">Ink.UI.Modal</a></li>
+            
+                <li><a href="../classes/Ink.UI.Pagination.html">Ink.UI.Pagination</a></li>
+            
+                <li><a href="../classes/Ink.UI.ProgressBar.html">Ink.UI.ProgressBar</a></li>
+            
+                <li><a href="../classes/Ink.UI.SmoothScroller.html">Ink.UI.SmoothScroller</a></li>
+            
+                <li><a href="../classes/Ink.UI.SortableList.html">Ink.UI.SortableList</a></li>
+            
+                <li><a href="../classes/Ink.UI.Spy.html">Ink.UI.Spy</a></li>
+            
+                <li><a href="../classes/Ink.UI.Stacker_1.html">Ink.UI.Stacker_1</a></li>
+            
+                <li><a href="../classes/Ink.UI.Sticky.html">Ink.UI.Sticky</a></li>
+            
+                <li><a href="../classes/Ink.UI.Swipe.html">Ink.UI.Swipe</a></li>
+            
+                <li><a href="../classes/Ink.UI.Table.html">Ink.UI.Table</a></li>
+            
+                <li><a href="../classes/Ink.UI.Tabs.html">Ink.UI.Tabs</a></li>
+            
+                <li><a href="../classes/Ink.UI.TagField.html">Ink.UI.TagField</a></li>
+            
+                <li><a href="../classes/Ink.UI.Toggle.html">Ink.UI.Toggle</a></li>
+            
+                <li><a href="../classes/Ink.UI.Tooltip.html">Ink.UI.Tooltip</a></li>
+            
+                <li><a href="../classes/Ink.UI.TreeView.html">Ink.UI.TreeView</a></li>
+            
+                <li><a href="../classes/Ink.Util.Array.html">Ink.Util.Array</a></li>
+            
+                <li><a href="../classes/Ink.Util.BinPack.html">Ink.Util.BinPack</a></li>
+            
+                <li><a href="../classes/Ink.Util.Cookie.html">Ink.Util.Cookie</a></li>
+            
+                <li><a href="../classes/Ink.Util.Date.html">Ink.Util.Date</a></li>
+            
+                <li><a href="../classes/Ink.Util.Dumper.html">Ink.Util.Dumper</a></li>
+            
+                <li><a href="../classes/Ink.Util.I18n.html">Ink.Util.I18n</a></li>
+            
+                <li><a href="../classes/Ink.Util.Json.html">Ink.Util.Json</a></li>
+            
+                <li><a href="../classes/Ink.Util.String.html">Ink.Util.String</a></li>
+            
+                <li><a href="../classes/Ink.Util.Url.html">Ink.Util.Url</a></li>
+            
+                <li><a href="../classes/Ink.Util.Validator.html">Ink.Util.Validator</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+                <li><a href="../modules/Ink.Dom.Browser_1.html">Ink.Dom.Browser_1</a></li>
+            
+                <li><a href="../modules/Ink.Dom.Css_1.html">Ink.Dom.Css_1</a></li>
+            
+                <li><a href="../modules/Ink.Dom.Element_1.html">Ink.Dom.Element_1</a></li>
+            
+                <li><a href="../modules/Ink.Dom.Event_1.html">Ink.Dom.Event_1</a></li>
+            
+                <li><a href="../modules/Ink.Dom.FormSerialize.html">Ink.Dom.FormSerialize</a></li>
+            
+                <li><a href="../modules/Ink.Dom.Loaded_1.html">Ink.Dom.Loaded_1</a></li>
+            
+                <li><a href="../modules/Ink.Dom.Selector_1.html">Ink.Dom.Selector_1</a></li>
+            
+                <li><a href="../modules/Ink.Namespace.ClassModule_1.html">Ink.Namespace.ClassModule_1</a></li>
+            
+                <li><a href="../modules/Ink.Namespace.StaticModule_1.html">Ink.Namespace.StaticModule_1</a></li>
+            
+                <li><a href="../modules/Ink.Net.Ajax_1.html">Ink.Net.Ajax_1</a></li>
+            
+                <li><a href="../modules/Ink.Net.JsonP_1.html">Ink.Net.JsonP_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Animate_1.html">Ink.UI.Animate_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Carousel_1.html">Ink.UI.Carousel_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Close_1.html">Ink.UI.Close_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Common_1.html">Ink.UI.Common_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.DatePicker_1.html">Ink.UI.DatePicker_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Dropdown_1.html">Ink.UI.Dropdown_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Droppable_1.html">Ink.UI.Droppable_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.FormValidator_1.html">Ink.UI.FormValidator_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.FormValidator_2.html">Ink.UI.FormValidator_2</a></li>
+            
+                <li><a href="../modules/Ink.UI.ImageQuery_1.html">Ink.UI.ImageQuery_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Modal_1.html">Ink.UI.Modal_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Pagination_1.html">Ink.UI.Pagination_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.ProgressBar_1.html">Ink.UI.ProgressBar_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.SmoothScroller_1.html">Ink.UI.SmoothScroller_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.SortableList_1.html">Ink.UI.SortableList_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Spy_1.html">Ink.UI.Spy_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Stacker_1.html">Ink.UI.Stacker_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Sticky_1.html">Ink.UI.Sticky_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Swipe.html">Ink.UI.Swipe</a></li>
+            
+                <li><a href="../modules/Ink.UI.Table_1.html">Ink.UI.Table_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Tabs_1.html">Ink.UI.Tabs_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Toggle_1.html">Ink.UI.Toggle_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Tooltip_1.html">Ink.UI.Tooltip_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.TreeView_1.html">Ink.UI.TreeView_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Array_1.html">Ink.Util.Array_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.BinPack_1.html">Ink.Util.BinPack_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Cookie_1.html">Ink.Util.Cookie_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Date_1.html">Ink.Util.Date_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Dumper_1.html">Ink.Util.Dumper_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.I18n_1.html">Ink.Util.I18n_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Json_1.html">Ink.Util.Json_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.String_1.html">Ink.Util.String_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Url_1.html">Ink.Util.Url_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Validator_1.html">Ink.Util.Validator_1</a></li>
+            
+                <li><a href="../modules/Ink_1.html">Ink_1</a></li>
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+
+
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1 class="file-heading">File: Ink/UI/Modal/1/lib.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+/**
+ * @module Ink.UI.Modal_1
+ * @author inkdev AT sapo.pt
+ * @version 1
+ */
+Ink.createModule(&#x27;Ink.UI.Modal&#x27;, &#x27;1&#x27;, [&#x27;Ink.UI.Common_1&#x27;,&#x27;Ink.Dom.Event_1&#x27;,&#x27;Ink.Dom.Css_1&#x27;,&#x27;Ink.Dom.Element_1&#x27;,&#x27;Ink.Dom.Selector_1&#x27;,&#x27;Ink.Util.Array_1&#x27;], function(Common, Event, Css, InkElement, Selector, InkArray ) {
+    &#x27;use strict&#x27;;
+
+    var opacitySupported = (function (div) {
+        div.style.opacity = &#x27;invalid&#x27;;
+        return div.style.opacity !== &#x27;invalid&#x27;;
+    }(InkElement.create(&#x27;div&#x27;, {style: &#x27;opacity: 1&#x27;})));
+
+    /**
+     * @class Ink.UI.Modal
+     * @constructor
+     * @version 1
+     * @param {String|DOMElement} selector
+     * @param {Object} [options] Options
+     *      @param {String}    [options.width]             Default/Initial width. Ex: &#x27;600px&#x27;
+     *      @param {String}    [options.height]            Default/Initial height. Ex: &#x27;400px&#x27;
+     *      @param {String}    [options.shadeClass]        Custom class to be added to the div.ink-shade
+     *      @param {String}    [options.modalClass]        Custom class to be added to the div.ink-modal
+     *      @param {String}    [options.trigger]           CSS Selector to target elements that will trigger the Modal.
+     *      @param {String}    [options.triggerEvent]      Trigger&#x27;s event to be listened. &#x27;click&#x27; is the default value. Ex: &#x27;mouseover&#x27;, &#x27;touchstart&#x27;...
+     *      @param {Boolean}   [options.autoDisplay=true]  Display the Modal automatically when constructed.
+     *      @param {String}    [options.markup]            Markup to be placed in the Modal when created
+     *      @param {Function}  [options.onShow]            Callback function to run when the Modal is opened.
+     *      @param {Function}  [options.onDismiss]         Callback function to run when the Modal is closed. Return &#x60;false&#x60; to cancel dismissing the Modal.
+     *      @param {Boolean}   [options.closeOnClick=false] Determines if the Modal should close when clicked outside of it.
+     *      @param {Boolean}   [options.closeOnEscape=true] Determines if the Modal should close when &quot;Esc&quot; key is pressed.
+     *      @param {Boolean}   [options.responsive]        Determines if the Modal should behave responsively (adapt to smaller viewports).
+     *      @param {Boolean}   [options.disableScroll]     Determines if the Modal should &#x27;disable&#x27; the page&#x27;s scroll (not the Modal&#x27;s body).
+     *
+     * @example
+     *      &lt;div class=&quot;ink-shade fade&quot;&gt;
+     *          &lt;div id=&quot;test&quot; class=&quot;ink-modal fade&quot; data-trigger=&quot;#bModal&quot; data-width=&quot;800px&quot; data-height=&quot;400px&quot;&gt;
+     *              &lt;div class=&quot;modal-header&quot;&gt;
+     *                  &lt;button class=&quot;modal-close ink-dismiss&quot;&gt;&lt;/button&gt;
+     *                  &lt;h5&gt;Modal windows can have headers&lt;/h5&gt;
+     *              &lt;/div&gt;
+     *              &lt;div class=&quot;modal-body&quot; id=&quot;modalContent&quot;&gt;
+     *                  &lt;h3&gt;Please confirm your previous choice&lt;/h3&gt;
+     *                  &lt;p&gt;&quot;No,&quot; said Peleg, &quot;and he hasn&#x27;t been baptized right either, or it would have washed some of that devil&#x27;s blue off his face.&quot;&lt;/p&gt;
+     *                  &lt;p&gt;
+     *                      &lt;img src=&quot;http://placehold.it/800x400&quot; style=&quot;width: 100%;&quot; alt=&quot;&quot;&gt;
+     *                  &lt;/p&gt;
+     *                  &lt;p&gt;&quot;Do tell, now,&quot; cried Bildad, &quot;is this Philistine a regular member of Deacon Deuteronomy&#x27;s meeting? I never saw him going there, and I pass it every Lord&#x27;s day.&quot;&lt;/p&gt;
+     *                  &lt;p&gt;&quot;I don&#x27;t know anything about Deacon Deuteronomy or his meeting,&quot; said I; &quot;all I know is, that Queequeg here is a born member of the First Congregational Church. He is a deacon himself, Queequeg is.&quot;&lt;/p&gt;
+     *              &lt;/div&gt;
+     *              &lt;div class=&quot;modal-footer&quot;&gt;
+     *                  &lt;div class=&quot;push-right&quot;&gt;
+     *                      &lt;button class=&quot;ink-button info&quot;&gt;Confirm&lt;/button&gt;
+     *                      &lt;button class=&quot;ink-button caution ink-dismiss&quot;&gt;Cancel&lt;/button&gt;
+     *                  &lt;/div&gt;
+     *              &lt;/div&gt;
+     *          &lt;/div&gt;
+     *      &lt;/div&gt;
+     *      &lt;a href=&quot;#&quot; id=&quot;bModal&quot;&gt;Open modal&lt;/a&gt;
+     *      &lt;script&gt;
+     *          Ink.requireModules( [&#x27;Ink.Dom.Selector_1&#x27;,&#x27;Ink.UI.Modal_1&#x27;], function( Selector, Modal ){
+     *              var modalElement = Ink.s(&#x27;#test&#x27;);
+     *              var modalObj = new Modal( modalElement );
+     *          });
+     *      &lt;/script&gt;
+     */
+
+    function upName(dimension) {
+        // omg IE
+        var firstCharacter = dimension.match(/^./)[0];
+        return firstCharacter.toUpperCase() + dimension.replace(/^./, &#x27;&#x27;);
+    }
+    function maxName(dimension) {
+        return &#x27;max&#x27; + upName(dimension);
+    }
+
+    var openModals = [];
+
+    var Modal = function(selector, options) {
+        if (!selector) {
+            this._element = null;
+        } else {
+            this._element = Common.elOrSelector(selector, &#x27;Ink.UI.Modal markup&#x27;);
+        }
+
+        this._options = {
+            /**
+             * Width, height and markup really optional, as they can be obtained by the element
+             */
+            width:        undefined,
+            height:       undefined,
+
+            /**
+             * To add extra classes
+             */
+            shadeClass: undefined,
+            modalClass: undefined,
+
+            /**
+             * Optional trigger properties
+             */
+            trigger:      undefined,
+            triggerEvent: &#x27;click&#x27;,
+            autoDisplay:  true,
+
+            /**
+             * Remaining options
+             */
+            markup:       undefined,
+            onShow:       undefined,
+            onDismiss:    undefined,
+            closeOnClick: false,
+            closeOnEscape: true,
+            responsive:    true,
+            disableScroll: true
+        };
+
+
+        this._handlers = {
+            click:   Ink.bindEvent(this._onShadeClick, this),
+            keyDown: Ink.bindEvent(this._onKeyDown, this),
+            resize:  Ink.bindEvent(this._onResize, this)
+        };
+
+        this._wasDismissed = false;
+
+        /**
+         * Modal Markup
+         */
+        if( this._element ){
+            this._markupMode = Css.hasClassName(this._element,&#x27;ink-modal&#x27;); // Check if the full modal comes from the markup
+        } else {
+            this._markupMode = false;
+        }
+
+        if( !this._markupMode ){
+            this._modalShadow      = document.createElement(&#x27;div&#x27;);
+            this._modalShadowStyle = this._modalShadow.style;
+
+            this._modalDiv         = document.createElement(&#x27;div&#x27;);
+            this._modalDivStyle    = this._modalDiv.style;
+
+            if( !!this._element ){
+                this._options.markup = this._element.innerHTML;
+            }
+
+            /**
+             * Not in full markup mode, let&#x27;s set the classes and css configurations
+             */
+            Css.addClassName( this._modalShadow,&#x27;ink-shade&#x27; );
+            Css.addClassName( this._modalDiv,&#x27;ink-modal ink-space&#x27; );
+
+            /**
+             * Applying the main css styles
+             */
+            // this._modalDivStyle.position = &#x27;absolute&#x27;;
+            this._modalShadow.appendChild( this._modalDiv);
+            document.body.appendChild( this._modalShadow );
+        } else {
+            this._modalDiv         = this._element;
+            this._modalDivStyle    = this._modalDiv.style;
+            this._modalShadow      = this._modalDiv.parentNode;
+            this._modalShadowStyle = this._modalShadow.style;
+
+            this._contentContainer = Selector.select(&quot;.modal-body&quot;, this._modalDiv)[0];
+            if( !this._contentContainer){
+                throw new Error(&#x27;Ink.UI.Modal: Missing div with class &quot;modal-body&quot;&#x27;);
+            }
+
+            this._options.markup = this._contentContainer.innerHTML;
+
+            /**
+             * First, will handle the least important: The dataset
+             */
+            this._options = Ink.extendObj(this._options,InkElement.data(this._element));
+
+        }
+
+        /**
+         * Now, the most important, the initialization options
+         */
+        this._options = Ink.extendObj(this._options,options || {});
+
+        if( !this._markupMode ){
+            this.setContentMarkup(this._options.markup);
+        }
+
+        if( typeof this._options.shadeClass === &#x27;string&#x27; ){
+            Css.addClassName(this._modalShadow, this._options.shadeClass);
+        }
+
+        if( typeof this._options.modalClass === &#x27;string&#x27; ){
+            Css.addClassName(this._modalDiv, this._options.modalClass);
+        }
+
+        if( (&quot;trigger&quot; in this._options) &amp;&amp; ( typeof this._options.trigger !== &#x27;undefined&#x27; ) ){
+            var triggerElement;
+            if( typeof this._options.trigger === &#x27;string&#x27; ){
+                triggerElement = Selector.select( this._options.trigger );
+                Event.observeMulti(triggerElement, this._options.triggerEvent, Ink.bindEvent(this.open, this));
+            }
+        } else if ( this._options.autoDisplay.toString() === &quot;true&quot; ) {
+            this.open();
+        }
+    };
+
+    Modal.prototype = {
+
+        /**
+         * Responsible for repositioning the modal
+         * 
+         * @method _reposition
+         * @private
+         */
+        _reposition: function(){
+            this._modalDivStyle.marginTop = (-InkElement.elementHeight(this._modalDiv)/2) + &#x27;px&#x27;;
+            this._modalDivStyle.marginLeft = (-InkElement.elementWidth(this._modalDiv)/2) + &#x27;px&#x27;;
+        },
+
+        /**
+         * Responsible for resizing the modal
+         * 
+         * @method _onResize
+         * @param {Boolean|Event} runNow Its executed in the begining to resize/reposition accordingly to the viewport. But usually it&#x27;s an event object.
+         * @private
+         */
+        _onResize: function( runNow ){
+            if( typeof runNow === &#x27;boolean&#x27; ){
+                this._timeoutResizeFunction.call(this);
+            } else if( !this._resizeTimeout &amp;&amp; (runNow &amp;&amp; typeof runNow === &#x27;object&#x27;) ){
+                this._resizeTimeout = setTimeout(Ink.bind(this._timeoutResizeFunction, this),250);
+            }
+        },
+
+        /**
+         * Timeout Resize Function
+         * 
+         * @method _timeoutResizeFunction
+         * @private
+         */
+        _timeoutResizeFunction: function(){
+            /**
+             * Getting the current viewport size
+             */
+            var isPercentage = {
+                width: (&#x27;&#x27; + this._options.width).indexOf(&#x27;%&#x27;) !== -1,
+                height: (&#x27;&#x27; + this._options.height).indexOf(&#x27;%&#x27;) !== -1
+            };
+            var currentViewport = {
+                height: InkElement.viewportHeight(),
+                width: InkElement.viewportWidth()
+            };
+
+            InkArray.forEach([&#x27;height&#x27;, &#x27;width&#x27;], Ink.bind(function (dimension) {
+                // Not used for percentage measurements
+                if (isPercentage[dimension]) { return; }
+
+                if (currentViewport[dimension] &gt; this.originalStatus[dimension]) {
+                    this._modalDivStyle[dimension] = this._modalDivStyle[maxName(dimension)];
+                } else {
+                    this._modalDivStyle[dimension] = Math.round(currentViewport[dimension] * 0.9) + &#x27;px&#x27;;
+                }
+            }, this));
+
+            this._resizeContainer();
+            this._reposition();
+            this._resizeTimeout = undefined;
+        },
+
+        /**
+         * Handle clicks on the shade element.
+         * 
+         * @method _onShadeClick
+         * @param {Event} ev
+         * @private
+         */
+        _onShadeClick: function(ev) {
+            var tgtEl = Event.element(ev);
+
+            if (Css.hasClassName(tgtEl, &#x27;ink-close&#x27;) || Css.hasClassName(tgtEl, &#x27;ink-dismiss&#x27;) || 
+                InkElement.findUpwardsBySelector(tgtEl, &#x27;.ink-close,.ink-dismiss&#x27;) ||
+                (
+                    this._options.closeOnClick &amp;&amp;
+                    (!InkElement.descendantOf(this._shadeElement, tgtEl) || (tgtEl === this._shadeElement))
+                )
+            ) {
+                var alertsInTheModal = Selector.select(&#x27;.ink-alert&#x27;, this._shadeElement),
+                    alertsLength = alertsInTheModal.length;
+                for( var i = 0; i &lt; alertsLength; i++ ){
+                    if( InkElement.descendantOf(alertsInTheModal[i], tgtEl) ){
+                        return;
+                    }
+                }
+
+                this.dismiss();
+
+                // Only stop the event if this dismisses this modal
+                if (this._wasDismissed) {
+                    Event.stop(ev);
+                }
+            }
+        },
+
+        /**
+         * Responsible for handling the escape key pressing.
+         *
+         * @method _onKeyDown
+         * @param  {Event} ev
+         * @private
+         */
+        _onKeyDown: function(ev) {
+            if (ev.keyCode !== 27 || this._wasDismissed) { return; }
+            if (this._options.closeOnEscape.toString() === &#x27;true&#x27; &amp;&amp;
+                    openModals[openModals.length - 1] === this) {
+                this.dismiss();
+                if (this._wasDismissed) {
+                    Event.stop(ev);
+                }
+            }
+        },
+
+        /**
+         * Responsible for setting the size of the modal (and position) based on the viewport.
+         * 
+         * @method _resizeContainer
+         * @private
+         */
+        _resizeContainer: function() {
+            // [3.0.0] drop this because everyone should have the new CSS now, which has this rule already with .ink-modal-is-open.
+            this._contentElement.style.overflow = this._contentElement.style.overflowX = this._contentElement.style.overflowY = &#x27;hidden&#x27;;
+            var containerHeight = InkElement.elementHeight(this._modalDiv);
+
+            this._modalHeader = Selector.select(&#x27;.modal-header&#x27;,this._modalDiv)[0];
+            if( this._modalHeader ){
+                containerHeight -= InkElement.elementHeight(this._modalHeader);
+            }
+
+            this._modalFooter = Selector.select(&#x27;.modal-footer&#x27;,this._modalDiv)[0];
+            if( this._modalFooter ){
+                containerHeight -= InkElement.elementHeight(this._modalFooter);
+            }
+
+            this._contentContainer.style.height = containerHeight + &#x27;px&#x27;;
+            if( containerHeight !== InkElement.elementHeight(this._contentContainer) ){
+                this._contentContainer.style.height = ~~(containerHeight - (InkElement.elementHeight(this._contentContainer) - containerHeight)) + &#x27;px&#x27;;
+            }
+
+            if( this._markupMode ){ return; }
+
+            this._contentContainer.style.overflow = this._contentContainer.style.overflowX = &#x27;hidden&#x27;;
+            this._contentContainer.style.overflowY = &#x27;auto&#x27;;
+            this._contentElement.style.overflow = this._contentElement.style.overflowX = this._contentElement.style.overflowY = &#x27;visible&#x27;;
+        },
+
+        /**
+         * Responsible for &#x27;disabling&#x27; the page scroll
+         * 
+         * @method _disableScroll
+         * @private
+         */
+        _disableScroll: function() {
+            var htmlEl = document.documentElement;
+            this._oldHtmlOverflows = [ htmlEl.style.overflowX,
+                htmlEl.style.overflowY ];
+            htmlEl.style.overflowX = htmlEl.style.overflowY = &#x27;hidden&#x27;;
+        },
+
+        /**************
+         * PUBLIC API *
+         **************/
+
+        /**
+         * Display this Modal. Useful if you have initialized the modal
+         * @method open 
+         * @param {Event} [event] (internal) In case its fired by the internal trigger.
+         */
+        open: function(event) {
+
+            if( event ){ Event.stop(event); }
+
+            var elem = (document.compatMode === &quot;CSS1Compat&quot;) ?  document.documentElement : document.body;
+
+            this._resizeTimeout    = null;
+
+            Css.addClassName( this._modalShadow,&#x27;ink-shade&#x27; );
+            this._modalShadowStyle.display = this._modalDivStyle.display = &#x27;block&#x27;;
+            setTimeout(Ink.bind(function() {
+                Css.addClassName( this._modalShadow, &#x27;visible&#x27; );
+                Css.addClassName( this._modalDiv, &#x27;visible&#x27; );
+            }, this), 100);
+
+            /**
+             * Fallback to the old one
+             */
+            this._contentElement = this._modalDiv;
+            this._shadeElement   = this._modalShadow;
+
+            if( !this._markupMode ){
+                /**
+                 * Setting the content of the modal
+                 */
+                this.setContentMarkup( this._options.markup );
+            }
+
+            /**
+             * If any size has been user-defined, let&#x27;s set them as max-width and max-height
+             */
+
+            var isPercentage = {
+                width: (&#x27;&#x27; + this._options.width).indexOf(&#x27;%&#x27;) !== -1,
+                height: (&#x27;&#x27; + this._options.height).indexOf(&#x27;%&#x27;) !== -1
+            };
+
+            InkArray.forEach([&#x27;width&#x27;, &#x27;height&#x27;], Ink.bind(function (dimension) {
+                if (this._options[dimension] !== undefined) {
+                    this._modalDivStyle[dimension] = this._options[dimension];
+                    if (!isPercentage[dimension]) {
+                        this._modalDivStyle[maxName(dimension)] =
+                            InkElement[&#x27;element&#x27; + upName(dimension)](this._modalDiv) + &#x27;px&#x27;;
+                    }
+                } else {
+                    this._modalDivStyle[maxName(dimension)] = InkElement[&#x27;element&#x27; + upName(dimension)](this._modalDiv) + &#x27;px&#x27;;
+                }
+
+                if (isPercentage[dimension] &amp;&amp; parseInt(elem[&#x27;client&#x27; + maxName(dimension)], 10) &lt;= parseInt(this._modalDivStyle[dimension], 10) ) {
+                    this._modalDivStyle[dimension] = Math.round(parseInt(elem[&#x27;client&#x27; + maxName(dimension)], 10) * 0.9) + &#x27;px&#x27;;
+                }
+            }, this));
+
+            this.originalStatus = {
+                viewportHeight:     InkElement.elementHeight(elem),
+                viewportWidth:      InkElement.elementWidth(elem),
+                height:             InkElement.elementHeight(this._modalDiv),
+                width:              InkElement.elementWidth(this._modalDiv)
+            };
+
+            /**
+             * Let&#x27;s &#x27;resize&#x27; it:
+             */
+            if( this._options.responsive.toString() === &#x27;true&#x27; ) {
+                this._onResize(true);
+                Event.observe( window,&#x27;resize&#x27;,this._handlers.resize );
+            } else {
+                this._resizeContainer();
+                this._reposition();
+            }
+
+            if (this._options.onShow) {
+                this._options.onShow(this);
+            }
+
+            if(this._options.disableScroll.toString() === &#x27;true&#x27;) {
+                this._disableScroll();
+            }
+
+            // subscribe events
+            Event.observe(this._shadeElement, &#x27;click&#x27;, this._handlers.click);
+            if (this._options.closeOnEscape.toString() === &#x27;true&#x27;) {
+                Event.observe(document, &#x27;keydown&#x27;, this._handlers.keyDown);
+            }
+
+            Common.registerInstance(this, this._shadeElement, &#x27;modal&#x27;);
+
+            this._wasDismissed = false;
+            openModals.push(this);
+
+            Css.addClassName(document.documentElement, &#x27;ink-modal-is-open&#x27;);
+        },
+
+        /**
+         * Dismisses the modal
+         * 
+         * @method dismiss
+         * @public
+         */
+        dismiss: function() {
+            if (this._wasDismissed) { /* Already dismissed. WTF IE. */ return; }
+
+            if (this._options.onDismiss) {
+                var ret = this._options.onDismiss(this);
+                if (ret === false) { return; }
+            }
+
+            this._wasDismissed = true;
+
+            if( this._options.responsive ){
+                Event.stopObserving(window, &#x27;resize&#x27;, this._handlers.resize);
+            }
+
+            // this._modalShadow.parentNode.removeChild(this._modalShadow);
+
+            if( !this._markupMode ){
+                this._modalShadow.parentNode.removeChild(this._modalShadow);
+                this.destroy();
+            } else {
+                Css.removeClassName( this._modalDiv, &#x27;visible&#x27; );
+                Css.removeClassName( this._modalShadow, &#x27;visible&#x27; );
+
+                this._waitForFade(this._modalShadow, Ink.bind(function () {
+                    this._modalShadowStyle.display = &#x27;none&#x27;;
+                }, this));
+            }
+
+            openModals = InkArray.remove(openModals, InkArray.keyValue(this, openModals), 1);
+
+            if (openModals.length === 0) {  // Document level stuff now there are no modals in play.
+                var htmlEl = document.documentElement;
+
+                // Reenable scroll
+                if(this._options.disableScroll) {
+                    htmlEl.style.overflowX = this._oldHtmlOverflows[0];
+                    htmlEl.style.overflowY = this._oldHtmlOverflows[1];
+                }
+
+                // Remove the class from the HTML element.
+                Css.removeClassName(htmlEl, &#x27;ink-modal-is-open&#x27;);
+            }
+        },
+
+        /**
+         * Utility function to listen to the onTransmissionEnd event, or wait using setTimeouts
+         *
+         * Specific to this._element
+         */
+        _waitForFade: function (elem, callback) {
+            if (!opacitySupported) { return callback(); }
+
+            var transitionEndEventNames = [
+                &#x27;transitionEnd&#x27;, &#x27;oTransitionEnd&#x27;, &#x27;webkitTransitionEnd&#x27;];
+            var classicName;
+            var evName;
+            for (var i = 0, len = transitionEndEventNames.length; i &lt; len; i++) {
+                evName = transitionEndEventNames[i];
+                classicName = &#x27;on&#x27; + evName.toLowerCase();
+                if (classicName in elem) {
+                    Event.observeOnce(elem, evName, callback);
+                    return;
+                }
+            }
+            var fadeChecker = function () {
+                if( +Css.getStyle(elem, &#x27;opacity&#x27;) &gt; 0 ){
+                    setTimeout(fadeChecker, 250);
+                } else {
+                    callback();
+                }
+            };
+            setTimeout(fadeChecker, 500);
+        },
+
+        /**
+         * Removes the modal from the DOM
+         * 
+         * @method destroy
+         * @public
+         */
+        destroy: function() {
+            Common.unregisterInstance(this._instanceId);
+        },
+
+        /**
+         * Returns the content DOM element
+         * 
+         * @method getContentElement
+         * @return {DOMElement} Modal main cointainer.
+         * @public
+         */
+        getContentElement: function() {
+            return this._contentContainer;
+        },
+
+        /**
+         * Replaces the content markup
+         * 
+         * @method setContentMarkup
+         * @param {String} contentMarkup
+         * @public
+         */
+        setContentMarkup: function(contentMarkup) {
+            if( !this._markupMode ){
+                this._modalDiv.innerHTML = [contentMarkup].join(&#x27;&#x27;);
+                this._contentContainer = Selector.select(&quot;.modal-body&quot;,this._modalDiv);
+                if( !this._contentContainer.length ){
+                    // throw &#x27;Missing div with class &quot;modal-body&quot;&#x27;;
+                    var tempHeader = Selector.select(&quot;.modal-header&quot;,this._modalDiv);
+                    var tempFooter = Selector.select(&quot;.modal-footer&quot;,this._modalDiv);
+
+                    InkArray.each(tempHeader, InkElement.remove);
+                    InkArray.each(tempFooter, InkElement.remove);
+
+                    var body = document.createElement(&#x27;div&#x27;);
+                    Css.addClassName(body,&#x27;modal-body&#x27;);
+                    body.innerHTML = this._modalDiv.innerHTML;
+                    this._modalDiv.innerHTML = &#x27;&#x27;;
+
+                    var toAdd = tempHeader.concat([body]).concat(tempFooter);
+                    InkArray.each(toAdd, Ink.bindMethod(this._modalDiv, &#x27;appendChild&#x27;));
+
+                    // InkArray.each(tempHeader,Ink.bind(function( element ){ this._modalDiv.appendChild(element); },this));
+                    // this._modalDiv.appendChild(body);
+                    // InkArray.each(tempFooter,Ink.bind(function( element ){ this._modalDiv.appendChild(element); },this));
+
+                    this._contentContainer = Selector.select(&quot;.modal-body&quot;,this._modalDiv);
+                }
+                this._contentContainer = this._contentContainer[0];
+            } else {
+                this._contentContainer.innerHTML = contentMarkup;
+            }
+            this._contentElement = this._modalDiv;
+            this._resizeContainer();
+        }
+
+    };
+
+    return Modal;
+
+});
+
+    </pre>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+</body>
+</html>

@@ -15,7 +15,7 @@ $(function($){
 	
 	String.prototype.formatNumber = function(c, d, t, m){
 		return (parseInt(this)).formatNumber(c, d, t, m);
-	}
+	};
 
 	String.prototype.lpad = function(padString, length, sep_thousand, minlength) {
 		var str = this,
@@ -33,7 +33,7 @@ $(function($){
 				str = padString + str;
 		}
 		return str;
-	}
+	};
 
 	//CPF Validations
 	Number.prototype.formatCPF = function(){
@@ -53,7 +53,7 @@ $(function($){
 	
 	String.prototype.formatCPF = function(){
 		return (parseInt(this)).formatCPF();
-	}
+	};
 	
 	//CNPJ Validations (14 digits)
 	// Examples: 
@@ -87,12 +87,12 @@ $(function($){
 		}
 
 		return s;
-	}
+	};
 	
 	String.prototype.formatCNPJ = function(){
 		return (parseInt(this)).formatCNPJ();
-	}
+	};
 	
 	
 }
-)
+);

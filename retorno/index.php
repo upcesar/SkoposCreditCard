@@ -1,5 +1,8 @@
 <html>
 <?php
+
+ini_set('default_socket_timeout', 180);
+
 require_once '../conf.php';
 require_once 'wsdl_detalhe_cartao.php';
 
@@ -8,6 +11,7 @@ class returnPayment extends Ometz_Default
 	private $hasValues;			//If values has passed by post
 	private $status; 			//Transaction status: Aproved / Denied.
 	private $transCode;			//Authorization code given by cc brand.	
+	private $transCodeAnt;		//Previous Authorization code given by cc brand.	
 	private $authCode;			//Transaction number given by credit card brand	
 	private $maskedCreditCard;	//Masked Credit Card Number (up to 19 digits)
 	private $docNumber;			//Quote number	
@@ -43,6 +47,7 @@ class returnPayment extends Ometz_Default
 			$this->discountValue = $this->getDiscountValue();
 			$this->valTotalCred = $this->applyDiscountCreditAmmount();
 			$this->feeAmmount = $this->getFeeAmmount();
+			$this->transCodeAnt = $this->getTransCodeAnt();
 		}		
 	}
 	
@@ -61,6 +66,7 @@ class returnPayment extends Ometz_Default
 		$this->valTotalCred = 5;
 		$this->feeAmmount = 1.25;
 		$this->expiredate = "112018";
+		$this->discountValue = 0;
 		$this->addPaymentSOAP();
 		//$this->addPaymentNUSOAP();
 		echo("payment saved...<br>");
@@ -114,6 +120,87 @@ class returnPayment extends Ometz_Default
 			return $this->getCutOffDate();
 	}
 	
+	private function get_unique_receive_acc($trans_id){
+		$sql = "SELECT 
+				  E1_FILIAL AS FILIAL, E1_PREFIXO AS PREFIXO, 
+				  E1_NUM AS NUMERO, SE1.E1_TIPO AS TIPO, 
+				  SE1.E1_PARCELA AS PARCELA
+								
+				  FROM DB2.SE1050 SE1 
+				
+				  INNER JOIN DB2.VZL500 VZL ON
+				      SE1.E1_FILIAL = VZL.VZL_CODFIL AND 
+				      SE1.E1_PREFIXO = VZL.VZL_PREFIX AND
+				      SE1.E1_NUM = VZL.VZL_NUM AND
+				      SE1.E1_PARCELA = VZL.VZL_PARCEL AND
+				      SE1.E1_TIPO = VZL.VZL_TIPO AND
+				          VZL.D_E_L_E_T_ <> '*'
+				      
+				  WHERE E1_TIPO = 'CC'
+				   	AND E1_SALDO > 0 
+				   	AND E1_NRDOC <> '' 
+				   	AND E1_CODORCA <> ''
+				  	AND SE1.E1_DTACRED <> ''
+				  	AND SE1.D_E_L_E_T_ <> '*'					
+				  	AND SE1.E1_NRDOC = '".$trans_id."'
+				    AND (VZL.VZL_STATUS = '2' OR VZL.VZL_STATUS IS NULL)					
+				    AND 
+				  	(VZL.VZL_SEQUEN IN
+				  		(
+				  		SELECT MAX(VZL2.VZL_SEQUEN)
+				      			FROM DB2.VZL500 AS VZL2
+				      			WHERE 
+				        			SE1.E1_FILIAL = VZL2.VZL_CODFIL AND 
+				  			    SE1.E1_PREFIXO = VZL2.VZL_PREFIX AND
+				  			    SE1.E1_NUM = VZL2.VZL_NUM AND
+				  			    SE1.E1_PARCELA = VZL2.VZL_PARCEL AND
+				  			    SE1.E1_TIPO = VZL2.VZL_TIPO AND            
+				        			SE1.D_E_L_E_T_ = VZL2.D_E_L_E_T_
+				  					AND VZL2.D_E_L_E_T_ <> '*'
+				    			) OR VZL.VZL_SEQUEN IS NULL
+				  	)
+				
+				
+				  ORDER BY SE1.E1_NUM, SE1.E1_FILIAL , SE1.E1_PARCELA
+				";
+		
+		$rs = $this->database->fetchAll($sql);
+		
+		return count($rs) > 0 ? $rs[0] : false; 
+		
+	}
+	
+	private function recollectSOAP(){
+		if($this->status == "True"){
+			if($this->validations->validateSOAP()){
+				$rowRecorrencia = $this->get_unique_receive_acc($this->getTransCodeAnt());				
+				if($rowRecorrencia != false) {
+					$wsdl = new WS_DETALHE_CARTAO();
+					$data = new RECORRENCIA();				
+					$data->SVZL_CODEMP = "05"; // string (hardcoded temporally)
+					$data->SVZL_CODFIL = strval($rowRecorrencia['FILIAL']); // string
+					$data->SVZL_PREFIX = strval($rowRecorrencia['PREFIXO']); // string
+					$data->SVZL_NUM = strval($rowRecorrencia['NUMERO']); // string
+					$data->SVZL_PARCEL = strval($rowRecorrencia['PARCELA']); // string
+					$data->SVZL_TIPO = strval($rowRecorrencia['TIPO']); // string
+					$data->SVZL_STATUS = strval($this->status); // string
+					$data->SVZL_APROVACAO = str_pad($this->getAuthCode(), 6, STR_PAD_LEFT); // string
+					$data->SVZL_TRANSACAO = str_pad($this->getTransCode(), 14, STR_PAD_LEFT); // string
+					$data->SVZL_OBS = "Cobrança OK - Alteração manual do cartão."; // string
+
+					$response = $wsdl->RECORRENCIA($data);
+						
+					$soapMessage = $response->RECORRENCIARESULT;
+					
+					$wsdl->RECORRENCIA($data);
+				}
+			}
+			else{
+				$this->soapMessage = $this->validations->_getErrorMessageWS();
+			}
+		}
+	}
+	
 	private function addPaymentSOAP(){
 		if($this->status == "True"){
 			if($this->validations->validateSOAP()){
@@ -144,19 +231,33 @@ class returnPayment extends Ometz_Default
 
 	public function init()
 	{
+
+		/*
+		if(isset($_GET["test"])){
+			$this->makeTestSOAP();		
+			exit;
+		}
+		*/
+				
 		$this->showDefaultHeader();
 		$this->checkVarPOST();			
 
-		/*
-		$this->makeTestSOAP();		
-		exit;
-		*/
-				
+						
 		if($this->hasPOST() == false) {
 			header('Location: '.BASE_URL);	
 			exit;
 		}
-		$this->addPaymentSOAP();	//Add payment details using SOAP.
+		
+		// Recollect		
+		if($this->getCodSaleType() == "6")
+			$this->recollectSOAP();
+		
+		else 
+			$this->addPaymentSOAP();	//Add payment details using SOAP.	
+		
+		$this->verifySavedData();
+		
+		
 	}
 				
 			
@@ -192,6 +293,16 @@ class returnPayment extends Ometz_Default
 		else {
 			$this->hasValues = false;
 			return $this->transCode;
+		}
+	}
+	
+	//Authorization code given by cc brand.
+	public function getTransCodeAnt() {
+		if (isset($_POST["TipoVenda"]))
+			return str_replace("RECOBRANCA - TRANSACAO ANTERIOR ", "", urldecode($_POST["TipoVenda"]));
+		else {
+			$this->hasValues = false;
+			return $this->transCodeAnt;
 		}
 	}			
 			
@@ -340,6 +451,96 @@ class returnPayment extends Ometz_Default
 		}
 	}
 	
+	private function send_mail_sz0(){
+		
+		$message = "Dados para inserir na SZ0:<br>			
+			SZ0_CODORCA  = ".$this->docNumber."<br>
+			SZ0_VENCTO   = ".$this->chooseCutOffDate()."<br>						
+			NZ0_VALENT 	= ".$this->valPaydown."<br>
+			NZ0_VALCRE 	= ".$this->valTotalCred."<br>
+			SZ0_PARCELA  = ".$this->feeNumbers."<br>
+			NZ0_VALOR 	= ".$this->feeAmmount."<br>
+			SZ0_DONOCH	= ".$this->getCodSaleType()."<br>
+			SZ0_HIST 	= \"COD AUTORIZACAO: ".$this->authCode."; TRASACAO: ".$this->transCode."\";<br>
+			SZ0_EMITENT  = \"CRE: ".$this->maskedCreditCard.";VEN: ".$this->expiredate."\";<br>
+		";
+
+
+		//Create a new PHPMailer instance
+		$mail = new PHPMailer();
+		//Tell PHPMailer to use SMTP
+		$mail->isSMTP();
+		//Set the hostname of the mail server
+		$mail->Host = "smtp.mindset.net.br";
+		//Set the SMTP port number - likely to be 25, 465 or 587
+		$mail->Port = 587;
+		//Whether to use SMTP authentication
+		$mail->SMTPAuth = true;
+		//Username to use for SMTP authentication
+		$mail->Username = "teste@ometzgroup.com.br";
+		//Password to use for SMTP authentication
+		$mail->Password = "1q2w3e4r";
+		//Set who the message is to be sent from
+		$mail->setFrom('cartaoskopos@ometzgroup.com.br', 'Webmaster Cartao Skopos');
+		//Set an alternative reply-to address
+		$mail->addReplyTo('cartaoskopos@ometzgroup.com.br', 'Webmaster Cartao Skopos');
+		//Set who the message are to be sent to
+		$mail->addAddress('joab.rodrigues@ometzgroup.com.br', 'Joab Rodrigues');
+		$mail->addAddress('cesar.urdaneta@ometzgroup.com.br', 'Cesar Urdaneta');
+		//Set the subject line
+		$mail->Subject = 'Dados tabela SZ0 - cartoaskopos.';
+		//convert HTML into a basic plain-text alternative body
+		$mail->msgHTML($message);
+		//Replace the plain text body with one created manually
+		$mail->AltBody = $message;
+				
+		//send the message, check for errors
+		if (!$mail->send()) {
+		    echo "Mailer Error: " . $mail->ErrorInfo;
+		} 
+		/*
+		else {
+		    echo "Message sent!";
+		}
+			*/	
+		
+	}
+	
+	private function verifySavedData(){
+		
+		$sql= "
+			SELECT 1					 
+			FROM DB2.SZ0500 AS SZ0
+			WHERE SZ0.Z0_CODORCA  = '".$this->docNumber."'
+			AND SZ0.Z0_HIST LIKE '%TRASACAO: ".$this->transCode."%'
+		";
+		
+		//die($sql);
+				
+		$rs = $this->database->fetchAll($sql);
+		
+		//Send E-Mail when data is not found.
+		if (count($rs) == 0)	
+			$this->send_mail_sz0();
+
+	}
+	
+	public function showErrorSoapMsg(){
+			
+		$pos = !strpos($this->getSoapMessage(), "sucesso");
+		$pos2 = !strpos($this->getSoapMessage(), "OK");		
+		
+		if($pos && $pos2){
+			$show_error = true;
+			echo('	<br>
+					<font color="#FF0000">'.$this->getSoapMessage().'
+					</font>');
+			
+			return true;
+		}
+		return false;
+	}
+	
 	//Web Service message
 	public function getSoapMessage(){
 		return $this->soapMessage;
@@ -372,14 +573,16 @@ $objPayment =  new returnPayment();
                         	<img src="<? echo(IMG_FOLDER); ?>aprovado.png">
                         </div>
                         <p class="textStatus">
-                        	A compra foi feita com sucesso.
-                            <? $pos = strpos($objPayment->getSoapMessage(), "sucesso");
-								if ($pos === false) {
-                            	echo('<br>
-								<font color="#FF0000">'.$objPayment->getSoapMessage().'
-								</font>'); 
-								}
+                        	<? if($objPayment->getCodSaleType() != '6') {?>
+	                        	A compra foi feita com sucesso.
+	                            
+	                        <? }
+							else { ?>
+								A alteração do cartão foi feita com sucesso.
+							<? } 
+							$objPayment->showErrorSoapMsg();
 							?>
+							
                         <br><br>
                         Segue os dados de aprova&ccedil;&atilde;o do cart&atilde;o de cr&eacute;dito:
                         </p>

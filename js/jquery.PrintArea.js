@@ -80,7 +80,7 @@
             if ( settings.mode == modes.popup && settings.popClose )
                 setTimeout(function() { printWindow.close(); }, 2000);
         });
-    }
+    };
 
     function docType()
     {
@@ -99,7 +99,7 @@
         var extraHead = "";
         var links = "";
 
-        if ( settings.extraHead ) settings.extraHead.replace( /([^,]+)/g, function(m){ extraHead += m });
+        if ( settings.extraHead ) settings.extraHead.replace( /([^,]+)/g, function(m){ extraHead += m; });
 
         $(document).find("link")
             .filter(function(){ // Requirement: <link> element MUST have rel="stylesheet" to be considered in print document
@@ -108,12 +108,12 @@
                 })
             .filter(function(){ // Include if media is undefined, empty, print or all
                     var mediaAttr = $(this).attr("media");
-                    return $.type(mediaAttr) === 'undefined' || mediaAttr == "" || mediaAttr.toLowerCase() == 'print' || mediaAttr.toLowerCase() == 'all'
+                    return $.type(mediaAttr) === 'undefined' || mediaAttr == "" || mediaAttr.toLowerCase() == 'print' || mediaAttr.toLowerCase() == 'all';
                 })
             .each(function(){
                     links += '<link type="text/css" rel="stylesheet" href="' + $(this).attr("href") + '" >';
                 });
-        if ( settings.extraCss ) settings.extraCss.replace( /([^,\s]+)/g, function(m){ links += '<link type="text/css" rel="stylesheet" href="' + m + '">' });
+        if ( settings.extraCss ) settings.extraCss.replace( /([^,\s]+)/g, function(m){ links += '<link type="text/css" rel="stylesheet" href="' + m + '">'; });
 
         return "<head><title>" + settings.popTitle + "</title>" + extraHead + links + "</head>";
     }
@@ -125,7 +125,7 @@
         elements.each(function() {
             var ele = getFormData( $(this) );
 
-            var attributes = ""
+            var attributes = "";
             for ( var x = 0; x < attrs.length; x++ )
             {
                 var eleAttr = $(ele).attr( attrs[x] );

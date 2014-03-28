@@ -2,90 +2,24 @@
 <?php
 require_once 'conf.php';
 
-class ShowCompetenceByEditor extends Ometz_Default
+class SearchQuotation extends Ometz_Default
 {
 	private $export="";
 
 	public function init()
 	{
 		$charset="";		
-		// Change to P08 database
-		//$this->database->connectToP10();
-				
+		// Change to P08 database		
+		
+		if($this->get_erp() == "P08"){	
+			$this->database->connectToP08();
+		}
 		if($this->validateSOAP())
 			$this->makeContent($charset);
 		else
 			$this->makeContentError();
 		
 	}
-
-
-	private function doExportXLS(){
-			/** Error reporting */
-			/*
-			error_reporting(E_ALL);
-			ini_set('display_errors', TRUE);
-			ini_set('display_startup_errors', TRUE);
-			date_default_timezone_set('Europe/London');
-
-
-			if (PHP_SAPI == 'cli')
-				die('This example should only be run from a Web Browser');
-
-			*/
-
-			/** Include PHPExcel */
-
-
-
-			// Create new PHPExcel object
-			$objPHPExcel = new PHPExcel();
-
-			// Set document properties
-			$objPHPExcel->getProperties()->setCreator("Maarten Balliauw")
-										 ->setLastModifiedBy("Maarten Balliauw")
-										 ->setTitle("Office 2007 XLSX Test Document")
-										 ->setSubject("Office 2007 XLSX Test Document")
-										 ->setDescription("Test document for Office 2007 XLSX, generated using PHP classes.")
-										 ->setKeywords("office 2007 openxml php")
-										 ->setCategory("Test result file");
-
-			$objPHPExcel->setActiveSheetIndex(0)
-						->setCellValueByColumnAndRow (0,1, $this->export);
-
-			/*
-			// Add some data
-			$objPHPExcel->setActiveSheetIndex(0)
-						->setCellValue('F1', 'Hello')
-						->setCellValue('B2', 'world!')
-						->setCellValue('C1', 'Hello')
-						->setCellValue('D2', 'world!');
-
-
-
-
-			// Miscellaneous glyphs, UTF-8
-			$objPHPExcel->setActiveSheetIndex(0)
-						->setCellValue('A4', 'Miscellaneous glyphs')
-						->setCellValue('A5', '�����������������');
-
-			// Rename worksheet
-			$objPHPExcel->getActiveSheet()->setTitle('Simple');
-
-			*/
-			// Set active sheet index to the first sheet, so Excel opens this as the first sheet
-			$objPHPExcel->setActiveSheetIndex(0);
-
-
-			// Redirect output to a client�s web browser (Excel2007)
-			header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
-			header('Content-Disposition: attachment;filename="01simple.xlsx"');
-			header('Cache-Control: max-age=0');
-
-			$objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel2007');
-			$objWriter->save('php://output');
-			exit;
-		}
 
 	
 	private function validateSOAP(){		
@@ -119,10 +53,38 @@ class ShowCompetenceByEditor extends Ometz_Default
 		return($sql2);
 	}
 
+	
+	private function get_erp(){
+		
+		$erp = "P10";
+		
+		if(isset($_GET["erp"]))
+			$erp = strval($_GET["erp"]);			
+		
+		return strtoupper($erp);
+		
+	}
+	
+	private function getOriginalQuery($txtNumQuotation){
+			
+		if($this->get_erp() == "P10"){
+			$sql3= $this->getOriginalQueryP10($txtNumQuotation);
+			$field_num_quote = "SCJ.CJ_NUM";
+		}
+		else{
+			$sql3= $this->getOriginalQueryP08($txtNumQuotation);
+			$field_num_quote = "SZ6.Z6_NUM";
+		}
+		
+		if($txtNumQuotation !="")
+			$sql3.="WHERE ".$field_num_quote." = '".$txtNumQuotation."'";
 
-	// Set SQL Query here
-	private function getOriginalQuery($txtNumQuotation)
-	{
+		return($sql3);
+
+	}
+	
+	// Set SQL Query here for P10
+	private function getOriginalQueryP10($txtNumQuotation){
 		$sql3="
 			SELECT 
 					CJ_NUM ORCAMENTO,
@@ -153,7 +115,11 @@ class ShowCompetenceByEditor extends Ometz_Default
 					AND SZ0.Z0_CODORCA = SCJ.CJ_NUM
 					AND SZ0.D_E_L_E_T_ = ''
 					) + SCJ.CJ_DESCONT AS TOTAL_PAGO,
-					SCJ.CJ_STATUS STATUS
+					SCJ.CJ_STATUS STATUS,					
+					CASE 
+						WHEN SCJ.CJ_FILINC < 'A0' AND SCJ.CJ_CODEMP = '30' THEN 0
+						ELSE 1
+					END ENABLE_RECURRING
         			FROM 
                         DB2.SA1500 AS SA1
         			INNER JOIN  DB2.SCJ500 AS SCJ ON 
@@ -164,18 +130,70 @@ class ShowCompetenceByEditor extends Ometz_Default
 						MT3.MT3_CODFIL = SCJ.CJ_MSFIL
 		";
 		
-		if($txtNumQuotation !="")
-			$sql3.="WHERE SCJ.CJ_NUM = '".$txtNumQuotation."'";
-
+		return $sql3;
+	}
+	
+	
+	private function getOriginalQueryP08($txtNumQuotation)
+	{
+		$sql3="
+			SELECT 
+					Z6_NUM ORCAMENTO,
+					MT3.MT3_CODFIL,					
+					UPPER(MT3.MT3_FIL) AS MT3_FIL,
+					SA1.A1_COD COD_CLIENTE,
+					SA1.A1_NUMRA,
+					SA1.A1_NOME AS CLIENTE,        
+					Case 
+							When SA1.A1_PESSOA  = 'F' Then 'CPF'
+							Else    'CNPJ'
+					End TIPODOC,
+					SA1.A1_CGC NUM_DOC,
+					CASE
+						WHEN SA1.A1_END IS NOT NULL THEN UPPER(SA1.A1_END)
+						ELSE 'NAO INFORMADO'
+					END AS ENDERECO,
+					SZ6.Z6_VALORD TOTAL_CARTAO, 
+					SZ6.Z6_TOTPAG2 TOTAL_ORCAMENTO,
+					(
+					SELECT  
+						CASE
+							WHEN  SUM(SZ0.Z0_VALCRE) IS NULL THEN 0
+							ELSE    SUM(SZ0.Z0_VALCRE) 
+						END AS SUM_PAYMENT
+					FROM DB2.SZ0010 AS SZ0
+					WHERE SZ0.Z0_DONOCH IN ('4', '5') 
+					AND SZ0.Z0_CODORCA = SZ6.Z6_NUM
+					AND SZ0.D_E_L_E_T_ = ''
+					) AS TOTAL_PAGO, -- + SZ6.Z6_DESCONT AS TOTAL_PAGO,
+					SZ6.Z6_STATUS STATUS,					
+					0 AS ENABLE_RECURRING
+        			FROM 
+                        DB2.SA1010 AS SA1
+        			INNER JOIN  DB2.SZ6010 AS SZ6 ON 
+						SA1.A1_LOJA = SZ6.Z6_LOJA  AND SA1.A1_COD = SZ6.Z6_CLIENTE AND
+						SA1.D_E_L_E_T_ = SZ6.D_E_L_E_T_ AND SA1.D_E_L_E_T_ = ''                        
+			        INNER JOIN DB2.MT3010 AS MT3 ON 
+						MT3.MT3_CODEMP = SZ6.Z6_CODEMP AND
+						MT3.MT3_CODFIL = SZ6.Z6_MSFIL			
+		";
+				
 		return($sql3);
 
 	}
-
+		
+	private function get_default_num_quote(){
+		
+		return $this->get_erp()== "P08" ? "AAIL06" : "058742";
+		
+	}
+	
 	public function makeContentError(){
 		$result = "";
 		$result .= $this->validations->_getErrorMessageWS();
 
 		$arrpage = array(
+				"erp"			=> $this->get_erp(),
 				"reccount"  	=> 0,
 				"pagecount"		=> 0,
 				"queryresult"	=> $result
@@ -196,7 +214,7 @@ class ShowCompetenceByEditor extends Ometz_Default
 		if(isset($_POST['txtNumQuote']))
 			$txtNumQuotation = $_POST["txtNumQuote"];
 		else
-			$txtNumQuotation = "058742";			
+			$txtNumQuotation = $this->get_default_num_quote();			
 
 		//Init pager
 		if (isset($_GET["numpage"]))
@@ -217,7 +235,7 @@ class ShowCompetenceByEditor extends Ometz_Default
 
 		$reccount = $this->countRecord($txtNumQuotation);
 		$pagecount = ceil($reccount / $pagesize);
-
+		
 		$result = "";
 
 		if ($reccount >= 0)
@@ -237,7 +255,8 @@ class ShowCompetenceByEditor extends Ometz_Default
 					TOTAL_CARTAO,
 					TOTAL_PAGO,
 					(TOTAL_CARTAO - TOTAL_PAGO) SALDO_RESTANTE,
-					STATUS
+					STATUS,
+					ENABLE_RECURRING
 			FROM
 			(";
 			$sql.= $this->getQueryWithRecNum($txtNumQuotation);
@@ -270,6 +289,7 @@ class ShowCompetenceByEditor extends Ometz_Default
 			}
 
 			$arrpage = array(
+				"erp"			=> $this->get_erp(),
 				"reccount"  	=> $reccount,
 				"pagecount" 	=> $pagecount,
 				"queryresult"	=> $result
@@ -285,6 +305,7 @@ class ShowCompetenceByEditor extends Ometz_Default
 			$result.= $this->database->getError();
 
 			$arrpage = array(
+					"erp"			=> $this->get_erp(),
 					"reccount"  	=> $reccount,
 					"pagecount"		=> $pagecount,
 					"queryresult"	=> $result
@@ -295,4 +316,4 @@ class ShowCompetenceByEditor extends Ometz_Default
 	}
 	
 }
-new ShowCompetenceByEditor();
+new SearchQuotation();

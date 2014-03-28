@@ -37,12 +37,12 @@ $(function($){
 				
 				
 				return false;
-            } else {
+            } else {                
                 return true;
             }
         });
+		
 	
-
 	//Set textboxes to numeric inputs only.
 	$("#txtValorDocumento").autoNumeric({aSep: '.', 
 										 wEmpty: 'zero',
@@ -65,13 +65,6 @@ $(function($){
 										 aDec: '.',
 										 vMin : 0
 										});
-
-	$("#txtNumQuote").autoNumeric({aSep: '',
-											 aDec: ',',
-											 mDec : 0,
-											 vMin : 0,
-											 vMax : 999999											 
-											});
 
 	$("#FinalPayment").autoNumeric({aSep: '.', 
 									 wEmpty: 'zero',
@@ -115,8 +108,9 @@ $(function($){
 						selectorOpt = "#optFeeRateNum" + $(this).val().toString();
 						
 						recurrentPayment = true;					
-						//Disable and strike when installment is greater than expire date minus today date.
-						if(expirePeriod < 24 && curPeriod >= expirePeriod ){
+						// Disable and strike when installment is greater than expire date minus today date or
+						// Branch is Wise Up Teens. 
+						if((expirePeriod < 24 && curPeriod >= expirePeriod ) || $("#EnableRecurring").val() == 0 ){
 							$(selectorOpt).attr('disabled','disabled');
 							$(selectorLabel).css('text-decoration','line-through');
 							$(selectorLabel).css('color','#CFCFCF');
@@ -129,7 +123,10 @@ $(function($){
 						principalAmmount = principalAmmount - calculatePercent(principalAmmount, $('#DownPayment').val()) ;						
 					}
 					else{
-						principalAmmount = principalAmmount - calculatePercent(principalAmmount, $('#DiscountRegSale').val()) ;
+						discountValue = checkDiscountRule($(this).val());
+						//discountValue = $('#DiscountRegSale').val();
+						principalAmmount = principalAmmount - calculatePercent(principalAmmount, discountValue) ;
+						
 					}
 					var feeAmmount = calculateQuoteValue(principalAmmount, $(this).val(), recurrentPayment);
 					
@@ -190,16 +187,17 @@ $(function($){
 			width: 420
 		});
 		
+
 	$('[name="optFeeNum"]').change(
 		function(event){
 			$("#msgSelFee").hide();
 		}
-	)
-	
+	);
+
 	$("#btnSelectQuota").click(
 		function(event){
 			event.preventDefault();
-			var valDoc = $("#txtValorDocumento").autoNumeric('get') !="" ? parseFloat( $("#txtValorDocumento").autoNumeric('get') ) : ""
+			var valDoc = $("#txtValorDocumento").autoNumeric('get') !="" ? parseFloat( $("#txtValorDocumento").autoNumeric('get') ) : "";
 			var validZeroValDoc = checkNoZeroValue("#divMsgValuePayment", valDoc, "Pagamento");
 			var validEmptyExpDate =  validateEmptyExpireDate();
 			var validExpDate =  validateExpireDate();
@@ -216,6 +214,12 @@ $(function($){
 	
 	//Lostfocus
 	$("#txtValorDocumento").focusout(function() {		
+		updatePayment();
+  	});
+
+
+	//Keyboard event
+	$("#txtValorDocumento").keyup(function() {		
 		updatePayment();
   	});
 
@@ -252,8 +256,9 @@ $(function($){
 			event.preventDefault();
 		}
 	);
-	
-})
+		
+});
+
 
 function makeCheckOut(){
 	
@@ -288,6 +293,7 @@ function makeCheckOut(){
 
 function validateQuotation(){
 	$("#divMsgQuotation").hide();	
+		
 	if($("#txtNumQuote").val().length == 0){
 		$("#divMsgQuotation").html("Deve digitar o n&uacute;mero de Or&ccedil;amento");
 		$("#txtNumQuote").select();
@@ -328,18 +334,27 @@ function populateCustomerQuote(rs){
 	$("#tdcbalance").html((frow["SALDO_RESTANTE"]).formatNumber(2, ',', '.', 'R$'));	
 	$("#txtValorDocumento").val((frow["SALDO_RESTANTE"]).formatNumber(2, ',', '.', 'R$'));
 	$("#SaldoRestante").val(frow["SALDO_RESTANTE"]);
+	$("#EnableRecurring").val(frow["ENABLE_RECURRING"]);
 	
 	$("#txtNumQuote").val('');					//Clear Quote value for new input.
 	$("#NumeroDocumento").val(numQuote);		//Store value for payment process.
 	$("#txtQuantidadeParcelas").val('');		//Clear num quotes.
+	
 
 }
 
 
 function searchQuotation(){
-	//Pad quotation before sending
-	var padded_quoted = $("#txtNumQuote").val().lpad("0", 6);
-	$("#txtNumQuote").val(padded_quoted);
+	// Pad quotation before sending (if numeric), otherwise upercase values.
+	var url_param = "";
+	if(!isNaN($("#txtNumQuote").val()) ){	
+		var padded_quoted = $("#txtNumQuote").val().lpad("0", 6);	
+		$("#txtNumQuote").val(padded_quoted);
+	}
+	else{
+		$("#txtNumQuote").val($("#txtNumQuote").val().toUpperCase());
+		url_param = "?erp = p8";
+	}
 	var ser_data = $("#txtNumQuote").serialize();	
 	
 	$("#divMsgQuotation").hide();
@@ -352,12 +367,11 @@ function searchQuotation(){
 
 	$.ajax(
 			{
-			url: "searchQuotation.php",
+			url: "searchQuotation.php" + url_param,
 			type: "POST",
 			timeout: 600000, 
 			data: ser_data, 
-			dataType: "json"
-			
+			dataType: "json"			
 			}
 
 		)
@@ -367,8 +381,9 @@ function searchQuotation(){
 			var nl2br = function(str, is_xhtml) {
 				var breakTag = (is_xhtml || typeof is_xhtml === 'undefined') ? '<br />' : '<br>';
 				return (str + '').replace(/([^>\r\n]?)(\r\n|\n\r|\r|\n)/g, '$1' + breakTag + '$2');
-			}			
+			};			
 			if(returnData.reccount > 0){
+				// Make post-validation of data.
 				if(rs[0]["TOTAL_CARTAO"] <= 0){
 					showMsgInvalidQuote("Valor pagamento por cartão deve ser maior a zero.");
 				}
@@ -632,7 +647,8 @@ function updateMessageAmmount(numQuotes, curFeeSTAC, feeAmmount){
 					   + '&nbsp;=&nbsp;<span id="outputTotalAmmount" data-a-sign="R$ " data-a-dec="," data-a-sep="."></span>';
 		
 		
-		//Output the selection to the main page.
+		//Output the selection to the main page when Total ammount is greater than zero.
+		
 		$("#outputPayment").html(selectedText);
 		$("#outputFeeAmmount").autoNumeric();
 		$("#outputFeeAmmount").autoNumeric('set',  feeAmmount);
@@ -647,6 +663,13 @@ function updateMessageAmmount(numQuotes, curFeeSTAC, feeAmmount){
 		}
 		$("#outputTotalAmmount").autoNumeric();
 		$("#outputTotalAmmount").autoNumeric('set',  totalAmmount);
+		
+	
+		if(curFeeSTAC > 0 & feeAmmount > 0 ){
+			$("#outputPayment").show();
+		}
+		else
+			$("#outputPayment").hide();
 	}
 }
 
@@ -668,6 +691,7 @@ function updatePayment(numQuotes, valPayment) {
 		principalAmmount = valPayment - calculatePercent(valPayment, $("#DiscountRegSale").val());
 		curFeeSTAC = principalAmmount;
 		setBillingType(this, "0");
+		$('#DiscountRegSale').val(checkDiscountRule(numQuotes));
 	}
 
 	feeAmmount = calculateQuoteValue(principalAmmount, numQuotes, recurrentPayment);
@@ -676,5 +700,39 @@ function updatePayment(numQuotes, valPayment) {
 	$("#FinalPayment").autoNumeric( 'set', curFeeSTAC );
 
 	updateMessageAmmount(numQuotes, curFeeSTAC, feeAmmount);
+	
+}
+
+function checkDiscountRule(installmentNum){
+
+	valDiscount = 0;
+
+
+	$.ajax({
+	  url: "discount_rules.php",
+	  async: false,
+	  dataType:"json"
+	  
+	})
+	.done(function(returnData) {
+		
+		$.each(returnData, function(){
+			if(installmentNum >= this.min & installmentNum <= this.max){
+				valDiscount = this.discount;
+				return false;
+			}
+		});
+		
+	})		
+	.fail(function(xhr, ajaxOptions, thrownError) {
+			valDiscount = $('#DiscountRegSale').val();
+		})
+	.always(function(){
+		});
+	
+	
+
+	
+	return valDiscount;
 	
 }

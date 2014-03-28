@@ -11,13 +11,13 @@ $obj = new Ometz_Default();
 $formatter = new formatterContent();
 
 $RazaoSocialOmetz = "CENTRAL DE PRODUCOES GWUP S/A.";
-$EnderecoOmetz = "AV. GETULIO VARGAS, 3812";
-$BairroOmetz = "AGUA VERDE";
+$EnderecoOmetz = "R WILLIAM BOOTH, 2501";
+$BairroOmetz = "BOQUEIRAO";
 $CidadeOmetz = "CURITIBA";
 $EstadoOmetz = "PARANA";
-$CepOmetz = "80240-041";
-$CNPJOmetz = "00.000.000/0001-00";
-$Bandeira = "You Move";
+$CepOmetz = "81730-080";
+$CNPJOmetz = "01.959.772/0002-07";
+$Bandeira = strtoupper($_POST["bandeira"]);
 
 $NomeCliente = $_POST["nomecliente"];
 $NacionalidadeCliente = $_POST["nacionalidadecliente"];
@@ -41,7 +41,7 @@ $ValorModulo = money_format('%.2n', $ValorModulo);
 $ValorKitExtenso = $formatter->valorPorExtenso(floatval($ValorKit), true);
 $ValorKit = money_format('%.2n', $ValorKit);
 
-$QuantidadeParcelas = $_POST["txtQuantidadeParcelas"];
+$QuantidadeParcelas = intval($_POST["txtQuantidadeParcelas"]) + 1;
 $QuantidadeParcelasExtenso = $formatter->valorPorExtenso(intval($QuantidadeParcelas),false, false,"parcela","parcelas");
 $ValorEntrada = $_POST["valorentrada"];
 $ValorEntradaExtenso = $formatter->valorPorExtenso(floatval($ValorEntrada), true);
@@ -55,7 +55,7 @@ $ValorParcelas = $_POST["valorparcelas"];
 $ValorParcelasExtenso = $formatter->valorPorExtenso(floatval($ValorParcelas), true);
 $ValorParcelas = money_format('%.2n', $ValorParcelas);
 $PrimeiraMensalidade = $obj->getCutOffDate("d/m/Y", $DataEmissaoContrato); //"05";
-$NumeroCartaoCredito = $_POST["firstCCNum"]."******".$_POST["lastCCNum"];
+$NumeroCartaoCredito = $_POST["firstCCNum"]."-XXXX-XXXX-".$_POST["lastCCNum"];
 $OperadoraCartao = $_POST["operadoracartao"];
 
 

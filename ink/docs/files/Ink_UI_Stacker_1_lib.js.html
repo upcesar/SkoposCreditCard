@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Ink/UI/Stacker/1/lib.js - Ink.js</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+    <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><img src="../yuidoclogo.png" title="Ink.js"></h1>
+            
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: latest</em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <h2 class="off-left">APIs</h2>
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+            <li><a href="#api-modules">Modules</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="../classes/Ink.html">Ink</a></li>
+            
+                <li><a href="../classes/Ink.Dom.Browser.html">Ink.Dom.Browser</a></li>
+            
+                <li><a href="../classes/Ink.Dom.Css.html">Ink.Dom.Css</a></li>
+            
+                <li><a href="../classes/Ink.Dom.Element.html">Ink.Dom.Element</a></li>
+            
+                <li><a href="../classes/Ink.Dom.Event.html">Ink.Dom.Event</a></li>
+            
+                <li><a href="../classes/Ink.Dom.FormSerialize.html">Ink.Dom.FormSerialize</a></li>
+            
+                <li><a href="../classes/Ink.Dom.Loaded.html">Ink.Dom.Loaded</a></li>
+            
+                <li><a href="../classes/Ink.Dom.Selector.html">Ink.Dom.Selector</a></li>
+            
+                <li><a href="../classes/Ink.Namespace.ClassModule.html">Ink.Namespace.ClassModule</a></li>
+            
+                <li><a href="../classes/Ink.Namespace.StaticModule.html">Ink.Namespace.StaticModule</a></li>
+            
+                <li><a href="../classes/Ink.Net.Ajax.html">Ink.Net.Ajax</a></li>
+            
+                <li><a href="../classes/Ink.Net.JsonP.html">Ink.Net.JsonP</a></li>
+            
+                <li><a href="../classes/Ink.UI.Animate_1.html">Ink.UI.Animate_1</a></li>
+            
+                <li><a href="../classes/Ink.UI.Carousel_1.html">Ink.UI.Carousel_1</a></li>
+            
+                <li><a href="../classes/Ink.UI.Close.html">Ink.UI.Close</a></li>
+            
+                <li><a href="../classes/Ink.UI.Common.html">Ink.UI.Common</a></li>
+            
+                <li><a href="../classes/Ink.UI.DatePicker.html">Ink.UI.DatePicker</a></li>
+            
+                <li><a href="../classes/Ink.UI.Draggable.html">Ink.UI.Draggable</a></li>
+            
+                <li><a href="../classes/Ink.UI.Dropdown.html">Ink.UI.Dropdown</a></li>
+            
+                <li><a href="../classes/Ink.UI.Droppable.html">Ink.UI.Droppable</a></li>
+            
+                <li><a href="../classes/Ink.UI.FormValidator.html">Ink.UI.FormValidator</a></li>
+            
+                <li><a href="../classes/Ink.UI.FormValidator_2.html">Ink.UI.FormValidator_2</a></li>
+            
+                <li><a href="../classes/Ink.UI.ImageQuery.html">Ink.UI.ImageQuery</a></li>
+            
+                <li><a href="../classes/Ink.UI.Modal.html">Ink.UI.Modal</a></li>
+            
+                <li><a href="../classes/Ink.UI.Pagination.html">Ink.UI.Pagination</a></li>
+            
+                <li><a href="../classes/Ink.UI.ProgressBar.html">Ink.UI.ProgressBar</a></li>
+            
+                <li><a href="../classes/Ink.UI.SmoothScroller.html">Ink.UI.SmoothScroller</a></li>
+            
+                <li><a href="../classes/Ink.UI.SortableList.html">Ink.UI.SortableList</a></li>
+            
+                <li><a href="../classes/Ink.UI.Spy.html">Ink.UI.Spy</a></li>
+            
+                <li><a href="../classes/Ink.UI.Stacker_1.html">Ink.UI.Stacker_1</a></li>
+            
+                <li><a href="../classes/Ink.UI.Sticky.html">Ink.UI.Sticky</a></li>
+            
+                <li><a href="../classes/Ink.UI.Swipe.html">Ink.UI.Swipe</a></li>
+            
+                <li><a href="../classes/Ink.UI.Table.html">Ink.UI.Table</a></li>
+            
+                <li><a href="../classes/Ink.UI.Tabs.html">Ink.UI.Tabs</a></li>
+            
+                <li><a href="../classes/Ink.UI.TagField.html">Ink.UI.TagField</a></li>
+            
+                <li><a href="../classes/Ink.UI.Toggle.html">Ink.UI.Toggle</a></li>
+            
+                <li><a href="../classes/Ink.UI.Tooltip.html">Ink.UI.Tooltip</a></li>
+            
+                <li><a href="../classes/Ink.UI.TreeView.html">Ink.UI.TreeView</a></li>
+            
+                <li><a href="../classes/Ink.Util.Array.html">Ink.Util.Array</a></li>
+            
+                <li><a href="../classes/Ink.Util.BinPack.html">Ink.Util.BinPack</a></li>
+            
+                <li><a href="../classes/Ink.Util.Cookie.html">Ink.Util.Cookie</a></li>
+            
+                <li><a href="../classes/Ink.Util.Date.html">Ink.Util.Date</a></li>
+            
+                <li><a href="../classes/Ink.Util.Dumper.html">Ink.Util.Dumper</a></li>
+            
+                <li><a href="../classes/Ink.Util.I18n.html">Ink.Util.I18n</a></li>
+            
+                <li><a href="../classes/Ink.Util.Json.html">Ink.Util.Json</a></li>
+            
+                <li><a href="../classes/Ink.Util.String.html">Ink.Util.String</a></li>
+            
+                <li><a href="../classes/Ink.Util.Url.html">Ink.Util.Url</a></li>
+            
+                <li><a href="../classes/Ink.Util.Validator.html">Ink.Util.Validator</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+                <li><a href="../modules/Ink.Dom.Browser_1.html">Ink.Dom.Browser_1</a></li>
+            
+                <li><a href="../modules/Ink.Dom.Css_1.html">Ink.Dom.Css_1</a></li>
+            
+                <li><a href="../modules/Ink.Dom.Element_1.html">Ink.Dom.Element_1</a></li>
+            
+                <li><a href="../modules/Ink.Dom.Event_1.html">Ink.Dom.Event_1</a></li>
+            
+                <li><a href="../modules/Ink.Dom.FormSerialize.html">Ink.Dom.FormSerialize</a></li>
+            
+                <li><a href="../modules/Ink.Dom.Loaded_1.html">Ink.Dom.Loaded_1</a></li>
+            
+                <li><a href="../modules/Ink.Dom.Selector_1.html">Ink.Dom.Selector_1</a></li>
+            
+                <li><a href="../modules/Ink.Namespace.ClassModule_1.html">Ink.Namespace.ClassModule_1</a></li>
+            
+                <li><a href="../modules/Ink.Namespace.StaticModule_1.html">Ink.Namespace.StaticModule_1</a></li>
+            
+                <li><a href="../modules/Ink.Net.Ajax_1.html">Ink.Net.Ajax_1</a></li>
+            
+                <li><a href="../modules/Ink.Net.JsonP_1.html">Ink.Net.JsonP_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Animate_1.html">Ink.UI.Animate_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Carousel_1.html">Ink.UI.Carousel_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Close_1.html">Ink.UI.Close_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Common_1.html">Ink.UI.Common_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.DatePicker_1.html">Ink.UI.DatePicker_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Dropdown_1.html">Ink.UI.Dropdown_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Droppable_1.html">Ink.UI.Droppable_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.FormValidator_1.html">Ink.UI.FormValidator_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.FormValidator_2.html">Ink.UI.FormValidator_2</a></li>
+            
+                <li><a href="../modules/Ink.UI.ImageQuery_1.html">Ink.UI.ImageQuery_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Modal_1.html">Ink.UI.Modal_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Pagination_1.html">Ink.UI.Pagination_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.ProgressBar_1.html">Ink.UI.ProgressBar_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.SmoothScroller_1.html">Ink.UI.SmoothScroller_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.SortableList_1.html">Ink.UI.SortableList_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Spy_1.html">Ink.UI.Spy_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Stacker_1.html">Ink.UI.Stacker_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Sticky_1.html">Ink.UI.Sticky_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Swipe.html">Ink.UI.Swipe</a></li>
+            
+                <li><a href="../modules/Ink.UI.Table_1.html">Ink.UI.Table_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Tabs_1.html">Ink.UI.Tabs_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Toggle_1.html">Ink.UI.Toggle_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Tooltip_1.html">Ink.UI.Tooltip_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.TreeView_1.html">Ink.UI.TreeView_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Array_1.html">Ink.Util.Array_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.BinPack_1.html">Ink.Util.BinPack_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Cookie_1.html">Ink.Util.Cookie_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Date_1.html">Ink.Util.Date_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Dumper_1.html">Ink.Util.Dumper_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.I18n_1.html">Ink.Util.I18n_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Json_1.html">Ink.Util.Json_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.String_1.html">Ink.Util.String_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Url_1.html">Ink.Util.Url_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Validator_1.html">Ink.Util.Validator_1</a></li>
+            
+                <li><a href="../modules/Ink_1.html">Ink_1</a></li>
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+
+
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1 class="file-heading">File: Ink/UI/Stacker/1/lib.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+/**
+ * @module Ink.UI.Stacker_1
+ **/
+Ink.createModule(&#x27;Ink.UI.Stacker&#x27;, 1, [&#x27;Ink.UI.Common_1&#x27;, &#x27;Ink.Dom.Event_1&#x27;, &#x27;Ink.Dom.Element_1&#x27;], function(InkUICommon, InkEvent, InkElement) {
+    &#x27;use strict&#x27;;
+
+function Stacker(selector, options) {
+    this._init(selector, options);
+}
+
+Stacker.prototype = {
+    /**
+     * This module combines several stacks of items together, in smaller screen sizes.
+     *
+     * The purpose is to have several stacks of items which may have different heights and as such cannot be used because of &#x60;float: left&#x60; quirks.
+     *
+     * For example, when you have three different columns of information:
+     *
+     *     [col. A: 1] [col. B: 1] [col. C: 1]
+     *     [col. B: 2] [col. C: 2] [col. C: 2]
+     *
+     * and the screen resizes and you need a layout of 2 columns, Stacker reorders the stacks so that you get:
+     *
+     *     [col. A: 1] [col. B: 1]
+     *     [col. C: 1] [col. A: 2]
+     *     [col. B: 2] [col. C: 2]
+     * 
+     * Note: If you just want to use a different amount of columns for your items in several viewports, but these items are guaranteed to have a fixed height, don&#x27;t use this module. Use the &#x60;small-*&#x60;, &#x60;medium-*&#x60; and &#x60;large-*&#x60; classes instead.
+     *
+     * @class Ink.UI.Stacker_1
+     *
+     * @constructor
+     * @param [container] {DOMElement|String} Element which contains the stacks (identified by the options.column selector)
+     * @param [options]
+     * @param [options.column=&#x27;.stacker-column&#x27;] {String}   Select the columns inside the &#x60;container&#x60;
+     * @param [options.item=&#x27;.stacker-item&#x27;]     {String}   Select items in your stack
+     *
+     * @param [options.customBreakPoints]        {Object}   options for each breakpoint name. Use this if you have more breakpoints than Ink by default (&#x60;large&#x60;, &#x60;medium&#x60;, &#x60;small&#x60;)
+     * @param [options.customBreakpoints.(breakpoint)] {Object} 
+     * @param options.customBreakpoints.(breakpoint).max    Maximum screen size as seen in your media query
+     * @param options.customBreakpoints.(breakpoint).min    Minimum screen size as seen in your media query
+     * @param options.customBreakpoints.(breakpoint).cols   Column count for this size.
+     *
+     * @param [options.largeMax]                 {Number}   Upper bound of &#x60;large&#x60; breakpoint
+     * @param [options.largeMin=961]             {Number}   Lower bound of &#x60;large&#x60; breakpoint
+     * @param [options.mediumMax=960]            {Number}   Upper bound of &#x60;medium&#x60; breakpoint
+     * @param [options.mediumMin=651]            {Number}   Lower bound of &#x60;medium&#x60; breakpoint
+     * @param [options.smallMax=650]             {Number}   Upper bound of &#x60;small&#x60; breakpoint
+     * @param [options.smallMin]                 {Number}   Lower bound of &#x60;small&#x60; breakpoint
+     *
+     * @param [options.largeCols=3]              {Integer}  Number of columns in the &#x60;large&#x60; viewport
+     * @param [options.mediumCols=2]             {Integer}  Number of columns in the &#x60;medium&#x60; viewport
+     * @param [options.smallCols=1]              {Integer}  Number of columns in the &#x60;small&#x60; viewport
+     *
+     * @param [options.isOrdered=true]           {Boolean}  When &#x60;false&#x60;, do not reorder stacks when combining them.
+     * @param [options.onRunCallback]            {Function} Called when instantiated
+     * @param [options.onResizeCallback]         {Function} Called when resized because the window resized.
+     * @param [options.onAPIReloadCallback]      {Function} Called when you ask to reload stack items from the DOM.
+     *
+     * @example
+     *
+     * Html:
+     *
+     *     &lt;div id=&quot;stacker-container&quot;&gt;  &lt;!-- Stacker element --&gt;
+     *         &lt;div class=&quot;large-33 medium-50 small-100 stacker-column&quot;&gt; &lt;!-- Column element (&#x27;.stacker-column&#x27; is the default selector) --&gt;
+     *             &lt;div id=&quot;a&quot; class=&quot;stacker-item&quot;&gt;a&lt;/div&gt; &lt;!-- Item (&#x27;.stacker-item&#x27; is the default selector) --&gt;
+     *             &lt;div id=&quot;d&quot; class=&quot;stacker-item&quot;&gt;d&lt;/div&gt;
+     *             &lt;div id=&quot;g&quot; class=&quot;stacker-item&quot;&gt;g&lt;/div&gt;
+     *         &lt;/div&gt;
+     *         &lt;div class=&quot;large-33 medium-50 small-100 hide-small stacker-column&quot;&gt;
+     *             &lt;div id=&quot;b&quot; class=&quot;stacker-item&quot;&gt;b&lt;/div&gt;
+     *             &lt;div id=&quot;e&quot; class=&quot;stacker-item&quot;&gt;e&lt;/div&gt;
+     *             &lt;div id=&quot;h&quot; class=&quot;stacker-item&quot;&gt;h&lt;/div&gt;
+     *         &lt;/div&gt;
+     *         &lt;div class=&quot;large-33 medium-50 small-100 hide-medium hide-small stacker-column&quot;&gt;
+     *             &lt;div id=&quot;c&quot; class=&quot;stacker-item&quot;&gt;c&lt;/div&gt;
+     *             &lt;div id=&quot;f&quot; class=&quot;stacker-item&quot;&gt;f&lt;/div&gt;
+     *             &lt;div id=&quot;i&quot; class=&quot;stacker-item&quot;&gt;i&lt;/div&gt;
+     *         &lt;/div&gt;
+     *     &lt;/div&gt;
+     *
+     * Javascript:
+     *
+     *     Ink.requireModules([&#x27;Ink.UI.Stacker_1&#x27;], function (Stacker) {
+     *         var stacker = new Stacker(&#x27;#stacker-container&#x27;);
+     *         // Keep the &quot;stacker&quot; variable around if you want to call addItem and reloadItems
+     *     });
+     **/
+    _init: function(selector, options) {
+        /* globals console */
+        this._rootElm = InkUICommon.elsOrSelector(selector, &#x27;Ink.UI.Stacker root element&#x27;)[0] || null;
+        if(this._rootElm === null) {
+            if(typeof console !== &#x27;undefined&#x27;) {
+                console.warn(&#x27;Ink.UI.Stacker: No root element&#x27;);
+            }
+        }
+
+        this._options = InkUICommon.options({
+            column: [&#x27;String&#x27;, &#x27;.stacker-column&#x27;],
+            item: [&#x27;String&#x27;, &#x27;.stacker-item&#x27;],
+
+            // [3.0.0] review this when we have info about our breakpoints from the CSS
+            customBreakPoints: [&#x27;Object&#x27;, null], // Must be: {xlarge: {max: 9999, min: 1281, cols: 5}, large:{max:1280, min:1001, cols:4} medium:{max:1000, min:801,cols:3}, ...etc..}
+            largeMax: [&#x27;Number&#x27;, Number.MAX_VALUE],
+            largeMin: [&#x27;Number&#x27;, 961],
+            mediumMax: [&#x27;Number&#x27;, 960],
+            mediumMin: [&#x27;Number&#x27;, 651],
+            smallMax: [&#x27;Number&#x27;, 650],
+            smallMin: [&#x27;Number&#x27;, 0],
+
+            largeCols: [&#x27;Integer&#x27;, 3],
+            mediumCols: [&#x27;Integer&#x27;, 2],
+            smallCols: [&#x27;Integer&#x27;, 1],
+
+            isOrdered: [&#x27;Boolean&#x27;, true],
+            onRunCallback: [&#x27;Function&#x27;, null],
+            onResizeCallback: [&#x27;Function&#x27;, null],
+            onAPIReloadCallback: [&#x27;Function&#x27;, null]
+        }, options || {}, this._rootElm);  
+
+        this._aList = []; 
+
+        this._curLayout = &#x27;large&#x27;;
+
+        // [todo] is this needed?
+        this._runFirstTime = false;
+
+        this._getPageItemsToList();
+
+        if(this._canApplyLayoutChange() || !this._runFirstTime) {
+            this._runFirstTime = true;
+            this._applyLayoutChange();
+            if(typeof(this._options.onRunCallback) === &#x27;function&#x27;) {
+                this._options.onRunCallback(this._curLayout);
+            }
+        }
+        this._addEvents();
+    },
+
+    /**
+     * Add an item to the end of your stacks. Call &#x60;reloadItems()&#x60; when you are done adding items.
+     * @method addItem
+     * @param {DOMElement} item
+     **/
+    addItem: function(item) {
+        this._aList.push(item);
+    },
+
+    /**
+     * Update the layout of your items.
+     *
+     * Call this when:
+     *
+     *  - The width has changed, but not because of the window resizing.
+     *  - You used addItem to add some items
+     *
+     * @method reloadItems
+     **/
+    reloadItems: function() {
+        this._applyLayoutChange();
+        if(typeof(this._options.onAPIReloadCallback) === &#x27;function&#x27;) {
+            this._options.onAPIReloadCallback(this._curLayout);
+        }
+    },
+
+    _addEvents: function() {
+        InkEvent.observe(window, &#x27;resize&#x27;, Ink.bindEvent(this._onResize, this));
+    },
+
+    _onResize: function() {
+        if(this._canApplyLayoutChange()) {
+            this._removeDomItems();
+            this._applyLayoutChange();
+            if(typeof(this._options.onResizeCallback) === &#x27;function&#x27;) {
+                this._options.onResizeCallback(this._curLayout);
+            }
+        }
+    },
+
+    _setCurLayout: function() {
+        var viewportWidth = InkElement.viewportWidth();
+        if(this._options.customBreakpoints &amp;&amp; typeof(this._options.customBreakPoints) === &#x27;object&#x27;) {
+            for(var prop in this._options.customBreakPoints) {
+                if(this._options.customBreakPoints.hasOwnProperty(prop)) {
+                    if(viewportWidth &gt;= Number(this._options.customBreakPoints[prop].min) &amp;&amp; viewportWidth &lt;= Number(this._options.customBreakPoints[prop].max) &amp;&amp; this._curLayout !== prop) {
+                        this._curLayout = prop;
+                        return;
+                    } 
+                }
+            }
+        } else {
+            if(viewportWidth &lt;= Number(this._options.largeMax) &amp;&amp; viewportWidth &gt;= Number(this._options.largeMin) &amp;&amp; this._curLayout !== &#x27;large&#x27;) {
+                this._curLayout = &#x27;large&#x27;;
+            } else if(viewportWidth &gt;= Number(this._options.mediumMin) &amp;&amp; viewportWidth &lt;= Number(this._options.mediumMax) &amp;&amp; this._curLayout !== &#x27;medium&#x27;) {
+                this._curLayout = &#x27;medium&#x27;;
+            } else if(viewportWidth &gt;= Number(this._options.smallMin) &amp;&amp; viewportWidth &lt;= Number(this._options.smallMax) &amp;&amp; this._curLayout !== &#x27;small&#x27;) {
+                this._curLayout = &#x27;small&#x27;;
+            }
+        }
+    },
+
+    _getColumnsToShow: function() {
+        if(this._options.customBreakPoints &amp;&amp; typeof(this._options.customBreakPoints) === &#x27;object&#x27;) {
+            return Number(this._options.customBreakPoints[this._curLayout].cols);
+        } else {
+            return Number(this._options[this._curLayout+&#x27;Cols&#x27;]);
+        }
+    },
+
+    _canApplyLayoutChange: function() {
+        var curLayout = this._curLayout;
+        this._setCurLayout();
+        if(curLayout !== this._curLayout) {
+            return true;
+        }
+        return false;
+    },
+
+    _getPageItemsToList: function() {
+        this._aColumn = Ink.ss(this._options.column, this._rootElm);
+        var totalCols = this._aColumn.length;
+        var index = 0;
+        if(totalCols &gt; 0) {
+            for(var i=0; i &lt; this._aColumn.length; i++) {
+                var aItems = Ink.ss(this._options.item, this._aColumn[i]);
+                for(var j=0; j &lt; aItems.length; j++) {
+                    if(this._options.isOrdered) {
+                        index = i + (j * totalCols);
+                    }
+                    this._aList[index] = aItems[j];
+                    if(!this._options.isOrdered) {
+                        index++;
+                    }
+                    //aItems[j].style.height = (100 + (Math.random() * 100))+&#x27;px&#x27;;
+                    aItems[j].parentNode.removeChild(aItems[j]);
+                }
+            }
+            if(this._aList.length &gt; 0 &amp;&amp; this._options.isOrdered) {
+                var aNewList = [];
+                for(var ii=0; ii &lt; this._aList.length; ii++) {
+                    if(typeof(this._aList[ii]) !== &#x27;undefined&#x27;) {
+                        aNewList.push(this._aList[ii]);
+                    }
+                }
+                this._aList = aNewList;
+            }
+        }
+    }, 
+
+    _removeDomItems: function() {
+        var totalCols = this._aColumn.length;
+        if(totalCols &gt; 0) {
+            for(var i=0; i &lt; totalCols; i++) {
+                var aItems = Ink.ss(this._options.item, this._aColumn[i]);
+                for(var j=aItems.length - 1; j &gt;= 0; j--) {
+                    aItems[j].parentNode.removeChild(aItems[j]);
+                }
+            }
+        }
+    },
+
+    _applyLayoutChange: function() {
+        var totalCols = this._getColumnsToShow();
+        var totalItems = this._aList.length;
+        var index = 0;
+        var countCol = 0;
+        if(totalCols &gt; 0) {
+            while(countCol &lt; totalCols) {
+                this._aColumn[countCol].appendChild(this._aList[index]);
+                index++;
+                countCol++;
+                if(index === totalItems) {
+                    return;
+                }
+                if(countCol === totalCols) {
+                    countCol = 0;
+                }
+            }
+        }
+    }
+};
+
+return Stacker;
+
+});
+
+    </pre>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+</body>
+</html>

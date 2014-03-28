@@ -62,7 +62,7 @@ $num_col_interest = abs($num_col_nointerest - $num_cols);
 	<tr >
 		<td colspan="2" class="FonteFormulario">
 			<p>
-				<a href="http://www.ometzgroup.com.br/empresas/skopos"><img src="<?php echo (IMG_FOLDER); ?>logo_company.png" border=0 align="absmiddle" title="Descri&ccedil;&atilde;o da Sua Loja"></a>
+				<a href="<?php echo (BASE_URL); ?>"><img src="<?php echo (IMG_FOLDER); ?>logo_company.png" border=0 align="absmiddle" title="Descri&ccedil;&atilde;o da Sua Loja"></a>
 				<div class="version">Vers&atilde;o: <? echo(VERSION); ?></div>
 			</p>
 		</td>
@@ -95,6 +95,8 @@ $num_col_interest = abs($num_col_nointerest - $num_cols);
                 <input type="hidden" id="FinalPayment" name="FinalPayment" value="">
 				<input type="hidden" id="AnoValidade" name="AnoValidade" value="">
 			    <input type="hidden" id="MesValidade" name="MesValidade" value="">
+			    <input type="hidden" id="EnableRecurring" name="EnableRecurring" value="1">
+			    <input type="hidden" id="EnderecoIPComprador" name="EnderecoIPComprador" value="RecorrENtE">
 
 				<div class="PurchaseData">
                 
@@ -105,7 +107,7 @@ $num_col_interest = abs($num_col_nointerest - $num_cols);
                     	<img src="img/loading.gif" />&nbsp;
                         <span id="msgWait">Procurando or&ccedil;amento...</span>
                     </span>
-                    <div id="divMsgQuotation" class="smallError">Deve digitar o n&uacute;mero de Or&ccedil;amento</div>					
+                    <div id="divMsgQuotation" class="smallError">Deve digitar o n&uacute;mero de Or&ccedil;amento</div>
                 </div>
 				
 				<div id="QuoteNotFound">				

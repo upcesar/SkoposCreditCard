@@ -1,18 +1,18 @@
 <?php
-//  Preenchimento das Variáveis 
+//  Preenchimento das VariÃ¡veis 
 // VARIAVEIS DO CLIENTE
 require_once('postvar.php');
 
 ?>
-<!-- Contrato de Compra no Cartão de Crédito -->
+<!-- Contrato de Compra no CartÃ£o de CrÃ©dito -->
 <div id="Header" class="width:100%;">
-	<div style="text-align:center;">
+	<div style="text-align:center;font-size: 14px;">
 		<br>
-		<h3>CONTRATO DE COMPRA E VENDA DE</h3>
-		<h3>MATERIAL DID&Aacute;TICO - CREDI&Aacute;RIO</h3>
+		<h3>CONTRATO DE COMPRA E VENDA DE<br>
+			MATERIAL DID&Aacute;TICO - CREDI&Aacute;RIO</h3>
 	</div>
 </div>
-<div id="Content">
+<div id="Content" style="font-size: 12px;">
 	<div style="text-align:left;margin-left:10%;margin-right:10%;">
 		Tendo o aluno adiante identificado e qualificado tomado conhecimento detalhado da
 		metodologia de ensino desenvolvida pela <?php echo $Bandeira ?>, e estando ciente das 

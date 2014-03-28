@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Ink/Net/Ajax/1/lib.js - Ink.js</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+    <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><img src="../yuidoclogo.png" title="Ink.js"></h1>
+            
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: latest</em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <h2 class="off-left">APIs</h2>
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+            <li><a href="#api-modules">Modules</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="../classes/Ink.html">Ink</a></li>
+            
+                <li><a href="../classes/Ink.Dom.Browser.html">Ink.Dom.Browser</a></li>
+            
+                <li><a href="../classes/Ink.Dom.Css.html">Ink.Dom.Css</a></li>
+            
+                <li><a href="../classes/Ink.Dom.Element.html">Ink.Dom.Element</a></li>
+            
+                <li><a href="../classes/Ink.Dom.Event.html">Ink.Dom.Event</a></li>
+            
+                <li><a href="../classes/Ink.Dom.FormSerialize.html">Ink.Dom.FormSerialize</a></li>
+            
+                <li><a href="../classes/Ink.Dom.Loaded.html">Ink.Dom.Loaded</a></li>
+            
+                <li><a href="../classes/Ink.Dom.Selector.html">Ink.Dom.Selector</a></li>
+            
+                <li><a href="../classes/Ink.Namespace.ClassModule.html">Ink.Namespace.ClassModule</a></li>
+            
+                <li><a href="../classes/Ink.Namespace.StaticModule.html">Ink.Namespace.StaticModule</a></li>
+            
+                <li><a href="../classes/Ink.Net.Ajax.html">Ink.Net.Ajax</a></li>
+            
+                <li><a href="../classes/Ink.Net.JsonP.html">Ink.Net.JsonP</a></li>
+            
+                <li><a href="../classes/Ink.UI.Animate_1.html">Ink.UI.Animate_1</a></li>
+            
+                <li><a href="../classes/Ink.UI.Carousel_1.html">Ink.UI.Carousel_1</a></li>
+            
+                <li><a href="../classes/Ink.UI.Close.html">Ink.UI.Close</a></li>
+            
+                <li><a href="../classes/Ink.UI.Common.html">Ink.UI.Common</a></li>
+            
+                <li><a href="../classes/Ink.UI.DatePicker.html">Ink.UI.DatePicker</a></li>
+            
+                <li><a href="../classes/Ink.UI.Draggable.html">Ink.UI.Draggable</a></li>
+            
+                <li><a href="../classes/Ink.UI.Dropdown.html">Ink.UI.Dropdown</a></li>
+            
+                <li><a href="../classes/Ink.UI.Droppable.html">Ink.UI.Droppable</a></li>
+            
+                <li><a href="../classes/Ink.UI.FormValidator.html">Ink.UI.FormValidator</a></li>
+            
+                <li><a href="../classes/Ink.UI.FormValidator_2.html">Ink.UI.FormValidator_2</a></li>
+            
+                <li><a href="../classes/Ink.UI.ImageQuery.html">Ink.UI.ImageQuery</a></li>
+            
+                <li><a href="../classes/Ink.UI.Modal.html">Ink.UI.Modal</a></li>
+            
+                <li><a href="../classes/Ink.UI.Pagination.html">Ink.UI.Pagination</a></li>
+            
+                <li><a href="../classes/Ink.UI.ProgressBar.html">Ink.UI.ProgressBar</a></li>
+            
+                <li><a href="../classes/Ink.UI.SmoothScroller.html">Ink.UI.SmoothScroller</a></li>
+            
+                <li><a href="../classes/Ink.UI.SortableList.html">Ink.UI.SortableList</a></li>
+            
+                <li><a href="../classes/Ink.UI.Spy.html">Ink.UI.Spy</a></li>
+            
+                <li><a href="../classes/Ink.UI.Stacker_1.html">Ink.UI.Stacker_1</a></li>
+            
+                <li><a href="../classes/Ink.UI.Sticky.html">Ink.UI.Sticky</a></li>
+            
+                <li><a href="../classes/Ink.UI.Swipe.html">Ink.UI.Swipe</a></li>
+            
+                <li><a href="../classes/Ink.UI.Table.html">Ink.UI.Table</a></li>
+            
+                <li><a href="../classes/Ink.UI.Tabs.html">Ink.UI.Tabs</a></li>
+            
+                <li><a href="../classes/Ink.UI.TagField.html">Ink.UI.TagField</a></li>
+            
+                <li><a href="../classes/Ink.UI.Toggle.html">Ink.UI.Toggle</a></li>
+            
+                <li><a href="../classes/Ink.UI.Tooltip.html">Ink.UI.Tooltip</a></li>
+            
+                <li><a href="../classes/Ink.UI.TreeView.html">Ink.UI.TreeView</a></li>
+            
+                <li><a href="../classes/Ink.Util.Array.html">Ink.Util.Array</a></li>
+            
+                <li><a href="../classes/Ink.Util.BinPack.html">Ink.Util.BinPack</a></li>
+            
+                <li><a href="../classes/Ink.Util.Cookie.html">Ink.Util.Cookie</a></li>
+            
+                <li><a href="../classes/Ink.Util.Date.html">Ink.Util.Date</a></li>
+            
+                <li><a href="../classes/Ink.Util.Dumper.html">Ink.Util.Dumper</a></li>
+            
+                <li><a href="../classes/Ink.Util.I18n.html">Ink.Util.I18n</a></li>
+            
+                <li><a href="../classes/Ink.Util.Json.html">Ink.Util.Json</a></li>
+            
+                <li><a href="../classes/Ink.Util.String.html">Ink.Util.String</a></li>
+            
+                <li><a href="../classes/Ink.Util.Url.html">Ink.Util.Url</a></li>
+            
+                <li><a href="../classes/Ink.Util.Validator.html">Ink.Util.Validator</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+                <li><a href="../modules/Ink.Dom.Browser_1.html">Ink.Dom.Browser_1</a></li>
+            
+                <li><a href="../modules/Ink.Dom.Css_1.html">Ink.Dom.Css_1</a></li>
+            
+                <li><a href="../modules/Ink.Dom.Element_1.html">Ink.Dom.Element_1</a></li>
+            
+                <li><a href="../modules/Ink.Dom.Event_1.html">Ink.Dom.Event_1</a></li>
+            
+                <li><a href="../modules/Ink.Dom.FormSerialize.html">Ink.Dom.FormSerialize</a></li>
+            
+                <li><a href="../modules/Ink.Dom.Loaded_1.html">Ink.Dom.Loaded_1</a></li>
+            
+                <li><a href="../modules/Ink.Dom.Selector_1.html">Ink.Dom.Selector_1</a></li>
+            
+                <li><a href="../modules/Ink.Namespace.ClassModule_1.html">Ink.Namespace.ClassModule_1</a></li>
+            
+                <li><a href="../modules/Ink.Namespace.StaticModule_1.html">Ink.Namespace.StaticModule_1</a></li>
+            
+                <li><a href="../modules/Ink.Net.Ajax_1.html">Ink.Net.Ajax_1</a></li>
+            
+                <li><a href="../modules/Ink.Net.JsonP_1.html">Ink.Net.JsonP_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Animate_1.html">Ink.UI.Animate_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Carousel_1.html">Ink.UI.Carousel_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Close_1.html">Ink.UI.Close_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Common_1.html">Ink.UI.Common_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.DatePicker_1.html">Ink.UI.DatePicker_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Dropdown_1.html">Ink.UI.Dropdown_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Droppable_1.html">Ink.UI.Droppable_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.FormValidator_1.html">Ink.UI.FormValidator_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.FormValidator_2.html">Ink.UI.FormValidator_2</a></li>
+            
+                <li><a href="../modules/Ink.UI.ImageQuery_1.html">Ink.UI.ImageQuery_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Modal_1.html">Ink.UI.Modal_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Pagination_1.html">Ink.UI.Pagination_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.ProgressBar_1.html">Ink.UI.ProgressBar_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.SmoothScroller_1.html">Ink.UI.SmoothScroller_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.SortableList_1.html">Ink.UI.SortableList_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Spy_1.html">Ink.UI.Spy_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Stacker_1.html">Ink.UI.Stacker_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Sticky_1.html">Ink.UI.Sticky_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Swipe.html">Ink.UI.Swipe</a></li>
+            
+                <li><a href="../modules/Ink.UI.Table_1.html">Ink.UI.Table_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Tabs_1.html">Ink.UI.Tabs_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Toggle_1.html">Ink.UI.Toggle_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Tooltip_1.html">Ink.UI.Tooltip_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.TreeView_1.html">Ink.UI.TreeView_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Array_1.html">Ink.Util.Array_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.BinPack_1.html">Ink.Util.BinPack_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Cookie_1.html">Ink.Util.Cookie_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Date_1.html">Ink.Util.Date_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Dumper_1.html">Ink.Util.Dumper_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.I18n_1.html">Ink.Util.I18n_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Json_1.html">Ink.Util.Json_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.String_1.html">Ink.Util.String_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Url_1.html">Ink.Util.Url_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Validator_1.html">Ink.Util.Validator_1</a></li>
+            
+                <li><a href="../modules/Ink_1.html">Ink_1</a></li>
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+
+
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1 class="file-heading">File: Ink/Net/Ajax/1/lib.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+/**
+ * @author inkdev AT sapo.pt
+ */
+
+Ink.createModule(&#x27;Ink.Net.Ajax&#x27;, &#x27;1&#x27;, [], function() {
+
+    &#x27;use strict&#x27;;
+
+    /**
+     * @module Ink.Net.Ajax_1
+     */
+
+    /**
+     * Creates a new cross browser XMLHttpRequest object
+     *
+     * @class Ink.Net.Ajax
+     * @constructor
+     *
+     * @param {String}  url      request url
+     * @param {Object}  options  request options
+     * @param {Boolean}        [options.asynchronous]    if the request should be asynchronous. true by default.
+     * @param {Boolean}        [options.cors]            set this to true if you&#x27;re doing a cross-origin request
+     * @param {String}         [options.method]          HTTP request method. POST by default.
+     * @param {Object|String}  [options.parameters]      Request parameters which should be sent with the request
+     * @param {Number}         [options.timeout]         Request timeout
+     * @param {Number}         [options.delay]           Artificial delay. If request is completed in time lower than this, then wait a bit before calling the callbacks
+     * @param {String}         [options.postBody]        POST request body. If not specified, it&#x27;s filled with the contents from parameters
+     * @param {String}         [options.contentType]     Content-type header to be sent. Defaults to &#x27;application/x-www-form-urlencoded&#x27;
+     * @param {Object}         [options.requestHeaders]  key-value pairs for additional request headers
+     * @param {Function}       [options.onComplete]      Callback executed after the request is completed, no matter what happens during the request.
+     * @param {Function}       [options.onSuccess]       Callback executed if the request is successful (requests with 2xx status codes)
+     * @param {Function}       [options.onFailure]       Callback executed if the request fails (requests with status codes different from 2xx)
+     * @param {Function}       [options.onException]     Callback executed if an exception  occurs. Receives the exception as a parameter.
+     * @param {Function}       [options.onCreate]        Callback executed after object initialization but before the request is made
+     * @param {Function}       [options.onInit]          Callback executed before any initialization
+     * @param {Function}       [options.onTimeout]       Callback executed if the request times out
+     * @param {Boolean|String} [options.evalJS]          If the request Content-type header is application/json, evaluates the response and populates responseJSON. Use &#x27;force&#x27; if you want to force the response evaluation, no matter what Content-type it&#x27;s using. Defaults to true.
+     * @param {Boolean}        [options.sanitizeJSON]    Sanitize the content of responseText before evaluation
+     * @param {String}         [options.xhrProxy]        URI for proxy service hosted on the same server as the web app, that can fetch documents from other domains.
+     *                                             The service must pipe all input and output untouched (some input sanitization is allowed, like clearing cookies).
+     *                                             e.g., requesting http://example.org/doc can become /proxy/http%3A%2F%2Fexample.org%2Fdoc The proxy service will
+     *                                             be used for cross-domain requests, if set, else a network error is returned as exception.
+     *
+     * @example
+     *     new Ajax(&#x27;test.json&#x27;, {
+     *         method: &#x27;get&#x27;,
+     *         onSuccess: function (ajx, responseJSON) {
+     *             // Do stuff with responseJSON or ajx.responseText
+     *             console.log(responseJSON.something.length);
+     *         },
+     *         onFailure: function (ajx, errorResponse) {
+     *             // Deal with it
+     *             alert(ajx.status);  // The HTTP response code
+     *         }
+     *     });
+     */
+    var Ajax = function(url, options){
+
+        // start of AjaxMock patch - uncomment to enable it
+        /*var AM = SAPO.Communication.AjaxMock;
+        if (AM &amp;&amp; !options.inMock) {
+            if (AM.autoRecordThisUrl &amp;&amp; AM.autoRecordThisUrl(url)) {
+                return new AM.Record(url, options);
+            }
+            if (AM.mockThisUrl &amp;&amp; AM.mockThisUrl(url)) {
+                return new AM.Play(url, options, true);
+            }
+        }*/
+        // end of AjaxMock patch
+
+        this.init(url, options);
+    };
+
+    /**
+    * Options for all requests. These can then be
+    * overriden for individual ones.
+    */
+    Ajax.globalOptions = {
+        parameters: {},
+        requestHeaders: {}
+    };
+
+
+    // IE10 does not need XDomainRequest
+    var xMLHttpRequestWithCredentials = &#x27;XMLHttpRequest&#x27; in window &amp;&amp; &#x27;withCredentials&#x27; in (new XMLHttpRequest());
+
+
+
+    Ajax.prototype = {
+
+        init: function(url, userOptions) {
+            if (!url) {
+                throw new Error(&quot;WRONG_ARGUMENTS_ERR&quot;);
+            }
+            var options = Ink.extendObj({
+                asynchronous: true,
+                method: &#x27;POST&#x27;,
+                parameters: null,
+                timeout: 0,
+                delay: 0,
+                postBody: &#x27;&#x27;,
+                contentType:  &#x27;application/x-www-form-urlencoded&#x27;,
+                requestHeaders: null,
+                onComplete: null,
+                onSuccess: null,
+                onFailure: null,
+                onException: null,
+                onHeaders: null,
+                onCreate: null,
+                onInit: null,
+                onTimeout: null,
+                sanitizeJSON: false,
+                evalJS: true,
+                xhrProxy: &#x27;&#x27;,
+                cors: false,
+                debug: false,
+                useCredentials: false,
+                signRequest: false
+            }, Ajax.globalOptions);
+
+            if (userOptions &amp;&amp; typeof userOptions === &#x27;object&#x27;) {
+                options = Ink.extendObj(options, userOptions);
+
+
+                if (typeof userOptions.parameters === &#x27;object&#x27;) {
+                    options.parameters = Ink.extendObj(Ink.extendObj({}, Ajax.globalOptions.parameters), userOptions.parameters);
+                } else if (userOptions.parameters !== null) {
+                    var globalParameters = this.paramsObjToStr(Ajax.globalOptions.parameters);
+                    if (globalParameters) {
+                        options.parameters = userOptions.parameters + &#x27;&amp;&#x27; + globalParameters;
+                    }
+                }
+
+                options.requestHeaders = Ink.extendObj({}, Ajax.globalOptions.requestHeaders);
+                options.requestHeaders = Ink.extendObj(options.requestHeaders, userOptions.requestHeaders);
+            }
+
+            this.options = options;
+
+            this.safeCall(&#x27;onInit&#x27;);
+
+            this.url = url;
+
+            var urlLocation = this._locationFromURL(url);
+            this.isHTTP = this._locationIsHTTP(urlLocation);
+            this.isCrossDomain = this._locationIsCrossDomain(urlLocation, location);
+
+            this.requestHasBody = options.method.search(/^get|head$/i) &lt; 0;
+
+            if(this.options.cors) {
+                this.isCrossDomain = false;
+            }
+
+            this.transport = this.getTransport();
+
+            this.request();
+        },
+
+        /**
+         * Returns a location object from an URL
+         *
+         * @method _locationFromUrl
+         * @param url
+         * @private
+         **/
+        _locationFromURL: function (url) {
+            var urlLocation =  document.createElementNS ?
+                document.createElementNS(&#x27;http://www.w3.org/1999/xhtml&#x27;, &#x27;a&#x27;) :
+                document.createElement(&#x27;a&#x27;);
+            urlLocation.href = url;
+            return urlLocation;
+        },
+
+        /**
+         * Checks whether a location is HTTP or HTTPS
+         *
+         * @method locationIsHttp
+         * @param urlLocation
+         * @private
+         */
+        _locationIsHTTP: function (urlLocation) {
+            return urlLocation.protocol.match(/^https?:/i) ? true : false;
+        },
+
+        /**
+         * Checks whether a location is cross-domain from another
+         *
+         * @method _locationIsCrossDomain
+         * @param urlLocation {Location}
+         * @param otherLocation {Location}
+         */
+        _locationIsCrossDomain: function (urlLocation, location) {
+            location = location || window.location;
+            if (!Ajax.prototype._locationIsHTTP(urlLocation) || location.protocol === &#x27;widget:&#x27; || typeof window.widget === &#x27;object&#x27;) {
+                return false;
+            } else {
+                return location.protocol           !== urlLocation.protocol ||
+                       location.host.split(&#x27;:&#x27;)[0] !== urlLocation.host.split(&#x27;:&#x27;)[0];
+            }
+        },
+
+        /**
+         * Creates the appropriate XMLHttpRequest object
+         *
+         * @method getTransport
+         * @return {Object} XMLHttpRequest object
+         */
+        getTransport: function()
+        {
+            /*global XDomainRequest:false, ActiveXObject:false */
+            if (!xMLHttpRequestWithCredentials &amp;&amp; this.options.cors &amp;&amp; &#x27;XDomainRequest&#x27; in window) {
+                this.usingXDomainReq = true;
+                return new XDomainRequest();
+            }
+            else if (typeof XMLHttpRequest !== &#x27;undefined&#x27;) {
+                return new XMLHttpRequest();
+            }
+            else if (typeof ActiveXObject !== &#x27;undefined&#x27;) {
+                try {
+                    return new ActiveXObject(&#x27;Msxml2.XMLHTTP&#x27;);
+                } catch (e) {
+                    return new ActiveXObject(&#x27;Microsoft.XMLHTTP&#x27;);
+                }
+            } else {
+                return null;
+            }
+        },
+
+        /**
+         * Set the necessary headers for an ajax request
+         *
+         * @method setHeaders
+         * @param {String} url - url for the request
+         */
+        setHeaders: function()
+        {
+            if (this.transport) {
+                try {
+                    var headers = {
+                        &quot;Accept&quot;: &quot;text/javascript,text/xml,application/xml,application/xhtml+xml,text/html,application/json;q=0.9,text/plain;q=0.8,video/x-mng,image/png,image/jpeg,image/gif;q=0.2,*/*;q=0.1&quot;,
+                        &quot;Accept-Language&quot;: navigator.language,
+                        &quot;X-Requested-With&quot;: &quot;XMLHttpRequest&quot;,
+                        &quot;X-Ink-Version&quot;: &quot;2&quot;
+                    };
+                    if (this.options.cors) {
+                        if (!this.options.signRequest) {
+                            delete headers[&#x27;X-Requested-With&#x27;];
+                        }
+                        delete headers[&#x27;X-Ink-Version&#x27;];
+                    }
+
+                    if (this.options.requestHeaders &amp;&amp; typeof this.options.requestHeaders === &#x27;object&#x27;) {
+                        for(var headerReqName in this.options.requestHeaders) {
+                            if (this.options.requestHeaders.hasOwnProperty(headerReqName)) {
+                                headers[headerReqName] = this.options.requestHeaders[headerReqName];
+                            }
+                        }
+                    }
+
+                    if (this.transport.overrideMimeType &amp;&amp; (navigator.userAgent.match(/Gecko\/(\d{4})/) || [0,2005])[1] &lt; 2005) {
+                        headers.Connection = &#x27;close&#x27;;
+                    }
+
+                    for (var headerName in headers) {
+                        if(headers.hasOwnProperty(headerName)) {
+                            this.transport.setRequestHeader(headerName, headers[headerName]);
+                        }
+                    }
+                } catch(e) {}
+            }
+        },
+
+        /**
+         * Converts an object with parameters to a querystring
+         *
+         * @method paramsObjToStr
+         * @param {Object|String}  optParams  parameters object
+         * @return {String} querystring
+         */
+        paramsObjToStr: function(optParams) {
+            var k, m, p, a, params = [];
+            if (typeof optParams === &#x27;object&#x27;) {
+                for (p in optParams){
+                    if (optParams.hasOwnProperty(p)) {
+                        a = optParams[p];
+                        if (Object.prototype.toString.call(a) === &#x27;[object Array]&#x27; &amp;&amp; !isNaN(a.length)) {
+                            for (k = 0, m = a.length; k &lt; m; k++) {
+                                params = params.concat([
+                                    encodeURIComponent(p), &#x27;[]&#x27;,   &#x27;=&#x27;,
+                                    encodeURIComponent(a[k]), &#x27;&amp;&#x27;
+                                ]);
+                            }
+                        }
+                        else {
+                            params = params.concat([
+                                encodeURIComponent(p), &#x27;=&#x27;,
+                                encodeURIComponent(a), &#x27;&amp;&#x27;
+                            ]);
+                        }
+                    }
+                }
+                if (params.length &gt; 0) {
+                    params.pop();
+                }
+            }
+            else
+            {
+                return optParams;
+            }
+            return params.join(&#x27;&#x27;);
+        },
+
+        /**
+         * set the url parameters for a GET request
+         *
+         * @method setParams
+         */
+        setParams: function()
+        {
+            var params = null, optParams = this.options.parameters;
+
+            if(typeof optParams === &quot;object&quot;){
+                params = this.paramsObjToStr(optParams);
+            } else {
+                params = &#x27;&#x27; + optParams;
+            }
+
+            if(params){
+                if(this.url.indexOf(&#x27;?&#x27;) &gt; -1) {
+                    this.url = this.url.split(&#x27;#&#x27;)[0] + &#x27;&amp;&#x27; + params;
+                } else {
+                    this.url = this.url.split(&#x27;#&#x27;)[0] + &#x27;?&#x27; + params;
+                }
+            }
+        },
+
+        /**
+         * Retrieves HTTP header from response
+         *
+         * @method getHeader
+         * @param {String}  name  header name
+         * @return {String} header content
+         */
+        getHeader: function(name)
+        {
+            if (this.usingXDomainReq &amp;&amp; name === &#x27;Content-Type&#x27;) {
+                return this.transport.contentType;
+            }
+            try{
+                return this.transport.getResponseHeader(name);
+            } catch(e) {
+                return null;
+            }
+        },
+
+        /**
+         * Returns all http headers from the response
+         *
+         * @method getAllHeaders
+         * @return {String} the headers, each separated by a newline
+         */
+        getAllHeaders: function()
+        {
+            try {
+                return this.transport.getAllResponseHeaders();
+            } catch(e) {
+                return null;
+            }
+        },
+
+        /**
+         * Setup the response object
+         *
+         * @method getResponse
+         * @return {Object} the response object
+         */
+        getResponse: function(){
+            // setup our own stuff
+            var t = this.transport,
+                r = {
+                    headerJSON: null,
+                    responseJSON: null,
+                    getHeader: this.getHeader,
+                    getAllHeaders: this.getAllHeaders,
+                    request: this,
+                    transport: t,
+                    timeTaken: new Date() - this.startTime,
+                    requestedUrl: this.url
+                };
+
+            // setup things expected from the native object
+            r.readyState = t.readyState;
+            try { r.responseText = t.responseText; } catch(e) {}
+            try { r.responseXML  = t.responseXML;  } catch(e) {}
+            try { r.status       = t.status;       } catch(e) { r.status     = 0;  }
+            try { r.statusText   = t.statusText;   } catch(e) { r.statusText = &#x27;&#x27;; }
+
+            return r;
+        },
+
+        /**
+         * Aborts the request if still running. No callbacks are called
+         *
+         * @method abort
+         */
+        abort: function(){
+            if (this.transport) {
+                clearTimeout(this.delayTimeout);
+                clearTimeout(this.stoTimeout);
+                try { this.transport.abort(); } catch(ex) {}
+                this.finish();
+            }
+        },
+
+        /**
+         * Executes the state changing phase of an ajax request
+         *
+         * @method runStateChange
+         */
+        runStateChange: function()
+        {
+            var rs = this.transport.readyState;
+            if (rs === 3) {
+                if (this.isHTTP) {
+                    this.safeCall(&#x27;onHeaders&#x27;);
+                }
+            } else if (rs === 4 || this.usingXDomainReq) {
+
+                if (this.options.asynchronous &amp;&amp; this.options.delay &amp;&amp; (this.startTime + this.options.delay &gt; new Date().getTime())) {
+                    this.delayTimeout = setTimeout(Ink.bind(this.runStateChange, this), this.options.delay + this.startTime - new Date().getTime());
+                    return;
+                }
+
+                var responseJSON,
+                    responseContent = this.transport.responseText,
+                    response = this.getResponse(),
+                    curStatus = this.transport.status;
+
+                if (this.isHTTP &amp;&amp; !this.options.asynchronous) {
+                    this.safeCall(&#x27;onHeaders&#x27;);
+                }
+
+                clearTimeout(this.stoTimeout);
+
+                if (curStatus === 0) {
+                    // Status 0 indicates network error for http requests.
+                    // For http less requests, 0 is always returned.
+                    if (this.isHTTP) {
+                        this.safeCall(&#x27;onException&#x27;, this.makeError(18, &#x27;NETWORK_ERR&#x27;));
+                    } else {
+                        curStatus = responseContent ? 200 : 404;
+                    }
+                }
+                else if (curStatus === 304) {
+                    curStatus = 200;
+                }
+                var isSuccess = this.usingXDomainReq || 200 &lt;= curStatus &amp;&amp; curStatus &lt; 300;
+
+                var headerContentType = this.getHeader(&#x27;Content-Type&#x27;) || &#x27;&#x27;;
+                if (this.options.evalJS &amp;&amp;
+                    (headerContentType.indexOf(&quot;application/json&quot;) &gt;= 0 || this.options.evalJS === &#x27;force&#x27;)){
+                        try {
+                            responseJSON = this.evalJSON(responseContent, this.sanitizeJSON);
+                            if(responseJSON){
+                                responseContent = response.responseJSON = responseJSON;
+                            }
+                        } catch(e){
+                            if (isSuccess) {
+                                // If the request failed, then this is perhaps an error page
+                                // so don&#x27;t notify error.
+                                this.safeCall(&#x27;onException&#x27;, e);
+                            }
+                        }
+                }
+
+                if (this.usingXDomainReq &amp;&amp; headerContentType.indexOf(&#x27;xml&#x27;) !== -1 &amp;&amp; &#x27;DOMParser&#x27; in window) {
+                    // http://msdn.microsoft.com/en-us/library/ie/ff975278(v=vs.85).aspx
+                    var mimeType;
+                    switch (headerContentType) {
+                        case &#x27;application/xml&#x27;:
+                        case &#x27;application/xhtml+xml&#x27;:
+                        case &#x27;image/svg+xml&#x27;:
+                            mimeType = headerContentType;
+                            break;
+                        default:
+                            mimeType = &#x27;text/xml&#x27;;
+                    }
+                    var xmlDoc = (new DOMParser()).parseFromString( this.transport.responseText, mimeType);
+                    this.transport.responseXML = xmlDoc;
+                    response.responseXML  = xmlDoc;
+                }
+
+                if (this.transport.responseXML !== null &amp;&amp; response.responseJSON === null &amp;&amp; this.transport.responseXML.xml !== &quot;&quot;){
+                    responseContent = this.transport.responseXML;
+                }
+
+                if (curStatus || this.usingXDomainReq) {
+                    if (isSuccess) {
+                        this.safeCall(&#x27;onSuccess&#x27;, response, responseContent);
+                    } else {
+                        this.safeCall(&#x27;onFailure&#x27;, response, responseContent);
+                    }
+                    this.safeCall(&#x27;on&#x27;+curStatus, response, responseContent);
+                }
+                this.finish(response, responseContent);
+            }
+        },
+
+        /**
+         * Last step after XHR is complete. Call onComplete and cleanup object
+         *
+         * @method finish
+         * @param {} response
+         * @param {} responseContent
+         */
+        finish: function(response, responseContent){
+            if (response) {
+                this.safeCall(&#x27;onComplete&#x27;, response, responseContent);
+            }
+            clearTimeout(this.stoTimeout);
+
+            if (this.transport) {
+                // IE6 sometimes barfs on this one
+                try{ this.transport.onreadystatechange = null; } catch(e){}
+
+                if (typeof this.transport.destroy === &#x27;function&#x27;) {
+                    // Stuff for Samsung.
+                    this.transport.destroy();
+                }
+
+                // Let XHR be collected.
+                this.transport = null;
+            }
+        },
+
+        /**
+         * Safely calls a callback function.
+         * Verifies that the callback is well defined and traps errors
+         *
+         * @method safeCall
+         * @param {Function}  listener
+         */
+        safeCall: function(listener, first/*, second*/) {
+            function rethrow(exception){
+                setTimeout(function() {
+                    // Rethrow exception so it&#x27;ll land in
+                    // the error console, firebug, whatever.
+                    if (exception.message) {
+                        exception.message += &#x27;\n&#x27;+(exception.stacktrace || exception.stack || &#x27;&#x27;);
+                    }
+                    throw exception;
+                }, 1);
+            }
+            if (typeof this.options[listener] === &#x27;function&#x27;) {
+                //SAPO.safeCall(this, this.options[listener], first, second);
+                //return object[listener].apply(object, [].slice.call(arguments, 2));
+                try {
+                    this.options[listener].apply(this, [].slice.call(arguments, 1));
+                } catch(ex) {
+                    rethrow(ex);
+                }
+            } else if (first &amp;&amp; window.Error &amp;&amp; (first instanceof Error)) {
+                rethrow(first);
+            }
+        },
+
+        /**
+         * Sets new request header for the subsequent http request
+         *
+         * @method setRequestHeader
+         * @param {String} name
+         * @param {String} value
+         */
+        setRequestHeader: function(name, value){
+            if (!this.options.requestHeaders) {
+                this.options.requestHeaders = {};
+            }
+            this.options.requestHeaders[name] = value;
+        },
+
+        /**
+         * Execute the request
+         *
+         * @method request
+         */
+        request: function()
+        {
+            if(this.transport) {
+                var params = null;
+                if(this.requestHasBody) {
+                    if(this.options.postBody !== null &amp;&amp; this.options.postBody !== &#x27;&#x27;) {
+                        params = this.options.postBody;
+                        this.setParams();
+                    } else if (this.options.parameters !== null &amp;&amp; this.options.parameters !== &#x27;&#x27;){
+                        params = this.options.parameters;
+                    }
+
+                    if (typeof params === &quot;object&quot; &amp;&amp; !params.nodeType) {
+                        params = this.paramsObjToStr(params);
+                    } else if (typeof params !== &quot;object&quot; &amp;&amp; params !== null){
+                        params = &#x27;&#x27; + params;
+                    }
+
+                    if(this.options.contentType) {
+                        this.setRequestHeader(&#x27;Content-Type&#x27;, this.options.contentType);
+                    }
+                } else {
+                    this.setParams();
+                }
+
+                var url = this.url;
+                var method = this.options.method;
+                var crossDomain = this.isCrossDomain;
+
+                if (crossDomain &amp;&amp; this.options.xhrProxy) {
+                    this.setRequestHeader(&#x27;X-Url&#x27;, url);
+                    url = this.options.xhrProxy + encodeURIComponent(url);
+                    crossDomain = false;
+                }
+
+                try {
+                    this.transport.open(method, url, this.options.asynchronous);
+                } catch(e) {
+                    this.safeCall(&#x27;onException&#x27;, e);
+                    return this.finish(this.getResponse(), null);
+                }
+
+                this.setHeaders();
+
+                this.safeCall(&#x27;onCreate&#x27;);
+
+                if(this.options.timeout &amp;&amp; !isNaN(this.options.timeout)) {
+                    this.stoTimeout = setTimeout(Ink.bind(function() {
+                        if(this.options.onTimeout) {
+                            this.safeCall(&#x27;onTimeout&#x27;);
+                            this.abort();
+                        }
+                    }, this), (this.options.timeout * 1000));
+                }
+
+                if(this.options.useCredentials &amp;&amp; !this.usingXDomainReq) {
+                    this.transport.withCredentials = true;
+                }
+
+                if(this.options.asynchronous &amp;&amp; !this.usingXDomainReq) {
+                    this.transport.onreadystatechange = Ink.bind(this.runStateChange, this);
+                }
+                else if (this.usingXDomainReq) {
+                    this.transport.onload = Ink.bind(this.runStateChange, this);
+                }
+
+                try {
+                    if (crossDomain) {
+                        // Need explicit handling because Mozila aborts
+                        // the script and Chrome fails silently.per the spec
+                        throw this.makeError(18, &#x27;NETWORK_ERR&#x27;);
+                    } else {
+                        this.startTime = new Date().getTime();
+                        this.transport.send(params);
+                    }
+                } catch(e) {
+                    this.safeCall(&#x27;onException&#x27;, e);
+                    return this.finish(this.getResponse(), null);
+                }
+
+                if(!this.options.asynchronous) {
+                    this.runStateChange();
+                }
+            }
+        },
+
+        /**
+         * Returns new exception object that can be thrown
+         *
+         * @method makeError
+         * @param code
+         * @param message
+         * @returns {Object}
+         */
+        makeError: function(code, message){
+            if (typeof Error !== &#x27;function&#x27;) {
+                return {code: code, message: message};
+            }
+            var e = new Error(message);
+            e.code = code;
+            return e;
+        },
+
+        /**
+         * Checks if a given string is valid JSON
+         *
+         * @method isJSON
+         * @param {String} str  String to be evaluated
+         * @return {Boolean} True if the string is valid JSON
+         */
+        isJSON: function(str)
+        {
+            if (typeof str !== &quot;string&quot; || !str){ return false; }
+            str = str.replace(/\\./g, &#x27;@&#x27;).replace(/&quot;[^&quot;\\\n\r]*&quot;/g, &#x27;&#x27;);
+            return (/^[,:{}\[\]0-9.\-+Eaeflnr-u \n\r\t]*$/).test(str);
+        },
+
+        /**
+         * Evaluates a given string as JSON
+         *
+         * @method evalJSON
+         * @param {String}  str       String to be evaluated
+         * @param {Boolean} sanitize  whether to sanitize the content or not
+         * @return {Object} Json content as an object
+         */
+        evalJSON: function(strJSON, sanitize)
+        {
+            if (strJSON &amp;&amp; (!sanitize || this.isJSON(strJSON))) {
+                try {
+                    if (typeof JSON  !== &quot;undefined&quot; &amp;&amp; typeof JSON.parse !== &#x27;undefined&#x27;){
+                        return JSON.parse(strJSON);
+                    }
+                    /*jshint evil:true */
+                    return eval(&#x27;(&#x27; + strJSON + &#x27;)&#x27;);
+                } catch(e) {
+                    throw new Error(&#x27;ERROR: Bad JSON string...&#x27;);
+                }
+            }
+            return null;
+        }
+    };
+
+    /**
+     * Loads content from a given url through a XMLHttpRequest.
+     *
+     * Shortcut function for simple AJAX use cases.
+     *
+     * Works with JSON, XML and plain text.
+     *
+     * @method load
+     * @param {String}   url       request url
+     * @param {Function} callback  callback to be executed if the request is successful
+     * @return {Object} XMLHttpRequest object
+     *
+     * @example
+     *      Ajax.load(&#x27;some/text/file&#x27;, function (responseText) {
+     *          doSomething(responseText);
+     *      });
+     *      Ajax.load(&#x27;some/xml/file&#x27;, function (responseXML) {
+     *          doSomething(responseXML);
+     *      });
+     *      Ajax.load(&#x27;some/json/file&#x27;, function (responseJSON) {
+     *          doSomething(responseJSON);
+     *      });
+     *
+     */
+    Ajax.load = function(url, callback){
+        return new Ajax(url, {
+            method: &#x27;GET&#x27;,
+            onSuccess: function(response){
+                callback(response.responseJSON || response.responseText, response);
+            }
+        });
+    };
+
+    /**
+     * Loads content from a given url through a XMLHttpRequest.
+     * Shortcut function for simple AJAX use cases.
+     *
+     * @method ping
+     * @param {String}   url       request url
+     * @param {Function} callback  callback to be executed if the request is successful
+     * @return {Object} XMLHttpRequest object
+     */
+    Ajax.ping = function(url, callback){
+        return new Ajax(url, {
+            method: &#x27;HEAD&#x27;,
+            onSuccess: function(response){
+                if (typeof callback === &#x27;function&#x27;){
+                    callback(response);
+                }
+            }
+        });
+    };
+
+
+    return Ajax;
+});
+
+    </pre>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+</body>
+</html>

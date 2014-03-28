@@ -96,10 +96,10 @@ class ShowCustomerContrato extends Ometz_Default
 				);
 	}
 	
-	private function countRecord($txtCustNum, $txtBrandNum)
+	private function countRecord($txtCustNum, $txtBrandNum, $cboFlag)
 	{
 		$sql_count=" SELECT COUNT(1) CUENTA FROM ";
-		$sql_count.= "(".$this->getOriginalQuery($txtCustNum, $txtBrandNum).") AS Z1 ";
+		$sql_count.= "(".$this->getOriginalQuery($txtCustNum, $txtBrandNum, $cboFlag).") AS Z1 ";
 
 		$response = $this->database->fetchAll($sql_count);
 		if($response)
@@ -112,16 +112,16 @@ class ShowCustomerContrato extends Ometz_Default
 	}
 
 
-	private function getQueryWithRecNum($txtCustNum, $txtBrandNum)
+	private function getQueryWithRecNum($txtCustNum, $txtBrandNum, $cboFlag)
 	{
 		$sql2=" SELECT ROW_NUMBER() OVER (ORDER BY COD_CLIENTE) AS NUM_REC, Z1.* FROM ";
-		$sql2.= "(".$this->getOriginalQuery($txtCustNum, $txtBrandNum).") AS Z1";
+		$sql2.= "(".$this->getOriginalQuery($txtCustNum, $txtBrandNum, $cboFlag).") AS Z1";
 		return($sql2);
 	}
 
 
 	// Set SQL Query here
-	private function getOriginalQuery($txtCustNum = "", $txtBrandNum = "")
+	private function getOriginalQuery($txtCustNum = "", $txtBrandNum = "", $cboFlag = "")
 	{
 		$sql3="
 			SELECT 
@@ -158,7 +158,7 @@ class ShowCustomerContrato extends Ometz_Default
 					SA1.A1_EMAIL AS E_MAIL					   
         			FROM 
                         DB2.SA1500 AS SA1                                
-                                INNER JOIN DB2.JA2500 AS JA2 ON
+                                LEFT JOIN DB2.JA2500 AS JA2 ON
                                         SA1.A1_COD = JA2.JA2_CLIENT  AND
                                         SA1.A1_LOJA = JA2.JA2_LOJA
                                 
@@ -174,17 +174,34 @@ class ShowCustomerContrato extends Ometz_Default
                                                 SX5_EC.X5_CHAVE = JA2.JA2_ECIVIL AND SX5_EC.X5_TABELA = '33'
 		";
 		
-		if($txtCustNum !="")
+		$bWhere = false;
+		
+		if($txtCustNum !=""){
 			$sql3.="WHERE SA1.A1_COD = '".$txtCustNum."'";
-
+			$bWhere = true;
+		}
+		
 		if($txtBrandNum !=""){
-			if($txtCustNum !="")
+			if($bWhere)
 				$sql3.=" AND SA1.A1_LOJA = '".$txtBrandNum."'";
-			else
+			else{
 				$sql3.="WHERE SA1.A1_LOJA = '".$txtBrandNum."'";
+				$bWhere = true;
+			}
 		}
 			
-
+		if($cboFlag !=""){
+			if($bWhere)
+				$sql3.=" AND SUBSTR(MT3.MT3_FIL,1,". strval(strlen($cboFlag)) .") = '".$cboFlag."'";
+			else{
+				$sql3.="WHERE SUBSTR(MT3.MT3_FIL,1,". strval(strlen($cboFlag)) .") = '".$cboFlag."'";
+				$bWhere = true;
+			}
+		}
+			
+			
+		
+		
 		return($sql3);
 
 	}
@@ -221,6 +238,12 @@ class ShowCustomerContrato extends Ometz_Default
 		else
 			$txtBrandNum = "01"; 
 		
+		if(isset($_POST['cboFlag']))
+			$cboFlag = $_POST["cboFlag"];
+		else
+			$cboFlag = ""; 
+		
+		
 		//Init pager
 		if (isset($_GET["numpage"]))
 			$numpage = $_GET["numpage"];
@@ -238,7 +261,7 @@ class ShowCustomerContrato extends Ometz_Default
 		$minRec = ((intval($numpage) - 1) * intval($pagesize)) + 1;
 		$maxRec = intval($numpage) * intval($pagesize);
 
-		$reccount = $this->countRecord($txtCustNum, $txtBrandNum);
+		$reccount = $this->countRecord($txtCustNum, $txtBrandNum, $cboFlag);
 		$pagecount = ceil($reccount / $pagesize);
 
 		$result = "";
@@ -265,7 +288,7 @@ class ShowCustomerContrato extends Ometz_Default
 					E_MAIL
 			FROM
 			(";
-			$sql.= $this->getQueryWithRecNum($txtCustNum, $txtBrandNum);
+			$sql.= $this->getQueryWithRecNum($txtCustNum, $txtBrandNum, $cboFlag);
 			$sql.= ") AS R ";
 			
 				

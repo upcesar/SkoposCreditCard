@@ -121,6 +121,11 @@ background:#c9c;
 	color:#999999;
 	margin-left:3px;	
 }
+
+#txtNumQuote{
+	text-transform: uppercase;	
+}
+
 #ValorDocumentoExibicao{
 	font-size: 12px;
 }

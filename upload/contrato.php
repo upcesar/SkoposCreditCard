@@ -1,5 +1,5 @@
 <?php
-//  Preenchimento das Variáveis 
+//  Preenchimento das Variï¿½veis 
 // VARIAVEIS DO CLIENTE
 /*
 $Bandeira = $_POST["bandeira"];
@@ -57,12 +57,12 @@ $EstadoCliente = "PARANA";
 $EmailCliente = "TESTE@TESTE.COM.BR";
 
 $RazaoSocialOmetz = "CENTRAL DE PRODUCOES GWUP S/A.";
-$EnderecoOmetz = "AV. GETULIO VARGAS, 3812";
-$BairroOmetz = "AGUA VERDE";
+$EnderecoOmetz = "R WILLIAM BOOTH, 2501";
+$BairroOmetz = "BOQUEIRAO";
 $CidadeOmetz = "CURITIBA";
 $EstadoOmetz = "PARANA";
-$CepOmetz = "80240-041";
-$CNPJOmetz = "00.000.000/0001-00";
+$CepOmetz = "81730-080";
+$CNPJOmetz = "01.959.772/0002-07";
 
 $QuantidadeModulos = "1";
 $QuantidadeModulosExtenso = "um";
@@ -84,7 +84,7 @@ $OperadoraCartao = "VISA";
 $DataEmissaoContrato = "17/01/2014";
 
 ?>
-<!-- Contrato de Compra no Cartão de Crédito -->
+<!-- Contrato de Compra no Cartï¿½o de Crï¿½dito -->
 <div id="Header" class="width:100%;">
 	<div style="text-align:center;">
 		<br>

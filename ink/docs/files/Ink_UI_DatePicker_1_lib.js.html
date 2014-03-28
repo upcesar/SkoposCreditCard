@@ -1,0 +1,1689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Ink/UI/DatePicker/1/lib.js - Ink.js</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+    <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><img src="../yuidoclogo.png" title="Ink.js"></h1>
+            
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: latest</em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <h2 class="off-left">APIs</h2>
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+            <li><a href="#api-modules">Modules</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="../classes/Ink.html">Ink</a></li>
+            
+                <li><a href="../classes/Ink.Dom.Browser.html">Ink.Dom.Browser</a></li>
+            
+                <li><a href="../classes/Ink.Dom.Css.html">Ink.Dom.Css</a></li>
+            
+                <li><a href="../classes/Ink.Dom.Element.html">Ink.Dom.Element</a></li>
+            
+                <li><a href="../classes/Ink.Dom.Event.html">Ink.Dom.Event</a></li>
+            
+                <li><a href="../classes/Ink.Dom.FormSerialize.html">Ink.Dom.FormSerialize</a></li>
+            
+                <li><a href="../classes/Ink.Dom.Loaded.html">Ink.Dom.Loaded</a></li>
+            
+                <li><a href="../classes/Ink.Dom.Selector.html">Ink.Dom.Selector</a></li>
+            
+                <li><a href="../classes/Ink.Namespace.ClassModule.html">Ink.Namespace.ClassModule</a></li>
+            
+                <li><a href="../classes/Ink.Namespace.StaticModule.html">Ink.Namespace.StaticModule</a></li>
+            
+                <li><a href="../classes/Ink.Net.Ajax.html">Ink.Net.Ajax</a></li>
+            
+                <li><a href="../classes/Ink.Net.JsonP.html">Ink.Net.JsonP</a></li>
+            
+                <li><a href="../classes/Ink.UI.Animate_1.html">Ink.UI.Animate_1</a></li>
+            
+                <li><a href="../classes/Ink.UI.Carousel_1.html">Ink.UI.Carousel_1</a></li>
+            
+                <li><a href="../classes/Ink.UI.Close.html">Ink.UI.Close</a></li>
+            
+                <li><a href="../classes/Ink.UI.Common.html">Ink.UI.Common</a></li>
+            
+                <li><a href="../classes/Ink.UI.DatePicker.html">Ink.UI.DatePicker</a></li>
+            
+                <li><a href="../classes/Ink.UI.Draggable.html">Ink.UI.Draggable</a></li>
+            
+                <li><a href="../classes/Ink.UI.Dropdown.html">Ink.UI.Dropdown</a></li>
+            
+                <li><a href="../classes/Ink.UI.Droppable.html">Ink.UI.Droppable</a></li>
+            
+                <li><a href="../classes/Ink.UI.FormValidator.html">Ink.UI.FormValidator</a></li>
+            
+                <li><a href="../classes/Ink.UI.FormValidator_2.html">Ink.UI.FormValidator_2</a></li>
+            
+                <li><a href="../classes/Ink.UI.ImageQuery.html">Ink.UI.ImageQuery</a></li>
+            
+                <li><a href="../classes/Ink.UI.Modal.html">Ink.UI.Modal</a></li>
+            
+                <li><a href="../classes/Ink.UI.Pagination.html">Ink.UI.Pagination</a></li>
+            
+                <li><a href="../classes/Ink.UI.ProgressBar.html">Ink.UI.ProgressBar</a></li>
+            
+                <li><a href="../classes/Ink.UI.SmoothScroller.html">Ink.UI.SmoothScroller</a></li>
+            
+                <li><a href="../classes/Ink.UI.SortableList.html">Ink.UI.SortableList</a></li>
+            
+                <li><a href="../classes/Ink.UI.Spy.html">Ink.UI.Spy</a></li>
+            
+                <li><a href="../classes/Ink.UI.Stacker_1.html">Ink.UI.Stacker_1</a></li>
+            
+                <li><a href="../classes/Ink.UI.Sticky.html">Ink.UI.Sticky</a></li>
+            
+                <li><a href="../classes/Ink.UI.Swipe.html">Ink.UI.Swipe</a></li>
+            
+                <li><a href="../classes/Ink.UI.Table.html">Ink.UI.Table</a></li>
+            
+                <li><a href="../classes/Ink.UI.Tabs.html">Ink.UI.Tabs</a></li>
+            
+                <li><a href="../classes/Ink.UI.TagField.html">Ink.UI.TagField</a></li>
+            
+                <li><a href="../classes/Ink.UI.Toggle.html">Ink.UI.Toggle</a></li>
+            
+                <li><a href="../classes/Ink.UI.Tooltip.html">Ink.UI.Tooltip</a></li>
+            
+                <li><a href="../classes/Ink.UI.TreeView.html">Ink.UI.TreeView</a></li>
+            
+                <li><a href="../classes/Ink.Util.Array.html">Ink.Util.Array</a></li>
+            
+                <li><a href="../classes/Ink.Util.BinPack.html">Ink.Util.BinPack</a></li>
+            
+                <li><a href="../classes/Ink.Util.Cookie.html">Ink.Util.Cookie</a></li>
+            
+                <li><a href="../classes/Ink.Util.Date.html">Ink.Util.Date</a></li>
+            
+                <li><a href="../classes/Ink.Util.Dumper.html">Ink.Util.Dumper</a></li>
+            
+                <li><a href="../classes/Ink.Util.I18n.html">Ink.Util.I18n</a></li>
+            
+                <li><a href="../classes/Ink.Util.Json.html">Ink.Util.Json</a></li>
+            
+                <li><a href="../classes/Ink.Util.String.html">Ink.Util.String</a></li>
+            
+                <li><a href="../classes/Ink.Util.Url.html">Ink.Util.Url</a></li>
+            
+                <li><a href="../classes/Ink.Util.Validator.html">Ink.Util.Validator</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+                <li><a href="../modules/Ink.Dom.Browser_1.html">Ink.Dom.Browser_1</a></li>
+            
+                <li><a href="../modules/Ink.Dom.Css_1.html">Ink.Dom.Css_1</a></li>
+            
+                <li><a href="../modules/Ink.Dom.Element_1.html">Ink.Dom.Element_1</a></li>
+            
+                <li><a href="../modules/Ink.Dom.Event_1.html">Ink.Dom.Event_1</a></li>
+            
+                <li><a href="../modules/Ink.Dom.FormSerialize.html">Ink.Dom.FormSerialize</a></li>
+            
+                <li><a href="../modules/Ink.Dom.Loaded_1.html">Ink.Dom.Loaded_1</a></li>
+            
+                <li><a href="../modules/Ink.Dom.Selector_1.html">Ink.Dom.Selector_1</a></li>
+            
+                <li><a href="../modules/Ink.Namespace.ClassModule_1.html">Ink.Namespace.ClassModule_1</a></li>
+            
+                <li><a href="../modules/Ink.Namespace.StaticModule_1.html">Ink.Namespace.StaticModule_1</a></li>
+            
+                <li><a href="../modules/Ink.Net.Ajax_1.html">Ink.Net.Ajax_1</a></li>
+            
+                <li><a href="../modules/Ink.Net.JsonP_1.html">Ink.Net.JsonP_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Animate_1.html">Ink.UI.Animate_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Carousel_1.html">Ink.UI.Carousel_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Close_1.html">Ink.UI.Close_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Common_1.html">Ink.UI.Common_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.DatePicker_1.html">Ink.UI.DatePicker_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Dropdown_1.html">Ink.UI.Dropdown_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Droppable_1.html">Ink.UI.Droppable_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.FormValidator_1.html">Ink.UI.FormValidator_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.FormValidator_2.html">Ink.UI.FormValidator_2</a></li>
+            
+                <li><a href="../modules/Ink.UI.ImageQuery_1.html">Ink.UI.ImageQuery_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Modal_1.html">Ink.UI.Modal_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Pagination_1.html">Ink.UI.Pagination_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.ProgressBar_1.html">Ink.UI.ProgressBar_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.SmoothScroller_1.html">Ink.UI.SmoothScroller_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.SortableList_1.html">Ink.UI.SortableList_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Spy_1.html">Ink.UI.Spy_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Stacker_1.html">Ink.UI.Stacker_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Sticky_1.html">Ink.UI.Sticky_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Swipe.html">Ink.UI.Swipe</a></li>
+            
+                <li><a href="../modules/Ink.UI.Table_1.html">Ink.UI.Table_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Tabs_1.html">Ink.UI.Tabs_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Toggle_1.html">Ink.UI.Toggle_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Tooltip_1.html">Ink.UI.Tooltip_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.TreeView_1.html">Ink.UI.TreeView_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Array_1.html">Ink.Util.Array_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.BinPack_1.html">Ink.Util.BinPack_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Cookie_1.html">Ink.Util.Cookie_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Date_1.html">Ink.Util.Date_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Dumper_1.html">Ink.Util.Dumper_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.I18n_1.html">Ink.Util.I18n_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Json_1.html">Ink.Util.Json_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.String_1.html">Ink.Util.String_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Url_1.html">Ink.Util.Url_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Validator_1.html">Ink.Util.Validator_1</a></li>
+            
+                <li><a href="../modules/Ink_1.html">Ink_1</a></li>
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+
+
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1 class="file-heading">File: Ink/UI/DatePicker/1/lib.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+/**
+ * @module Ink.UI.DatePicker_1
+ * @author inkdev AT sapo.pt
+ * @version 1
+ */
+Ink.createModule(&#x27;Ink.UI.DatePicker&#x27;, &#x27;1&#x27;, [&#x27;Ink.UI.Common_1&#x27;,&#x27;Ink.Dom.Event_1&#x27;,&#x27;Ink.Dom.Css_1&#x27;,&#x27;Ink.Dom.Element_1&#x27;,&#x27;Ink.Dom.Selector_1&#x27;,&#x27;Ink.Util.Array_1&#x27;,&#x27;Ink.Util.Date_1&#x27;, &#x27;Ink.Dom.Browser_1&#x27;], function(Common, Event, Css, InkElement, Selector, InkArray, InkDate ) {
+    &#x27;use strict&#x27;;
+
+    // Repeat a string. Long version of (new Array(n)).join(str);
+    function strRepeat(n, str) {
+        var ret = &#x27;&#x27;;
+        for (var i = 0; i &lt; n; i++) {
+            ret += str;
+        }
+        return ret;
+    }
+
+    // Clamp a number into a min/max limit
+    function clamp(n, min, max) {
+        if (n &gt; max) { n = max; }
+        if (n &lt; min) { n = min; }
+
+        return n;
+    }
+
+    function dateishFromYMDString(YMD) {
+        var split = YMD.split(&#x27;-&#x27;);
+        return dateishFromYMD(+split[0], +split[1] - 1, +split[2]);
+    }
+
+    function dateishFromYMD(year, month, day) {
+        return {_year: year, _month: month, _day: day};
+    }
+
+    function dateishFromDate(date) {
+        return {_year: date.getFullYear(), _month: date.getMonth(), _day: date.getDate()};
+    }
+
+    /**
+     * @class Ink.UI.DatePicker
+     * @constructor
+     * @version 1
+     *
+     * @param {String|DOMElement} selector
+     * @param {Object} [options] Options
+     *      @param {Boolean}   [options.autoOpen=false]  set to &#x60;true&#x60; to automatically open the datepicker.
+     *      @param {String}    [options.cleanText]       text to display on clean button. defaults to &#x27;Limpar&#x27;
+     *      @param {String}    [options.closeText]       text to display on close button. defaults to &#x27;Fechar&#x27;
+     *      @param {String}    [options.cssClass]        CSS class to be applied to the datepicker
+     *      @param {String}    [options.dateRange]       enforce limits to year, month and day for the Date, ex: &#x27;1990-08-25:2020-11&#x27;
+     *      @param {Boolean}   [options.displayInSelect] whether to display the component in a select. defaults to false.
+     *      @param {String|DOMElement} [options.dayField]   (if using options.displayInSelect) &#x60;&lt;select&gt;&#x60; field with days.
+     *      @param {String|DOMElement} [options.monthField] (if using options.displayInSelect)  &#x60;&lt;select&gt;&#x60; field with months.
+     *      @param {String|DOMElement} [options.yearField]  (if using options.displayInSelect)  &#x60;&lt;select&gt;&#x60; field with years.
+     *      @param {String}    [options.format]          Date format string
+     *      @param {String}    [options.instance]        unique id for the datepicker
+     *      @param {Object}    [options.month]           Hash of month names. Defaults to portuguese month names. January is 1.
+     *      @param {String}    [options.nextLinkText]    text to display on the previous button. defaults to &#x27;«&#x27;
+     *      @param {String}    [options.ofText=&#x27; of &#x27;]   text to display between month and year. defaults to &#x27; de &#x27;
+     *      @param {Boolean}   [options.onFocus=true]    if the datepicker should open when the target element is focused
+     *      @param {Function}  [options.onMonthSelected] callback function to execute when the month is selected
+     *      @param {Function}  [options.onSetDate]       callback to execute when set date
+     *      @param {Function}  [options.onYearSelected]  callback function to execute when the year is selected
+     *      @param {String}    [options.position]        position the datepicker. Accept right or bottom, default is right
+     *      @param {String}    [options.prevLinkText]    text to display on the previous button. defaults to &#x27;«&#x27;
+     *      @param {Boolean}   [options.showClean]       whether to display the clean button or not. defaults to true.
+     *      @param {Boolean}   [options.showClose]       whether to display the close button or not. defaults to true.
+     *      @param {Boolean}   [options.shy=true]        whether the datepicker starts automatically.
+     *      @param {String}    [options.startDate]       Date to define init month. Must be in yyyy-mm-dd format
+     *      @param {Number}    [options.startWeekDay]    day to use as first column on the calendar view. Defaults to Monday (1)
+     *      @param {Function}  [options.validYearFn]    callback function to execute when &#x27;rendering&#x27; the month (in the month view)
+     *      @param {Function}  [options.validMonthFn]    callback function to execute when &#x27;rendering&#x27; the month (in the month view)
+     *      @param {Function}  [options.validDayFn]      callback function to execute when &#x27;rendering&#x27; the day (in the month view)
+     *      @param {Function}  [options.nextValidDateFn] Find the next valid date, given the current Date. Necessary when the calendar has a lot of &quot;holes&quot;, and not many dates are valid and they are separated by many months or years so it doesn&#x27;t make sense to have the user click the &quot;next&quot; button too many times and not see any valid date.
+     *      @param {Function}  [options.prevValidDateFn] See nextValidDateFn. Find the previous valid date.
+     *      @param {Object}    [options.wDay]            Hash of weekdays. Defaults to portuguese month names. Sunday is 0.
+     *      @param {String}    [options.yearRange]       enforce limits to year for the Date, ex: &#x27;1990:2020&#x27; (deprecated)
+     *
+     * @example
+     *     &lt;input type=&quot;text&quot; id=&quot;dPicker&quot; /&gt;
+     *     &lt;script&gt;
+     *         Ink.requireModules([&#x27;Ink.Dom.Selector_1&#x27;,&#x27;Ink.UI.DatePicker_1&#x27;],function( Selector, DatePicker ){
+     *             var datePickerElement = Ink.s(&#x27;#dPicker&#x27;);
+     *             var datePickerObj = new DatePicker( datePickerElement );
+     *         });
+     *     &lt;/script&gt;
+     */
+    var DatePicker = function(selector, options) {
+        this._element = selector &amp;&amp;
+            Common.elOrSelector(selector, &#x27;[Ink.UI.DatePicker_1]: selector argument&#x27;);
+
+        this._options = Common.options(&#x27;Ink.UI.DatePicker_1&#x27;, {
+            autoOpen:        [&#x27;Boolean&#x27;, false],
+            cleanText:       [&#x27;String&#x27;, &#x27;Clear&#x27;],
+            closeText:       [&#x27;String&#x27;, &#x27;Close&#x27;],
+            containerElement:[&#x27;Element&#x27;, null],
+            cssClass:        [&#x27;String&#x27;, &#x27;ink-calendar bottom&#x27;],
+            dateRange:       [&#x27;String&#x27;, null],
+            
+            // use this in a &lt;select&gt;
+            displayInSelect: [&#x27;Boolean&#x27;, false],
+            dayField:        [&#x27;Element&#x27;, null],
+            monthField:      [&#x27;Element&#x27;, null],
+            yearField:       [&#x27;Element&#x27;, null],
+
+            format:          [&#x27;String&#x27;, &#x27;yyyy-mm-dd&#x27;],
+            instance:        [&#x27;String&#x27;, &#x27;scdp_&#x27; + Math.round(99999 * Math.random())],
+            nextLinkText:    [&#x27;String&#x27;, &#x27;»&#x27;],
+            ofText:          [&#x27;String&#x27;, &#x27; of &#x27;],
+            onFocus:         [&#x27;Boolean&#x27;, true],
+            onMonthSelected: [&#x27;Function&#x27;, null],
+            onSetDate:       [&#x27;Function&#x27;, null],
+            onYearSelected:  [&#x27;Function&#x27;, null],
+            position:        [&#x27;String&#x27;, &#x27;right&#x27;],
+            prevLinkText:    [&#x27;String&#x27;, &#x27;«&#x27;],
+            showClean:       [&#x27;Boolean&#x27;, true],
+            showClose:       [&#x27;Boolean&#x27;, true],
+            shy:             [&#x27;Boolean&#x27;, true],
+            startDate:       [&#x27;String&#x27;, null], // format yyyy-mm-dd,
+            startWeekDay:    [&#x27;Number&#x27;, 1],
+
+            // Validation
+            validDayFn:      [&#x27;Function&#x27;, null],
+            validMonthFn:    [&#x27;Function&#x27;, null],
+            validYearFn:     [&#x27;Function&#x27;, null],
+            nextValidDateFn: [&#x27;Function&#x27;, null],
+            prevValidDateFn: [&#x27;Function&#x27;, null],
+            yearRange:       [&#x27;String&#x27;, null],
+
+            // Text
+            month: [&#x27;Object&#x27;, {
+                 1:&#x27;January&#x27;,
+                 2:&#x27;February&#x27;,
+                 3:&#x27;March&#x27;,
+                 4:&#x27;April&#x27;,
+                 5:&#x27;May&#x27;,
+                 6:&#x27;June&#x27;,
+                 7:&#x27;July&#x27;,
+                 8:&#x27;August&#x27;,
+                 9:&#x27;September&#x27;,
+                10:&#x27;October&#x27;,
+                11:&#x27;November&#x27;,
+                12:&#x27;December&#x27;
+            }],
+            wDay: [&#x27;Object&#x27;, {
+                0:&#x27;Sunday&#x27;,
+                1:&#x27;Monday&#x27;,
+                2:&#x27;Tuesday&#x27;,
+                3:&#x27;Wednesday&#x27;,
+                4:&#x27;Thursday&#x27;,
+                5:&#x27;Friday&#x27;,
+                6:&#x27;Saturday&#x27;
+            }]
+        }, options || {}, this._element);
+
+        this._options.format = this._dateParsers[ this._options.format ] || this._options.format;
+
+        this._hoverPicker = false;
+
+        this._picker = this._options.pickerField &amp;&amp;
+            Common.elOrSelector(this._options.pickerField, &#x27;pickerField&#x27;);
+
+        this._setMinMax( this._options.dateRange || this._options.yearRange );
+
+        if(this._options.startDate) {
+            this.setDate( this._options.startDate );
+        } else if (this._element &amp;&amp; this._element.value) {
+            this.setDate( this._element.value );
+        } else {
+            var today = new Date();
+            this._day   = today.getDate( );
+            this._month = today.getMonth( );
+            this._year  = today.getFullYear( );
+        }
+
+        if(this._options.displayInSelect &amp;&amp;
+                !(this._options.dayField &amp;&amp; this._options.monthField &amp;&amp; this._options.yearField)){
+            throw new Error(
+                &#x27;Ink.UI.DatePicker: displayInSelect option enabled.&#x27;+
+                &#x27;Please specify dayField, monthField and yearField selectors.&#x27;);
+        }
+
+        this._init();
+    };
+
+    DatePicker.prototype = {
+        version: &#x27;0.1&#x27;,
+
+        /**
+         * Initialization function. Called by the constructor and
+         * receives the same parameters.
+         *
+         * @method _init
+         * @private
+         */
+        _init: function(){
+            Ink.extendObj(this._options,this._lang || {});
+
+            this._render();
+            this._listenToContainerObjectEvents();
+
+            Common.registerInstance(this, this._containerObject, &#x27;datePicker&#x27;);
+        },
+
+        /**
+         * Renders the DatePicker&#x27;s markup
+         *
+         * @method _render
+         * @private
+         */
+        _render: function() {
+            this._containerObject = document.createElement(&#x27;div&#x27;);
+
+            this._containerObject.id = this._options.instance;
+
+            this._containerObject.className = this._options.cssClass + &#x27; ink-datepicker-calendar hide-all&#x27;;
+
+            this._renderSuperTopBar();
+
+            var calendarTop = document.createElement(&quot;div&quot;);
+            calendarTop.className = &#x27;ink-calendar-top&#x27;;
+
+            this._monthDescContainer = document.createElement(&quot;div&quot;);
+            this._monthDescContainer.className = &#x27;ink-calendar-month_desc&#x27;;
+
+            this._monthPrev = document.createElement(&#x27;div&#x27;);
+            this._monthPrev.className = &#x27;ink-calendar-prev&#x27;;
+            this._monthPrev.innerHTML =&#x27;&lt;a href=&quot;#prev&quot; class=&quot;change_month_prev&quot;&gt;&#x27; + this._options.prevLinkText + &#x27;&lt;/a&gt;&#x27;;
+
+            this._monthNext = document.createElement(&#x27;div&#x27;);
+            this._monthNext.className = &#x27;ink-calendar-next&#x27;;
+            this._monthNext.innerHTML =&#x27;&lt;a href=&quot;#next&quot; class=&quot;change_month_next&quot;&gt;&#x27; + this._options.nextLinkText + &#x27;&lt;/a&gt;&#x27;;
+
+            calendarTop.appendChild(this._monthPrev);
+            calendarTop.appendChild(this._monthDescContainer);
+            calendarTop.appendChild(this._monthNext);
+
+            this._monthContainer = document.createElement(&quot;div&quot;);
+            this._monthContainer.className = &#x27;ink-calendar-month&#x27;;
+
+            this._containerObject.appendChild(calendarTop);
+            this._containerObject.appendChild(this._monthContainer);
+
+            this._monthSelector = this._renderMonthSelector();
+            this._containerObject.appendChild(this._monthSelector);
+
+            this._yearSelector = document.createElement(&#x27;ul&#x27;);
+            this._yearSelector.className = &#x27;ink-calendar-year-selector&#x27;;
+
+            this._containerObject.appendChild(this._yearSelector);
+
+            if(!this._options.onFocus || this._options.displayInSelect){
+                if(!this._options.pickerField){
+                    this._picker = document.createElement(&#x27;a&#x27;);
+                    this._picker.href = &#x27;#open_cal&#x27;;
+                    this._picker.innerHTML = &#x27;open&#x27;;
+                    this._element.parentNode.appendChild(this._picker);
+                    this._picker.className = &#x27;ink-datepicker-picker-field&#x27;;
+                } else {
+                    this._picker = Common.elOrSelector(this._options.pickerField, &#x27;pickerField&#x27;);
+                }
+            }
+
+            this._appendDatePickerToDom();
+
+            this._renderMonth();
+
+            this._monthChanger = document.createElement(&#x27;a&#x27;);
+            this._monthChanger.href = &#x27;#monthchanger&#x27;;
+            this._monthChanger.className = &#x27;ink-calendar-link-month&#x27;;
+            this._monthChanger.innerHTML = this._options.month[this._month + 1];
+
+            this._ofText = document.createElement(&#x27;span&#x27;);
+            this._ofText.innerHTML = this._options.ofText;
+
+            this._yearChanger = document.createElement(&#x27;a&#x27;);
+            this._yearChanger.href = &#x27;#yearchanger&#x27;;
+            this._yearChanger.className = &#x27;ink-calendar-link-year&#x27;;
+            this._yearChanger.innerHTML = this._year;
+            this._monthDescContainer.innerHTML = &#x27;&#x27;;
+            this._monthDescContainer.appendChild(this._monthChanger);
+            this._monthDescContainer.appendChild(this._ofText);
+            this._monthDescContainer.appendChild(this._yearChanger);
+
+            if (!this._options.inline) {
+                this._addOpenCloseEvents();
+            } else {
+                this.show();
+            }
+            this._addDateChangeHandlersToInputs();
+        },
+
+        _addDateChangeHandlersToInputs: function () {
+            var fields = this._element;
+            if (this._options.displayInSelect) {
+                fields = [
+                    this._options.dayField,
+                    this._options.monthField,
+                    this._options.yearField];
+            }
+            Event.observeMulti(fields ,&#x27;change&#x27;, Ink.bindEvent(function(){
+                this._updateDate( );
+                this._showDefaultView( );
+                this.setDate( );
+                if ( !this._inline &amp;&amp; !this._hoverPicker ) {
+                    this._hide(true);
+                }
+            },this));
+        },
+
+        /**
+         * Shows the calendar
+         *
+         * @method show
+         **/
+        show: function () {
+            this._updateDate();
+            this._renderMonth();
+            Css.removeClassName(this._containerObject, &#x27;hide-all&#x27;);
+        },
+
+        _addOpenCloseEvents: function () {
+            var opener = this._picker || this._element;
+
+            Event.observe(opener, &#x27;click&#x27;, Ink.bindEvent(function(e){
+                Event.stop(e);
+                this.show();
+            },this));
+
+            if (this._options.autoOpen) {
+                this.show();
+            }
+
+            if(!this._options.displayInSelect){
+                Event.observe(opener, &#x27;blur&#x27;, Ink.bindEvent(function() {
+                    if ( !this._hoverPicker ) {
+                        this._hide(true);
+                    }
+                },this));
+            }
+
+            if (this._options.shy) {
+                // Close the picker when clicking elsewhere.
+                Event.observe(document,&#x27;click&#x27;,Ink.bindEvent(function(e){
+                    var target = Event.element(e);
+
+                    // &quot;elsewhere&quot; is outside any of these elements:
+                    var cannotBe = [
+                        this._options.dayField,
+                        this._options.monthField,
+                        this._options.yearField,
+                        this._picker,
+                        this._element
+                    ];
+
+                    for (var i = 0, len = cannotBe.length; i &lt; len; i++) {
+                        if (cannotBe[i] &amp;&amp; InkElement.descendantOf(cannotBe[i], target)) {
+                            return;
+                        }
+                    }
+
+                    this._hide(true);
+                },this));
+            }
+        },
+
+        /**
+         * Create the markup of the view with months.
+         *
+         * @method _renderMonthSelector
+         * @private
+         */
+        _renderMonthSelector: function () {
+            var selector = document.createElement(&#x27;ul&#x27;);
+            selector.className = &#x27;ink-calendar-month-selector&#x27;;
+
+            var ulSelector = document.createElement(&#x27;ul&#x27;);
+            for(var mon=1; mon&lt;=12; mon++){
+                ulSelector.appendChild(this._renderMonthButton(mon));
+
+                if (mon % 4 === 0) {
+                    selector.appendChild(ulSelector);
+                    ulSelector = document.createElement(&#x27;ul&#x27;);
+                }
+            }
+            return selector;
+        },
+
+        /**
+         * Render a single month button.
+         */
+        _renderMonthButton: function (mon) {
+            var liMonth = document.createElement(&#x27;li&#x27;);
+            var aMonth = document.createElement(&#x27;a&#x27;);
+            aMonth.setAttribute(&#x27;data-cal-month&#x27;, mon);
+            aMonth.innerHTML = this._options.month[mon].substring(0,3);
+            liMonth.appendChild(aMonth);
+            return liMonth;
+        },
+
+        _appendDatePickerToDom: function () {
+            if(this._options.containerElement) {
+                var appendTarget =
+                    Ink.i(this._options.containerElement) ||  // [2.3.0] maybe id; small backwards compatibility thing
+                    Common.elOrSelector(this._options.containerElement);
+                appendTarget.appendChild(this._containerObject);
+            }
+
+            if (InkElement.findUpwardsBySelector(this._element, &#x27;.ink-form .control-group .control&#x27;) === this._element.parentNode) {
+                // [3.0.0] Check if the &lt;input&gt; must be a direct child of .control, and if not, remove this block.
+                this._wrapper = this._element.parentNode;
+                this._wrapperIsControl = true;
+            } else {
+                this._wrapper = InkElement.create(&#x27;div&#x27;, { className: &#x27;ink-datepicker-wrapper&#x27; });
+                InkElement.wrap(this._element, this._wrapper);
+            }
+            InkElement.insertAfter(this._containerObject, this._element);
+        },
+
+        /**
+         * Render the topmost bar with the &quot;close&quot; and &quot;clear&quot; buttons.
+         */
+        _renderSuperTopBar: function () {
+            if((!this._options.showClose) || (!this._options.showClean)){ return; }
+
+            this._superTopBar = document.createElement(&quot;div&quot;);
+            this._superTopBar.className = &#x27;ink-calendar-top-options&#x27;;
+            if(this._options.showClean){
+                this._superTopBar.appendChild(InkElement.create(&#x27;a&#x27;, {
+                    className: &#x27;clean&#x27;,
+                    setHTML: this._options.cleanText
+                }));
+            }
+            if(this._options.showClose){
+                this._superTopBar.appendChild(InkElement.create(&#x27;a&#x27;, {
+                    className: &#x27;close&#x27;,
+                    setHTML: this._options.closeText
+                }));
+            }
+            this._containerObject.appendChild(this._superTopBar);
+        },
+
+        _listenToContainerObjectEvents: function () {
+            Event.observe(this._containerObject,&#x27;mouseover&#x27;,Ink.bindEvent(function(e){
+                Event.stop( e );
+                this._hoverPicker = true;
+            },this));
+
+            Event.observe(this._containerObject,&#x27;mouseout&#x27;,Ink.bindEvent(function(e){
+                Event.stop( e );
+                this._hoverPicker = false;
+            },this));
+
+            Event.observe(this._containerObject,&#x27;click&#x27;,Ink.bindEvent(this._onClick, this));
+        },
+
+        _onClick: function(e){
+            var elem = Event.element(e);
+
+            if (Css.hasClassName(elem, &#x27;ink-calendar-off&#x27;)) {
+                Event.stopDefault(e);
+                return null;
+            }
+
+            Event.stop(e);
+
+            // Relative changers
+            this._onRelativeChangerClick(elem);
+
+            // Absolute changers
+            this._onAbsoluteChangerClick(elem);
+
+            // Mode changers
+            if (Css.hasClassName(elem, &#x27;ink-calendar-link-month&#x27;)) {
+                this._showMonthSelector();
+            } else if (Css.hasClassName(elem, &#x27;ink-calendar-link-year&#x27;)) {
+                this._showYearSelector();
+            } else if(Css.hasClassName(elem, &#x27;clean&#x27;)){
+                this._clean();
+            } else if(Css.hasClassName(elem, &#x27;close&#x27;)){
+                this._hide(false);
+            }
+
+            this._updateDescription();
+        },
+
+        /**
+         * Handle click events on a changer (« ») for next/prev year/month
+         * @method _onChangerClick
+         * @private
+         **/
+        _onRelativeChangerClick: function (elem) {
+            var changeYear = {
+                change_year_next: 1,
+                change_year_prev: -1
+            };
+            var changeMonth = {
+                change_month_next: 1,
+                change_month_prev: -1
+            };
+
+            if( elem.className in changeMonth ) {
+                this._updateCal(changeMonth[elem.className]);
+            } else if( elem.className in changeYear ) {
+                this._showYearSelector(changeYear[elem.className]);
+            }
+        },
+
+        /**
+         * Handle click events on an atom-changer (day button, month button, year button)
+         *
+         * @method _onAbsoluteChangerClick
+         * @private
+         */
+        _onAbsoluteChangerClick: function (elem) {
+            var elemData = InkElement.data(elem);
+
+            if( Number(elemData.calDay) ){
+                this.setDate( [this._year, this._month + 1, elemData.calDay].join(&#x27;-&#x27;) );
+                this._hide();
+            } else if( Number(elemData.calMonth) ) {
+                this._month = Number(elemData.calMonth) - 1;
+                this._showDefaultView();
+                this._updateCal();
+            } else if( Number(elemData.calYear) ){
+                this._changeYear(Number(elemData.calYear));
+            }
+        },
+
+        _changeYear: function (year) {
+            year = +year;
+            if(year){
+                this._year = year;
+                if( typeof this._options.onYearSelected === &#x27;function&#x27; ){
+                    this._options.onYearSelected(this, {
+                        &#x27;year&#x27;: this._year
+                    });
+                }
+                this._showMonthSelector();
+            }
+        },
+
+        _clean: function () {
+            if(this._options.displayInSelect){
+                this._options.yearField.selectedIndex = 0;
+                this._options.monthField.selectedIndex = 0;
+                this._options.dayField.selectedIndex = 0;
+            } else {
+                this._element.value = &#x27;&#x27;;
+            }
+        },
+
+        /**
+         * Hides the DatePicker. If the component is shy (options.shy), behaves differently.
+         *
+         * @method _hide
+         * @param [blur=true] Set to false to indicate this is not just a blur and force hiding even if the component is shy.
+         */
+        _hide: function(blur) {
+            blur = blur === undefined ? true : blur;
+            if (blur === false || (blur &amp;&amp; this._options.shy)) {
+                Css.addClassName(this._containerObject, &#x27;hide-all&#x27;);
+            }
+        },
+
+        /**
+         * Sets the range of dates allowed to be selected in the Date Picker
+         *
+         * @method _setMinMax
+         * @param {String} dateRange Two dates separated by a &#x27;:&#x27;. Example: 2013-01-01:2013-12-12
+         * @private
+         */
+        _setMinMax: function( dateRange ) {
+            var self = this;
+
+            var noMinLimit = {
+                _year: -Number.MAX_VALUE,
+                _month: 0,
+                _day: 1
+            };
+
+            var noMaxLimit = {
+                _year: Number.MAX_VALUE,
+                _month: 11,
+                _day: 31
+            };
+
+            function noLimits() {
+                self._min = noMinLimit;
+                self._max = noMaxLimit;
+            }
+
+            if (!dateRange) { return noLimits(); }
+
+            var dates = dateRange.split( &#x27;:&#x27; );
+            var rDate = /^(\d{4})((\-)(\d{1,2})((\-)(\d{1,2}))?)?$/;
+
+            InkArray.each([
+                        {name: &#x27;_min&#x27;, date: dates[0], noLim: noMinLimit},
+                        {name: &#x27;_max&#x27;, date: dates[1], noLim: noMaxLimit}
+                    ], Ink.bind(function (data) {
+
+                var lim = data.noLim;
+
+                if ( data.date.toUpperCase() === &#x27;NOW&#x27; ) {
+                    var now = new Date();
+                    lim = dateishFromDate(now);
+                } else if (data.date.toUpperCase() === &#x27;EVER&#x27;) {
+                    lim = data.noLim;
+                } else if ( rDate.test( data.date ) ) {
+                    lim = dateishFromYMDString(data.date);
+
+                    lim._month = clamp(lim._month, 0, 11);
+                    lim._day = clamp(lim._day, 1, this._daysInMonth( lim._year, lim._month ));
+                }
+
+                this[data.name] = lim;
+            }, this));
+
+            // Should be equal, or min should be smaller
+            var valid = this._dateCmp(this._max, this._min) !== -1;
+
+            if (!valid) {
+                noLimits();
+            }
+        },
+
+        /**
+         * Checks if a date is between the valid range.
+         * Starts by checking if the date passed is valid. If not, will fallback to the &#x27;today&#x27; date.
+         * Then checks if the all params are inside of the date range specified. If not, it will fallback to the nearest valid date (either Min or Max).
+         *
+         * @method _fitDateToRange
+         * @param  {Number} year  Year with 4 digits (yyyy)
+         * @param  {Number} month Month
+         * @param  {Number} day   Day
+         * @return {Array}       Array with the final processed date.
+         * @private
+         */
+        _fitDateToRange: function( date ) {
+            if ( !this._isValidDate( date ) ) {
+                date = dateishFromDate(new Date());
+            }
+
+            if (this._dateCmp(date, this._min) === -1) {
+                return Ink.extendObj({}, this._min);
+            } else if (this._dateCmp(date, this._max) === 1) {
+                return Ink.extendObj({}, this._max);
+            }
+
+            return Ink.extendObj({}, date);  // date is okay already, just copy it.
+        },
+
+        /**
+         * Checks whether a date is within the valid date range
+         * @method _dateWithinRange
+         * @param year
+         * @param month
+         * @param day
+         * @return {Boolean}
+         * @private
+         */
+        _dateWithinRange: function (date) {
+            if (!arguments.length) {
+                date = this;
+            }
+
+            return  (!this._dateAboveMax(date) &amp;&amp;
+                    (!this._dateBelowMin(date)));
+        },
+
+        _dateAboveMax: function (date) {
+            return this._dateCmp(date, this._max) === 1;
+        },
+
+        _dateBelowMin: function (date) {
+            return this._dateCmp(date, this._min) === -1;
+        },
+
+        _dateCmp: function (self, oth) {
+            return this._dateCmpUntil(self, oth, &#x27;_day&#x27;);
+        },
+
+        /**
+         * _dateCmp with varied precision. You can compare down to the day field, or, just to the month.
+         * // the following two dates are considered equal because we asked
+         * // _dateCmpUntil to just check up to the years.
+         *
+         * _dateCmpUntil({_year: 2000, _month: 10}, {_year: 2000, _month: 11}, &#x27;_year&#x27;) === 0
+         */
+        _dateCmpUntil: function (self, oth, depth) {
+            var props = [&#x27;_year&#x27;, &#x27;_month&#x27;, &#x27;_day&#x27;];
+            var i = -1;
+
+            do {
+                i++;
+                if      (self[props[i]] &gt; oth[props[i]]) { return 1; }
+                else if (self[props[i]] &lt; oth[props[i]]) { return -1; }
+            } while (props[i] !== depth &amp;&amp;
+                    self[props[i + 1]] !== undefined &amp;&amp; oth[props[i + 1]] !== undefined);
+
+            return 0;
+        },
+
+        /**
+         * Sets the markup in the default view mode (showing the days).
+         * Also disables the previous and next buttons in case they don&#x27;t meet the range requirements.
+         *
+         * @method _showDefaultView
+         * @private
+         */
+        _showDefaultView: function(){
+            this._yearSelector.style.display = &#x27;none&#x27;;
+            this._monthSelector.style.display = &#x27;none&#x27;;
+            this._monthPrev.childNodes[0].className = &#x27;change_month_prev&#x27;;
+            this._monthNext.childNodes[0].className = &#x27;change_month_next&#x27;;
+
+            if ( !this._getPrevMonth() ) {
+                this._monthPrev.childNodes[0].className = &#x27;action_inactive&#x27;;
+            }
+
+            if ( !this._getNextMonth() ) {
+                this._monthNext.childNodes[0].className = &#x27;action_inactive&#x27;;
+            }
+
+            this._monthContainer.style.display = &#x27;block&#x27;;
+        },
+
+        /**
+         * Updates the date shown on the datepicker
+         *
+         * @method _updateDate
+         * @private
+         */
+        _updateDate: function(){
+            var dataParsed;
+            if(!this._options.displayInSelect &amp;&amp; this._element.value){
+                dataParsed = this._parseDate(this._element.value);
+            } else if (this._options.displayInSelect) {
+                dataParsed = {
+                    _year: this._options.yearField[this._options.yearField.selectedIndex].value,
+                    _month: this._options.monthField[this._options.monthField.selectedIndex].value - 1,
+                    _day: this._options.dayField[this._options.dayField.selectedIndex].value
+                };
+            }
+
+            if (dataParsed) {
+                dataParsed = this._fitDateToRange(dataParsed);
+                this._year = dataParsed._year;
+                this._month = dataParsed._month;
+                this._day = dataParsed._day;
+            }
+            this.setDate();
+            this._updateDescription();
+            this._renderMonth();
+        },
+
+        /**
+         * Updates the date description shown at the top of the datepicker
+         *
+         * EG &quot;12 de November&quot;
+         *
+         * @method  _updateDescription
+         * @private
+         */
+        _updateDescription: function(){
+            this._monthChanger.innerHTML = this._options.month[ this._month + 1 ];
+            this._ofText.innerHTML = this._options.ofText;
+            this._yearChanger.innerHTML = this._year;
+        },
+
+        /**
+         * Renders the year selector view of the datepicker
+         *
+         * @method _showYearSelector
+         * @private
+         */
+        _showYearSelector: function(inc){
+            this._incrementViewingYear(inc);
+
+            var firstYear = this._year - (this._year % 10);
+            var thisYear = firstYear - 1;
+            var str = &quot;&lt;li&gt;&lt;ul&gt;&quot;;
+
+            if (thisYear &gt; this._min._year) {
+                str += &#x27;&lt;li&gt;&lt;a href=&quot;#year_prev&quot; class=&quot;change_year_prev&quot;&gt;&#x27; + this._options.prevLinkText + &#x27;&lt;/a&gt;&lt;/li&gt;&#x27;;
+            } else {
+                str += &#x27;&lt;li&gt;&amp;nbsp;&lt;/li&gt;&#x27;;
+            }
+
+            for (var i=1; i &lt; 11; i++){
+                if (i % 4 === 0){
+                    str+=&#x27;&lt;/ul&gt;&lt;ul&gt;&#x27;;
+                }
+
+                thisYear = firstYear + i - 1;
+
+                str += this._getYearButtonHtml(thisYear);
+            }
+
+            if( thisYear &lt; this._max._year){
+                str += &#x27;&lt;li&gt;&lt;a href=&quot;#year_next&quot; class=&quot;change_year_next&quot;&gt;&#x27; + this._options.nextLinkText + &#x27;&lt;/a&gt;&lt;/li&gt;&#x27;;
+            } else {
+                str += &#x27;&lt;li&gt;&amp;nbsp;&lt;/li&gt;&#x27;;
+            }
+
+            str += &quot;&lt;/ul&gt;&lt;/li&gt;&quot;;
+
+            this._yearSelector.innerHTML = str;
+            this._monthPrev.childNodes[0].className = &#x27;action_inactive&#x27;;
+            this._monthNext.childNodes[0].className = &#x27;action_inactive&#x27;;
+            this._monthSelector.style.display = &#x27;none&#x27;;
+            this._monthContainer.style.display = &#x27;none&#x27;;
+            this._yearSelector.style.display = &#x27;block&#x27;;
+        },
+
+        /**
+         * For the year selector.
+         *
+         * Update this._year, to find the next decade or use nextValidDateFn to find it.
+         */
+        _incrementViewingYear: function (inc) {
+            if (!inc) { return; }
+
+            var year = +this._year + inc*10;
+            year = year - year % 10;
+            if ( year &gt; this._max._year || year + 9 &lt; this._min._year){
+                return;
+            }
+            this._year = +this._year + inc*10;
+        },
+
+        _getYearButtonHtml: function (thisYear) {
+            if ( this._acceptableYear({_year: thisYear}) ){
+                var className = (thisYear === this._year) ? &#x27; class=&quot;ink-calendar-on&quot;&#x27; : &#x27;&#x27;;
+                return &#x27;&lt;li&gt;&lt;a href=&quot;#&quot; data-cal-year=&quot;&#x27; + thisYear + &#x27;&quot;&#x27; + className + &#x27;&gt;&#x27; + thisYear +&#x27;&lt;/a&gt;&lt;/li&gt;&#x27;;
+            } else {
+                return &#x27;&lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;ink-calendar-off&quot;&gt;&#x27; + thisYear +&#x27;&lt;/a&gt;&lt;/li&gt;&#x27;;
+
+            }
+        },
+
+        /**
+         * Show the month selector (happens when you click a year, or the &quot;month&quot; link.
+         * @method _showMonthSelector
+         * @private
+         */
+        _showMonthSelector: function () {
+            this._yearSelector.style.display = &#x27;none&#x27;;
+            this._monthContainer.style.display = &#x27;none&#x27;;
+            this._monthPrev.childNodes[0].className = &#x27;action_inactive&#x27;;
+            this._monthNext.childNodes[0].className = &#x27;action_inactive&#x27;;
+            this._addMonthClassNames();
+            this._monthSelector.style.display = &#x27;block&#x27;;
+        },
+
+        /**
+         * This function returns the given date in the dateish format
+         *
+         * @method _parseDate
+         * @param {String} dateStr A date on a string.
+         * @private
+         */
+        _parseDate: function(dateStr){
+            var date = InkDate.set( this._options.format , dateStr );
+            if (date) {
+                return dateishFromDate(date);
+            }
+            return null;
+        },
+
+        /**
+         * Checks if a date is valid
+         *
+         * @method _isValidDate
+         * @param {Dateish} date
+         * @private
+         * @return {Boolean} True if the date is valid, false otherwise
+         */
+        _isValidDate: function(date){
+            var yearRegExp = /^\d{4}$/;
+            var validOneOrTwo = /^\d{1,2}$/;
+            return (
+                yearRegExp.test(date._year)     &amp;&amp;
+                validOneOrTwo.test(date._month) &amp;&amp;
+                validOneOrTwo.test(date._day)   &amp;&amp;
+                +date._month + 1 &gt;= 1  &amp;&amp;
+                +date._month + 1 &lt;= 12 &amp;&amp;
+                +date._day       &gt;= 1  &amp;&amp;
+                +date._day       &lt;= this._daysInMonth(date._year, date._month + 1)
+            );
+        },
+
+        /**
+         * Checks if a given date is an valid format.
+         *
+         * @method _isDate
+         * @param {String} format A date format.
+         * @param {String} dateStr A date on a string.
+         * @private
+         * @return {Boolean} True if the given date is valid according to the given format
+         */
+        _isDate: function(format, dateStr){
+            try {
+                if (typeof format === &#x27;undefined&#x27;){
+                    return false;
+                }
+                var date = InkDate.set( format , dateStr );
+                if( date &amp;&amp; this._isValidDate( dateishFromDate(date) )) {
+                    return true;
+                }
+            } catch (ex) {}
+
+            return false;
+        },
+
+        _acceptableDay: function (date) {
+            return this._acceptableDateComponent(date, &#x27;validDayFn&#x27;);
+        },
+
+        _acceptableMonth: function (date) {
+            return this._acceptableDateComponent(date, &#x27;validMonthFn&#x27;);
+        },
+
+        _acceptableYear: function (date) {
+            return this._acceptableDateComponent(date, &#x27;validYearFn&#x27;);
+        },
+
+        /** DRY base for the above 2 functions */
+        _acceptableDateComponent: function (date, userCb) {
+            if (this._options[userCb]) {
+                return this._callUserCallbackBool(this._options[userCb], date);
+            } else {
+                return this._dateWithinRange(date);
+            }
+        },
+
+        /**
+         * This method returns the date written with the format specified on the options
+         *
+         * @method _writeDateInFormat
+         * @private
+         * @return {String} Returns the current date of the object in the specified format
+         */
+        _writeDateInFormat:function(){
+            return InkDate.get( this._options.format , this.getDate());
+        },
+
+        /**
+         * This method allows the user to set the DatePicker&#x27;s date on run-time.
+         *
+         * @method setDate
+         * @param {String} dateString A date string in yyyy-mm-dd format.
+         * @public
+         */
+        setDate: function( dateString ) {
+            if ( /\d{4}-\d{1,2}-\d{1,2}/.test( dateString ) ) {
+                var auxDate = dateString.split( &#x27;-&#x27; );
+                this._year  = +auxDate[ 0 ];
+                this._month = +auxDate[ 1 ] - 1;
+                this._day   = +auxDate[ 2 ];
+            }
+
+            this._setDate( );
+        },
+
+        /**
+         * Get the current date as a JavaScript date.
+         *
+         * @method getDate
+         */
+        getDate: function () {
+            if (!this._day) {
+                throw &#x27;Ink.UI.DatePicker: Still picking a date. Cannot getDate now!&#x27;;
+            }
+            return new Date(this._year, this._month, this._day);
+        },
+
+        /**
+         * Sets the chosen date on the target input field
+         *
+         * @method _setDate
+         * @param {DOMElement} objClicked Clicked object inside the DatePicker&#x27;s calendar.
+         * @private
+         */
+        _setDate : function( objClicked ) {
+            if (objClicked) {
+                var data = InkElement.data(objClicked);
+                this._day = (+data.calDay) || this._day;
+            }
+
+            var dt = this._fitDateToRange(this);
+
+            this._year = dt._year;
+            this._month = dt._month;
+            this._day = dt._day;
+
+            if(!this._options.displayInSelect){
+                this._element.value = this._writeDateInFormat();
+            } else {
+                this._options.dayField.value   = this._day;
+                this._options.monthField.value = this._month + 1;
+                this._options.yearField.value  = this._year;
+            }
+
+            if(this._options.onSetDate) {
+                this._options.onSetDate( this , { date : this.getDate() } );
+            }
+        },
+
+        /**
+         * Makes the necessary work to update the calendar
+         * when choosing a different month
+         *
+         * @method _updateCal
+         * @param {Number} inc Indicates previous or next month
+         * @private
+         */
+        _updateCal: function(inc){
+            if( typeof this._options.onMonthSelected === &#x27;function&#x27; ){
+                this._options.onMonthSelected(this, {
+                    &#x27;year&#x27;: this._year,
+                    &#x27;month&#x27; : this._month
+                });
+            }
+            if (inc &amp;&amp; this._updateMonth(inc) === null) {
+                return;
+            }
+            this._renderMonth();
+        },
+
+        /**
+         * Function that returns the number of days on a given month on a given year
+         *
+         * @method _daysInMonth
+         * @param {Number} _y - year
+         * @param {Number} _m - month
+         * @private
+         * @return {Number} The number of days on a given month on a given year
+         */
+        _daysInMonth: function(_y,_m){
+            var exceptions = {
+                2: ((_y % 400 === 0) || (_y % 4 === 0 &amp;&amp; _y % 100 !== 0)) ? 29 : 28,
+                4: 30,
+                6: 30,
+                9: 30,
+                11: 30
+            };
+
+            return exceptions[_m] || 31;
+        },
+
+
+        /**
+         * Updates the calendar when a different month is chosen
+         *
+         * @method _updateMonth
+         * @param {Number} incValue - indicates previous or next month
+         * @private
+         */
+        _updateMonth: function(incValue){
+            var date;
+            if (incValue &gt; 0) {
+                date = this._getNextMonth();
+            } else if (incValue &lt; 0) {
+                date = this._getPrevMonth();
+            }
+            if (!date) { return null; }
+            this._year = date._year;
+            this._month = date._month;
+            this._day = date._day;
+        },
+
+        /**
+         * Get the next month we can show.
+         */
+        _getNextMonth: function (date) {
+            return this._tryLeap( date, &#x27;Month&#x27;, &#x27;next&#x27;, function (d) {
+                    d._month += 1;
+                    if (d._month &gt; 11) {
+                        d._month = 0;
+                        d._year += 1;
+                    }
+                    return d;
+                });
+        },
+
+        /**
+         * Get the previous month we can show.
+         */
+        _getPrevMonth: function (date) {
+            return this._tryLeap( date, &#x27;Month&#x27;, &#x27;prev&#x27;, function (d) {
+                    d._month -= 1;
+                    if (d._month &lt; 0) {
+                        d._month = 11;
+                        d._year -= 1;
+                    }
+                    return d;
+                });
+        },
+
+        /**
+         * Get the next year we can show.
+         */
+        _getPrevYear: function (date) {
+            return this._tryLeap( date, &#x27;Year&#x27;, &#x27;prev&#x27;, function (d) {
+                    d._year -= 1;
+                    return d;
+                });
+        },
+
+        /**
+         * Get the next year we can show.
+         */
+        _getNextYear: function (date) {
+            return this._tryLeap( date, &#x27;Year&#x27;, &#x27;next&#x27;, function (d) {
+                    d._year += 1;
+                    return d;
+                });
+        },
+
+        /**
+         * DRY base for a function which tries to get the next or previous valid year or month.
+         *
+         * It checks if we can go forward by using _dateCmp with atomic
+         * precision (this means, {_year} for leaping years, and
+         * {_year, month} for leaping months), then it tries to get the
+         * result from the user-supplied callback (nextDateFn or prevDateFn),
+         * and when this is not present, advance the date forward using the
+         * &#x60;advancer&#x60; callback.
+         */
+        _tryLeap: function (date, atomName, directionName, advancer) {
+            date = date || { _year: this._year, _month: this._month, _day: this._day };
+
+            var maxOrMin = directionName === &#x27;prev&#x27; ? &#x27;_min&#x27; : &#x27;_max&#x27;;
+            var boundary = this[maxOrMin];
+
+            // Check if we&#x27;re by the boundary of min/max year/month
+            if (this._dateCmpUntil(date, boundary, atomName) === 0) {
+                return null;  // We&#x27;re already at the boundary. Bail.
+            }
+
+            var leapUserCb = this._options[directionName + &#x27;ValidDateFn&#x27;];
+            if (leapUserCb) {
+                return this._callUserCallbackDate(leapUserCb, date);
+            } else {
+                date = advancer(date);
+            }
+
+            date = this._fitDateToRange(date);
+
+            return this[&#x27;_acceptable&#x27; + atomName](date) ? date : null;
+        },
+
+        _getNextDecade: function (date) {
+            date = date || { _year: this._year, _month: this._month, _day: this._day };
+            var decade = this._getCurrentDecade(date);
+            if (decade + 10 &gt; this._max._year) { return null; }
+            return decade + 10;
+        },
+
+        _getPrevDecade: function (date) {
+            date = date || { _year: this._year, _month: this._month, _day: this._day };
+            var decade = this._getCurrentDecade(date);
+            if (decade - 10 &lt; this._min._year) { return null; }
+            return decade - 10;
+        },
+
+        /** Returns the decade given a date or year*/
+        _getCurrentDecade: function (year) {
+            year = year ? (year._year || year) : this._year;
+            return Math.floor(year / 10) * 10;  // Round to first place
+        },
+
+        _callUserCallbackBase: function (cb, date) {
+            return cb.call(this, date._year, date._month + 1, date._day);
+        },
+
+        _callUserCallbackBool: function (cb, date) {
+            return !!this._callUserCallbackBase(cb, date);
+        },
+
+        _callUserCallbackDate: function (cb, date) {
+            var ret = this._callUserCallbackBase(cb, date);
+            return ret ? dateishFromDate(ret) : null;
+        },
+
+        /**
+         * Key-value object that (for a given key) points to the correct parsing format for the DatePicker
+         * @property _dateParsers
+         * @type {Object}
+         * @readOnly
+         */
+        _dateParsers: {
+            &#x27;yyyy-mm-dd&#x27; : &#x27;Y-m-d&#x27; ,
+            &#x27;yyyy/mm/dd&#x27; : &#x27;Y/m/d&#x27; ,
+            &#x27;yy-mm-dd&#x27;   : &#x27;y-m-d&#x27; ,
+            &#x27;yy/mm/dd&#x27;   : &#x27;y/m/d&#x27; ,
+            &#x27;dd-mm-yyyy&#x27; : &#x27;d-m-Y&#x27; ,
+            &#x27;dd/mm/yyyy&#x27; : &#x27;d/m/Y&#x27; ,
+            &#x27;dd-mm-yy&#x27;   : &#x27;d-m-y&#x27; ,
+            &#x27;dd/mm/yy&#x27;   : &#x27;d/m/y&#x27; ,
+            &#x27;mm/dd/yyyy&#x27; : &#x27;m/d/Y&#x27; ,
+            &#x27;mm-dd-yyyy&#x27; : &#x27;m-d-Y&#x27;
+        },
+
+        /**
+         * Renders the current month
+         *
+         * @method _renderMonth
+         * @private
+         */
+        _renderMonth: function(){
+            var month = this._month;
+            var year = this._year;
+            
+            // Week day of the first day in the month
+            var wDayFirst = (new Date( year , month , 1 )).getDay();
+
+            var startWeekDay = this._options.startWeekDay || 0;
+
+            this._showDefaultView();
+
+            if(startWeekDay &gt; wDayFirst) {
+                wDayFirst = 7 + startWeekDay - wDayFirst;
+            } else {
+                wDayFirst += startWeekDay;
+            }
+
+            var html = &#x27;&#x27;;
+
+            html += this._getMonthCalendarHeaderHtml(startWeekDay);
+
+            var counter = 0;
+            html+=&#x27;&lt;ul&gt;&#x27;;
+
+            var emptyHtml = &#x27;&lt;li class=&quot;ink-calendar-empty&quot;&gt;&amp;nbsp;&lt;/li&gt;&#x27;;
+
+            // Add padding if the first day of the month is not monday.
+            if(wDayFirst !== 0) {
+                var empties = wDayFirst - startWeekDay - 1;
+                counter += empties;
+                html += strRepeat(empties, emptyHtml);
+            }
+
+            html += this._getDayButtonsHtml(counter, year, month);
+
+            html += &#x27;&lt;/ul&gt;&#x27;;
+
+            this._monthContainer.innerHTML = html;
+        },
+
+        _getDayButtonsHtml: function (counter, year, month) {
+            var daysInMonth = this._daysInMonth(year, month);
+            var ret = &#x27;&#x27;;
+            for (var day = 1; day &lt;= daysInMonth; day++) {
+                if (counter === 7){ // new week
+                    counter=0;
+                    ret += &#x27;&lt;ul&gt;&#x27;;
+                }
+
+                ret += this._getDayButtonHtml(year, month, day);
+
+                counter++;
+                if(counter === 7){
+                    ret += &#x27;&lt;/ul&gt;&#x27;;
+                }
+            }
+            return ret;
+        },
+
+        /**
+         * Get the HTML markup for a single day in month view, given year, month, day.
+         *
+         * @method _getDayButtonHtml
+         * @private
+         */
+        _getDayButtonHtml: function (year, month, day) {
+            var attrs = &#x27; &#x27;;
+            var date = dateishFromYMD(year, month, day);
+            if (!this._acceptableDay(date)) {
+                attrs += &#x27;class=&quot;ink-calendar-off&quot;&#x27;;
+            } else {
+                attrs += &#x27;data-cal-day=&quot;&#x27; + day + &#x27;&quot;&#x27;;
+            }
+
+            if (this._day &amp;&amp; this._dateCmp(date, this) === 0) {
+                attrs += &#x27;class=&quot;ink-calendar-on&quot; data-cal-day=&quot;&#x27; + day + &#x27;&quot;&#x27;;
+            }
+
+            return &#x27;&lt;li&gt;&lt;a href=&quot;#&quot; &#x27; + attrs + &#x27;&gt;&#x27; + day + &#x27;&lt;/a&gt;&lt;/li&gt;&#x27;;   
+        },
+
+        /** Write the top bar of the calendar (M T W T F S S) */
+        _getMonthCalendarHeaderHtml: function (startWeekDay) {
+            var ret = &#x27;&lt;ul class=&quot;ink-calendar-header&quot;&gt;&#x27;;
+            var wDay;
+            for(var i=0; i&lt;7; i++){
+                wDay = (startWeekDay + i) % 7;
+                ret += &#x27;&lt;li&gt;&#x27; +
+                    this._options.wDay[wDay].substring(0,1) +
+                    &#x27;&lt;/li&gt;&#x27;;
+            }
+            return ret + &#x27;&lt;/ul&gt;&#x27;;
+        },
+
+        /**
+         * This method adds class names to month buttons, to visually distinguish.
+         *
+         * @method _addMonthClassNames
+         * @param {DOMElement} parent DOMElement where all the months are.
+         * @private
+         */
+        _addMonthClassNames: function(parent){
+            InkArray.forEach(
+                (parent || this._monthSelector).getElementsByTagName(&#x27;a&#x27;),
+                Ink.bindMethod(this, &#x27;_addMonthButtonClassNames&#x27;));
+        },
+
+        /**
+         * Add the ink-calendar-on className if the given button is the current month,
+         * otherwise add the ink-calendar-off className if the given button refers to
+         * an unacceptable month (given dateRange and validMonthFn)
+         */
+        _addMonthButtonClassNames: function (btn) {
+            var data = InkElement.data(btn);
+            if (!data.calMonth) { throw &#x27;not a calendar month button!&#x27;; }
+
+            var month = +data.calMonth - 1;
+
+            if ( month === this._month ) {
+                Css.addClassName( btn, &#x27;ink-calendar-on&#x27; );  // This month
+                Css.removeClassName( btn, &#x27;ink-calendar-off&#x27; );
+            } else {
+                Css.removeClassName( btn, &#x27;ink-calendar-on&#x27; );  // Not this month
+
+                var toDisable = !this._acceptableMonth({_year: this._year, _month: month});
+                Css.addRemoveClassName( btn, &#x27;ink-calendar-off&#x27;, toDisable);
+            }
+        },
+
+        /**
+         * Prototype&#x27;s method to allow the &#x27;i18n files&#x27; to change all objects&#x27; language at once.
+         * @param  {Object} options Object with the texts&#x27; configuration.
+         *     @param {String} closeText Text of the close anchor
+         *     @param {String} cleanText Text of the clean text anchor
+         *     @param {String} prevLinkText &quot;Previous&quot; link&#x27;s text
+         *     @param {String} nextLinkText &quot;Next&quot; link&#x27;s text
+         *     @param {String} ofText The text &quot;of&quot;, present in &#x27;May of 2013&#x27;
+         *     @param {Object} month An object with keys from 1 to 12 that have the full months&#x27; names
+         *     @param {Object} wDay An object with keys from 0 to 6 that have the full weekdays&#x27; names
+         * @public
+         */
+        lang: function( options ){
+            this._lang = options;
+        },
+
+        /**
+         * This calls the rendering of the selected month. (Deprecated: use show() instead)
+         *
+         * @method showMonth
+         * @public
+         */
+        showMonth: function(){
+            this._renderMonth();
+        },
+
+        /**
+         * Returns true if the calendar sceen is in &#x27;select day&#x27; mode
+         * 
+         * @return {Boolean} True if the calendar sceen is in &#x27;select day&#x27; mode
+         * @public
+         */
+        isMonthRendered: function(){
+            var header = Selector.select(&#x27;.ink-calendar-header&#x27;, this._containerObject)[0];
+
+            return ((Css.getStyle(header.parentNode,&#x27;display&#x27;) !== &#x27;none&#x27;) &amp;&amp;
+                    (Css.getStyle(header.parentNode.parentNode,&#x27;display&#x27;) !== &#x27;none&#x27;) );
+        },
+
+        /**
+         * Destroys this datepicker, removing it from the page.
+         *
+         * @public
+         **/
+        destroy: function () {
+            InkElement.unwrap(this._element);
+            InkElement.remove(this._wrapper);
+            InkElement.remove(this._containerObject);
+            Common.unregisterInstance.call(this);
+        }
+    };
+
+    return DatePicker;
+});
+
+    </pre>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+</body>
+</html>

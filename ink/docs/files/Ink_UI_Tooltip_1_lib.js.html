@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Ink/UI/Tooltip/1/lib.js - Ink.js</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+    <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><img src="../yuidoclogo.png" title="Ink.js"></h1>
+            
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: latest</em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <h2 class="off-left">APIs</h2>
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+            <li><a href="#api-modules">Modules</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="../classes/Ink.html">Ink</a></li>
+            
+                <li><a href="../classes/Ink.Dom.Browser.html">Ink.Dom.Browser</a></li>
+            
+                <li><a href="../classes/Ink.Dom.Css.html">Ink.Dom.Css</a></li>
+            
+                <li><a href="../classes/Ink.Dom.Element.html">Ink.Dom.Element</a></li>
+            
+                <li><a href="../classes/Ink.Dom.Event.html">Ink.Dom.Event</a></li>
+            
+                <li><a href="../classes/Ink.Dom.FormSerialize.html">Ink.Dom.FormSerialize</a></li>
+            
+                <li><a href="../classes/Ink.Dom.Loaded.html">Ink.Dom.Loaded</a></li>
+            
+                <li><a href="../classes/Ink.Dom.Selector.html">Ink.Dom.Selector</a></li>
+            
+                <li><a href="../classes/Ink.Namespace.ClassModule.html">Ink.Namespace.ClassModule</a></li>
+            
+                <li><a href="../classes/Ink.Namespace.StaticModule.html">Ink.Namespace.StaticModule</a></li>
+            
+                <li><a href="../classes/Ink.Net.Ajax.html">Ink.Net.Ajax</a></li>
+            
+                <li><a href="../classes/Ink.Net.JsonP.html">Ink.Net.JsonP</a></li>
+            
+                <li><a href="../classes/Ink.UI.Animate_1.html">Ink.UI.Animate_1</a></li>
+            
+                <li><a href="../classes/Ink.UI.Carousel_1.html">Ink.UI.Carousel_1</a></li>
+            
+                <li><a href="../classes/Ink.UI.Close.html">Ink.UI.Close</a></li>
+            
+                <li><a href="../classes/Ink.UI.Common.html">Ink.UI.Common</a></li>
+            
+                <li><a href="../classes/Ink.UI.DatePicker.html">Ink.UI.DatePicker</a></li>
+            
+                <li><a href="../classes/Ink.UI.Draggable.html">Ink.UI.Draggable</a></li>
+            
+                <li><a href="../classes/Ink.UI.Dropdown.html">Ink.UI.Dropdown</a></li>
+            
+                <li><a href="../classes/Ink.UI.Droppable.html">Ink.UI.Droppable</a></li>
+            
+                <li><a href="../classes/Ink.UI.FormValidator.html">Ink.UI.FormValidator</a></li>
+            
+                <li><a href="../classes/Ink.UI.FormValidator_2.html">Ink.UI.FormValidator_2</a></li>
+            
+                <li><a href="../classes/Ink.UI.ImageQuery.html">Ink.UI.ImageQuery</a></li>
+            
+                <li><a href="../classes/Ink.UI.Modal.html">Ink.UI.Modal</a></li>
+            
+                <li><a href="../classes/Ink.UI.Pagination.html">Ink.UI.Pagination</a></li>
+            
+                <li><a href="../classes/Ink.UI.ProgressBar.html">Ink.UI.ProgressBar</a></li>
+            
+                <li><a href="../classes/Ink.UI.SmoothScroller.html">Ink.UI.SmoothScroller</a></li>
+            
+                <li><a href="../classes/Ink.UI.SortableList.html">Ink.UI.SortableList</a></li>
+            
+                <li><a href="../classes/Ink.UI.Spy.html">Ink.UI.Spy</a></li>
+            
+                <li><a href="../classes/Ink.UI.Stacker_1.html">Ink.UI.Stacker_1</a></li>
+            
+                <li><a href="../classes/Ink.UI.Sticky.html">Ink.UI.Sticky</a></li>
+            
+                <li><a href="../classes/Ink.UI.Swipe.html">Ink.UI.Swipe</a></li>
+            
+                <li><a href="../classes/Ink.UI.Table.html">Ink.UI.Table</a></li>
+            
+                <li><a href="../classes/Ink.UI.Tabs.html">Ink.UI.Tabs</a></li>
+            
+                <li><a href="../classes/Ink.UI.TagField.html">Ink.UI.TagField</a></li>
+            
+                <li><a href="../classes/Ink.UI.Toggle.html">Ink.UI.Toggle</a></li>
+            
+                <li><a href="../classes/Ink.UI.Tooltip.html">Ink.UI.Tooltip</a></li>
+            
+                <li><a href="../classes/Ink.UI.TreeView.html">Ink.UI.TreeView</a></li>
+            
+                <li><a href="../classes/Ink.Util.Array.html">Ink.Util.Array</a></li>
+            
+                <li><a href="../classes/Ink.Util.BinPack.html">Ink.Util.BinPack</a></li>
+            
+                <li><a href="../classes/Ink.Util.Cookie.html">Ink.Util.Cookie</a></li>
+            
+                <li><a href="../classes/Ink.Util.Date.html">Ink.Util.Date</a></li>
+            
+                <li><a href="../classes/Ink.Util.Dumper.html">Ink.Util.Dumper</a></li>
+            
+                <li><a href="../classes/Ink.Util.I18n.html">Ink.Util.I18n</a></li>
+            
+                <li><a href="../classes/Ink.Util.Json.html">Ink.Util.Json</a></li>
+            
+                <li><a href="../classes/Ink.Util.String.html">Ink.Util.String</a></li>
+            
+                <li><a href="../classes/Ink.Util.Url.html">Ink.Util.Url</a></li>
+            
+                <li><a href="../classes/Ink.Util.Validator.html">Ink.Util.Validator</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+                <li><a href="../modules/Ink.Dom.Browser_1.html">Ink.Dom.Browser_1</a></li>
+            
+                <li><a href="../modules/Ink.Dom.Css_1.html">Ink.Dom.Css_1</a></li>
+            
+                <li><a href="../modules/Ink.Dom.Element_1.html">Ink.Dom.Element_1</a></li>
+            
+                <li><a href="../modules/Ink.Dom.Event_1.html">Ink.Dom.Event_1</a></li>
+            
+                <li><a href="../modules/Ink.Dom.FormSerialize.html">Ink.Dom.FormSerialize</a></li>
+            
+                <li><a href="../modules/Ink.Dom.Loaded_1.html">Ink.Dom.Loaded_1</a></li>
+            
+                <li><a href="../modules/Ink.Dom.Selector_1.html">Ink.Dom.Selector_1</a></li>
+            
+                <li><a href="../modules/Ink.Namespace.ClassModule_1.html">Ink.Namespace.ClassModule_1</a></li>
+            
+                <li><a href="../modules/Ink.Namespace.StaticModule_1.html">Ink.Namespace.StaticModule_1</a></li>
+            
+                <li><a href="../modules/Ink.Net.Ajax_1.html">Ink.Net.Ajax_1</a></li>
+            
+                <li><a href="../modules/Ink.Net.JsonP_1.html">Ink.Net.JsonP_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Animate_1.html">Ink.UI.Animate_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Carousel_1.html">Ink.UI.Carousel_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Close_1.html">Ink.UI.Close_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Common_1.html">Ink.UI.Common_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.DatePicker_1.html">Ink.UI.DatePicker_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Dropdown_1.html">Ink.UI.Dropdown_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Droppable_1.html">Ink.UI.Droppable_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.FormValidator_1.html">Ink.UI.FormValidator_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.FormValidator_2.html">Ink.UI.FormValidator_2</a></li>
+            
+                <li><a href="../modules/Ink.UI.ImageQuery_1.html">Ink.UI.ImageQuery_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Modal_1.html">Ink.UI.Modal_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Pagination_1.html">Ink.UI.Pagination_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.ProgressBar_1.html">Ink.UI.ProgressBar_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.SmoothScroller_1.html">Ink.UI.SmoothScroller_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.SortableList_1.html">Ink.UI.SortableList_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Spy_1.html">Ink.UI.Spy_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Stacker_1.html">Ink.UI.Stacker_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Sticky_1.html">Ink.UI.Sticky_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Swipe.html">Ink.UI.Swipe</a></li>
+            
+                <li><a href="../modules/Ink.UI.Table_1.html">Ink.UI.Table_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Tabs_1.html">Ink.UI.Tabs_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Toggle_1.html">Ink.UI.Toggle_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Tooltip_1.html">Ink.UI.Tooltip_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.TreeView_1.html">Ink.UI.TreeView_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Array_1.html">Ink.Util.Array_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.BinPack_1.html">Ink.Util.BinPack_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Cookie_1.html">Ink.Util.Cookie_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Date_1.html">Ink.Util.Date_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Dumper_1.html">Ink.Util.Dumper_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.I18n_1.html">Ink.Util.I18n_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Json_1.html">Ink.Util.Json_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.String_1.html">Ink.Util.String_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Url_1.html">Ink.Util.Url_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Validator_1.html">Ink.Util.Validator_1</a></li>
+            
+                <li><a href="../modules/Ink_1.html">Ink_1</a></li>
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+
+
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1 class="file-heading">File: Ink/UI/Tooltip/1/lib.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+/**
+ * @module Ink.UI.Tooltip_1
+ * @author inkdev AT sapo.pt
+ */
+Ink.createModule(&#x27;Ink.UI.Tooltip&#x27;, &#x27;1&#x27;, [&#x27;Ink.UI.Common_1&#x27;, &#x27;Ink.Dom.Event_1&#x27;, &#x27;Ink.Dom.Element_1&#x27;, &#x27;Ink.Dom.Selector_1&#x27;, &#x27;Ink.Util.Array_1&#x27;, &#x27;Ink.Dom.Css_1&#x27;, &#x27;Ink.Dom.Browser_1&#x27;], function (Common, InkEvent, InkElement, Selector, InkArray, Css) {
+    &#x27;use strict&#x27;;
+
+    /**
+     * @class Ink.UI.Tooltip
+     * @constructor
+     *
+     * @param {DOMElement|String} target Target element or selector of elements, to display the tooltips on.
+     * @param {Object} [options]
+     *     @param [options.text=&#x27;&#x27;]             Text content for the tooltip.
+     *     @param [options.html=&#x27;&#x27;]             HTML for the tooltip. Same as above, but won&#x27;t escape HTML.
+     *     @param [options.where=&#x27;up&#x27;]          Positioning for the tooltip. Options:
+     *          @param options.where.up/down/left/right     Place above, below, to the left of, or to the right of, the target. Show an arrow.
+     *          @param options.where.mousemove  Place the tooltip to the bottom and to the right of the mouse when it hovers the element, and follow the mouse as it moves.
+     *          @param options.where.mousefix   Place the tooltip to the bottom and to the right of the mouse when it hovers the element, keep the tooltip there motionless.
+     *     
+     *     @param [options.color=&#x27;&#x27;]            Color of the tooltip. Options are red, orange, blue, green and black. Default is white.
+     *     @param [options.fade=0.3]            Fade time; Duration of the fade in/out effect.
+     *     @param [options.forever=0]           Set to 1/true to prevent the tooltip from being erased when the mouse hovers away from the target
+     *     @param [options.timeout=0]           Time for the tooltip to live. Useful together with [options.forever].
+     *     @param [options.delay]               Time the tooltip waits until it is displayed. Useful to avoid getting the attention of the user unnecessarily
+     *     @param [options.template=null]       Element or selector containing HTML to be cloned into the tooltips. Can be a hidden element, because CSS &#x60;display&#x60; is set to &#x60;block&#x60;.
+     *     @param [options.templatefield=null]  Selector within the template element to choose where the text is inserted into the tooltip. Useful when a wrapper DIV is required.
+     *
+     *     @param [options.left,top=10]         (Nitty-gritty) Spacing from the target to the tooltip, when &#x60;where&#x60; is &#x60;mousemove&#x60; or &#x60;mousefix&#x60;
+     *     @param [options.spacing=8]           (Nitty-gritty) Spacing between the tooltip and the target element, when &#x60;where&#x60; is &#x60;up&#x60;, &#x60;down&#x60;, &#x60;left&#x60;, or &#x60;right&#x60;
+     * 
+     * @example
+     *     &lt;ul class=&quot;buttons&quot;&gt;
+     *         &lt;li class=&quot;button&quot; data-tip-text=&quot;Create a new document&quot;&gt;New&lt;/li&gt;
+     *         &lt;li class=&quot;button&quot; data-tip-text=&quot;Exit the program&quot;&gt;Quit&lt;/li&gt;
+     *         &lt;li class=&quot;button&quot; data-tip-text=&quot;Save the document you are working on&quot;&gt;Save&lt;/li&gt;
+     *     &lt;/ul&gt;
+     *     
+     *     [...]
+     *
+     *     &lt;script&gt;
+     *         Ink.requireModules([&#x27;Ink.UI.Tooltip_1&#x27;], function (Tooltip) {
+     *             new Tooltip(&#x27;.button&#x27;, {where: &#x27;mousefix&#x27;});
+     *         });
+     *     &lt;/script&gt;
+     */
+    function Tooltip(element, options) {
+        this._init(element, options || {});
+    }
+
+    function EachTooltip(root, elm) {
+        this._init(root, elm);
+    }
+
+    var transitionDurationName,
+        transitionPropertyName,
+        transitionTimingFunctionName;
+    (function () {  // Feature detection
+        var test = document.createElement(&#x27;DIV&#x27;);
+        var names = [&#x27;transition&#x27;, &#x27;oTransition&#x27;, &#x27;msTransition&#x27;, &#x27;mozTransition&#x27;,
+            &#x27;webkitTransition&#x27;];
+        for (var i = 0; i &lt; names.length; i++) {
+            if (typeof test.style[names[i] + &#x27;Duration&#x27;] !== &#x27;undefined&#x27;) {
+                transitionDurationName = names[i] + &#x27;Duration&#x27;;
+                transitionPropertyName = names[i] + &#x27;Property&#x27;;
+                transitionTimingFunctionName = names[i] + &#x27;TimingFunction&#x27;;
+                break;
+            }
+        }
+    }());
+
+    // Body or documentElement
+    var bodies = document.getElementsByTagName(&#x27;body&#x27;);
+    var body = bodies.length ? bodies[0] : document.documentElement;
+
+    Tooltip.prototype = {
+        _init: function(element, options) {
+            var elements;
+
+            this.options = Ink.extendObj({
+                    where: &#x27;up&#x27;,
+                    zIndex: 10000,
+                    left: 10,
+                    top: 10,
+                    spacing: 8,
+                    forever: 0,
+                    color: &#x27;&#x27;,
+                    timeout: 0,
+                    delay: 0,
+                    template: null,
+                    templatefield: null,
+                    fade: 0.3,
+                    text: &#x27;&#x27;
+                }, options || {});
+
+            if (typeof element === &#x27;string&#x27;) {
+                elements = Selector.select(element);
+            } else if (typeof element === &#x27;object&#x27;) {
+                elements = [element];
+            } else {
+                throw &#x27;Element expected&#x27;;
+            }
+
+            this.tooltips = [];
+
+            for (var i = 0, len = elements.length; i &lt; len; i++) {
+                this.tooltips[i] = new EachTooltip(this, elements[i]);
+            }
+        },
+        /**
+         * Destroys the tooltips created by this instance
+         *
+         * @method destroy
+         */
+        destroy: function () {
+            InkArray.each(this.tooltips, function (tooltip) {
+                tooltip._destroy();
+            });
+            this.tooltips = null;
+            this.options = null;
+        }
+    };
+
+    EachTooltip.prototype = {
+        _oppositeDirections: {
+            left: &#x27;right&#x27;,
+            right: &#x27;left&#x27;,
+            up: &#x27;down&#x27;,
+            down: &#x27;up&#x27;
+        },
+        _init: function(root, elm) {
+            InkEvent.observe(elm, &#x27;mouseover&#x27;, Ink.bindEvent(this._onMouseOver, this));
+            InkEvent.observe(elm, &#x27;mouseout&#x27;, Ink.bindEvent(this._onMouseOut, this));
+            InkEvent.observe(elm, &#x27;mousemove&#x27;, Ink.bindEvent(this._onMouseMove, this));
+
+            this.root = root;
+            this.element = elm;
+            this._delayTimeout = null;
+            this.tooltip = null;
+        },
+        _makeTooltip: function (mousePosition) {
+            if (!this._getOpt(&#x27;text&#x27;) &amp;&amp;
+                    !this._getOpt(&#x27;html&#x27;) &amp;&amp;
+                    !InkElement.hasAttribute(this.element, &#x27;title&#x27;)) {
+                return false;
+            }
+
+            var tooltip = this._createTooltipElement();
+
+            if (this.tooltip) {
+                this._removeTooltip();
+            }
+
+            this.tooltip = tooltip;
+
+            this._fadeInTooltipElement(tooltip);
+            this._placeTooltipElement(tooltip, mousePosition);
+
+            InkEvent.observe(tooltip, &#x27;mouseover&#x27;, Ink.bindEvent(this._onTooltipMouseOver, this));
+
+            var timeout = this._getFloatOpt(&#x27;timeout&#x27;);
+            if (timeout) {
+                setTimeout(Ink.bind(function () {
+                    if (this.tooltip === tooltip) {
+                        this._removeTooltip();
+                    }
+                }, this), timeout * 1000);
+            }
+        },
+        _createTooltipElement: function () {
+            var template = this._getOpt(&#x27;template&#x27;),  // User template instead of our HTML
+                templatefield = this._getOpt(&#x27;templatefield&#x27;),
+                
+                tooltip,  // The element we float
+                field;  // Element where we write our message. Child or same as the above
+
+            if (template) {  // The user told us of a template to use. We copy it.
+                var temp = document.createElement(&#x27;DIV&#x27;);
+                temp.innerHTML = Common.elOrSelector(template, &#x27;options.template&#x27;).outerHTML;
+                tooltip = temp.firstChild;
+                
+                if (templatefield) {
+                    field = Selector.select(templatefield, tooltip);
+                    if (field) {
+                        field = field[0];
+                    } else {
+                        throw &#x27;options.templatefield must be a valid selector within options.template&#x27;;
+                    }
+                } else {
+                    field = tooltip;  // Assume same element if user did not specify a field
+                }
+            } else {  // We create the default structure
+                tooltip = document.createElement(&#x27;DIV&#x27;);
+                Css.addClassName(tooltip, &#x27;ink-tooltip&#x27;);
+                Css.addClassName(tooltip, this._getOpt(&#x27;color&#x27;));
+
+                field = document.createElement(&#x27;DIV&#x27;);
+                Css.addClassName(field, &#x27;content&#x27;);
+
+                tooltip.appendChild(field);
+            }
+            
+            if (this._getOpt(&#x27;html&#x27;)) {
+                field.innerHTML = this._getOpt(&#x27;html&#x27;);
+            } else if (this._getOpt(&#x27;text&#x27;)) {
+                InkElement.setTextContent(field, this._getOpt(&#x27;text&#x27;));
+            } else {
+                InkElement.setTextContent(field, this.element.getAttribute(&#x27;title&#x27;));
+            }
+            tooltip.style.display = &#x27;block&#x27;;
+            tooltip.style.position = &#x27;absolute&#x27;;
+            tooltip.style.zIndex = this._getIntOpt(&#x27;zIndex&#x27;);
+
+            return tooltip;
+        },
+        _fadeInTooltipElement: function (tooltip) {
+            var fadeTime = this._getFloatOpt(&#x27;fade&#x27;);
+            if (transitionDurationName &amp;&amp; fadeTime) {
+                tooltip.style.opacity = &#x27;0&#x27;;
+                tooltip.style[transitionDurationName] = fadeTime + &#x27;s&#x27;;
+                tooltip.style[transitionPropertyName] = &#x27;opacity&#x27;;
+                tooltip.style[transitionTimingFunctionName] = &#x27;ease-in-out&#x27;;
+                setTimeout(function () {
+                    tooltip.style.opacity = &#x27;1&#x27;;
+                }, 0); // Wait a tick
+            }
+        },
+        _placeTooltipElement: function (tooltip, mousePosition) {
+            var where = this._getOpt(&#x27;where&#x27;);
+
+            if (where === &#x27;mousemove&#x27; || where === &#x27;mousefix&#x27;) {
+                var mPos = mousePosition;
+                this._setPos(mPos[0], mPos[1]);
+                body.appendChild(tooltip);
+            } else if (where.match(/(up|down|left|right)/)) {
+                body.appendChild(tooltip);
+                var targetElementPos = InkElement.offset(this.element);
+                var tleft = targetElementPos[0],
+                    ttop = targetElementPos[1];
+
+                var centerh = (InkElement.elementWidth(this.element) / 2) - (InkElement.elementWidth(tooltip) / 2),
+                    centerv = (InkElement.elementHeight(this.element) / 2) - (InkElement.elementHeight(tooltip) / 2);
+                var spacing = this._getIntOpt(&#x27;spacing&#x27;);
+
+                var tooltipDims = InkElement.elementDimensions(tooltip);
+                var elementDims = InkElement.elementDimensions(this.element);
+
+                var maxX = InkElement.scrollWidth() + InkElement.viewportWidth();
+                var maxY = InkElement.scrollHeight() + InkElement.viewportHeight();
+                
+                where = this._getWhereValueInsideViewport(where, {
+                    left: tleft - tooltipDims[0],
+                    right: tleft + tooltipDims[0],
+                    top: ttop + tooltipDims[1],
+                    bottom: ttop + tooltipDims[1]
+                }, {
+                    right: maxX,
+                    bottom: maxY
+                });
+                
+                if (where === &#x27;up&#x27;) {
+                    ttop -= tooltipDims[1];
+                    ttop -= spacing;
+                    tleft += centerh;
+                } else if (where === &#x27;down&#x27;) {
+                    ttop += elementDims[1];
+                    ttop += spacing;
+                    tleft += centerh;
+                } else if (where === &#x27;left&#x27;) {
+                    tleft -= tooltipDims[0];
+                    tleft -= spacing;
+                    ttop += centerv;
+                } else if (where === &#x27;right&#x27;) {
+                    tleft += elementDims[0];
+                    tleft += spacing;
+                    ttop += centerv;
+                }
+                
+                var arrow = null;
+                if (where.match(/(up|down|left|right)/)) {
+                    arrow = document.createElement(&#x27;SPAN&#x27;);
+                    Css.addClassName(arrow, &#x27;arrow&#x27;);
+                    Css.addClassName(arrow, this._oppositeDirections[where]);
+                    tooltip.appendChild(arrow);
+                }
+
+                var tooltipLeft = tleft;
+                var tooltipTop = ttop;
+
+                var toBottom = (tooltipTop + tooltipDims[1]) - maxY;
+                var toRight = (tooltipLeft + tooltipDims[0]) - maxX;
+                var toLeft = 0 - tooltipLeft;
+                var toTop = 0 - tooltipTop;
+
+                if (toBottom &gt; 0) {
+                    if (arrow) { arrow.style.top = (tooltipDims[1] / 2) + toBottom + &#x27;px&#x27;; }
+                    tooltipTop -= toBottom;
+                } else if (toTop &gt; 0) {
+                    if (arrow) { arrow.style.top = (tooltipDims[1] / 2) - toTop + &#x27;px&#x27;; }
+                    tooltipTop += toTop;
+                } else if (toRight &gt; 0) {
+                    if (arrow) { arrow.style.left = (tooltipDims[0] / 2) + toRight + &#x27;px&#x27;; }
+                    tooltipLeft -= toRight;
+                } else if (toLeft &gt; 0) {
+                    if (arrow) { arrow.style.left = (tooltipDims[0] / 2) - toLeft + &#x27;px&#x27;; }
+                    tooltipLeft += toLeft;
+                }
+
+                tooltip.style.left = tooltipLeft + &#x27;px&#x27;;
+                tooltip.style.top = tooltipTop + &#x27;px&#x27;;
+            }
+        },
+
+        /**
+         * Get a value for &quot;where&quot; (left/right/up/down) which doesn&#x27;t put the
+         * tooltip off the screen
+         *
+         * @method _getWhereValueInsideViewport
+         * @param where {String} &quot;where&quot; value which was given by the user and we might change
+         * @param bbox {BoundingBox} A bounding box like what you get from getBoundingClientRect ({top, bottom, left, right}) with pixel positions from the top left corner of the viewport.
+         * @param viewport {BoundingBox} Bounding box for the viewport. &quot;top&quot; and &quot;left&quot; are omitted because these coordinates are relative to the top-left corner of the viewport so they are zero.
+         *
+         * @note: we can&#x27;t use getBoundingClientRect in this case because it returns {0,0,0,0} on our uncreated tooltip.
+         */
+        _getWhereValueInsideViewport: function (where, bbox, viewport) {
+            if (where === &#x27;left&#x27; &amp;&amp; bbox.left &lt; 0) {
+                return &#x27;right&#x27;;
+            } else if (where === &#x27;right&#x27; &amp;&amp; bbox.right &gt; viewport.right) {
+                return &#x27;left&#x27;;
+            } else if (where === &#x27;up&#x27; &amp;&amp; bbox.top &lt; 0) {
+                return &#x27;down&#x27;;
+            } else if (where === &#x27;down&#x27; &amp;&amp; bbox.bottom &gt; viewport.bottom) {
+                return &#x27;up&#x27;;
+            }
+
+            return where;
+        },
+        _removeTooltip: function() {
+            var tooltip = this.tooltip;
+            if (!tooltip) {return;}
+
+            var remove = Ink.bind(InkElement.remove, {}, tooltip);
+
+            if (this._getOpt(&#x27;where&#x27;) !== &#x27;mousemove&#x27; &amp;&amp; transitionDurationName) {
+                tooltip.style.opacity = 0;
+                // remove() will operate on correct tooltip, although this.tooltip === null then
+                setTimeout(remove, this._getFloatOpt(&#x27;fade&#x27;) * 1000);
+            } else {
+                remove();
+            }
+            this.tooltip = null;
+        },
+        _getOpt: function (option) {
+            var dataAttrVal = InkElement.data(this.element)[InkElement._camelCase(&#x27;tip-&#x27; + option)];
+            if (dataAttrVal /* either null or &quot;&quot; may signify the absense of this attribute*/) {
+                return dataAttrVal;
+            }
+            var instanceOption = this.root.options[option];
+            if (typeof instanceOption !== &#x27;undefined&#x27;) {
+                return instanceOption;
+            }
+        },
+        _getIntOpt: function (option) {
+            return parseInt(this._getOpt(option), 10);
+        },
+        _getFloatOpt: function (option) {
+            return parseFloat(this._getOpt(option), 10);
+        },
+        _destroy: function () {
+            if (this.tooltip) {
+                InkElement.remove(this.tooltip);
+            }
+            this.root = null;  // Cyclic reference = memory leaks
+            this.element = null;
+            this.tooltip = null;
+        },
+        _onMouseOver: function(e) {
+            // on IE &lt; 10 you can&#x27;t access the mouse event not even a tick after it fired
+            var mousePosition = this._getMousePosition(e);
+            var delay = this._getFloatOpt(&#x27;delay&#x27;);
+            if (delay) {
+                this._delayTimeout = setTimeout(Ink.bind(function () {
+                    if (!this.tooltip) {
+                        this._makeTooltip(mousePosition);
+                    }
+                    this._delayTimeout = null;
+                }, this), delay * 1000);
+            } else {
+                this._makeTooltip(mousePosition);
+            }
+        },
+        _onMouseMove: function(e) {
+            if (this._getOpt(&#x27;where&#x27;) === &#x27;mousemove&#x27; &amp;&amp; this.tooltip) {
+                var mPos = this._getMousePosition(e);
+                this._setPos(mPos[0], mPos[1]);
+            }
+        },
+        _onMouseOut: function () {
+            if (!this._getIntOpt(&#x27;forever&#x27;)) {
+                this._removeTooltip();
+            }
+            if (this._delayTimeout) {
+                clearTimeout(this._delayTimeout);
+                this._delayTimeout = null;
+            }
+        },
+        _onTooltipMouseOver: function () {
+            if (this.tooltip) {  // If tooltip is already being removed, this has no effect
+                this._removeTooltip();
+            }
+        },
+        _setPos: function(left, top) {
+            left += this._getIntOpt(&#x27;left&#x27;);
+            top += this._getIntOpt(&#x27;top&#x27;);
+            var pageDims = this._getPageXY();
+            if (this.tooltip) {
+                var elmDims = [InkElement.elementWidth(this.tooltip), InkElement.elementHeight(this.tooltip)];
+                var scrollDim = this._getScroll();
+
+                if((elmDims[0] + left - scrollDim[0]) &gt;= (pageDims[0] - 20)) {
+                    left = (left - elmDims[0] - this._getIntOpt(&#x27;left&#x27;) - 10);
+                }
+                if((elmDims[1] + top - scrollDim[1]) &gt;= (pageDims[1] - 20)) {
+                    top = (top - elmDims[1] - this._getIntOpt(&#x27;top&#x27;) - 10);
+                }
+
+                this.tooltip.style.left = left + &#x27;px&#x27;;
+                this.tooltip.style.top = top + &#x27;px&#x27;;
+            }
+        },
+        _getPageXY: function() {
+            var cWidth = 0;
+            var cHeight = 0;
+            if( typeof( window.innerWidth ) === &#x27;number&#x27; ) {
+                cWidth = window.innerWidth;
+                cHeight = window.innerHeight;
+            } else if( document.documentElement &amp;&amp; ( document.documentElement.clientWidth || document.documentElement.clientHeight ) ) {
+                cWidth = document.documentElement.clientWidth;
+                cHeight = document.documentElement.clientHeight;
+            } else if( document.body &amp;&amp; ( document.body.clientWidth || document.body.clientHeight ) ) {
+                cWidth = document.body.clientWidth;
+                cHeight = document.body.clientHeight;
+            }
+            return [parseInt(cWidth, 10), parseInt(cHeight, 10)];
+        },
+        _getScroll: function() {
+            var dd = document.documentElement, db = document.body;
+            if (dd &amp;&amp; (dd.scrollLeft || dd.scrollTop)) {
+                return [dd.scrollLeft, dd.scrollTop];
+            } else if (db) {
+                return [db.scrollLeft, db.scrollTop];
+            } else {
+                return [0, 0];
+            }
+        },
+        _getMousePosition: function(e) {
+            return [parseInt(InkEvent.pointerX(e), 10), parseInt(InkEvent.pointerY(e), 10)];
+        }
+    };
+
+    return Tooltip;
+});
+
+    </pre>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+</body>
+</html>

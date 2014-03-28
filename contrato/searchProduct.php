@@ -127,12 +127,7 @@ class ShowCustomerContrato extends Ometz_Default
 			SELECT 
   					SB1.B1_COD, SB1.B1_DESC, SB1.B1_PRV1
 				FROM DB2.SB1500 AS SB1
-				WHERE SB1.B1_COD IN (
-					'101.00000000001',
-					'101.00000000351',
-					'101.00000000352',
-					'101.00000000353') 
-				AND SB1.D_E_L_E_T_ = ''
+				WHERE SB1.D_E_L_E_T_ = ''
 		";
 		
 		if($txtProdCode !="")

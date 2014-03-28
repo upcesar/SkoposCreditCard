@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Ink/UI/Table/1/lib.js - Ink.js</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+    <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><img src="../yuidoclogo.png" title="Ink.js"></h1>
+            
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: latest</em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <h2 class="off-left">APIs</h2>
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+            <li><a href="#api-modules">Modules</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="../classes/Ink.html">Ink</a></li>
+            
+                <li><a href="../classes/Ink.Dom.Browser.html">Ink.Dom.Browser</a></li>
+            
+                <li><a href="../classes/Ink.Dom.Css.html">Ink.Dom.Css</a></li>
+            
+                <li><a href="../classes/Ink.Dom.Element.html">Ink.Dom.Element</a></li>
+            
+                <li><a href="../classes/Ink.Dom.Event.html">Ink.Dom.Event</a></li>
+            
+                <li><a href="../classes/Ink.Dom.FormSerialize.html">Ink.Dom.FormSerialize</a></li>
+            
+                <li><a href="../classes/Ink.Dom.Loaded.html">Ink.Dom.Loaded</a></li>
+            
+                <li><a href="../classes/Ink.Dom.Selector.html">Ink.Dom.Selector</a></li>
+            
+                <li><a href="../classes/Ink.Namespace.ClassModule.html">Ink.Namespace.ClassModule</a></li>
+            
+                <li><a href="../classes/Ink.Namespace.StaticModule.html">Ink.Namespace.StaticModule</a></li>
+            
+                <li><a href="../classes/Ink.Net.Ajax.html">Ink.Net.Ajax</a></li>
+            
+                <li><a href="../classes/Ink.Net.JsonP.html">Ink.Net.JsonP</a></li>
+            
+                <li><a href="../classes/Ink.UI.Animate_1.html">Ink.UI.Animate_1</a></li>
+            
+                <li><a href="../classes/Ink.UI.Carousel_1.html">Ink.UI.Carousel_1</a></li>
+            
+                <li><a href="../classes/Ink.UI.Close.html">Ink.UI.Close</a></li>
+            
+                <li><a href="../classes/Ink.UI.Common.html">Ink.UI.Common</a></li>
+            
+                <li><a href="../classes/Ink.UI.DatePicker.html">Ink.UI.DatePicker</a></li>
+            
+                <li><a href="../classes/Ink.UI.Draggable.html">Ink.UI.Draggable</a></li>
+            
+                <li><a href="../classes/Ink.UI.Dropdown.html">Ink.UI.Dropdown</a></li>
+            
+                <li><a href="../classes/Ink.UI.Droppable.html">Ink.UI.Droppable</a></li>
+            
+                <li><a href="../classes/Ink.UI.FormValidator.html">Ink.UI.FormValidator</a></li>
+            
+                <li><a href="../classes/Ink.UI.FormValidator_2.html">Ink.UI.FormValidator_2</a></li>
+            
+                <li><a href="../classes/Ink.UI.ImageQuery.html">Ink.UI.ImageQuery</a></li>
+            
+                <li><a href="../classes/Ink.UI.Modal.html">Ink.UI.Modal</a></li>
+            
+                <li><a href="../classes/Ink.UI.Pagination.html">Ink.UI.Pagination</a></li>
+            
+                <li><a href="../classes/Ink.UI.ProgressBar.html">Ink.UI.ProgressBar</a></li>
+            
+                <li><a href="../classes/Ink.UI.SmoothScroller.html">Ink.UI.SmoothScroller</a></li>
+            
+                <li><a href="../classes/Ink.UI.SortableList.html">Ink.UI.SortableList</a></li>
+            
+                <li><a href="../classes/Ink.UI.Spy.html">Ink.UI.Spy</a></li>
+            
+                <li><a href="../classes/Ink.UI.Stacker_1.html">Ink.UI.Stacker_1</a></li>
+            
+                <li><a href="../classes/Ink.UI.Sticky.html">Ink.UI.Sticky</a></li>
+            
+                <li><a href="../classes/Ink.UI.Swipe.html">Ink.UI.Swipe</a></li>
+            
+                <li><a href="../classes/Ink.UI.Table.html">Ink.UI.Table</a></li>
+            
+                <li><a href="../classes/Ink.UI.Tabs.html">Ink.UI.Tabs</a></li>
+            
+                <li><a href="../classes/Ink.UI.TagField.html">Ink.UI.TagField</a></li>
+            
+                <li><a href="../classes/Ink.UI.Toggle.html">Ink.UI.Toggle</a></li>
+            
+                <li><a href="../classes/Ink.UI.Tooltip.html">Ink.UI.Tooltip</a></li>
+            
+                <li><a href="../classes/Ink.UI.TreeView.html">Ink.UI.TreeView</a></li>
+            
+                <li><a href="../classes/Ink.Util.Array.html">Ink.Util.Array</a></li>
+            
+                <li><a href="../classes/Ink.Util.BinPack.html">Ink.Util.BinPack</a></li>
+            
+                <li><a href="../classes/Ink.Util.Cookie.html">Ink.Util.Cookie</a></li>
+            
+                <li><a href="../classes/Ink.Util.Date.html">Ink.Util.Date</a></li>
+            
+                <li><a href="../classes/Ink.Util.Dumper.html">Ink.Util.Dumper</a></li>
+            
+                <li><a href="../classes/Ink.Util.I18n.html">Ink.Util.I18n</a></li>
+            
+                <li><a href="../classes/Ink.Util.Json.html">Ink.Util.Json</a></li>
+            
+                <li><a href="../classes/Ink.Util.String.html">Ink.Util.String</a></li>
+            
+                <li><a href="../classes/Ink.Util.Url.html">Ink.Util.Url</a></li>
+            
+                <li><a href="../classes/Ink.Util.Validator.html">Ink.Util.Validator</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+                <li><a href="../modules/Ink.Dom.Browser_1.html">Ink.Dom.Browser_1</a></li>
+            
+                <li><a href="../modules/Ink.Dom.Css_1.html">Ink.Dom.Css_1</a></li>
+            
+                <li><a href="../modules/Ink.Dom.Element_1.html">Ink.Dom.Element_1</a></li>
+            
+                <li><a href="../modules/Ink.Dom.Event_1.html">Ink.Dom.Event_1</a></li>
+            
+                <li><a href="../modules/Ink.Dom.FormSerialize.html">Ink.Dom.FormSerialize</a></li>
+            
+                <li><a href="../modules/Ink.Dom.Loaded_1.html">Ink.Dom.Loaded_1</a></li>
+            
+                <li><a href="../modules/Ink.Dom.Selector_1.html">Ink.Dom.Selector_1</a></li>
+            
+                <li><a href="../modules/Ink.Namespace.ClassModule_1.html">Ink.Namespace.ClassModule_1</a></li>
+            
+                <li><a href="../modules/Ink.Namespace.StaticModule_1.html">Ink.Namespace.StaticModule_1</a></li>
+            
+                <li><a href="../modules/Ink.Net.Ajax_1.html">Ink.Net.Ajax_1</a></li>
+            
+                <li><a href="../modules/Ink.Net.JsonP_1.html">Ink.Net.JsonP_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Animate_1.html">Ink.UI.Animate_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Carousel_1.html">Ink.UI.Carousel_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Close_1.html">Ink.UI.Close_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Common_1.html">Ink.UI.Common_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.DatePicker_1.html">Ink.UI.DatePicker_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Dropdown_1.html">Ink.UI.Dropdown_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Droppable_1.html">Ink.UI.Droppable_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.FormValidator_1.html">Ink.UI.FormValidator_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.FormValidator_2.html">Ink.UI.FormValidator_2</a></li>
+            
+                <li><a href="../modules/Ink.UI.ImageQuery_1.html">Ink.UI.ImageQuery_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Modal_1.html">Ink.UI.Modal_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Pagination_1.html">Ink.UI.Pagination_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.ProgressBar_1.html">Ink.UI.ProgressBar_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.SmoothScroller_1.html">Ink.UI.SmoothScroller_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.SortableList_1.html">Ink.UI.SortableList_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Spy_1.html">Ink.UI.Spy_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Stacker_1.html">Ink.UI.Stacker_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Sticky_1.html">Ink.UI.Sticky_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Swipe.html">Ink.UI.Swipe</a></li>
+            
+                <li><a href="../modules/Ink.UI.Table_1.html">Ink.UI.Table_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Tabs_1.html">Ink.UI.Tabs_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Toggle_1.html">Ink.UI.Toggle_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Tooltip_1.html">Ink.UI.Tooltip_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.TreeView_1.html">Ink.UI.TreeView_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Array_1.html">Ink.Util.Array_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.BinPack_1.html">Ink.Util.BinPack_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Cookie_1.html">Ink.Util.Cookie_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Date_1.html">Ink.Util.Date_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Dumper_1.html">Ink.Util.Dumper_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.I18n_1.html">Ink.Util.I18n_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Json_1.html">Ink.Util.Json_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.String_1.html">Ink.Util.String_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Url_1.html">Ink.Util.Url_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Validator_1.html">Ink.Util.Validator_1</a></li>
+            
+                <li><a href="../modules/Ink_1.html">Ink_1</a></li>
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+
+
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1 class="file-heading">File: Ink/UI/Table/1/lib.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+/**
+ * @module Ink.UI.Table_1
+ * @author inkdev AT sapo.pt
+ * @version 1
+ */
+Ink.createModule(&#x27;Ink.UI.Table&#x27;, &#x27;1&#x27;, [&#x27;Ink.Util.Url_1&#x27;,&#x27;Ink.UI.Pagination_1&#x27;,&#x27;Ink.Net.Ajax_1&#x27;,&#x27;Ink.UI.Common_1&#x27;,&#x27;Ink.Dom.Event_1&#x27;,&#x27;Ink.Dom.Css_1&#x27;,&#x27;Ink.Dom.Element_1&#x27;,&#x27;Ink.Dom.Selector_1&#x27;,&#x27;Ink.Util.Array_1&#x27;,&#x27;Ink.Util.String_1&#x27;, &#x27;Ink.Util.Json_1&#x27;], function(InkUrl,Pagination, Ajax, Common, Event, Css, Element, Selector, InkArray, InkString, Json) {
+    &#x27;use strict&#x27;;
+
+    var rNumber = /\d/g;
+    // Turn into a number, if we can. For sorting data which could be numeric or not.
+    function maybeTurnIntoNumber(value) {
+        if( !isNaN(value) &amp;&amp; rNumber.test(value) ){
+            return parseInt(value, 10);
+        } else if( !isNaN(value) ){
+            return parseFloat(value);
+        }
+        return value;
+    }
+    function cmp (a, b) {
+        if( a === b ){
+            return 0;
+        }
+        return ( ( a &gt; b ) ? 1 : -1 );
+    }
+    // cmp function for comparing data which might be a number.
+    function numberishEnabledCmp (a, b) {
+        var aValue = maybeTurnIntoNumber(Element.textContent(a));
+        var bValue = maybeTurnIntoNumber(Element.textContent(b));
+
+        return cmp(aValue, bValue);
+    }
+    // Object.keys polyfill
+    function keys(obj) {
+        if (typeof Object.keys !== &#x27;undefined&#x27;) {
+            return Object.keys(obj);
+        }
+        var ret = [];
+        for (var k in obj) if (obj.hasOwnProperty(k)) {
+            ret.push(k);
+        }
+        return ret;
+    }
+
+    // Most processJSON* functions can just default to this.
+    function sameSame(obj) { return obj; }
+    /**
+     * The Table component transforms the native/DOM table element into a
+     * sortable, paginated component.
+     * 
+     * @class Ink.UI.Table
+     * @constructor
+     * @version 1
+     * @param {String|DOMElement} selector
+     * @param {Object} [options] Options
+     *     @param {Number}    [options.pageSize]
+     *      Number of rows per page. Omit to avoid paginating.
+     *
+     *     @param {String}    [options.endpoint]
+     *      Endpoint to get the records via AJAX. Omit if you don&#x27;t want to do AJAX
+     *
+     *     @param {Function}  [options.createEndpointUrl]
+     *      Callback to customise what URL the AJAX endpoint is at. Receives three
+     *      arguments: base (the &quot;endpoint&quot; option), sort (&#x60;{ order: &#x27;asc&#x27; or &#x27;desc&#x27;, field: fieldname }&#x60;)
+     *      and page ({ page: page number, size: items per page })
+     *
+     *     @param {Function}  [options.getDataFromEndPoint]
+     *      Callback to allow the user to retrieve the data himself given an URL.
+     *      Must accept two arguments: &#x60;url&#x60; and &#x60;callback&#x60;. This &#x60;callback&#x60; will
+     *      take as a single argument a JavaScript object.
+     *
+     *     @param {Function}  [options.processJSONRows]
+     *      Retrieve an array of rows from the data which came from AJAX.
+     *
+     *     @param {Function}  [options.processJSONHeaders]
+     *      Get an object with all the headers&#x27; names as keys, and a { label, sortable }
+     *      object as value.
+     *      Example: &#x60;{col1: {label: &quot;Column 1&quot;}, col2: {label: &quot;Column 2&quot;, sortable: true}&#x60;.
+     *      Takes a single argument, the JSON response.
+     *
+     *     @param {Function}  [options.processJSONRow]
+     *      Process a row object before it gets on the table.
+     *
+     *     @param {Function}  [options.processJSONField]
+     *      Process the field data before putting it on the table.
+     *      You can return HTML, a DOM element, or a string here.
+     *      Arguments you receive: &#x60;(column, fieldData, rowIndex)&#x60;.
+     *
+     *          @param {Function}  [options.processJSONField.(field_name)]
+     *           The same as processJSONField, but for a particular field.
+     *
+     *     @param {Function}  [options.processJSONTotalRows]
+     *      A callback where you have a chance to say how many rows
+     *      are in the dataset (not only on this page) you have on the
+     *      collection. You get as an argument the JSON response.
+     *
+     *     @param {Function}  [options.getSortKey=null]
+     *      A function taking a &#x60;{ columnIndex, columnName, data, element }&#x60;
+     *      object and returning a value which serves as a sort key for the
+     *      sorting operation. For example, if you want to sort by a
+     *      &#x60;data-sort-key&#x60; atribute, set &#x60;getSortKey&#x60; to:
+     *
+     *          function (cell) {
+     *              return cell.element.getAttribute(&#x27;data-sort-key&#x27;);
+     *          }
+     *
+     *          @param {Function} [options.getSortKey.(field_name)]
+     *           Same as &#x60;options.getSortKey&#x60;, but for a particular field.
+     *
+     *     @param {Object}    [options.tdClassNames]
+     *      An object mapping each field to what classes it gets.
+     *      Example: &#x60;{ name: &quot;large-10&quot;, isBoss: &quot;hide-small&quot; }&#x60;
+     *
+     *     @param {String|DomElement|Ink.UI.Pagination} [options.pagination]
+     *      Pagination instance or element.
+     *
+     *     @param {Object}    [options.paginationOptions]
+     *      Override the options with which we instantiate the Ink.UI.Pagination.
+     *
+     *     @param {Boolean}   [options.allowResetSorting]
+     *      Allow sort order to be set to &quot;none&quot; in addition to &quot;ascending&quot; and &quot;descending&quot;
+     *
+     *     @param {String|Array} [options.visibleFields]
+     *      Set of fields which get shown on the table
+     * @example
+     *      &lt;table class=&quot;ink-table alternating&quot; data-page-size=&quot;6&quot;&gt;
+     *          &lt;thead&gt;
+     *              &lt;tr&gt;
+     *                  &lt;th data-sortable=&quot;true&quot; width=&quot;75%&quot;&gt;Pepper&lt;/th&gt;
+     *                  &lt;th data-sortable=&quot;true&quot; width=&quot;25%&quot;&gt;Scoville Rating&lt;/th&gt;
+     *              &lt;/tr&gt;
+     *          &lt;/thead&gt;
+     *          &lt;tbody&gt;
+     *              &lt;tr&gt;
+     *                  &lt;td&gt;Trinidad Moruga Scorpion&lt;/td&gt;
+     *                  &lt;td&gt;1500000&lt;/td&gt;
+     *              &lt;/tr&gt;
+     *              &lt;tr&gt;
+     *                  &lt;td&gt;Bhut Jolokia&lt;/td&gt;
+     *                  &lt;td&gt;1000000&lt;/td&gt;
+     *              &lt;/tr&gt;
+     *              &lt;tr&gt;
+     *                  &lt;td&gt;Naga Viper&lt;/td&gt;
+     *                  &lt;td&gt;1463700&lt;/td&gt;
+     *              &lt;/tr&gt;
+     *              &lt;tr&gt;
+     *                  &lt;td&gt;Red Savina Habanero&lt;/td&gt;
+     *                  &lt;td&gt;580000&lt;/td&gt;
+     *              &lt;/tr&gt;
+     *              &lt;tr&gt;
+     *                  &lt;td&gt;Habanero&lt;/td&gt;
+     *                  &lt;td&gt;350000&lt;/td&gt;
+     *              &lt;/tr&gt;
+     *              &lt;tr&gt;
+     *                  &lt;td&gt;Scotch Bonnet&lt;/td&gt;
+     *                  &lt;td&gt;180000&lt;/td&gt;
+     *              &lt;/tr&gt;
+     *              &lt;tr&gt;
+     *                  &lt;td&gt;Malagueta&lt;/td&gt;
+     *                  &lt;td&gt;50000&lt;/td&gt;
+     *              &lt;/tr&gt;
+     *              &lt;tr&gt;
+     *                  &lt;td&gt;Tabasco&lt;/td&gt;
+     *                  &lt;td&gt;35000&lt;/td&gt;
+     *              &lt;/tr&gt;
+     *              &lt;tr&gt;
+     *                  &lt;td&gt;Serrano Chili&lt;/td&gt;
+     *                  &lt;td&gt;27000&lt;/td&gt;
+     *              &lt;/tr&gt;
+     *              &lt;tr&gt;
+     *                  &lt;td&gt;Jalapeño&lt;/td&gt;
+     *                  &lt;td&gt;8000&lt;/td&gt;
+     *              &lt;/tr&gt;
+     *              &lt;tr&gt;
+     *                  &lt;td&gt;Poblano&lt;/td&gt;
+     *                  &lt;td&gt;1500&lt;/td&gt;
+     *              &lt;/tr&gt;
+     *              &lt;tr&gt;
+     *                  &lt;td&gt;Peperoncino&lt;/td&gt;
+     *                  &lt;td&gt;500&lt;/td&gt;
+     *              &lt;/tr&gt;
+     *          &lt;/tbody&gt;
+     *      &lt;/table&gt;
+     *      &lt;nav class=&quot;ink-navigation&quot;&gt;&lt;ul class=&quot;pagination&quot;&gt;&lt;/ul&gt;&lt;/nav&gt;
+     *      &lt;script&gt;
+     *          Ink.requireModules( [&#x27;Ink.Dom.Selector_1&#x27;,&#x27;Ink.UI.Table_1&#x27;], function( Selector, Table ){
+     *              var tableElement = Ink.s(&#x27;.ink-table&#x27;);
+     *              var tableObj = new Table( tableElement );
+     *          });
+     *      &lt;/script&gt;
+     */
+    var Table = function( selector, options ){
+
+        /**
+         * Get the root element
+         */
+        this._rootElement = Common.elOrSelector(selector, &#x27;Ink.UI.Table :&#x27;);
+
+        if( this._rootElement.nodeName.toLowerCase() !== &#x27;table&#x27; ){
+            throw new Error(&#x27;[Ink.UI.Table] :: The element is not a table&#x27;);
+        }
+
+        this._options = Common.options({
+            pageSize: [&#x27;Integer&#x27;, null],
+            endpoint: [&#x27;String&#x27;, null],
+            createEndpointUrl: [&#x27;Function&#x27;, null /* default func uses above option */],
+            getDataFromEndPoint: [&#x27;Function&#x27;, null /* by default use plain ajax for JSON */],
+            processJSONRows: [&#x27;Function&#x27;, sameSame],
+            processJSONRow: [&#x27;Function&#x27;, sameSame],
+            processJSONField: [&#x27;Function&#x27;, sameSame],
+            processJSONHeaders: [&#x27;Function&#x27;, function (dt) { return dt.fields; }],
+            processJSONTotalRows: [&#x27;Function&#x27;, function (dt) { return dt.length || dt.totalRows; }],
+            getSortKey: [&#x27;Function&#x27;, null],
+            pagination: [&#x27;Element&#x27;, null],
+            allowResetSorting: [&#x27;Boolean&#x27;, false],
+            visibleFields: [&#x27;String&#x27;, null],
+            tdClassNames: [&#x27;Object&#x27;, {}],
+            paginationOptions: [&#x27;Object&#x27;, null]
+        }, options || {}, this._rootElement);
+
+        /**
+         * Checking if it&#x27;s in markup mode or endpoint mode
+         */
+        this._markupMode = !this._options.endpoint;
+
+        if( this._options.visibleFields ){
+            this._options.visibleFields = this._options.visibleFields.toString().split(/[, ]+/g);
+        }
+
+        this._thead = this._rootElement.tHead || this._rootElement.createTHead();
+        this._headers = Selector.select(&#x27;th&#x27;, this._thead);
+
+        /**
+         * Initializing variables
+         */
+        this._handlers = {
+            thClick: null
+        };
+        this._originalFields = [
+            // field headers from the DOM
+        ];
+        this._sortableFields = {
+            // Identifies which columns are sorted and how.
+            // columnIndex: &#x27;none&#x27;|&#x27;asc&#x27;|&#x27;desc&#x27;
+        };
+        this._originalData = this._data = [];
+        this._pagination = null;
+        this._totalRows = 0;
+
+        this._handlers.thClick = Event.observeDelegated(this._rootElement, &#x27;click&#x27;,
+                &#x27;thead th[data-sortable=&quot;true&quot;]&#x27;,
+                Ink.bindMethod(this, &#x27;_onThClick&#x27;));
+
+        this._init();
+    };
+
+    Table.prototype = {
+
+        /**
+         * Init function called by the constructor
+         * 
+         * @method _init
+         * @private
+         */
+        _init: function(){
+            /**
+             * If not is in markup mode, we have to do the initial request
+             * to get the first data and the headers
+             */
+             if( !this._markupMode ) {
+                 /* Endpoint mode */
+                this._getData(  );
+             } else /* Markup mode */ {
+                this._resetSortOrder();
+                this._addHeadersClasses();
+
+                /**
+                 * Getting the table&#x27;s data
+                 */
+                this._data = Selector.select(&#x27;tbody tr&#x27;, this._rootElement);
+                this._originalData = this._data.slice(0);
+
+                this._totalRows = this._data.length;
+
+                /**
+                 * Set pagination if options tell us to
+                 */
+                this._setPagination();
+             }
+        },
+
+        /**
+         * Add the classes in this._options.tdClassNames to our table headers.
+         * @method _addHeadersClasses
+         * @private
+         */
+        _addHeadersClasses: function () {
+            var headerLabel;
+            var classNames;
+            for (var i = 0, len = this._headers.length; i &lt; len; i++) {
+                headerLabel = Element.textContent(this._headers[i]);
+                classNames = this._options.tdClassNames[headerLabel];
+                // TODO do not find header labels this way. But how?
+                if (classNames) {
+                    Css.addClassName(this._headers[i], classNames);
+                }
+            }
+        },
+
+        /**
+         * Click handler. This will mainly handle the sorting (when you click in the headers)
+         * 
+         * @method _onThClick
+         * @param {Event} event Event obj
+         * @private
+         */
+        _onThClick: function( event ){
+            var tgtEl = Event.element(event),
+                paginated = this._options.pageSize !== undefined;
+
+            Event.stop(event);
+
+            var index = InkArray.keyValue(tgtEl, this._headers, true);
+            var sortable = index !== false &amp;&amp; this._sortableFields[index] !== undefined;
+
+            if( !sortable ){
+                return;
+            }
+
+            if( !this._markupMode &amp;&amp; paginated ){
+                this._invertSortOrder(index, false);
+            } else {
+                if ( (this._sortableFields[index] === &#x27;desc&#x27;) &amp;&amp; this._options.allowResetSorting ) {
+                    this._setSortOrderOfColumn(index, null);
+                    this._data = this._originalData.slice(0);
+                } else {
+                    this._invertSortOrder(index, true);
+                }
+
+                var tbody = Selector.select(&#x27;tbody&#x27;,this._rootElement)[0];
+                Common.cleanChildren(tbody);
+                InkArray.each(this._data, Ink.bindMethod(tbody, &#x27;appendChild&#x27;));
+
+                if (this._pagination) {
+                    this._pagination.setCurrent(0);
+                    this._paginate(1);
+                }
+            }
+        },
+
+        _invertSortOrder: function (index, sortAndReverse) {
+            var isAscending = this._sortableFields[index] === &#x27;asc&#x27;;
+
+            for (var i = 0, len = this._headers.length; i &lt; len; i++) {
+                this._setSortOrderOfColumn(i, null);
+            }
+
+            if (sortAndReverse) {
+                this._sort(index);
+                if (isAscending) {
+                    this._data.reverse();
+                }
+            }
+
+            this._setSortOrderOfColumn(index, !isAscending);
+        },
+
+        _setSortOrderOfColumn: function(index, up) {
+            var header = this._headers[index];
+            var caretHtml = &#x27;&#x27;;
+            var order = &#x27;none&#x27;;
+
+            if (up === true) {
+                caretHtml = &#x27;&lt;i class=&quot;icon-caret-up&quot;&gt;&lt;/i&gt;&#x27;;
+                order = &#x27;asc&#x27;;
+            } else if (up === false) {
+                caretHtml = &#x27;&lt;i class=&quot;icon-caret-down&quot;&gt;&lt;/i&gt;&#x27;;
+                order = &#x27;desc&#x27;;
+            }
+
+            this._sortableFields[index] = order;
+            header.innerHTML = Element.textContent(header) + caretHtml;
+        },
+
+        /**
+         * Applies and/or changes the CSS classes in order to show the right columns
+         * 
+         * @method _paginate
+         * @param {Number} page Current page
+         * @private
+         */
+        _paginate: function( page ){
+            if (!this._pagination) { return; }
+
+            var pageSize = this._options.pageSize;
+
+            // Hide everything except the items between these indices
+            var firstIndex = (page - 1) * pageSize;
+            var lastIndex = firstIndex + pageSize;
+
+            InkArray.each(this._data, function(item, index){
+                if (index &gt;= firstIndex &amp;&amp; index &lt; lastIndex) {
+                    Css.removeClassName(item,&#x27;hide-all&#x27;);
+                } else {
+                    Css.addClassName(item,&#x27;hide-all&#x27;);
+                }
+            });
+
+        },
+
+        /* register fields into this._originalFields, whether they come from JSON or a table.
+         * @method _registerFieldNames
+         * @private
+         * @param [names] The field names in an array
+         **/
+        _registerFieldNames: function (names) {
+            this._originalFields = [];
+
+            InkArray.forEach(names, Ink.bind(function (field) {
+                if( !this._fieldIsVisible(field) ){
+                    return;  // The user deems this not to be necessary to see.
+                }
+                this._originalFields.push(field);
+            }, this));
+        },
+
+        _fieldIsVisible: function (field) {
+            return !this._options.visibleFields ||
+                (this._options.visibleFields.indexOf(field) !== -1);
+        },
+
+        /**
+         * Sorts by a specific column.
+         * 
+         * @method _sort
+         * @param {Number} index Column number (starting at 0)
+         * @private
+         */
+        _sort: function( index ){
+            // TODO this is THE worst way to declare field names. Incompatible with i18n and a lot of other things.
+            var fieldName = Element.textContent(this._headers[index]);
+            var keyFunction = this._options.getSortKey;
+
+            if (keyFunction) {
+                keyFunction =
+                    typeof keyFunction[fieldName] === &#x27;function&#x27; ?
+                        keyFunction[fieldName] :
+                    typeof keyFunction === &#x27;function&#x27; ?
+                        keyFunction :
+                        null;
+            }
+
+            var self = this;
+
+            this._data.sort(function (trA, trB) {
+                var elementA = Ink.ss(&#x27;td&#x27;, trA)[index];
+                var elementB = Ink.ss(&#x27;td&#x27;, trB)[index];
+                if (keyFunction) {
+                    return cmp(userKey(elementA), userKey(elementB));
+                } else {
+                    return numberishEnabledCmp(elementA, elementB, index);
+                }
+            });
+
+            function userKey(element) {
+                return keyFunction.call(self, {
+                    columnIndex: index,
+                    columnName: fieldName,
+                    data: Element.textContent(element),
+                    element: element
+                });
+            }
+        },
+
+        /**
+         * Assembles the headers markup
+         *
+         * @method _createHeadersFromJson
+         * @param  {Object} headers Key-value object that contains the fields as keys, their configuration (label and sorting ability) as value
+         * @private
+         */
+        _createHeadersFromJson: function( headers ){
+            this._registerFieldNames(keys(headers));
+
+            if (this._thead.children.length) { return; }
+
+            var tr = this._thead.insertRow(0);
+            var th;
+
+            for (var i = 0, len = headers.length; i &lt; len; i++) {
+                if (this._fieldIsVisible(headers[i])) {
+                    th = Element.create(&#x27;th&#x27;);
+                    th = this._createSingleHeaderFromJson(headers[i], th);
+                    tr.appendChild(th);
+                    this._headers.push(th);
+                }
+            }
+        },
+
+        _createSingleHeaderFromJson: function (header, th) {
+            if (header.sortable) {
+                th.setAttribute(&#x27;data-sortable&#x27;,&#x27;true&#x27;);
+            }
+
+            if (header.label){
+                Element.setTextContent(th, header.label);
+            }
+
+            return th;
+        },
+
+        /**
+         * Reset the sort order as marked on the table headers to &quot;none&quot;
+         *
+         * @method _resetSortOrder
+         * @private
+         */
+        _resetSortOrder: function(){
+            /**
+             * Setting the sortable columns and its event listeners
+             */
+            for (var i = 0, len = this._headers.length; i &lt; len; i++) {
+                var dataset = Element.data( this._headers[i] );
+                if (dataset.sortable &amp;&amp; dataset.sortable.toString() === &#x27;true&#x27;) {
+                    this._sortableFields[i] = &#x27;none&#x27;;
+                }
+            }
+        },
+
+        /**
+         * This method gets the rows from AJAX and places them as &lt;tr&gt; and &lt;td&gt;
+         *
+         * @method _createRowsFromJSON
+         * @param  {Object} rows Array of objects with the data to be showed
+         * @private
+         */
+        _createRowsFromJSON: function( rows ){
+            var tbody = Selector.select(&#x27;tbody&#x27;,this._rootElement)[0];
+
+            if( !tbody ){
+                tbody = document.createElement(&#x27;tbody&#x27;);
+                this._rootElement.appendChild( tbody );
+            } else {
+                Element.setHTML(tbody, &#x27;&#x27;);
+            }
+
+            this._data = [];
+            var row;
+
+            for (var trIndex in rows) {
+                if (rows.hasOwnProperty(trIndex)) {
+                    row = this._options.processJSONRow(rows[trIndex]);
+                    this._createSingleRowFromJson(tbody, row, trIndex);
+                }
+            }
+
+            this._originalData = this._data.slice(0);
+        },
+
+        _createSingleRowFromJson: function (tbody, row, rowIndex) {
+            var tr = document.createElement(&#x27;tr&#x27;);
+            tbody.appendChild( tr );
+            for( var field in row ){
+                if (row.hasOwnProperty(field)) {
+                    this._createFieldFromJson(tr, row[field], field, rowIndex);
+                }
+            }
+            this._data.push(tr);
+        },
+
+        _createFieldFromJson: function (tr, fieldData, fieldName, rowIndex) {
+            if (!this._fieldIsVisible(fieldName)) { return; }
+
+            var processor =
+                this._options.processJSONField[fieldName] ||  // per-field callback
+                this._options.processJSONField;  // generic callback
+
+            var result;
+            if (typeof processor === &#x27;function&#x27;) {
+                result = processor(fieldData, fieldName, rowIndex);
+            } else {
+                result = fieldData;
+            }
+            var elm = this._elOrFieldData(result);
+
+            var className = this._options.tdClassNames[fieldName];
+            if (className) {
+                Css.addClassName(elm, className);
+            }
+
+            tr.appendChild(elm);
+        },
+
+        _elOrFieldData: function (processed) {
+            if (Common.isDOMElement(processed)) {
+                return processed;
+            }
+
+            var isString = typeof processed === &#x27;string&#x27;;
+            var isNumber = typeof processed === &#x27;number&#x27;;
+            var elm = Element.create(&#x27;td&#x27;);
+
+            if (isString &amp;&amp; /^\s*?&lt;/.test(processed)) {
+                Element.setHTML(elm, processed);
+            } else if (isString || isNumber) {
+                Element.setTextContent(elm, processed);
+            } else {
+                throw new Error(&#x27;Ink.UI.Table Unknown result from processJSONField: &#x27; + processed);
+            }
+
+            return elm;
+        },
+
+        /**
+         * Sets the endpoint. Useful for changing the endpoint in runtime.
+         *
+         * @method _setEndpoint
+         * @param {String} endpoint New endpoint
+         */
+        setEndpoint: function( endpoint, currentPage ){
+            if( !this._markupMode ){
+                this._options.endpoint = endpoint;
+                if (this._pagination) {
+                    this._pagination.setCurrent((!!currentPage) ? parseInt(currentPage,10) : 0 );
+                }
+            }
+        },
+
+        /**
+         * Sets the instance&#x27;s pagination, if necessary.
+         *
+         * Precondition: this._totalRows needs to be known.
+         *
+         * @method _setPagination
+         * @private
+         */
+        _setPagination: function(){
+            /* If user doesn&#x27;t say they want pagination, bail. */
+            if( this._options.pageSize == null ){ return; }
+
+            /**
+             * Fetch pagination from options. Can be a selector string, an element or a Pagination instance.
+             */
+            var paginationEl = this._options.pagination;
+
+            if ( paginationEl instanceof Pagination ) {
+                this._pagination = paginationEl;
+                return;
+            }
+
+            if (!paginationEl) {
+                paginationEl = Element.create(&#x27;nav&#x27;, {
+                    className: &#x27;ink-navigation&#x27;,
+                    insertAfter: this._rootElement
+                });
+                Element.create(&#x27;ul&#x27;, {
+                    className: &#x27;pagination&#x27;,
+                    insertBottom: paginationEl
+                });
+            }
+
+            var paginationOptions = Ink.extendObj({
+                totalItemCount: this._totalRows,
+                itemsPerPage: this._options.pageSize,
+                onChange: Ink.bind(function (_, pageNo) {
+                    this._paginate(pageNo + 1);
+                }, this)
+            }, this._options.paginationOptions || {});
+
+            this._pagination = new Pagination(paginationEl, paginationOptions);
+
+            this._paginate(1);
+        },
+
+        /**
+         * Method to choose which is the best way to get the data based on the endpoint:
+         *     - AJAX
+         *     - JSONP
+         *
+         * @method _getData
+         * @private
+         */
+        _getData: function( ){
+            var sortOrder = this._getSortOrder() || null;
+            var page = null;
+
+            if (this._pagination) {
+                page = {
+                    size: this._options.pageSize,
+                    page: this._pagination.getCurrent() + 1
+                };
+            }
+
+            this._getDataViaAjax( this._getUrl( sortOrder, page) );
+        },
+
+        /**
+         * Return an object describing sort order { field: [field name] ,
+         * order: [&quot;asc&quot; or &quot;desc&quot;] }, or null if there is no sorting
+         * going on.
+         * @method _getSortOrder
+         * @private
+         */
+        _getSortOrder: function () {
+            var index;
+            for (index in this._sortableFields) if (this._sortableFields.hasOwnProperty(index)) {
+                if( this._sortableFields[index] !== &#x27;none&#x27; ){
+                    break;
+                }
+            }
+            if (!index) {
+                return null; // no sorting going on
+            }
+            return {
+                field: this._originalFields[index],
+                order: this._sortableFields[index]
+            };
+        },
+
+        _getUrl: function (sort, page) {
+            var urlCreator = this._options.createEndpointUrl ||
+                function (endpoint, sort, page
+                        /* TODO implement filters too */) {
+                    endpoint = InkUrl.parseUrl(endpoint);
+                    endpoint.query = endpoint.query || {};
+
+                    if (sort) {
+                        endpoint.query.sortOrder = sort.order;
+                        endpoint.query.sortField = sort.field;
+                    }
+
+                    if (page) {
+                        endpoint.query[&#x27;rows_per_page&#x27;] = page.size;
+                        endpoint.query[&#x27;page&#x27;] = page.page;
+                    }
+
+                    return InkUrl.format(endpoint);
+                };
+
+            var ret = urlCreator(this._options.endpoint, sort, page);
+
+            if (typeof ret !== &#x27;string&#x27;) {
+                throw new TypeError(&#x27;Ink.UI.Table_1: &#x27; +
+                    &#x27;createEndpointUrl did not return a string!&#x27;);
+            }
+
+            return ret;
+        },
+
+        /**
+         * Gets the data via AJAX and calls this._onAjaxSuccess with the response.
+         * 
+         * Will call options.getDataFromEndpoint( Uri, callback ) if available.
+         *
+         * @param  endpointUri Endpoint to get data from, after processing.
+         */
+        _getDataViaAjax: function( endpointUri ){
+            var success = Ink.bind(function( JSONData ){
+                this._onAjaxSuccess( JSONData );
+            }, this);
+
+            if (!this._options.getDataFromEndpoint) {
+                new Ajax( endpointUri, {
+                    method: &#x27;GET&#x27;,
+                    contentType: &#x27;application/json&#x27;,
+                    sanitizeJSON: true,
+                    onSuccess: Ink.bind(function( response ){
+                        if( response.status === 200 ){
+                            success(Json.parse(response.responseText));
+                        }
+                    }, this)
+                });
+            } else {
+                this._options.getDataFromEndpoint( endpointUri, success );
+            }
+        },
+
+        _onAjaxSuccess: function (jsonResponse) {
+            var paginated = this._options.pageSize != null;
+            var rows = this._options.processJSONRows(jsonResponse);
+            this._headers = Selector.select(&#x27;th&#x27;, this._thead);
+
+            // If headers not in DOM, get from JSON
+            if( this._headers.length === 0 ) {
+                var headers = this._options.processJSONHeaders(
+                    jsonResponse);
+                if (!headers || !headers.length || !headers[0]) {
+                    throw new Error(&#x27;Ink.UI.Table: processJSONHeaders option must return an array of objects!&#x27;);
+                }
+                this._createHeadersFromJson( headers );
+                this._resetSortOrder();
+                this._addHeadersClasses();
+            }
+
+            this._createRowsFromJSON( rows );
+
+            this._totalRows = this._rowLength = rows.length;
+
+            if( paginated ){
+                this._totalRows = this._options.processJSONTotalRows(jsonResponse);
+                this._setPagination( );
+            }
+        }
+    };
+
+    return Table;
+
+});
+
+    </pre>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+</body>
+</html>

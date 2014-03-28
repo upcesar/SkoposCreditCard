@@ -24,16 +24,23 @@ while(isset($_POST['inputorcamento'.strval($id)])){
 	
 		
 	// SALVA O ARQUIVO NA PASTA DO SERVER
-	$allowedExts = array("gif", "jpeg", "jpg", "png");
+	$allowedExts = array("gif", "jpeg", "jpg", "png", "pdf");
 	$temp = explode(".", $_FILES['inputfile'.strval($id)]['name']);
 	$extension = end($temp);
+	
+	
 	if ((($_FILES['inputfile'.strval($id)]['type'] == "image/gif")
 			|| ($_FILES['inputfile'.strval($id)]['type'] == "image/jpeg")
 			|| ($_FILES['inputfile'.strval($id)]['type'] == "image/jpg")
 			|| ($_FILES['inputfile'.strval($id)]['type'] == "image/pjpeg")
-			|| ($_FILES['inputfile'.strval($id)]['type'] == "image/x-png")
-			|| ($_FILES['inputfile'.strval($id)]['type'] == "image/png"))
-			//&& ($_FILES['inputfile'.strval($id)]['size'] < 20000)
+			|| ($_FILES['inputfile'.strval($id)]['type'] == "image/x-png")			
+			|| ($_FILES['inputfile'.strval($id)]['type'] == "image/png")
+			|| ($_FILES['inputfile'.strval($id)]['type'] == "application/pdf")
+			|| ($_FILES['inputfile'.strval($id)]['type'] == "application/x-pdf")
+			|| ($_FILES['inputfile'.strval($id)]['type'] == "application/vnd.pdf")
+			|| ($_FILES['inputfile'.strval($id)]['type'] == "text/pdf")
+			|| ($_FILES['inputfile'.strval($id)]['type'] == "text/x-pdf"))
+			&& ($_FILES['inputfile'.strval($id)]['size'] <= UPLOAD_MAX_SIZE)
 			&& in_array($extension, $allowedExts))
 	{
 		if ($_FILES['inputfile'.strval($id)]['error'] > 0)
@@ -43,7 +50,8 @@ while(isset($_POST['inputorcamento'.strval($id)])){
 			$Itens .= '			<td>'.$DataInclusao.'</td>';
 			$Itens .= '			<td>'.$responsavel.'</td>';	
 			$Itens .= '			<td>'.$nomearquivo.'</td>';
-			$Itens .= '			<td><span class="ink-badge red"><i class="icon-remove-sign"></i></span></td>';
+			$Itens .= '			<td><span style="color:red;">Erro do servidor ao subir o arquivo.</span></td>';
+			$Itens .= '			<td><span class="ink-badge red"><i class="icon-remove-sign" title="Erro do servidor ao subir o arquivo."></i></span></td>';			
 			$Itens .= '		</tr>';
 		}
 		else
@@ -81,7 +89,8 @@ while(isset($_POST['inputorcamento'.strval($id)])){
 				$Itens .= '			<td>'.$DataInclusao.'</td>';
 				$Itens .= '			<td>'.$responsavel.'</td>';
 				$Itens .= '			<td>'.$nomearquivo.'</td>';
-				$Itens .= '			<td><span class="ink-badge red"><i class="icon-remove-sign"></i></span></td>';
+				$Itens .= '			<td><span style="color:red;">Arquivo ja existe no servidor</span></td>';
+				$Itens .= '			<td><span class="ink-badge red"><i class="icon-remove-sign" title="Arquivo ja existe no servidor"></i></span></td>';
 				$Itens .= '		</tr>';
 			}
 			else
@@ -113,17 +122,23 @@ while(isset($_POST['inputorcamento'.strval($id)])){
 				else
 					$soapMessage = "FALSE";
 				
-				if(strtoupper($soapMessage) == 'TRUE')
-					$icon = '<span class="ink-badge green"><i class="icon-ok-sign"></i></span>';									
-				else
-					$icon = '<span class="ink-badge red"><i class="icon-remove-sign"></i></span>';
-
+				if(strtoupper($soapMessage) == 'TRUE'){
+					$message = "Arquivo subido com sucesso";
+					$icon = '<span class="ink-badge green"><i class="icon-ok-sign" title="Arquivo subido com sucesso"></i></span>';
+					$color = 'green';					
+				}									
+				else{
+					$message = $soapMessage;
+					$icon = '<span class="ink-badge red"><i class="icon-remove-sign" title="'.$soapMessage.'"></i></span>';
+					$color = 'red';
+				}
 
 				$Itens .= '		<tr>';
 				$Itens .= '			<td>'.$orcamento.'</td>';
 				$Itens .= '			<td>'.$DataInclusao.'</td>';
 				$Itens .= '			<td>'.$responsavel.'</td>';
-				$Itens .= '			<td>'.$nomearquivo.'</td>';
+				$Itens .= '			<td>'.$nomearquivo.'</td>';				
+				$Itens .= '			<td><span style="color:'.$color.';">'.$message.'</span></td>';
 				$Itens .= '			<td>'.$icon.'</td>';
 				$Itens .= '		</tr>';
 				
@@ -131,14 +146,57 @@ while(isset($_POST['inputorcamento'.strval($id)])){
 			}
 		}
 	}
-	else
-	{
+	else{
+		
+		$message = "";
+		
+		// Show invalid extension files.		
+		if(!in_array($extension, $allowedExts)){
+			$message .= "Extens&otilde;es do arquivo permitidas: ". strtoupper(implode(", ", $allowedExts));
+		}
+		
+
+		if($_FILES['inputfile'.strval($id)]['size'] > UPLOAD_MAX_SIZE){
+			$sizeFile = floatval(UPLOAD_MAX_SIZE);
+			$imeasure = 0;
+			$smeasure = "byte";
+			$plural = "s";
+			while ($sizeFile >= 1024){
+				$sizeFile = floatval($sizeFile / 1024); 
+				$imeasure++;
+				switch ($imeasure) {
+					case 1:
+						$smeasure = "Kb";
+						break;					
+					case 2:
+						$smeasure = "Mb";
+						$plural = "'s";
+						break;					
+					case 3:
+						$smeasure = "Gb";
+						$plural = "'s";
+						break;
+					default:						
+						break;
+				}
+			}
+			$smeasure = $smeasure.($sizeFile > 1 ? $plural : "");
+			
+			if($message != ""){
+				$message .="\r\n";
+			}
+			
+			$message .= "Tamanho maximo permitido para upload de arquivos &eacute; de ".strval($sizeFile)." ".$smeasure;
+		}
+		
+		
 		$Itens .= '		<tr>';
 		$Itens .= '			<td>'.$orcamento.'</td>';
 		$Itens .= '			<td>'.$DataInclusao.'</td>';
 		$Itens .= '			<td>'.$responsavel.'</td>';
 		$Itens .= '			<td>'.$nomearquivo.'</td>';
-		$Itens .= '			<td><span class="ink-badge red"><i class="icon-remove-sign"></i></span></td>';
+		$Itens .= '			<td><span style="color:red;">'.str_replace('\r\n', '<br>', $message).'</span></td>';
+		$Itens .= '			<td><span class="ink-badge red"><i class="icon-remove-sign" title="'.$message.'"></i></span></td>';		
 		$Itens .= '		</tr>';
 	}
 	
@@ -146,12 +204,14 @@ while(isset($_POST['inputorcamento'.strval($id)])){
 }
 
 $Html  = '<head>';
+$Html .= '	<title>.:Pagina de Upload de Contratos :.</title>';
 $Html .= '	<link charset="utf-8" media="screen" type="text/css" href="../ink/css/ink.css" rel="stylesheet">';
 $Html .= '	<script type="text/javascript" src="../ink/js/ink.js"></script>';
 $Html .= '	<script type="text/javascript" src="../ink/js/ink.datepicker.pt.js"></script>';
 $Html .= '	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js "></script>';
 $Html .= '	<script type="text/javascript" src="../ink/js/autoload.js"></script>';
 $Html .= '	<script type="text/javascript" src="../ink/js/ink.modal.js"></script>';
+
 $Html .= '</head>';
 $Html .= '<body text="#000000" class="VermelhoGrande">';
 $Html .= '	<table  width="80%" align="center">';
@@ -172,6 +232,7 @@ $Html .= '			<td>N&uacute;mero Or&ccedil;amento</td>';
 $Html .= '			<td>Data de Inclus&atilde;o</td>';
 $Html .= '			<td>Respons&aacute;vel</td>';
 $Html .= '			<td>Nome do Arquivo</td>';
+$Html .= '			<td>Mensagem</td>';
 $Html .= '			<td>Status</td>';
 $Html .= '		</thead>';
 
@@ -179,7 +240,7 @@ $Html .= '		</thead>';
 $Html .= $Itens;
 
 $Html .= '		<tr>';
-$Html .= '			<td colspan=5 align="center"><a href="index.php"><i class="icon-circle-arrow-left"></i> Voltar ao menu inicial</a></td>';
+$Html .= '			<td colspan=6 align="center"><a href="index.php"><i class="icon-circle-arrow-left"></i> Voltar ao menu inicial</a></td>';
 $Html .= '		</tr>';
 
 $Html .= '	</table>';

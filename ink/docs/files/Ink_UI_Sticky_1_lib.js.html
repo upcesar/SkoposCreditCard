@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Ink/UI/Sticky/1/lib.js - Ink.js</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+    <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><img src="../yuidoclogo.png" title="Ink.js"></h1>
+            
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: latest</em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <h2 class="off-left">APIs</h2>
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+            <li><a href="#api-modules">Modules</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="../classes/Ink.html">Ink</a></li>
+            
+                <li><a href="../classes/Ink.Dom.Browser.html">Ink.Dom.Browser</a></li>
+            
+                <li><a href="../classes/Ink.Dom.Css.html">Ink.Dom.Css</a></li>
+            
+                <li><a href="../classes/Ink.Dom.Element.html">Ink.Dom.Element</a></li>
+            
+                <li><a href="../classes/Ink.Dom.Event.html">Ink.Dom.Event</a></li>
+            
+                <li><a href="../classes/Ink.Dom.FormSerialize.html">Ink.Dom.FormSerialize</a></li>
+            
+                <li><a href="../classes/Ink.Dom.Loaded.html">Ink.Dom.Loaded</a></li>
+            
+                <li><a href="../classes/Ink.Dom.Selector.html">Ink.Dom.Selector</a></li>
+            
+                <li><a href="../classes/Ink.Namespace.ClassModule.html">Ink.Namespace.ClassModule</a></li>
+            
+                <li><a href="../classes/Ink.Namespace.StaticModule.html">Ink.Namespace.StaticModule</a></li>
+            
+                <li><a href="../classes/Ink.Net.Ajax.html">Ink.Net.Ajax</a></li>
+            
+                <li><a href="../classes/Ink.Net.JsonP.html">Ink.Net.JsonP</a></li>
+            
+                <li><a href="../classes/Ink.UI.Animate_1.html">Ink.UI.Animate_1</a></li>
+            
+                <li><a href="../classes/Ink.UI.Carousel_1.html">Ink.UI.Carousel_1</a></li>
+            
+                <li><a href="../classes/Ink.UI.Close.html">Ink.UI.Close</a></li>
+            
+                <li><a href="../classes/Ink.UI.Common.html">Ink.UI.Common</a></li>
+            
+                <li><a href="../classes/Ink.UI.DatePicker.html">Ink.UI.DatePicker</a></li>
+            
+                <li><a href="../classes/Ink.UI.Draggable.html">Ink.UI.Draggable</a></li>
+            
+                <li><a href="../classes/Ink.UI.Dropdown.html">Ink.UI.Dropdown</a></li>
+            
+                <li><a href="../classes/Ink.UI.Droppable.html">Ink.UI.Droppable</a></li>
+            
+                <li><a href="../classes/Ink.UI.FormValidator.html">Ink.UI.FormValidator</a></li>
+            
+                <li><a href="../classes/Ink.UI.FormValidator_2.html">Ink.UI.FormValidator_2</a></li>
+            
+                <li><a href="../classes/Ink.UI.ImageQuery.html">Ink.UI.ImageQuery</a></li>
+            
+                <li><a href="../classes/Ink.UI.Modal.html">Ink.UI.Modal</a></li>
+            
+                <li><a href="../classes/Ink.UI.Pagination.html">Ink.UI.Pagination</a></li>
+            
+                <li><a href="../classes/Ink.UI.ProgressBar.html">Ink.UI.ProgressBar</a></li>
+            
+                <li><a href="../classes/Ink.UI.SmoothScroller.html">Ink.UI.SmoothScroller</a></li>
+            
+                <li><a href="../classes/Ink.UI.SortableList.html">Ink.UI.SortableList</a></li>
+            
+                <li><a href="../classes/Ink.UI.Spy.html">Ink.UI.Spy</a></li>
+            
+                <li><a href="../classes/Ink.UI.Stacker_1.html">Ink.UI.Stacker_1</a></li>
+            
+                <li><a href="../classes/Ink.UI.Sticky.html">Ink.UI.Sticky</a></li>
+            
+                <li><a href="../classes/Ink.UI.Swipe.html">Ink.UI.Swipe</a></li>
+            
+                <li><a href="../classes/Ink.UI.Table.html">Ink.UI.Table</a></li>
+            
+                <li><a href="../classes/Ink.UI.Tabs.html">Ink.UI.Tabs</a></li>
+            
+                <li><a href="../classes/Ink.UI.TagField.html">Ink.UI.TagField</a></li>
+            
+                <li><a href="../classes/Ink.UI.Toggle.html">Ink.UI.Toggle</a></li>
+            
+                <li><a href="../classes/Ink.UI.Tooltip.html">Ink.UI.Tooltip</a></li>
+            
+                <li><a href="../classes/Ink.UI.TreeView.html">Ink.UI.TreeView</a></li>
+            
+                <li><a href="../classes/Ink.Util.Array.html">Ink.Util.Array</a></li>
+            
+                <li><a href="../classes/Ink.Util.BinPack.html">Ink.Util.BinPack</a></li>
+            
+                <li><a href="../classes/Ink.Util.Cookie.html">Ink.Util.Cookie</a></li>
+            
+                <li><a href="../classes/Ink.Util.Date.html">Ink.Util.Date</a></li>
+            
+                <li><a href="../classes/Ink.Util.Dumper.html">Ink.Util.Dumper</a></li>
+            
+                <li><a href="../classes/Ink.Util.I18n.html">Ink.Util.I18n</a></li>
+            
+                <li><a href="../classes/Ink.Util.Json.html">Ink.Util.Json</a></li>
+            
+                <li><a href="../classes/Ink.Util.String.html">Ink.Util.String</a></li>
+            
+                <li><a href="../classes/Ink.Util.Url.html">Ink.Util.Url</a></li>
+            
+                <li><a href="../classes/Ink.Util.Validator.html">Ink.Util.Validator</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+                <li><a href="../modules/Ink.Dom.Browser_1.html">Ink.Dom.Browser_1</a></li>
+            
+                <li><a href="../modules/Ink.Dom.Css_1.html">Ink.Dom.Css_1</a></li>
+            
+                <li><a href="../modules/Ink.Dom.Element_1.html">Ink.Dom.Element_1</a></li>
+            
+                <li><a href="../modules/Ink.Dom.Event_1.html">Ink.Dom.Event_1</a></li>
+            
+                <li><a href="../modules/Ink.Dom.FormSerialize.html">Ink.Dom.FormSerialize</a></li>
+            
+                <li><a href="../modules/Ink.Dom.Loaded_1.html">Ink.Dom.Loaded_1</a></li>
+            
+                <li><a href="../modules/Ink.Dom.Selector_1.html">Ink.Dom.Selector_1</a></li>
+            
+                <li><a href="../modules/Ink.Namespace.ClassModule_1.html">Ink.Namespace.ClassModule_1</a></li>
+            
+                <li><a href="../modules/Ink.Namespace.StaticModule_1.html">Ink.Namespace.StaticModule_1</a></li>
+            
+                <li><a href="../modules/Ink.Net.Ajax_1.html">Ink.Net.Ajax_1</a></li>
+            
+                <li><a href="../modules/Ink.Net.JsonP_1.html">Ink.Net.JsonP_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Animate_1.html">Ink.UI.Animate_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Carousel_1.html">Ink.UI.Carousel_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Close_1.html">Ink.UI.Close_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Common_1.html">Ink.UI.Common_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.DatePicker_1.html">Ink.UI.DatePicker_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Dropdown_1.html">Ink.UI.Dropdown_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Droppable_1.html">Ink.UI.Droppable_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.FormValidator_1.html">Ink.UI.FormValidator_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.FormValidator_2.html">Ink.UI.FormValidator_2</a></li>
+            
+                <li><a href="../modules/Ink.UI.ImageQuery_1.html">Ink.UI.ImageQuery_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Modal_1.html">Ink.UI.Modal_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Pagination_1.html">Ink.UI.Pagination_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.ProgressBar_1.html">Ink.UI.ProgressBar_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.SmoothScroller_1.html">Ink.UI.SmoothScroller_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.SortableList_1.html">Ink.UI.SortableList_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Spy_1.html">Ink.UI.Spy_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Stacker_1.html">Ink.UI.Stacker_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Sticky_1.html">Ink.UI.Sticky_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Swipe.html">Ink.UI.Swipe</a></li>
+            
+                <li><a href="../modules/Ink.UI.Table_1.html">Ink.UI.Table_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Tabs_1.html">Ink.UI.Tabs_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Toggle_1.html">Ink.UI.Toggle_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Tooltip_1.html">Ink.UI.Tooltip_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.TreeView_1.html">Ink.UI.TreeView_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Array_1.html">Ink.Util.Array_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.BinPack_1.html">Ink.Util.BinPack_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Cookie_1.html">Ink.Util.Cookie_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Date_1.html">Ink.Util.Date_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Dumper_1.html">Ink.Util.Dumper_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.I18n_1.html">Ink.Util.I18n_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Json_1.html">Ink.Util.Json_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.String_1.html">Ink.Util.String_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Url_1.html">Ink.Util.Url_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Validator_1.html">Ink.Util.Validator_1</a></li>
+            
+                <li><a href="../modules/Ink_1.html">Ink_1</a></li>
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+
+
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1 class="file-heading">File: Ink/UI/Sticky/1/lib.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+/**
+ * @module Ink.UI.Sticky_1
+ * @author inkdev AT sapo.pt
+ * @version 1
+ */
+Ink.createModule(&#x27;Ink.UI.Sticky&#x27;, &#x27;1&#x27;, [&#x27;Ink.UI.Common_1&#x27;,&#x27;Ink.Dom.Event_1&#x27;,&#x27;Ink.Dom.Element_1&#x27;,&#x27;Ink.Dom.Css_1&#x27;], function(Common, Event, Element, Css) {
+    &#x27;use strict&#x27;;
+
+    /**
+     * The Sticky component takes an element and transforms it&#x27;s behavior in order to, when the user scrolls he sets its position
+     * to fixed and maintain it until the user scrolls back to the same place.
+     *
+     * @class Ink.UI.Sticky
+     * @constructor
+     * @version 1
+     * @param {String|DOMElement} selector
+     * @param {Object} [options] Options
+     *     @param {Number}     [options.offsetBottom=0]    Number of pixels of distance from the bottomElement.
+     *     @param {Number}     [options.offsetTop=0]       Number of pixels of distance from the topElement.
+     *     @param {Boolean}    [options.inlineDimensions=true] Whether to set &quot;style.height&quot; and &quot;style.width&quot; in the stuck element. Turn this off when your &#x60;stickyClass&#x60; has its own height and width and you don&#x27;t want this to be dealt with through javascript.
+     *     @param {Boolean}    [options.inlinePosition=true] Whether to set &quot;style.left&quot; in the stuck element. Turn this off when your &#x60;stickyClass&#x60; has its own &quot;left&quot; position and you don&#x27;t want this to be dealt with through javascript.
+     *     @param {String}     [options.wrapperClass=&quot;ink-sticky-wrapper&quot;] Css class for the wrapper element.
+     *     @param {String}     [options.stickyClass=&quot;ink-sticky-stuck&quot;] Css class for sticking the sticky to the screen. Add your own &quot;stuck&quot; class to define your own sticky behaviour.
+     *     @param {String}     [options.topElement]        CSS Selector that specifies a top element with which the component could collide.
+     *     @param {String}     [options.bottomElement]     CSS Selector that specifies a bottom element with which the component could collide.
+     *     @param {Array|String} [options.activateInLayouts=&#x27;medium,large&#x27;] Layouts in which the sticky behaviour is present. Pass an array or comma-separated string.
+     * @example
+     *      &lt;script&gt;
+     *          Ink.requireModules( [&#x27;Ink.Dom.Selector_1&#x27;,&#x27;Ink.UI.Sticky_1&#x27;], function( Selector, Sticky ) {
+     *              var menuElement = Ink.s(&#x27;#menu&#x27;);
+     *              var stickyObj = new Sticky( menuElement );
+     *          });
+     *      &lt;/script&gt;
+     */
+    var Sticky = function( selector, options ){
+        this._rootElement = Common.elOrSelector(selector, &#x27;Ink.UI.Sticky_1&#x27;);
+
+        this._options = Common.options({
+            offsetBottom: [&#x27;Integer&#x27;, 0],
+            offsetTop: [&#x27;Integer&#x27;, 0],
+            topElement: [&#x27;Element&#x27;, null],
+            wrapperClass: [&#x27;String&#x27;, &#x27;ink-sticky-wrapper&#x27;],
+            stickyClass: [&#x27;String&#x27;, &#x27;ink-sticky-stuck&#x27;],
+            inlineDimensions: [&#x27;Boolean&#x27;, true],
+            inlinePosition: [&#x27;Boolean&#x27;, true],
+            bottomElement: [&#x27;Element&#x27;, null],
+            activateInLayouts: [&#x27;String&#x27;, &#x27;medium,large&#x27;]
+        }, options || {}, this._rootElement );
+
+        // Because String#indexOf is compatible with lt IE8 but not Array#indexOf
+        this._options.activateInLayouts = this._options.activateInLayouts.toString();
+
+        this._dims = null;  // force a recalculation of the dimensions later
+
+        this._options.offsetTop = parseInt(this._options.offsetTop, 10) || 0;
+        this._options.offsetBottom = parseInt(this._options.offsetBottom, 10) || 0;
+
+        if (this._options.topElement) {
+            this._options.topElement = Common.elOrSelector(this._options.topElement, &#x27;Top Element&#x27;);
+        }
+        if (this._options.bottomElement) {
+            this._options.bottomElement = Common.elOrSelector(this._options.bottomElement, &#x27;Sticky bottom Element&#x27;);
+        }
+
+        this._wrapper = Element.create(&#x27;div&#x27;, { className: this._options.wrapperClass });
+        Element.wrap(this._rootElement, this._wrapper);
+
+        this._init();
+    };
+
+    Sticky.prototype = {
+
+        /**
+         * Init function called by the constructor
+         *
+         * @method _init
+         * @private
+         */
+        _init: function() {
+            var scrollTarget = document.addEventListener ? document : window;
+            this._onScroll = Ink.bind(Event.throttle(this._onScroll, 33), this);  // Because this is called directly.
+            Event.observe( scrollTarget, &#x27;scroll&#x27;, this._onScroll );
+            Event.observe( window, &#x27;resize&#x27;, Ink.bindEvent(Event.throttle(this._onResize, 100), this) );
+            this._onScroll();
+        },
+
+        /**
+         * Returns whether the sticky is disabled in the current view
+         *
+         * @method isDisabledInLayout
+         * @private
+         */
+        _isDisabledInLayout: function () {
+            var currentLayout = Common.currentLayout();
+            if (!currentLayout) { return false; }
+            return this._options.activateInLayouts.indexOf(currentLayout) === -1;
+        },
+
+        /**
+         * Scroll handler.
+         *
+         * @method _onScroll
+         * @private
+         */
+        _onScroll: function(){
+            var dims = this._getDims();
+            var scrollHeight = Element.scrollHeight();
+
+            var unstick = this._isDisabledInLayout() ||
+                scrollHeight &lt;= dims.top - this._options.offsetTop ||
+                (this._options.topElement &amp;&amp; this._options.topElement.getBoundingClientRect().bottom + this._options.offsetTop &gt; 0);
+
+            if( unstick ) {
+                // We&#x27;re on top, no sticking. position:static is the &quot;normal&quot; position.
+                this._unstick();
+                return;
+            }
+
+            // If we stick it now, what will be its boundingClientRect.bottom ?
+            var bottomOfSticky = this._options.offsetTop + dims.height + Element.scrollHeight();
+            var maxBottomOfSticky = document.body.scrollHeight;
+
+            if (this._options.bottomElement) {
+                maxBottomOfSticky =
+                    this._options.bottomElement.getBoundingClientRect().top +
+                    Element.scrollHeight();
+            }
+
+            maxBottomOfSticky -= this._options.offsetBottom;
+
+            if ( bottomOfSticky &lt; maxBottomOfSticky ) {
+                // Stick to screen!
+                this._stickTo(&#x27;screen&#x27;);
+            } else {
+                // Stick to bottom
+                this._stickTo(&#x27;bottom&#x27;);
+            }
+        },
+
+        /**
+         * Have the sticky stick nowhere, to the screen, or to the bottom.
+         *
+         * @method _stickTo
+         * @private
+         */
+        _stickTo: function (where) {
+            var style = this._rootElement.style;
+            var dims = this._getDims();
+
+            Css.addClassName(this._rootElement, this._options.stickyClass);
+            this._wrapper.style.height = dims.height + &#x27;px&#x27;;
+
+            this._inlineDimensions(dims.height + &#x27;px&#x27;, dims.width + &#x27;px&#x27;);
+
+            if (this._options.inlinePosition === false) {
+                return;
+            }
+
+            style.left = dims.left + &#x27;px&#x27;;
+
+            if (where === &#x27;screen&#x27;) {
+                style.bottom = null;
+                style.top = this._options.offsetTop + &#x27;px&#x27;;
+            } else if (where === &#x27;bottom&#x27;) {
+                // Distance between bottom of sticky and bottom of document
+                var bottom = this._getBottomOffset();
+
+                // Distance between bottom of viewport and bottom of document
+                var bottomOfViewport = Element.scrollHeight() + Element.viewportHeight();
+                var toBottomOfDocument = Element.pageHeight() - bottomOfViewport;
+
+                style.bottom = bottom - toBottomOfDocument + &#x27;px&#x27;;
+                style.top = &#x27;auto&#x27;;
+            }
+        },
+
+        /**
+         * &quot;unstick&quot; the sticky from the screen or bottom of the document
+         * @method _unstick
+         * @private
+         */
+        _unstick: function () {
+            Css.removeClassName(this._rootElement, this._options.stickyClass);
+            // deinline dimensions of our root element
+            this._inlineDimensions(null, null);
+
+            // deinline the position of our root element
+            if (this._options.inlinePosition) {
+                this._rootElement.style.left = null;
+                this._rootElement.style.top = null;
+                this._rootElement.style.bottom = null;
+            }
+
+            // deinline dimensions of wrapper
+            this._wrapper.style.height = null;
+            this._wrapper.style.width = null;
+
+            // Break the &quot;getDims&quot; cache
+            this._dims = null;
+        },
+
+        /**
+         * Resize handler
+         *
+         * @method _onResize
+         * @private
+         */
+        _onResize: function(){
+            this._dims = null;  // Blow the cache so _getDims recalculates
+            this._onScroll();
+        },
+
+        /**
+         * Recalculate the &quot;dims&quot; cache, or get it.
+         *
+         * The &quot;dims&quot; cache is to be set to null when the element is liable to have changed dimensions
+         *
+         * (eg: on resize)
+         *
+         **/
+        _getDims: function () {
+            if (this._dims !== null) { return this._dims; }
+
+            var style = this._rootElement.style;
+
+            // We unstick the sticky so we can measure.
+            var oldPosition = style.position;
+            var oldWidth = style.width;
+
+            style.position = &#x27;static&#x27;; // [todo] this should be a class toggle
+            style.width = null;
+
+            var dimensionsInStatic = Element.outerDimensions(this._rootElement);
+            var rect = this._wrapper.getBoundingClientRect();
+            this._dims = {
+                height: dimensionsInStatic[1],
+                width: dimensionsInStatic[0],
+                left: rect.left + Element.scrollWidth(),
+                top: rect.top + Element.scrollHeight()
+            };
+
+            style.position = oldPosition;
+            style.width = oldWidth;
+
+            return this._dims;
+        },
+
+        /**
+         * Set style.height and style.width, but not if options.inlineDimensions === false
+         *
+         * @method _inlineDimensions
+         * @private
+         */
+        _inlineDimensions: function (height, width) {
+            if (this._options.inlineDimensions) {
+                this._rootElement.style.height = height;
+                this._rootElement.style.width = width;
+            }
+        },
+
+        /**
+         * Get the distance between the bottom of the element and the bottom of the page
+         *
+         * @method _getBottomOffset
+         * @private
+         */
+        _getBottomOffset: function () {
+            var bottom = this._options.offsetBottom;
+            if (this._options.bottomElement) {
+                bottom += Element.pageHeight() -
+                    Element.offsetTop(this._options.bottomElement);
+            }
+            return bottom;
+        }
+    };
+
+    return Sticky;
+
+});
+
+    </pre>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+</body>
+</html>

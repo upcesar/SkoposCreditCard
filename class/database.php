@@ -33,15 +33,18 @@ class Database
 	}
 	
 	public function __construct(){
-		if(AMBIENTE_DB == 'PRO')
-			$this->connectToP10();
-		else
-			$this->connectToP10_HOM();
 		
-		//$this->connectToP10();
+		$this->connectToP10();		
 	}
 
 	public function connectToP10(){
+		if(AMBIENTE_DB == 'PRO')
+			$this->connectToP10_PRO();
+		else
+			$this->connectToP10_HOM();
+	}
+	
+	public function connectToP10_PRO(){
 		$this->user = 'USR_GWI';
 		$this->password = 'Gw1Db2@c355*';
 		$this->connectToHostP10();
@@ -72,10 +75,26 @@ class Database
 	
 	
 	public function connectToP08(){
+		if(AMBIENTE_DB == 'PRO')
+			$this->connectToP08_PRO();
+		else
+			$this->connectToP08_HOM();
+	}
+	
+	public function connectToP08_PROD(){
 		$this->database = 'T9P5XC';
 		$this->user = 'WBI';
 		$this->password = '@c3550b1t0tv5#';
 		$this->hostname = '187.94.60.35';
+		$this->port = '50002';	
+		$this->connectDataBase();
+	}
+	
+	public function connectToP08_HOM(){
+		$this->database = 'T9P5XC_H';
+		$this->user = 'wbi2';
+		$this->password = 't9p5xch0m0';
+		$this->hostname = '187.94.62.41';
 		$this->port = '50002';	
 		$this->connectDataBase();
 	}

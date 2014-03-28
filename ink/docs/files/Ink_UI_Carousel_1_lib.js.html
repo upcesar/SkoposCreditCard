@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Ink/UI/Carousel/1/lib.js - Ink.js</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+    <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><img src="../yuidoclogo.png" title="Ink.js"></h1>
+            
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: latest</em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <h2 class="off-left">APIs</h2>
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+            <li><a href="#api-modules">Modules</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="../classes/Ink.html">Ink</a></li>
+            
+                <li><a href="../classes/Ink.Dom.Browser.html">Ink.Dom.Browser</a></li>
+            
+                <li><a href="../classes/Ink.Dom.Css.html">Ink.Dom.Css</a></li>
+            
+                <li><a href="../classes/Ink.Dom.Element.html">Ink.Dom.Element</a></li>
+            
+                <li><a href="../classes/Ink.Dom.Event.html">Ink.Dom.Event</a></li>
+            
+                <li><a href="../classes/Ink.Dom.FormSerialize.html">Ink.Dom.FormSerialize</a></li>
+            
+                <li><a href="../classes/Ink.Dom.Loaded.html">Ink.Dom.Loaded</a></li>
+            
+                <li><a href="../classes/Ink.Dom.Selector.html">Ink.Dom.Selector</a></li>
+            
+                <li><a href="../classes/Ink.Namespace.ClassModule.html">Ink.Namespace.ClassModule</a></li>
+            
+                <li><a href="../classes/Ink.Namespace.StaticModule.html">Ink.Namespace.StaticModule</a></li>
+            
+                <li><a href="../classes/Ink.Net.Ajax.html">Ink.Net.Ajax</a></li>
+            
+                <li><a href="../classes/Ink.Net.JsonP.html">Ink.Net.JsonP</a></li>
+            
+                <li><a href="../classes/Ink.UI.Animate_1.html">Ink.UI.Animate_1</a></li>
+            
+                <li><a href="../classes/Ink.UI.Carousel_1.html">Ink.UI.Carousel_1</a></li>
+            
+                <li><a href="../classes/Ink.UI.Close.html">Ink.UI.Close</a></li>
+            
+                <li><a href="../classes/Ink.UI.Common.html">Ink.UI.Common</a></li>
+            
+                <li><a href="../classes/Ink.UI.DatePicker.html">Ink.UI.DatePicker</a></li>
+            
+                <li><a href="../classes/Ink.UI.Draggable.html">Ink.UI.Draggable</a></li>
+            
+                <li><a href="../classes/Ink.UI.Dropdown.html">Ink.UI.Dropdown</a></li>
+            
+                <li><a href="../classes/Ink.UI.Droppable.html">Ink.UI.Droppable</a></li>
+            
+                <li><a href="../classes/Ink.UI.FormValidator.html">Ink.UI.FormValidator</a></li>
+            
+                <li><a href="../classes/Ink.UI.FormValidator_2.html">Ink.UI.FormValidator_2</a></li>
+            
+                <li><a href="../classes/Ink.UI.ImageQuery.html">Ink.UI.ImageQuery</a></li>
+            
+                <li><a href="../classes/Ink.UI.Modal.html">Ink.UI.Modal</a></li>
+            
+                <li><a href="../classes/Ink.UI.Pagination.html">Ink.UI.Pagination</a></li>
+            
+                <li><a href="../classes/Ink.UI.ProgressBar.html">Ink.UI.ProgressBar</a></li>
+            
+                <li><a href="../classes/Ink.UI.SmoothScroller.html">Ink.UI.SmoothScroller</a></li>
+            
+                <li><a href="../classes/Ink.UI.SortableList.html">Ink.UI.SortableList</a></li>
+            
+                <li><a href="../classes/Ink.UI.Spy.html">Ink.UI.Spy</a></li>
+            
+                <li><a href="../classes/Ink.UI.Stacker_1.html">Ink.UI.Stacker_1</a></li>
+            
+                <li><a href="../classes/Ink.UI.Sticky.html">Ink.UI.Sticky</a></li>
+            
+                <li><a href="../classes/Ink.UI.Swipe.html">Ink.UI.Swipe</a></li>
+            
+                <li><a href="../classes/Ink.UI.Table.html">Ink.UI.Table</a></li>
+            
+                <li><a href="../classes/Ink.UI.Tabs.html">Ink.UI.Tabs</a></li>
+            
+                <li><a href="../classes/Ink.UI.TagField.html">Ink.UI.TagField</a></li>
+            
+                <li><a href="../classes/Ink.UI.Toggle.html">Ink.UI.Toggle</a></li>
+            
+                <li><a href="../classes/Ink.UI.Tooltip.html">Ink.UI.Tooltip</a></li>
+            
+                <li><a href="../classes/Ink.UI.TreeView.html">Ink.UI.TreeView</a></li>
+            
+                <li><a href="../classes/Ink.Util.Array.html">Ink.Util.Array</a></li>
+            
+                <li><a href="../classes/Ink.Util.BinPack.html">Ink.Util.BinPack</a></li>
+            
+                <li><a href="../classes/Ink.Util.Cookie.html">Ink.Util.Cookie</a></li>
+            
+                <li><a href="../classes/Ink.Util.Date.html">Ink.Util.Date</a></li>
+            
+                <li><a href="../classes/Ink.Util.Dumper.html">Ink.Util.Dumper</a></li>
+            
+                <li><a href="../classes/Ink.Util.I18n.html">Ink.Util.I18n</a></li>
+            
+                <li><a href="../classes/Ink.Util.Json.html">Ink.Util.Json</a></li>
+            
+                <li><a href="../classes/Ink.Util.String.html">Ink.Util.String</a></li>
+            
+                <li><a href="../classes/Ink.Util.Url.html">Ink.Util.Url</a></li>
+            
+                <li><a href="../classes/Ink.Util.Validator.html">Ink.Util.Validator</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+                <li><a href="../modules/Ink.Dom.Browser_1.html">Ink.Dom.Browser_1</a></li>
+            
+                <li><a href="../modules/Ink.Dom.Css_1.html">Ink.Dom.Css_1</a></li>
+            
+                <li><a href="../modules/Ink.Dom.Element_1.html">Ink.Dom.Element_1</a></li>
+            
+                <li><a href="../modules/Ink.Dom.Event_1.html">Ink.Dom.Event_1</a></li>
+            
+                <li><a href="../modules/Ink.Dom.FormSerialize.html">Ink.Dom.FormSerialize</a></li>
+            
+                <li><a href="../modules/Ink.Dom.Loaded_1.html">Ink.Dom.Loaded_1</a></li>
+            
+                <li><a href="../modules/Ink.Dom.Selector_1.html">Ink.Dom.Selector_1</a></li>
+            
+                <li><a href="../modules/Ink.Namespace.ClassModule_1.html">Ink.Namespace.ClassModule_1</a></li>
+            
+                <li><a href="../modules/Ink.Namespace.StaticModule_1.html">Ink.Namespace.StaticModule_1</a></li>
+            
+                <li><a href="../modules/Ink.Net.Ajax_1.html">Ink.Net.Ajax_1</a></li>
+            
+                <li><a href="../modules/Ink.Net.JsonP_1.html">Ink.Net.JsonP_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Animate_1.html">Ink.UI.Animate_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Carousel_1.html">Ink.UI.Carousel_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Close_1.html">Ink.UI.Close_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Common_1.html">Ink.UI.Common_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.DatePicker_1.html">Ink.UI.DatePicker_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Dropdown_1.html">Ink.UI.Dropdown_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Droppable_1.html">Ink.UI.Droppable_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.FormValidator_1.html">Ink.UI.FormValidator_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.FormValidator_2.html">Ink.UI.FormValidator_2</a></li>
+            
+                <li><a href="../modules/Ink.UI.ImageQuery_1.html">Ink.UI.ImageQuery_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Modal_1.html">Ink.UI.Modal_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Pagination_1.html">Ink.UI.Pagination_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.ProgressBar_1.html">Ink.UI.ProgressBar_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.SmoothScroller_1.html">Ink.UI.SmoothScroller_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.SortableList_1.html">Ink.UI.SortableList_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Spy_1.html">Ink.UI.Spy_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Stacker_1.html">Ink.UI.Stacker_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Sticky_1.html">Ink.UI.Sticky_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Swipe.html">Ink.UI.Swipe</a></li>
+            
+                <li><a href="../modules/Ink.UI.Table_1.html">Ink.UI.Table_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Tabs_1.html">Ink.UI.Tabs_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Toggle_1.html">Ink.UI.Toggle_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Tooltip_1.html">Ink.UI.Tooltip_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.TreeView_1.html">Ink.UI.TreeView_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Array_1.html">Ink.Util.Array_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.BinPack_1.html">Ink.Util.BinPack_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Cookie_1.html">Ink.Util.Cookie_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Date_1.html">Ink.Util.Date_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Dumper_1.html">Ink.Util.Dumper_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.I18n_1.html">Ink.Util.I18n_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Json_1.html">Ink.Util.Json_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.String_1.html">Ink.Util.String_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Url_1.html">Ink.Util.Url_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Validator_1.html">Ink.Util.Validator_1</a></li>
+            
+                <li><a href="../modules/Ink_1.html">Ink_1</a></li>
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+
+
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1 class="file-heading">File: Ink/UI/Carousel/1/lib.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+/**
+ * @module Ink.UI.Carousel_1
+ * @author inkdev AT sapo.pt
+ * @version 1
+ */
+Ink.createModule(&#x27;Ink.UI.Carousel&#x27;, &#x27;1&#x27;,
+    [&#x27;Ink.UI.Common_1&#x27;, &#x27;Ink.Dom.Event_1&#x27;, &#x27;Ink.Dom.Css_1&#x27;, &#x27;Ink.Dom.Element_1&#x27;, &#x27;Ink.UI.Pagination_1&#x27;, &#x27;Ink.Dom.Browser_1&#x27;, &#x27;Ink.Dom.Selector_1&#x27;],
+    function(Common, InkEvent, Css, InkElement, Pagination, Browser/*, Selector*/) {
+    &#x27;use strict&#x27;;
+
+    /*
+     * TODO:
+     *  keyboardSupport
+     */
+
+    function limitRange(n, min, max) {
+        return Math.min(max, Math.max(min, n));
+    }
+
+    var requestAnimationFrame = window.requestAnimationFrame ||
+        window.mozRequestAnimationFrame ||
+        window.webkitRequestAnimationFrame ||
+        function (cb) {return setTimeout(cb, 1000 / 30); };
+
+    /**
+     * @class Ink.UI.Carousel_1
+     * @constructor
+     *
+     * @param {String|DOMElement} selector
+     * @param {Object} [options]
+     *  @param {Integer} [autoAdvance=0] The number of milliseconds to wait between auto-advancing pages. Set to 0 to disable auto-advance.
+     *  @param {String} [options.axis=&#x27;x&#x27;] Can be &#x60;&#x27;x&#x27;&#x60; or &#x60;&#x27;y&#x27;&#x60;, for a horizontal or vertical carousel
+     *  @param {Boolean} [options.center=false] Center the carousel.
+     *  @param {Number} [options.initialPage=0] When initialized, set the page to this.
+     *  @TODO @param {Boolean} [options.keyboardSupport=false] Enable keyboard support
+     *  @param {Boolean} [options.swipe=true] Enable swipe support where available
+     *  @param {String|DOMElement|Ink.UI.Pagination_1} [options.pagination] Either an &#x60;&lt;ul&gt;&#x60; element to add pagination markup to, or an &#x60;Ink.UI.Pagination&#x60; instance to use.
+     *  @param {Function} [options.onChange] Callback for when the page is changed.
+     */
+    var Carousel = function(selector, options) {
+        this._handlers = {
+            paginationChange: Ink.bindMethod(this, &#x27;_onPaginationChange&#x27;),
+            windowResize:     InkEvent.throttle(Ink.bindMethod(this, &#x27;refit&#x27;), 200)
+        };
+
+        InkEvent.observe(window, &#x27;resize&#x27;, this._handlers.windowResize);
+
+        var element = this._element = Common.elOrSelector(selector, &#x27;1st argument&#x27;);
+
+        var opts = this._options = Common.options({
+            autoAdvance:    [&#x27;Integer&#x27;, 0],
+            axis:           [&#x27;String&#x27;, &#x27;x&#x27;],
+            initialPage:    [&#x27;Integer&#x27;, 0],
+            hideLast:       [&#x27;Boolean&#x27;, false],
+            center:         [&#x27;Boolean&#x27;, false],
+            keyboardSupport:[&#x27;Boolean&#x27;, false],
+            pagination:     [&#x27;String&#x27;, null],
+            onChange:       [&#x27;Function&#x27;, null],
+            swipe:          [&#x27;Boolean&#x27;, true]
+            // TODO exponential swipe
+            // TODO specify break point for next page when moving finger
+        }, options || {}, element, this);
+
+        this._isY = (opts.axis === &#x27;y&#x27;);
+
+        var ulEl = Ink.s(&#x27;ul.stage&#x27;, element);
+        this._ulEl = ulEl;
+
+        InkElement.removeTextNodeChildren(ulEl);
+
+        this.refit(); // recalculate this._numPages
+
+        if (this._isY) {
+            // Override white-space: no-wrap which is only necessary to make sure horizontal stuff stays horizontal, but breaks stuff intended to be vertical.
+            this._ulEl.style.whiteSpace = &#x27;normal&#x27;;
+        }
+
+        if (opts.swipe) {
+            InkEvent.observe(element, &#x27;touchstart&#x27;, Ink.bindMethod(this, &#x27;_onTouchStart&#x27;));
+            InkEvent.observe(element, &#x27;touchmove&#x27;, Ink.bindMethod(this, &#x27;_onTouchMove&#x27;));
+            InkEvent.observe(element, &#x27;touchend&#x27;, Ink.bindMethod(this, &#x27;_onTouchEnd&#x27;));
+        }
+
+        this._setUpPagination();
+        this._setUpAutoAdvance();
+        this._setUpHider();
+    };
+
+    Carousel.prototype = {
+        /**
+         * Measure the carousel once again, adjusting the involved elements&#x27;
+         * sizes. Called automatically when the window resizes, in order to
+         * cater for changes from responsive media queries, for instance.
+         *
+         * @method refit
+         * @public
+         */
+        refit: function() {
+            var _isY = this._isY;
+
+            var size = function (elm, perpendicular) {
+                if (!perpendicular) {
+                    return InkElement.outerDimensions(elm)[_isY ? 1 : 0];
+                } else {
+                    return InkElement.outerDimensions(elm)[_isY ? 0 : 1];
+                }
+            };
+
+            this._liEls = Ink.ss(&#x27;li.slide&#x27;, this._ulEl);
+            var numSlides = this._liEls.length;
+
+            var contRect = this._ulEl.getBoundingClientRect();
+            this._ctnLength = _isY ? contRect.bottom - contRect.top : contRect.right - contRect.left;
+            this._elLength = size(this._liEls[0]);
+            this._slidesPerPage = Math.floor( this._ctnLength / this._elLength  ) || 1;
+
+            var numPages = Math.ceil( numSlides / this._slidesPerPage );
+            var numPagesChanged = this._numPages !== numPages;
+            this._numPages = numPages;
+            this._deltaLength = this._slidesPerPage * this._elLength;
+            
+            this._center();
+            this._updateHider();
+            this._IE7();
+
+            if (this._pagination &amp;&amp; numPagesChanged) {
+                this._pagination.setSize(this._numPages);
+            }
+            this.setPage(limitRange(this.getPage(), 1, this._numPages));
+        },
+
+        _setUpPagination: function () {
+            if (this._options.pagination) {
+                if (Common.isDOMElement(this._options.pagination) ||
+                        typeof this._options.pagination === &#x27;string&#x27;) {
+                    // if dom element or css selector string...
+                    this._pagination = new Pagination(this._options.pagination, {
+                        size:     this._numPages,
+                        onChange: this._handlers.paginationChange
+                    });
+                } else {
+                    // assumes instantiated pagination
+                    this._pagination = this._options.pagination;
+                    this._pagination._options.onChange = this._handlers.paginationChange;
+                    this._pagination.setSize(this._numPages);
+                }
+                this._pagination.setCurrent(this._options.initialPage || 0);
+            } else {
+                this._currentPage = this._options.initialPage || 0;
+            }
+        },
+
+        _setUpAutoAdvance: function () {
+            if (!this._options.autoAdvance) { return; }
+            var self = this;
+
+            setTimeout(function autoAdvance() {
+                self.nextPage(true /* wrap */);
+                setTimeout(autoAdvance, self._options.autoAdvance);
+            }, this._options.autoAdvance);
+        },
+
+        _setUpHider: function () {
+            if (this._options.hideLast) {
+                var hiderEl = InkElement.create(&#x27;div&#x27;, {
+                    className: &#x27;hider&#x27;,
+                    insertBottom: this._element
+                });
+                hiderEl.style.position = &#x27;absolute&#x27;;
+                hiderEl.style[ this._isY ? &#x27;left&#x27; : &#x27;top&#x27; ] = &#x27;0&#x27;;  // fix to top..
+                hiderEl.style[ this._isY ? &#x27;right&#x27; : &#x27;bottom&#x27; ] = &#x27;0&#x27;;  // and bottom...
+                hiderEl.style[ this._isY ? &#x27;bottom&#x27; : &#x27;right&#x27; ] = &#x27;0&#x27;;  // and move to the end.
+                this._hiderEl = hiderEl;
+            }
+        },
+
+        _center: function() {
+            if (!this._options.center) { return; }
+            var gap = Math.floor( (this._ctnLength - (this._elLength * this._slidesPerPage) ) / 2 );
+
+            var pad;
+            if (this._isY) {
+                pad = [gap, &#x27;px 0&#x27;];
+            } else {
+                pad = [&#x27;0 &#x27;, gap, &#x27;px&#x27;];
+            }
+
+            this._ulEl.style.padding = pad.join(&#x27;&#x27;);
+        },
+
+        _updateHider: function() {
+            if (!this._hiderEl) { return; }
+            if (this.getPage() === 0) {
+                var gap = Math.floor( this._ctnLength - (this._elLength * this._slidesPerPage) );
+                if (this._options.center) {
+                    gap /= 2;
+                }
+                this._hiderEl.style[ this._isY ? &#x27;height&#x27; : &#x27;width&#x27; ] = gap + &#x27;px&#x27;;
+            } else {
+                this._hiderEl.style[ this._isY ? &#x27;height&#x27; : &#x27;width&#x27; ] = &#x27;0px&#x27;;
+            }
+        },
+        
+        /**
+         * Refit stuff for IE7 because it won&#x27;t support inline-block.
+         *
+         * @method _IE7
+         * @private
+         */
+        _IE7: function () {
+            if (Browser.IE &amp;&amp; &#x27;&#x27; + Browser.version.split(&#x27;.&#x27;)[0] === &#x27;7&#x27;) {
+                // var numPages = this._numPages;
+                var slides = Ink.ss(&#x27;li.slide&#x27;, this._ulEl);
+                var stl = function (prop, val) {slides[i].style[prop] = val; };
+                for (var i = 0, len = slides.length; i &lt; len; i++) {
+                    stl(&#x27;position&#x27;, &#x27;absolute&#x27;);
+                    stl(this._isY ? &#x27;top&#x27; : &#x27;left&#x27;, (i * this._elLength) + &#x27;px&#x27;);
+                }
+            }
+        },
+
+        _onTouchStart: function (event) {
+            if (event.touches.length &gt; 1) { return; }
+
+            this._swipeData = {
+                x: InkEvent.pointerX(event),
+                y: InkEvent.pointerY(event),
+                lastUlPos: null
+            };
+
+            var ulRect = this._ulEl.getBoundingClientRect();
+
+            this._swipeData.inUlX =  this._swipeData.x - ulRect.left;
+            this._swipeData.inUlY =  this._swipeData.y - ulRect.top;
+
+            setTransitionProperty(this._ulEl, &#x27;none&#x27;);
+
+            this._touchMoveIsFirstTouchMove = true;
+
+            // event.preventDefault();
+            event.stopPropagation();
+        },
+
+        _onTouchMove: function (event) {
+            if (event.touches.length &gt; 1) { return; /* multitouch event, not my problem. */ }
+
+            var pointerX = InkEvent.pointerX(event);
+            var pointerY = InkEvent.pointerY(event);
+
+            var deltaY = Math.abs(pointerY - this._swipeData.y);
+            var deltaX = Math.abs(pointerX - this._swipeData.x);
+
+            if (this._touchMoveIsFirstTouchMove) {
+                this._touchMoveIsFirstTouchMove = undefined;
+                this._scrolling = this._isY ?
+                    deltaX &gt; deltaY :
+                    deltaY &gt; deltaX ;
+
+                if (!this._scrolling) {
+                    this._onAnimationFrame();
+                }
+            }
+
+            if (!this._scrolling &amp;&amp; this._swipeData) {
+                event.preventDefault();
+
+                this._swipeData.pointerPos = this._isY ? pointerY : pointerX;
+            }
+
+            event.stopPropagation();
+        },
+
+        _onAnimationFrame: function () {
+            var swipeData = this._swipeData;
+
+            if (!swipeData || this._scrolling || this._touchMoveIsFirstTouchMove) { return; }
+
+            var elRect = this._element.getBoundingClientRect();
+
+            var newPos;
+
+            if (!this._isY) {
+                newPos = swipeData.pointerPos - swipeData.inUlX - elRect.left;
+            } else {
+                newPos = swipeData.pointerPos - swipeData.inUlY - elRect.top;
+            }
+
+            this._ulEl.style[this._isY ? &#x27;top&#x27; : &#x27;left&#x27;] = newPos + &#x27;px&#x27;;
+
+            swipeData.lastUlPos = newPos;
+
+            requestAnimationFrame(Ink.bindMethod(this, &#x27;_onAnimationFrame&#x27;));
+        },
+
+        _onTouchEnd: function (event) {
+            if (this._swipeData &amp;&amp; this._swipeData.pointerPos &amp;&amp; !this._scrolling &amp;&amp; !this._touchMoveIsFirstTouchMove) {
+                var snapToNext = 0.1;  // swipe 10% of the way to change page
+                var progress = - this._swipeData.lastUlPos;
+
+                var curPage = this.getPage();
+                var estimatedPage = progress / this._elLength / this._slidesPerPage;
+
+                if (Math.round(estimatedPage) === curPage) {
+                    var diff = estimatedPage - curPage;
+                    if (Math.abs(diff) &gt; snapToNext) {
+                        diff = diff &gt; 0 ? 1 : -1;
+                        curPage += diff;
+                    }
+                } else {
+                    curPage = Math.round(estimatedPage);
+                }
+
+                this.setPage(curPage);
+
+                event.stopPropagation();
+                // event.preventDefault();
+            }
+
+            setTransitionProperty(this._ulEl, null /* transition: left, top */);
+            this._swipeData = null;
+            this._touchMoveIsFirstTouchMove = undefined;
+            this._scrolling = undefined;
+        },
+
+        _onPaginationChange: function(pgn) {
+            this._setPage(pgn.getCurrent());
+        },
+
+        /**
+         * Get the currently displayed page.
+         * @method getPage
+         **/
+        getPage: function () {
+            if (this._pagination) {
+                return this._pagination.getCurrent();
+            } else {
+                return this._currentPage;
+            }
+        },
+
+        /**
+         * Set the current page to &#x60;page&#x60;
+         * @method setPage
+         * @param page
+         * @param [wrap=false] Wrap over the first and last pages. (For example, going to the 5th page when there are only 4 pages goes to the 1st page)
+         **/
+        setPage: function (page, wrap) {
+            if (wrap) {
+                // Pages outside the range [0..this._numPages] are wrapped.
+                page = page % this._numPages;
+                if (page &lt; 0) { page = this._numPages - page; }
+            }
+            page = limitRange(page, 0, this._numPages - 1);
+
+            if (this._pagination) {
+                this._pagination.setCurrent(page);
+            } else {
+                this._setPage(page);
+            }
+        },
+
+        _setPage: function (page) {
+            this._ulEl.style[ this._isY ? &#x27;top&#x27; : &#x27;left&#x27;] =
+                [&#x27;-&#x27;, page * this._deltaLength, &#x27;px&#x27;].join(&#x27;&#x27;);
+
+            if (this._options.onChange) {
+                this._options.onChange.call(this, page);
+            }
+
+            this._currentPage = page;
+
+            this._updateHider();
+        },
+
+        /**
+         * Change to the next page
+         * @method nextPage
+         * @param {Boolean} [wrap=false] If true, going to the page after the last page takes you to the first page.
+         **/
+        nextPage: function (wrap) {
+            this.setPage(this.getPage() + 1, wrap);
+        },
+
+        /**
+         * Change to the previous page
+         * @method previousPage
+         * @param {Boolean} [wrap=false] If true, going to the page after the last page takes you to the first page.
+         **/
+        previousPage: function (wrap) { this.setPage(this.getPage() - 1, wrap); }
+    };
+
+    function setTransitionProperty(el, newTransition) {
+        el.style.transitionProperty =
+        el.style.oTransitionProperty =
+        el.style.msTransitionProperty =
+        el.style.mozTransitionProperty =
+        el.style.webkitTransitionProperty = newTransition;
+    }
+
+    return Carousel;
+
+});
+
+    </pre>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+</body>
+</html>

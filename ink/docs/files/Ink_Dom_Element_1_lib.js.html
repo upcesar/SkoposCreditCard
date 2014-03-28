@@ -1,0 +1,2041 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Ink/Dom/Element/1/lib.js - Ink.js</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+    <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><img src="../yuidoclogo.png" title="Ink.js"></h1>
+            
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: latest</em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <h2 class="off-left">APIs</h2>
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+            <li><a href="#api-modules">Modules</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="../classes/Ink.html">Ink</a></li>
+            
+                <li><a href="../classes/Ink.Dom.Browser.html">Ink.Dom.Browser</a></li>
+            
+                <li><a href="../classes/Ink.Dom.Css.html">Ink.Dom.Css</a></li>
+            
+                <li><a href="../classes/Ink.Dom.Element.html">Ink.Dom.Element</a></li>
+            
+                <li><a href="../classes/Ink.Dom.Event.html">Ink.Dom.Event</a></li>
+            
+                <li><a href="../classes/Ink.Dom.FormSerialize.html">Ink.Dom.FormSerialize</a></li>
+            
+                <li><a href="../classes/Ink.Dom.Loaded.html">Ink.Dom.Loaded</a></li>
+            
+                <li><a href="../classes/Ink.Dom.Selector.html">Ink.Dom.Selector</a></li>
+            
+                <li><a href="../classes/Ink.Namespace.ClassModule.html">Ink.Namespace.ClassModule</a></li>
+            
+                <li><a href="../classes/Ink.Namespace.StaticModule.html">Ink.Namespace.StaticModule</a></li>
+            
+                <li><a href="../classes/Ink.Net.Ajax.html">Ink.Net.Ajax</a></li>
+            
+                <li><a href="../classes/Ink.Net.JsonP.html">Ink.Net.JsonP</a></li>
+            
+                <li><a href="../classes/Ink.UI.Animate_1.html">Ink.UI.Animate_1</a></li>
+            
+                <li><a href="../classes/Ink.UI.Carousel_1.html">Ink.UI.Carousel_1</a></li>
+            
+                <li><a href="../classes/Ink.UI.Close.html">Ink.UI.Close</a></li>
+            
+                <li><a href="../classes/Ink.UI.Common.html">Ink.UI.Common</a></li>
+            
+                <li><a href="../classes/Ink.UI.DatePicker.html">Ink.UI.DatePicker</a></li>
+            
+                <li><a href="../classes/Ink.UI.Draggable.html">Ink.UI.Draggable</a></li>
+            
+                <li><a href="../classes/Ink.UI.Dropdown.html">Ink.UI.Dropdown</a></li>
+            
+                <li><a href="../classes/Ink.UI.Droppable.html">Ink.UI.Droppable</a></li>
+            
+                <li><a href="../classes/Ink.UI.FormValidator.html">Ink.UI.FormValidator</a></li>
+            
+                <li><a href="../classes/Ink.UI.FormValidator_2.html">Ink.UI.FormValidator_2</a></li>
+            
+                <li><a href="../classes/Ink.UI.ImageQuery.html">Ink.UI.ImageQuery</a></li>
+            
+                <li><a href="../classes/Ink.UI.Modal.html">Ink.UI.Modal</a></li>
+            
+                <li><a href="../classes/Ink.UI.Pagination.html">Ink.UI.Pagination</a></li>
+            
+                <li><a href="../classes/Ink.UI.ProgressBar.html">Ink.UI.ProgressBar</a></li>
+            
+                <li><a href="../classes/Ink.UI.SmoothScroller.html">Ink.UI.SmoothScroller</a></li>
+            
+                <li><a href="../classes/Ink.UI.SortableList.html">Ink.UI.SortableList</a></li>
+            
+                <li><a href="../classes/Ink.UI.Spy.html">Ink.UI.Spy</a></li>
+            
+                <li><a href="../classes/Ink.UI.Stacker_1.html">Ink.UI.Stacker_1</a></li>
+            
+                <li><a href="../classes/Ink.UI.Sticky.html">Ink.UI.Sticky</a></li>
+            
+                <li><a href="../classes/Ink.UI.Swipe.html">Ink.UI.Swipe</a></li>
+            
+                <li><a href="../classes/Ink.UI.Table.html">Ink.UI.Table</a></li>
+            
+                <li><a href="../classes/Ink.UI.Tabs.html">Ink.UI.Tabs</a></li>
+            
+                <li><a href="../classes/Ink.UI.TagField.html">Ink.UI.TagField</a></li>
+            
+                <li><a href="../classes/Ink.UI.Toggle.html">Ink.UI.Toggle</a></li>
+            
+                <li><a href="../classes/Ink.UI.Tooltip.html">Ink.UI.Tooltip</a></li>
+            
+                <li><a href="../classes/Ink.UI.TreeView.html">Ink.UI.TreeView</a></li>
+            
+                <li><a href="../classes/Ink.Util.Array.html">Ink.Util.Array</a></li>
+            
+                <li><a href="../classes/Ink.Util.BinPack.html">Ink.Util.BinPack</a></li>
+            
+                <li><a href="../classes/Ink.Util.Cookie.html">Ink.Util.Cookie</a></li>
+            
+                <li><a href="../classes/Ink.Util.Date.html">Ink.Util.Date</a></li>
+            
+                <li><a href="../classes/Ink.Util.Dumper.html">Ink.Util.Dumper</a></li>
+            
+                <li><a href="../classes/Ink.Util.I18n.html">Ink.Util.I18n</a></li>
+            
+                <li><a href="../classes/Ink.Util.Json.html">Ink.Util.Json</a></li>
+            
+                <li><a href="../classes/Ink.Util.String.html">Ink.Util.String</a></li>
+            
+                <li><a href="../classes/Ink.Util.Url.html">Ink.Util.Url</a></li>
+            
+                <li><a href="../classes/Ink.Util.Validator.html">Ink.Util.Validator</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+                <li><a href="../modules/Ink.Dom.Browser_1.html">Ink.Dom.Browser_1</a></li>
+            
+                <li><a href="../modules/Ink.Dom.Css_1.html">Ink.Dom.Css_1</a></li>
+            
+                <li><a href="../modules/Ink.Dom.Element_1.html">Ink.Dom.Element_1</a></li>
+            
+                <li><a href="../modules/Ink.Dom.Event_1.html">Ink.Dom.Event_1</a></li>
+            
+                <li><a href="../modules/Ink.Dom.FormSerialize.html">Ink.Dom.FormSerialize</a></li>
+            
+                <li><a href="../modules/Ink.Dom.Loaded_1.html">Ink.Dom.Loaded_1</a></li>
+            
+                <li><a href="../modules/Ink.Dom.Selector_1.html">Ink.Dom.Selector_1</a></li>
+            
+                <li><a href="../modules/Ink.Namespace.ClassModule_1.html">Ink.Namespace.ClassModule_1</a></li>
+            
+                <li><a href="../modules/Ink.Namespace.StaticModule_1.html">Ink.Namespace.StaticModule_1</a></li>
+            
+                <li><a href="../modules/Ink.Net.Ajax_1.html">Ink.Net.Ajax_1</a></li>
+            
+                <li><a href="../modules/Ink.Net.JsonP_1.html">Ink.Net.JsonP_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Animate_1.html">Ink.UI.Animate_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Carousel_1.html">Ink.UI.Carousel_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Close_1.html">Ink.UI.Close_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Common_1.html">Ink.UI.Common_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.DatePicker_1.html">Ink.UI.DatePicker_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Dropdown_1.html">Ink.UI.Dropdown_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Droppable_1.html">Ink.UI.Droppable_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.FormValidator_1.html">Ink.UI.FormValidator_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.FormValidator_2.html">Ink.UI.FormValidator_2</a></li>
+            
+                <li><a href="../modules/Ink.UI.ImageQuery_1.html">Ink.UI.ImageQuery_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Modal_1.html">Ink.UI.Modal_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Pagination_1.html">Ink.UI.Pagination_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.ProgressBar_1.html">Ink.UI.ProgressBar_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.SmoothScroller_1.html">Ink.UI.SmoothScroller_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.SortableList_1.html">Ink.UI.SortableList_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Spy_1.html">Ink.UI.Spy_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Stacker_1.html">Ink.UI.Stacker_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Sticky_1.html">Ink.UI.Sticky_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Swipe.html">Ink.UI.Swipe</a></li>
+            
+                <li><a href="../modules/Ink.UI.Table_1.html">Ink.UI.Table_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Tabs_1.html">Ink.UI.Tabs_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Toggle_1.html">Ink.UI.Toggle_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Tooltip_1.html">Ink.UI.Tooltip_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.TreeView_1.html">Ink.UI.TreeView_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Array_1.html">Ink.Util.Array_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.BinPack_1.html">Ink.Util.BinPack_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Cookie_1.html">Ink.Util.Cookie_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Date_1.html">Ink.Util.Date_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Dumper_1.html">Ink.Util.Dumper_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.I18n_1.html">Ink.Util.I18n_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Json_1.html">Ink.Util.Json_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.String_1.html">Ink.Util.String_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Url_1.html">Ink.Util.Url_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Validator_1.html">Ink.Util.Validator_1</a></li>
+            
+                <li><a href="../modules/Ink_1.html">Ink_1</a></li>
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+
+
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1 class="file-heading">File: Ink/Dom/Element/1/lib.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+/**
+ * @author inkdev AT sapo.pt
+ */
+
+Ink.createModule(&#x27;Ink.Dom.Element&#x27;, 1, [], function() {
+
+    &#x27;use strict&#x27;;
+
+    var createContextualFragmentSupport = (
+        typeof document.createRange === &#x27;function&#x27; &amp;&amp;
+        typeof window.Range.prototype.createContextualFragment === &#x27;function&#x27;);
+
+    var deleteThisTbodyToken = &#x27;Ink.Dom.Element tbody: &#x27; + Math.random();
+    var browserCreatesTbodies = (function () {
+        var div = document.createElement(&#x27;div&#x27;);
+        div.innerHTML = &#x27;&lt;table&gt;&#x27;;
+        return div.getElementsByTagName(&#x27;tbody&#x27;).length !== 0;
+    }());
+
+    function rect(elem){
+        var dimensions = {};
+        try {
+            dimensions = elem.getBoundingClientRect();
+        } catch(e){
+            dimensions = { top: elem.offsetTop, left: elem.offsetLeft };
+        }
+        return dimensions;
+    }
+
+    /**
+     * @module Ink.Dom.Element_1
+     */
+
+    /**
+     * @class Ink.Dom.Element
+     */
+
+    var InkElement = {
+
+        /**
+         * Shortcut for &#x60;document.getElementById&#x60;
+         *
+         * @method get
+         * @param {String|DOMElement} elm   Either an ID of an element, or an element.
+         * @return {DOMElement|null} The DOM element with the given id or null when it was not found
+         */
+        get: function(elm) {
+            if(typeof elm !== &#x27;undefined&#x27;) {
+                if(typeof elm === &#x27;string&#x27;) {
+                    return document.getElementById(elm);
+                }
+                return elm;
+            }
+            return null;
+        },
+
+        /**
+         * Creates a DOM element
+         *
+         * @method create
+         * @param {String} tag        tag name
+         * @param {Object} properties  object with properties to be set on the element. You can also call other functions in Ink.Dom.Element like this
+         *
+         * @example
+         *
+         *      var myPanel = InkElement.create(&#x27;div&#x27;, {
+         *          appendHTML: &#x27;&lt;span&gt;&lt;/span&gt;&#x27;,
+         *          className: &#x27;classes to add&#x27;,
+         *          insertAfter: anotherPane
+         *      };
+         *
+         *      myPanel.innerHTML;  // -&gt; &#x27;&lt;div class=&quot;classes to add&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/div&gt;
+         *      myPanel.parentNode;  // -&gt; anotherPane
+         */
+        create: function(tag, properties) {
+            var el = document.createElement(tag);
+            //Ink.extendObj(el, properties);
+            for(var property in properties) {
+                if(properties.hasOwnProperty(property)) {
+                    if (property in InkElement) {
+                        InkElement[property](el, properties[property]);
+                    } else {
+                        if(property === &#x27;className&#x27; || property === &#x27;class&#x27;) {
+                            el.className = properties.className || properties[&#x27;class&#x27;];
+                        } else {
+                            el.setAttribute(property, properties[property]);
+                        }
+                    }
+                }
+            }
+            return el;
+        },
+
+        /**
+         * Removes a DOM Element from the DOM
+         *
+         * @method remove
+         * @param {DOMElement} elm  The element to remove
+         */
+        remove: function(el) {
+            var parEl;
+            if (el &amp;&amp; (parEl = el.parentNode)) {
+                parEl.removeChild(el);
+            }
+        },
+
+        /**
+         * Scrolls the window to an element
+         *
+         * @method scrollTo
+         * @param {DOMElement|String} elm  Element where to scroll
+         */
+        scrollTo: function(elm) {
+            elm = InkElement.get(elm);
+            if(elm) {
+                if (elm.scrollIntoView) {
+                    return elm.scrollIntoView();
+                }
+
+                var elmOffset = {},
+                    elmTop = 0, elmLeft = 0;
+
+                do {
+                    elmTop += elm.offsetTop || 0;
+                    elmLeft += elm.offsetLeft || 0;
+
+                    elm = elm.offsetParent;
+                } while(elm);
+
+                elmOffset = {x: elmLeft, y: elmTop};
+
+                window.scrollTo(elmOffset.x, elmOffset.y);
+            }
+        },
+
+        /**
+         * Gets the top cumulative offset for an element
+         *
+         * Requires Ink.Dom.Browser
+         *
+         * @method offsetTop
+         * @param {DOMElement|String} elm  target element
+         * @return {Number} Offset from the target element to the top of the document
+         */
+        offsetTop: function(elm) {
+            return InkElement.offset(elm)[1];
+        },
+
+        /**
+         * Gets the left cumulative offset for an element
+         *
+         * Requires Ink.Dom.Browser
+         *
+         * @method offsetLeft
+         * @param {DOMElement|String} elm  target element
+         * @return {Number} Offset from the target element to the left of the document
+         */
+        offsetLeft: function(elm) {
+            return InkElement.offset(elm)[0];
+        },
+
+        /**
+        * Gets the element offset relative to its closest positioned ancestor
+        *
+        * @method positionedOffset
+        * @param {DOMElement|String} elm  target element
+        * @return {Array} Array with the element offsetleft and offsettop relative to the closest positioned ancestor
+        */
+        positionedOffset: function(element) {
+            var valueTop = 0, valueLeft = 0;
+            element = InkElement.get(element);
+            do {
+                valueTop  += element.offsetTop  || 0;
+                valueLeft += element.offsetLeft || 0;
+                element = element.offsetParent;
+                if (element) {
+                    if (element.tagName.toLowerCase() === &#x27;body&#x27;) { break;  }
+
+                    var value = element.style.position;
+                    if (!value &amp;&amp; element.currentStyle) {
+                        value = element.currentStyle.position;
+                    }
+                    if ((!value || value === &#x27;auto&#x27;) &amp;&amp; typeof getComputedStyle !== &#x27;undefined&#x27;) {
+                        var css = getComputedStyle(element, null);
+                        value = css ? css.position : null;
+                    }
+                    if (value === &#x27;relative&#x27; || value === &#x27;absolute&#x27;) { break;  }
+                }
+            } while (element);
+            return [valueLeft, valueTop];
+        },
+
+        /**
+         * Gets the cumulative offset for an element
+         *
+         * Returns the top left position of the element on the page
+         *
+         * Requires Ink.Dom.Browser
+         *
+         * @method offset
+         * @param {DOMElement|String}   elm     Target element
+         * @return {[Number, Number]}   Array with pixel distance from the target element to the top left corner of the document
+         */
+        offset: function(el) {
+            /*jshint boss:true */
+            el = Ink.i(el);
+            var res = [0, 0];
+            var doc = el.ownerDocument,
+                docElem = doc.documentElement,
+                box = rect(el),
+                body = doc.body,
+                clientTop  = docElem.clientTop  || body.clientTop  || 0,
+                clientLeft = docElem.clientLeft || body.clientLeft || 0,
+                scrollTop  = doc.pageYOffset || docElem.scrollTop  || body.scrollTop,
+                scrollLeft = doc.pageXOffset || docElem.scrollLeft || body.scrollLeft,
+                top  = box.top  + scrollTop  - clientTop,
+                left = box.left + scrollLeft - clientLeft;
+            res = [left, top];
+            return res;
+        },
+
+        /**
+         * Gets the scroll of the element
+         *
+         * @method scroll
+         * @param {DOMElement|String} [elm] target element or document.body
+         * @returns {Array} offset values for x and y scroll
+         */
+        scroll: function(elm) {
+            elm = elm ? Ink.i(elm) : document.body;
+            return [
+                ( ( !window.pageXOffset ) ? elm.scrollLeft : window.pageXOffset ),
+                ( ( !window.pageYOffset ) ? elm.scrollTop : window.pageYOffset )
+            ];
+        },
+
+        _getPropPx: function(cs, prop) {
+            var n, c;
+            var val = cs.getPropertyValue ? cs.getPropertyValue(prop) : cs[prop];
+            if (!val) { n = 0; }
+            else {
+                c = val.indexOf(&#x27;px&#x27;);
+                if (c === -1) { n = 0; }
+                else {
+                    n = parseFloat(val, 10);
+                }
+            }
+
+            //console.log([prop, &#x27; &quot;&#x27;, val, &#x27;&quot; &#x27;, n].join(&#x27;&#x27;));
+
+            return n;
+        },
+
+        /**
+         * Alias for offset()
+         *
+         * @method offset2
+         * @deprecated Kept for historic reasons. Use offset() instead.
+         */
+        offset2: function(el) {
+            return InkElement.offset(el);
+        },
+
+        /**
+         * Verifies the existence of an attribute
+         *
+         * @method hasAttribute
+         * @param {Object} elm   target element
+         * @param {String} attr  attribute name
+         * @return {Boolean} Boolean based on existance of attribute
+         */
+        hasAttribute: function(elm, attr){
+            return elm.hasAttribute ? elm.hasAttribute(attr) : !!elm.getAttribute(attr);
+        },
+        /**
+         * Inserts a element immediately after a target element
+         *
+         * @method insertAfter
+         * @param {DOMElement}         newElm     element to be inserted
+         * @param {DOMElement|String}  targetElm  key element
+         */
+        insertAfter: function(newElm, targetElm) {
+            /*jshint boss:true */
+            if (targetElm = InkElement.get(targetElm)) {
+                if (targetElm.nextSibling !== null) {
+                    targetElm.parentNode.insertBefore(newElm, targetElm.nextSibling);
+                } else {
+                    targetElm.parentNode.appendChild(newElm);
+                }
+            }
+        },
+
+        /**
+         * Inserts an element before a target element
+         *
+         * @method insertBefore
+         * @param {DOMElement}         newElm     element to be inserted
+         * @param {DOMElement|String}  targetElm  key element
+         */
+        insertBefore: function (newElm, targetElm) {
+            /*jshint boss:true */
+            if ( (targetElm = InkElement.get(targetElm)) ) {
+                targetElm.parentNode.insertBefore(newElm, targetElm);
+            }
+        },
+
+        /**
+         * Inserts a element at the top of the childNodes of a target element
+         *
+         * @method insertTop
+         * @param {DOMElement}         newElm     element to be inserted
+         * @param {DOMElement|String}  targetElm  key element
+         */
+        insertTop: function(newElm,targetElm) {
+            /*jshint boss:true */
+            if (targetElm = InkElement.get(targetElm)) {
+                if (targetElm.firstChild) {
+                    targetElm.insertBefore(newElm, targetElm.firstChild);
+                } else {
+                    targetElm.appendChild(newElm);
+                }
+            }
+        },
+
+        /**
+         * Inserts an element after all the child nodes of another element
+         *
+         * @method insertBottom
+         * @param {DOMElement}         newElm     element to be inserted
+         * @param {DOMElement|String}  targetElm  key element
+         */
+        insertBottom: function(newElm,targetElm) {
+            /*jshint boss:true */
+            targetElm.appendChild(newElm);
+        },
+
+        /**
+         * Retrieves textContent from node
+         *
+         * @method innerText
+         * @param {DOMNode} node from which to retreive text from. Can be any node type.
+         * @return {String} the text
+         */
+        textContent: function(node){
+            node = Ink.i(node);
+            var text, k, cs, m;
+
+            switch(node &amp;&amp; node.nodeType) {
+            case 9: /*DOCUMENT_NODE*/
+                // IE quirks mode does not have documentElement
+                return InkElement.textContent(node.documentElement || node.body &amp;&amp; node.body.parentNode || node.body);
+
+            case 1: /*ELEMENT_NODE*/
+                text = node.innerText;
+                if (typeof text !== &#x27;undefined&#x27;) {
+                    return text;
+                }
+                /* falls through */
+            case 11: /*DOCUMENT_FRAGMENT_NODE*/
+                text = node.textContent;
+                if (typeof text !== &#x27;undefined&#x27;) {
+                    return text;
+                }
+
+                if (node.firstChild === node.lastChild) {
+                    // Common case: 0 or 1 children
+                    return InkElement.textContent(node.firstChild);
+                }
+
+                text = [];
+                cs = node.childNodes;
+                for (k = 0, m = cs.length; k &lt; m; ++k) {
+                    text.push( InkElement.textContent( cs[k] ) );
+                }
+                return text.join(&#x27;&#x27;);
+
+            case 3: /*TEXT_NODE*/
+            case 4: /*CDATA_SECTION_NODE*/
+                return node.nodeValue;
+            }
+            return &#x27;&#x27;;
+        },
+
+        /**
+         * Removes all nodes children and adds the text
+         *
+         * @method setTextContent
+         * @param {DOMNode} node    node to add the text to. Can be any node type.
+         * @param {String}  text    text to be appended to the node.
+         */
+        setTextContent: function(node, text){
+            node = Ink.i(node);
+            switch(node &amp;&amp; node.nodeType)
+            {
+            case 1: /*ELEMENT_NODE*/
+                if (&#x27;innerText&#x27; in node) {
+                    node.innerText = text;
+                    break;
+                }
+                /* falls through */
+            case 11: /*DOCUMENT_FRAGMENT_NODE*/
+                if (&#x27;textContent&#x27; in node) {
+                    node.textContent = text;
+                    break;
+                }
+                /* falls through */
+            case 9: /*DOCUMENT_NODE*/
+                while(node.firstChild) {
+                    node.removeChild(node.firstChild);
+                }
+                if (text !== &#x27;&#x27;) {
+                    var doc = node.ownerDocument || node;
+                    node.appendChild(doc.createTextNode(text));
+                }
+                break;
+
+            case 3: /*TEXT_NODE*/
+            case 4: /*CDATA_SECTION_NODE*/
+                node.nodeValue = text;
+                break;
+            }
+        },
+
+        /**
+         * Tells if element is a clickable link
+         *
+         * @method isLink
+         * @param {DOMNode} node    node to check if it&#x27;s link
+         * @return {Boolean}
+         */
+        isLink: function(element){
+            var b = element &amp;&amp; element.nodeType === 1 &amp;&amp; ((/^a|area$/i).test(element.tagName) ||
+                element.hasAttributeNS &amp;&amp; element.hasAttributeNS(&#x27;http://www.w3.org/1999/xlink&#x27;,&#x27;href&#x27;));
+            return !!b;
+        },
+
+        /**
+         * Tells if ancestor is ancestor of node
+         *
+         * @method isAncestorOf
+         * @param {DOMNode} ancestor  ancestor node
+         * @param {DOMNode} node      descendant node
+         * @return {Boolean}
+         */
+        isAncestorOf: function(ancestor, node){
+            /*jshint boss:true */
+            if (!node || !ancestor) {
+                return false;
+            }
+            if (node.compareDocumentPosition) {
+                return (ancestor.compareDocumentPosition(node) &amp; 0x10) !== 0;/*Node.DOCUMENT_POSITION_CONTAINED_BY*/
+            }
+            while (node = node.parentNode){
+                if (node === ancestor){
+                    return true;
+                }
+            }
+            return false;
+        },
+
+        /**
+         * Tells if descendant is descendant of node
+         *
+         * @method descendantOf
+         * @param {DOMNode} node        the ancestor
+         * @param {DOMNode} descendant  the descendant
+         * @return {Boolean} true if &#x27;descendant&#x27; is descendant of &#x27;node&#x27;
+         */
+        descendantOf: function(node, descendant){
+            return node !== descendant &amp;&amp; InkElement.isAncestorOf(node, descendant);
+        },
+
+        /**
+         * Get first child in document order of node type 1
+         * @method firstElementChild
+         * @param {DOMNode} elm parent node
+         * @return {DOMNode} the element child
+         */
+        firstElementChild: function(elm){
+            if(!elm) {
+                return null;
+            }
+            if (&#x27;firstElementChild&#x27; in elm) {
+                return elm.firstElementChild;
+            }
+            var child = elm.firstChild;
+            while(child &amp;&amp; child.nodeType !== 1) {
+                child = child.nextSibling;
+            }
+            return child;
+        },
+
+        /**
+         * Get last child in document order of node type 1
+         * @method lastElementChild
+         * @param {DOMNode} elm parent node
+         * @return {DOMNode} the element child
+         */
+        lastElementChild: function(elm){
+            if(!elm) {
+                return null;
+            }
+            if (&#x27;lastElementChild&#x27; in elm) {
+                return elm.lastElementChild;
+            }
+            var child = elm.lastChild;
+            while(child &amp;&amp; child.nodeType !== 1) {
+                child = child.previousSibling;
+            }
+            return child;
+        },
+
+        /**
+         * Get the first element sibling after the node
+         *
+         * @method nextElementSibling
+         * @param {DOMNode} node  current node
+         * @return {DOMNode|Null} the first element sibling after node or null if none is found
+         */
+        nextElementSibling: function(node){
+            var sibling = null;
+
+            if(!node){ return sibling; }
+
+            if(&quot;nextElementSibling&quot; in node){
+                return node.nextElementSibling;
+            } else {
+                sibling = node.nextSibling;
+
+                // 1 === Node.ELEMENT_NODE
+                while(sibling &amp;&amp; sibling.nodeType !== 1){
+                    sibling = sibling.nextSibling;
+                }
+
+                return sibling;
+            }
+        },
+
+        /**
+         * Get the first element sibling before the node
+         *
+         * @method previousElementSibling
+         * @param {DOMNode}        node  current node
+         * @return {DOMNode|Null} the first element sibling before node or null if none is found
+         */
+        previousElementSibling: function(node){
+            var sibling = null;
+
+            if(!node){ return sibling; }
+
+            if(&quot;previousElementSibling&quot; in node){
+                return node.previousElementSibling;
+            } else {
+                sibling = node.previousSibling;
+
+                // 1 === Node.ELEMENT_NODE
+                while(sibling &amp;&amp; sibling.nodeType !== 1){
+                    sibling = sibling.previousSibling;
+                }
+
+                return sibling;
+            }
+        },
+
+        /**
+         * Returns the width of the given element, in pixels
+         *
+         * @method elementWidth
+         * @param {DOMElement|string} element target DOM element or target ID
+         * @return {Number} the element&#x27;s width
+         */
+        elementWidth: function(element) {
+            if(typeof element === &quot;string&quot;) {
+                element = document.getElementById(element);
+            }
+            return element.offsetWidth;
+        },
+
+        /**
+         * Returns the height of the given element, in pixels
+         *
+         * @method elementHeight
+         * @param {DOMElement|string} element target DOM element or target ID
+         * @return {Number} the element&#x27;s height
+         */
+        elementHeight: function(element) {
+            if(typeof element === &quot;string&quot;) {
+                element = document.getElementById(element);
+            }
+            return element.offsetHeight;
+        },
+
+        /**
+         * Returns the element&#x27;s left position in pixels
+         *
+         * @method elementLeft
+         * @param {DOMElement|string} element target DOM element or target ID
+         * @return {Number} element&#x27;s left position
+         */
+        elementLeft: function(element) {
+            if(typeof element === &quot;string&quot;) {
+                element = document.getElementById(element);
+            }
+            return element.offsetLeft;
+        },
+
+        /**
+         * Returns the element&#x27;s top position in pixels
+         *
+         * @method elementTop
+         * @param {DOMElement|string} element target DOM element or target ID
+         * @return {Number} element&#x27;s top position
+         */
+        elementTop: function(element) {
+            if(typeof element === &quot;string&quot;) {
+                element = document.getElementById(element);
+            }
+            return element.offsetTop;
+        },
+
+        /**
+         * Returns the dimensions of the given element, in pixels
+         *
+         * @method elementDimensions
+         * @param {element} element target element
+         * @return {Array} array with element&#x27;s width and height
+         */
+        elementDimensions: function(element) {
+            element = Ink.i(element);
+            return [element.offsetWidth, element.offsetHeight];
+        },
+
+        /**
+         * Returns the outer (width + margin + padding included) dimensions of an element, in pixels.
+         *
+         * Requires Ink.Dom.Css
+         *
+         * @method outerDimensions
+         * @param {DOMElement} element Target element
+         * @return {Array} Array with element width and height.
+         */
+        outerDimensions: function (element) {
+            var bbox = rect(element);
+
+            var Css = Ink.getModule(&#x27;Ink.Dom.Css_1&#x27;);
+            var getStyle = Ink.bindMethod(Css, &#x27;getStyle&#x27;, element);
+
+            return [
+                bbox.right - bbox.left + parseFloat(getStyle(&#x27;marginLeft&#x27;) || 0) + parseFloat(getStyle(&#x27;marginRight&#x27;) || 0),  // w
+                bbox.bottom - bbox.top + parseFloat(getStyle(&#x27;marginTop&#x27;) || 0) + parseFloat(getStyle(&#x27;marginBottom&#x27;) || 0)  // h
+            ];
+        },
+
+        /**
+         * Check whether an element is inside the viewport
+         *
+         * @method inViewport
+         * @param {DOMElement} element Element to check
+         * @param {Boolean} [partial=false] Return &#x60;true&#x60; even if it is only partially visible.
+         * @return {Boolean}
+         */
+        inViewport: function (element, partial) {
+            var dims = rect(Ink.i(element));
+            if (partial) {
+                return  dims.bottom &gt; 0                        &amp;&amp; // from the top
+                        dims.left &lt; InkElement.viewportWidth()    &amp;&amp; // from the right
+                        dims.top &lt; InkElement.viewportHeight()    &amp;&amp; // from the bottom
+                        dims.right  &gt; 0;                          // from the left
+            } else {
+                return  dims.top &gt; 0                           &amp;&amp; // from the top
+                        dims.right &lt; InkElement.viewportWidth()   &amp;&amp; // from the right
+                        dims.bottom &lt; InkElement.viewportHeight() &amp;&amp; // from the bottom
+                        dims.left  &gt; 0;                           // from the left
+            }
+        },
+
+        /**
+         * Check whether an element is hidden 
+         * Taken from Mootools Element extras ( https://gist.github.com/cheeaun/73342 )
+         * Does not take into account visibility:hidden
+         * @method isHidden
+         * @param {DOMElement} element Element to check
+         * @return {Boolean}
+         */
+
+        isHidden: function (element) {
+            var w = element.offsetWidth, 
+                h = element.offsetHeight,
+                force = (element.tagName.toLowerCase() === &#x27;tr&#x27;);
+
+            var Css = Ink.getModule(&#x27;Ink.Dom.Css_1&#x27;);
+
+            return (w===0 &amp;&amp; h===0 &amp;&amp; !force) ? true :
+                (w!==0 &amp;&amp; h!==0 &amp;&amp; !force) ? false :
+                Css.getStyle(element, &#x27;display&#x27;).toLowerCase() === &#x27;none&#x27;;
+         },
+
+        /**
+         * Check whether an element is visible 
+         *
+         * @method isVisible
+         * @param {DOMElement} element Element to check
+         * @return {Boolean}
+         */
+
+        isVisible: function (element) {
+            return !this.isHidden(element);
+        },
+
+        /**
+         * Applies the cloneFrom&#x27;s dimensions to cloneTo
+         *
+         * @method clonePosition
+         * @param {DOMElement} cloneTo    element to be position cloned
+         * @param {DOMElement} cloneFrom  element to get the cloned position
+         * @return {DOMElement} the element with positionClone
+         */
+        clonePosition: function(cloneTo, cloneFrom){
+            var pos = InkElement.offset(cloneFrom);
+            cloneTo.style.left = pos[0]+&#x27;px&#x27;;
+            cloneTo.style.top = pos[1]+&#x27;px&#x27;;
+
+            return cloneTo;
+        },
+
+        /**
+         * Slices off a piece of text at the end of the element and adds the ellipsis
+         * so all text fits in the element.
+         *
+         * @method ellipsizeText
+         * @param {DOMElement} element     which text is to add the ellipsis
+         * @param {String}     [ellipsis=&#x27;\u2026&#x27;]  String to append to the chopped text
+         */
+        ellipsizeText: function(element, ellipsis){
+            /*jshint boss:true */
+            if (element = Ink.i(element)){
+                while (element &amp;&amp; element.scrollHeight &gt; (element.offsetHeight + 8)) {
+                    element.textContent = element.textContent.replace(/(\s+\S+)\s*$/, ellipsis || &#x27;\u2026&#x27;);
+                }
+            }
+        },
+
+        /**
+         * Searches up the DOM tree for an element fulfilling the boolTest function (returning trueish)
+         *
+         * @method findUpwardsHaving
+         * @param {HtmlElement} element
+         * @param {Function}    boolTest
+         * @return {HtmlElement|false} the matched element or false if did not match
+         */
+        findUpwardsHaving: function(element, boolTest) {
+            while (element &amp;&amp; element.nodeType === 1) {
+                if (boolTest(element)) {
+                    return element;
+                }
+                element = element.parentNode;
+            }
+            return false;
+        },
+
+        /**
+         * Śearches up the DOM tree for an element of specified class name
+         *
+         * @method findUpwardsByClass
+         * @param {HtmlElement} element
+         * @param {String}      className
+         * @returns {HtmlElement|false} the matched element or false if did not match
+         */
+        findUpwardsByClass: function(element, className) {
+            var re = new RegExp(&quot;(^|\\s)&quot; + className + &quot;(\\s|$)&quot;);
+            var tst = function(el) {
+                var cls = el.className;
+                return cls &amp;&amp; re.test(cls);
+            };
+            return InkElement.findUpwardsHaving(element, tst);
+        },
+
+        /**
+         * Śearches up the DOM tree for an element of specified tag
+         *
+         * @method findUpwardsByTag
+         * @param {HtmlElement} element
+         * @param {String}      tag
+         * @returns {HtmlElement|false} the matched element or false if did not match
+         */
+        findUpwardsByTag: function(element, tag) {
+            tag = tag.toUpperCase();
+            var tst = function(el) {
+                return el.nodeName &amp;&amp; el.nodeName.toUpperCase() === tag;
+            };
+            return InkElement.findUpwardsHaving(element, tst);
+        },
+
+        /**
+         * Śearches up the DOM tree for an element of specified id
+         *
+         * @method findUpwardsById
+         * @param {HtmlElement} element
+         * @param {String}      id
+         * @returns {HtmlElement|false} the matched element or false if did not match
+         */
+        findUpwardsById: function(element, id) {
+            var tst = function(el) {
+                return el.id === id;
+            };
+            return InkElement.findUpwardsHaving(element, tst);
+        },
+
+        /**
+         * Śearches up the DOM tree for an element matching the given selector
+         *
+         * @method findUpwardsBySelector
+         * @param {HtmlElement} element
+         * @param {String}      sel
+         * @returns {HtmlElement|false} the matched element or false if did not match
+         */
+        findUpwardsBySelector: function(element, sel) {
+            var Selector = Ink.getModule(&#x27;Ink.Dom.Selector&#x27;);
+            if (!Selector) {
+                throw new Error(&#x27;This method requires Ink.Dom.Selector&#x27;);
+            }
+            var tst = function(el) {
+                return Selector.matchesSelector(el, sel);
+            };
+            return InkElement.findUpwardsHaving(element, tst);
+        },
+
+        /**
+         * Returns trimmed text content of descendants
+         *
+         * @method getChildrenText
+         * @param {DOMElement}  el          element being seeked
+         * @param {Boolean}     [removeIt]  whether to remove the found text nodes or not
+         * @return {String} text found
+         */
+        getChildrenText: function(el, removeIt) {
+            var node,
+                j,
+                part,
+                nodes = el.childNodes,
+                jLen = nodes.length,
+                text = &#x27;&#x27;;
+
+            if (!el) {
+                return text;
+            }
+
+            for (j = 0; j &lt; jLen; ++j) {
+                node = nodes[j];
+                if (!node) {    continue;   }
+                if (node.nodeType === 3) {  // TEXT NODE
+                    part = InkElement._trimString( String(node.data) );
+                    if (part.length &gt; 0) {
+                        text += part;
+                        if (removeIt) { el.removeChild(node);   }
+                    }
+                    else {  el.removeChild(node);   }
+                }
+            }
+
+            return text;
+        },
+
+        /**
+         * String trim implementation
+         * Used by getChildrenText
+         *
+         * function _trimString
+         * param {String} text
+         * return {String} trimmed text
+         */
+        _trimString: function(text) {
+            return (String.prototype.trim) ? text.trim() : text.replace(/^\s*/, &#x27;&#x27;).replace(/\s*$/, &#x27;&#x27;);
+        },
+
+        /**
+         * Returns the values of a select element
+         *
+         * @method getSelectValues
+         * @param {DomElement|String} select element
+         * @return {Array} selected values
+         */
+        getSelectValues: function (select) {
+            var selectEl = Ink.i(select);
+            var values = [];
+            for (var i = 0; i &lt; selectEl.options.length; ++i) {
+                values.push( selectEl.options[i].value );
+            }
+            return values;
+        },
+
+
+        /* used by fills */
+        _normalizeData: function(data) {
+            var d, data2 = [];
+            for (var i = 0, f = data.length; i &lt; f; ++i) {
+                d = data[i];
+
+                if (!(d instanceof Array)) {    // if not array, wraps primitive twice:     val -&gt; [val, val]
+                    d = [d, d];
+                }
+                else if (d.length === 1) {      // if 1 element array:                      [val] -&gt; [val, val]
+                    d.push(d[0]);
+                }
+                data2.push(d);
+            }
+            return data2;
+        },
+
+
+        /**
+         * Fills select element with choices
+         *
+         * @method fillSelect
+         * @param {DomElement|String}  container       select element which will get filled
+         * @param {Array}              data            data which will populate the component
+         * @param {Boolean}            [skipEmpty]     true to skip empty option
+         * @param {String|Number}      [defaultValue]  primitive value to select at beginning
+         */
+        fillSelect: function(container, data, skipEmpty, defaultValue) {
+            var containerEl = Ink.i(container);
+            if (!containerEl) {   return; }
+
+            containerEl.innerHTML = &#x27;&#x27;;
+            var d, optionEl;
+
+            if (!skipEmpty) {
+                // add initial empty option
+                optionEl = document.createElement(&#x27;option&#x27;);
+                optionEl.setAttribute(&#x27;value&#x27;, &#x27;&#x27;);
+                containerEl.appendChild(optionEl);
+            }
+
+            data = InkElement._normalizeData(data);
+
+            for (var i = 0, f = data.length; i &lt; f; ++i) {
+                d = data[i];
+
+                optionEl = document.createElement(&#x27;option&#x27;);
+                optionEl.setAttribute(&#x27;value&#x27;, d[0]);
+                if (d.length &gt; 2) {
+                    optionEl.setAttribute(&#x27;extra&#x27;, d[2]);
+                }
+                optionEl.appendChild( document.createTextNode(d[1]) );
+
+                if (d[0] === defaultValue) {
+                    optionEl.setAttribute(&#x27;selected&#x27;, &#x27;selected&#x27;);
+                }
+
+                containerEl.appendChild(optionEl);
+            }
+        },
+
+
+        /**
+         * Select element on steroids - allows the creation of new values
+         *
+         * @method fillSelect2
+         * @param {DomElement|String} ctn select element which will get filled
+         * @param {Object} opts
+         * @param {Array}                      [opts.data]               data which will populate the component
+         * @param {Boolean}                    [opts.skipEmpty]          if true empty option is not created (defaults to false)
+         * @param {String}                     [opts.emptyLabel]         label to display on empty option
+         * @param {String}                     [opts.createLabel]        label to display on create option
+         * @param {String}                     [opts.optionsGroupLabel]  text to display on group surrounding value options
+         * @param {String}                     [opts.defaultValue]       option to select initially
+         * @param {Function(selEl, addOptFn)}  [opts.onCreate]           callback that gets called once user selects the create option
+         */
+        fillSelect2: function(ctn, opts) {
+            ctn = Ink.i(ctn);
+            ctn.innerHTML = &#x27;&#x27;;
+
+            var defs = {
+                skipEmpty:              false,
+                skipCreate:             false,
+                emptyLabel:             &#x27;none&#x27;,
+                createLabel:            &#x27;create&#x27;,
+                optionsGroupLabel:      &#x27;groups&#x27;,
+                emptyOptionsGroupLabel: &#x27;none exist&#x27;,
+                defaultValue:           &#x27;&#x27;
+            };
+            if (!opts) {      throw &#x27;param opts is a requirement!&#x27;;   }
+            if (!opts.data) { throw &#x27;opts.data is a requirement!&#x27;;    }
+            opts = Ink.extendObj(defs, opts);
+
+            var optionEl, d;
+
+            var optGroupValuesEl = document.createElement(&#x27;optgroup&#x27;);
+            optGroupValuesEl.setAttribute(&#x27;label&#x27;, opts.optionsGroupLabel);
+
+            opts.data = InkElement._normalizeData(opts.data);
+
+            if (!opts.skipCreate) {
+                opts.data.unshift([&#x27;$create$&#x27;, opts.createLabel]);
+            }
+
+            if (!opts.skipEmpty) {
+                opts.data.unshift([&#x27;&#x27;, opts.emptyLabel]);
+            }
+
+            for (var i = 0, f = opts.data.length; i &lt; f; ++i) {
+                d = opts.data[i];
+
+                optionEl = document.createElement(&#x27;option&#x27;);
+                optionEl.setAttribute(&#x27;value&#x27;, d[0]);
+                optionEl.appendChild( document.createTextNode(d[1]) );
+
+                if (d[0] === opts.defaultValue) {   optionEl.setAttribute(&#x27;selected&#x27;, &#x27;selected&#x27;);  }
+
+                if (d[0] === &#x27;&#x27; || d[0] === &#x27;$create$&#x27;) {
+                    ctn.appendChild(optionEl);
+                }
+                else {
+                    optGroupValuesEl.appendChild(optionEl);
+                }
+            }
+
+            var lastValIsNotOption = function(data) {
+                var lastVal = data[data.length-1][0];
+                return (lastVal === &#x27;&#x27; || lastVal === &#x27;$create$&#x27;);
+            };
+
+            if (lastValIsNotOption(opts.data)) {
+                optionEl = document.createElement(&#x27;option&#x27;);
+                optionEl.setAttribute(&#x27;value&#x27;, &#x27;$dummy$&#x27;);
+                optionEl.setAttribute(&#x27;disabled&#x27;, &#x27;disabled&#x27;);
+                optionEl.appendChild(   document.createTextNode(opts.emptyOptionsGroupLabel)    );
+                optGroupValuesEl.appendChild(optionEl);
+            }
+
+            ctn.appendChild(optGroupValuesEl);
+
+            var addOption = function(v, l) {
+                var optionEl = ctn.options[ctn.options.length - 1];
+                if (optionEl.getAttribute(&#x27;disabled&#x27;)) {
+                    optionEl.parentNode.removeChild(optionEl);
+                }
+
+                // create it
+                optionEl = document.createElement(&#x27;option&#x27;);
+                optionEl.setAttribute(&#x27;value&#x27;, v);
+                optionEl.appendChild(   document.createTextNode(l)  );
+                optGroupValuesEl.appendChild(optionEl);
+
+                // select it
+                ctn.options[ctn.options.length - 1].setAttribute(&#x27;selected&#x27;, true);
+            };
+
+            if (!opts.skipCreate) {
+                ctn.onchange = function() {
+                    if ((ctn.value === &#x27;$create$&#x27;) &amp;&amp; (typeof opts.onCreate === &#x27;function&#x27;)) {  opts.onCreate(ctn, addOption);  }
+                };
+            }
+        },
+
+
+        /**
+         * Creates set of radio buttons, returns wrapper
+         *
+         * @method fillRadios
+         * @param {DomElement|String}  insertAfterEl   element which will precede the input elements
+         * @param {String}             name            name to give to the form field ([] is added if not as suffix already)
+         * @param {Array}              data            data which will populate the component
+         * @param {Boolean}            [skipEmpty]     true to skip empty option
+         * @param {String|Number}      [defaultValue]  primitive value to select at beginning
+         * @param {String}             [splitEl]       name of element to add after each input element (example: &#x27;br&#x27;)
+         * @return {DOMElement} wrapper element around radio buttons
+         */
+        fillRadios: function(insertAfterEl, name, data, skipEmpty, defaultValue, splitEl) {
+            var afterEl = Ink.i(insertAfterEl);
+            afterEl = afterEl.nextSibling;
+            while (afterEl &amp;&amp; afterEl.nodeType !== 1) {
+                afterEl = afterEl.nextSibling;
+            }
+            var containerEl = document.createElement(&#x27;span&#x27;);
+            if (afterEl) {
+                afterEl.parentNode.insertBefore(containerEl, afterEl);
+            } else {
+                Ink.i(insertAfterEl).appendChild(containerEl);
+            }
+
+            data = InkElement._normalizeData(data);
+
+            if (name.substring(name.length - 1) !== &#x27;]&#x27;) {
+                name += &#x27;[]&#x27;;
+            }
+
+            var d, inputEl;
+
+            if (!skipEmpty) {
+                // add initial empty option
+                inputEl = document.createElement(&#x27;input&#x27;);
+                inputEl.setAttribute(&#x27;type&#x27;, &#x27;radio&#x27;);
+                inputEl.setAttribute(&#x27;name&#x27;, name);
+                inputEl.setAttribute(&#x27;value&#x27;, &#x27;&#x27;);
+                containerEl.appendChild(inputEl);
+                if (splitEl) {  containerEl.appendChild( document.createElement(splitEl) ); }
+            }
+
+            for (var i = 0; i &lt; data.length; ++i) {
+                d = data[i];
+
+                inputEl = document.createElement(&#x27;input&#x27;);
+                inputEl.setAttribute(&#x27;type&#x27;, &#x27;radio&#x27;);
+                inputEl.setAttribute(&#x27;name&#x27;, name);
+                inputEl.setAttribute(&#x27;value&#x27;, d[0]);
+                containerEl.appendChild(inputEl);
+                containerEl.appendChild( document.createTextNode(d[1]) );
+                if (splitEl) {  containerEl.appendChild( document.createElement(splitEl) ); }
+
+                if (d[0] === defaultValue) {
+                    inputEl.checked = true;
+                }
+            }
+
+            return containerEl;
+        },
+
+
+        /**
+         * Creates set of checkbox buttons, returns wrapper
+         *
+         * @method fillChecks
+         * @param {DomElement|String}  insertAfterEl   element which will precede the input elements
+         * @param {String}             name            name to give to the form field ([] is added if not as suffix already)
+         * @param {Array}              data            data which will populate the component
+         * @param {Boolean}            [skipEmpty]     true to skip empty option
+         * @param {String|Number}      [defaultValue]  primitive value to select at beginning
+         * @param {String}             [splitEl]       name of element to add after each input element (example: &#x27;br&#x27;)
+         * @return {DOMElement} wrapper element around checkboxes
+         */
+        fillChecks: function(insertAfterEl, name, data, defaultValue, splitEl) {
+            var afterEl = Ink.i(insertAfterEl);
+            afterEl = afterEl.nextSibling;
+            while (afterEl &amp;&amp; afterEl.nodeType !== 1) {
+                afterEl = afterEl.nextSibling;
+            }
+            var containerEl = document.createElement(&#x27;span&#x27;);
+            if (afterEl) {
+                afterEl.parentNode.insertBefore(containerEl, afterEl);
+            } else {
+                Ink.i(insertAfterEl).appendChild(containerEl);
+            }
+
+            data = InkElement._normalizeData(data);
+
+            if (name.substring(name.length - 1) !== &#x27;]&#x27;) {
+                name += &#x27;[]&#x27;;
+            }
+
+            var d, inputEl;
+
+            for (var i = 0; i &lt; data.length; ++i) {
+                d = data[i];
+
+                inputEl = document.createElement(&#x27;input&#x27;);
+                inputEl.setAttribute(&#x27;type&#x27;, &#x27;checkbox&#x27;);
+                inputEl.setAttribute(&#x27;name&#x27;, name);
+                inputEl.setAttribute(&#x27;value&#x27;, d[0]);
+                containerEl.appendChild(inputEl);
+                containerEl.appendChild( document.createTextNode(d[1]) );
+                if (splitEl) {  containerEl.appendChild( document.createElement(splitEl) ); }
+
+                if (d[0] === defaultValue) {
+                    inputEl.checked = true;
+                }
+            }
+
+            return containerEl;
+        },
+
+
+        /**
+         * Returns index of element from parent, -1 if not child of parent...
+         *
+         * @method parentIndexOf
+         * @param {DOMElement}  parentEl  Element to parse
+         * @param {DOMElement}  childEl   Child Element to look for
+         * @return {Number}
+         */
+        parentIndexOf: function(parentEl, childEl) {
+            var node, idx = 0;
+            for (var i = 0, f = parentEl.childNodes.length; i &lt; f; ++i) {
+                node = parentEl.childNodes[i];
+                if (node.nodeType === 1) {  // ELEMENT
+                    if (node === childEl) { return idx; }
+                    ++idx;
+                }
+            }
+            return -1;
+        },
+
+
+        /**
+         * Returns an array of elements - the next siblings
+         *
+         * @method nextSiblings
+         * @param {String|DomElement} elm element
+         * @return {Array} Array of next sibling elements
+         */
+        nextSiblings: function(elm) {
+            if(typeof(elm) === &quot;string&quot;) {
+                elm = document.getElementById(elm);
+            }
+            if(typeof(elm) === &#x27;object&#x27; &amp;&amp; elm !== null &amp;&amp; elm.nodeType &amp;&amp; elm.nodeType === 1) {
+                var elements = [],
+                    siblings = elm.parentNode.children,
+                    index    = InkElement.parentIndexOf(elm.parentNode, elm);
+
+                for(var i = ++index, len = siblings.length; i&lt;len; i++) {
+                    elements.push(siblings[i]);
+                }
+
+                return elements;
+            }
+            return [];
+        },
+
+
+        /**
+         * Returns an array of elements - the previous siblings
+         *
+         * @method previousSiblings
+         * @param {String|DomElement} elm element
+         * @return {Array} Array of previous sibling elements
+         */
+        previousSiblings: function(elm) {
+            if(typeof(elm) === &quot;string&quot;) {
+                elm = document.getElementById(elm);
+            }
+            if(typeof(elm) === &#x27;object&#x27; &amp;&amp; elm !== null &amp;&amp; elm.nodeType &amp;&amp; elm.nodeType === 1) {
+                var elements    = [],
+                    siblings    = elm.parentNode.children,
+                    index       = InkElement.parentIndexOf(elm.parentNode, elm);
+
+                for(var i = 0, len = index; i&lt;len; i++) {
+                    elements.push(siblings[i]);
+                }
+
+                return elements;
+            }
+            return [];
+        },
+
+
+        /**
+         * Returns an array of elements - its siblings
+         *
+         * @method siblings
+         * @param {String|DomElement} elm element
+         * @return {Array} Array of sibling elements
+         */
+        siblings: function(elm) {
+            if(typeof(elm) === &quot;string&quot;) {
+                elm = document.getElementById(elm);
+            }
+            if(typeof(elm) === &#x27;object&#x27; &amp;&amp; elm !== null &amp;&amp; elm.nodeType &amp;&amp; elm.nodeType === 1) {
+                var elements   = [],
+                    siblings   = elm.parentNode.children;
+
+                for(var i = 0, len = siblings.length; i&lt;len; i++) {
+                    if(elm !== siblings[i]) {
+                        elements.push(siblings[i]);
+                    }
+                }
+
+                return elements;
+            }
+            return [];
+        },
+
+        /**
+         * fallback to elem.childElementCount
+         *
+         * @method childElementCount
+         * @param {String|DomElement} elm element
+         * @return {Number} number of child elements
+         */
+        childElementCount: function(elm) {
+            elm = Ink.i(elm);
+            if (&#x27;childElementCount&#x27; in elm) {
+                return elm.childElementCount;
+            }
+            if (!elm) { return 0; }
+            return InkElement.siblings(elm).length + 1;
+        },
+
+        _wrapElements: {
+            TABLE: function (div, html) {
+                /* If we don&#x27;t create a tbody, IE7 does that for us. Adding a tbody with a random string and then filtering for that random string is the only way to avoid double insertion of tbodies. */
+                if (browserCreatesTbodies) {
+                    div.innerHTML = &quot;&lt;table&gt;&quot; + html + &quot;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&quot; + deleteThisTbodyToken + &quot;&lt;/tr&gt;&lt;/td&gt;&lt;/tbody&gt;&lt;/table&gt;&quot;;
+                } else {
+                    div.innerHTML = &quot;&lt;table&gt;&quot; + html + &quot;&lt;/table&gt;&quot;;
+                }
+                return div.firstChild;
+            },
+            TBODY: function (div, html) {
+                div.innerHTML = &#x27;&lt;table&gt;&lt;tbody&gt;&#x27; + html + &#x27;&lt;/tbody&gt;&lt;/table&gt;&#x27;;
+                return div.firstChild.getElementsByTagName(&#x27;tbody&#x27;)[0];
+            },
+            THEAD: function (div, html) {
+                div.innerHTML = &#x27;&lt;table&gt;&lt;thead&gt;&#x27; + html + &#x27;&lt;/thead&gt;&lt;tbody&gt;&lt;/tbody&gt;&lt;/table&gt;&#x27;;
+                return div.firstChild.getElementsByTagName(&#x27;thead&#x27;)[0];
+            },
+            TFOOT: function (div, html) {
+                div.innerHTML = &#x27;&lt;table&gt;&lt;tfoot&gt;&#x27; + html + &#x27;&lt;/tfoot&gt;&lt;tbody&gt;&lt;/tbody&gt;&lt;/table&gt;&#x27;;
+                return div.firstChild.getElementsByTagName(&#x27;tfoot&#x27;)[0];
+            },
+            TR: function (div, html) {
+                div.innerHTML = &#x27;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&#x27; + html + &#x27;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&#x27;;
+                return div.firstChild.firstChild.firstChild;
+            }
+        },
+
+        /**
+         * Gets a wrapper DIV with a certain HTML content for being inserted in &#x60;elm&#x60;.
+         * Necessary for appendHTML,prependHTML functions, because they need a container element to copy the children from.
+         *
+         * Works around IE table quirks
+         * @method _getWrapper
+         * @private
+         * @param elm
+         * @param html
+         */
+        _getWrapper: function (elm, html) {
+            var nodeName = elm.nodeName &amp;&amp; elm.nodeName.toUpperCase();
+            var wrapper = document.createElement(&#x27;div&#x27;);
+            var wrapFunc = InkElement._wrapElements[nodeName];
+
+            if ( !wrapFunc ) {
+                wrapper.innerHTML = html;
+                return wrapper;
+            }
+            // special cases
+            wrapper = wrapFunc(wrapper, html);
+            // worst case: tbody auto-creation even when our HTML has a tbody.
+            if (browserCreatesTbodies &amp;&amp; nodeName === &#x27;TABLE&#x27;) {
+                // terrible case. Deal with tbody creation too.
+                var tds = wrapper.getElementsByTagName(&#x27;td&#x27;);
+                for (var i = 0, len = tds.length; i &lt; len; i++) {
+                    if (tds[i].innerHTML === deleteThisTbodyToken) {
+                        var tbody = tds[i].parentNode.parentNode;
+                        tbody.parentNode.removeChild(tbody);
+                    }
+                }
+            }
+            return wrapper;
+        },
+
+        /**
+         * parses and appends an html string to a container, not destroying its contents
+         *
+         * @method appendHTML
+         * @param {String|DomElement} elm   element
+         * @param {String}            html  markup string
+         */
+        appendHTML: function(elm, html){
+            var wrapper = InkElement._getWrapper(elm, html);
+            while (wrapper.firstChild) {
+                elm.appendChild(wrapper.firstChild);
+            }
+        },
+
+        /**
+         * parses and prepends an html string to a container, not destroying its contents
+         *
+         * @method prependHTML
+         * @param {String|DomElement} elm   element
+         * @param {String}            html  markup string
+         */
+        prependHTML: function(elm, html){
+            var wrapper = InkElement._getWrapper(elm, html);
+            while (wrapper.lastChild) {
+                elm.insertBefore(wrapper.lastChild, elm.firstChild);
+            }
+        },
+
+        /**
+         * sets the Inner HTML of an element to the given HTML string
+         *
+         * @method setHTML
+         * @param {String|DomElement} elm   element
+         * @param {String}            html  markup string
+         */
+        setHTML: function (elm, html) {
+            try {
+                elm.innerHTML = html;
+            } catch (e) {
+                // Tables in IE7
+                while (elm.firstChild) {
+                    elm.removeChild(elm.firstChild);
+                }
+                InkElement.appendHTML(elm, html);
+            }
+        },
+
+        /**
+         * Wraps an element inside a container.
+         *
+         * The container may or may not be in the document yet.
+         *
+         * @method wrap
+         * @param {String|DomElement}   target Element to be wrapped
+         * @param {String|DomElement}   container Element to wrap the target
+         * @return Container element
+         *
+         * @example
+         * before:
+         *
+         *     &lt;div id=&quot;target&quot;&gt;&lt;/div&gt;
+         *
+         * call this function to wrap #target with a wrapper div.
+         *
+         *     InkElement.wrap(&#x27;target&#x27;, InkElement.create(&#x27;div&#x27;, {id: &#x27;container&#x27;});
+         * 
+         * after: 
+         *
+         *     &lt;div id=&quot;container&quot;&gt;&lt;div id=&quot;target&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+         */
+        wrap: function (target, container) {
+            target = Ink.i(target);
+            container = Ink.i(container);
+            
+            var nextNode = target.nextSibling;
+            var parent = target.parentNode;
+
+            container.appendChild(target);
+
+            if (nextNode !== null) {
+                parent.insertBefore(container, nextNode);
+            } else {
+                parent.appendChild(container);
+            }
+
+            return container;
+        },
+
+        /**
+         * Pulls an element out of its wrapper.
+         *
+         * @method unwrap
+         * @param elem The element you&#x27;re trying to unwrap. This should be a child of the wrapper.
+         * @param {String} [wrapperSelector] Use this if you want to find your wrapper (if &#x60;elem&#x60; is inside several layers of wrappers).
+         *
+         * @example
+         *
+         * When you have this:
+         *
+         *      &lt;div id=&quot;wrapper&quot;&gt;
+         *          &lt;div id=&quot;unwrapMe&quot;&gt;&lt;/div&gt;
+         *      &lt;/div&gt;
+         *
+         * If you do this:
+         *
+         *      InkElement.unwrap(&#x27;unwrapMe&#x27;);
+         *
+         * You get this:
+         *
+         *      &lt;div id=&quot;unwrapMe&quot;&gt;&lt;/div&gt;
+         *      &lt;div id=&quot;wrapper&quot;&gt;&lt;/div&gt;
+         *      
+         **/
+        unwrap: function (elem, wrapperSelector) {
+            elem = Ink.i(elem);
+            var wrapper;
+            if (wrapperSelector) {
+                wrapper = InkElement.findUpwardsBySelector(elem, wrapperSelector);
+            } else {
+                wrapper = elem.parentNode;
+            }
+            if (!wrapper || !wrapper.parentNode) { return; }
+
+            InkElement.insertBefore(elem, wrapper);
+        },
+
+        /**
+         * Replaces an element with another.
+         *
+         * @method replace
+         * @param element The element to be replaced.
+         * @param replacement The new element.
+         *
+         * @example
+         *       var newelement1 = InkElement.create(&#x27;div&#x27;);
+         *       // ...
+         *       replace(Ink.i(&#x27;element1&#x27;), newelement1);
+         */
+        replace: function (element, replacement) {
+            InkElement.insertBefore(replacement, element);
+            InkElement.remove(element);
+        },
+
+        /**
+         * Removes direct children on type text.
+         * Useful to remove nasty layout gaps generated by whitespace on the markup.
+         *
+         * @method removeTextNodeChildren
+         * @param  {DOMElement} el
+         */
+        removeTextNodeChildren: function(el) {
+            var prevEl, toRemove, parent = el;
+            el = el.firstChild;
+            while (el) {
+                toRemove = (el.nodeType === 3);
+                prevEl = el;
+                el = el.nextSibling;
+                if (toRemove) {
+                    parent.removeChild(prevEl);
+                }
+            }
+        },
+
+        /**
+         * Pass an HTML string and receive a documentFragment with the corresponding elements
+         * @method htmlToFragment
+         * @param  {String} html  html string
+         * @return {DocumentFragment} DocumentFragment containing all of the elements from the html string
+         */
+        htmlToFragment: (createContextualFragmentSupport ?
+            function(html){
+                var range;
+
+                if(typeof html !== &#x27;string&#x27;){ return document.createDocumentFragment(); }
+
+                range = document.createRange();
+
+                // set the context to document.body (firefox does this already, webkit doesn&#x27;t)
+                range.selectNode(document.body);
+
+                return range.createContextualFragment(html);
+            } : function (html) {
+                var fragment = document.createDocumentFragment(),
+                    tempElement,
+                    current;
+
+                if(typeof html !== &#x27;string&#x27;){ return fragment; }
+
+                tempElement = document.createElement(&#x27;div&#x27;);
+                tempElement.innerHTML = html;
+
+                // append child removes elements from the original parent
+                while( (current = tempElement.firstChild) ){ // intentional assignment
+                    fragment.appendChild(current);
+                }
+
+                return fragment;
+            }),
+
+        _camelCase: function(str)
+        {
+            return str ? str.replace(/-(\w)/g, function (_, $1){
+                return $1.toUpperCase();
+            }) : str;
+        },
+
+        /**
+         * Gets all of the data attributes from an element
+         *
+         * @method data
+         * @param {String|DomElement} selector Element or CSS selector
+         * @return {Object} Object with the data-* properties. If no data-attributes are present, an empty object is returned.
+        */
+        data: function(selector) {
+            var el;
+            if (typeof selector !== &#x27;object&#x27; &amp;&amp; typeof selector !== &#x27;string&#x27;) {
+                throw &#x27;[Ink.Dom.Element.data] :: Invalid selector defined&#x27;;
+            }
+
+            if (typeof selector === &#x27;object&#x27;) {
+                el = selector;
+            }
+            else {
+                var InkDomSelector = Ink.getModule(&#x27;Ink.Dom.Selector&#x27;, 1);
+                if (!InkDomSelector) {
+                    throw &quot;[Ink.Dom.Element.data] :: this method requires Ink.Dom.Selector - v1&quot;;
+                }
+                el = InkDomSelector.select(selector);
+                if (el.length &lt;= 0) {
+                    throw &quot;[Ink.Dom.Element.data] :: Can&#x27;t find any element with the specified selector&quot;;
+                }
+                el = el[0];
+            }
+
+            var dataset = {};
+            var attrs = el.attributes || [];
+
+            var curAttr, curAttrName, curAttrValue;
+            if (attrs) {
+                for (var i = 0, total = attrs.length; i &lt; total; ++i) {
+                    curAttr = attrs[i];
+                    curAttrName = curAttr.name;
+                    curAttrValue = curAttr.value;
+                    if (curAttrName &amp;&amp; curAttrName.indexOf(&#x27;data-&#x27;) === 0) {
+                        dataset[InkElement._camelCase(curAttrName.replace(&#x27;data-&#x27;, &#x27;&#x27;))] = curAttrValue;
+                    }
+                }
+            }
+
+            return dataset;
+        },
+
+        /**
+         * @method moveCursorTo
+         * @param  {Input|Textarea}  el
+         * @param  {Number}          t
+         */
+        moveCursorTo: function(el, t) {
+            if (el.setSelectionRange) {
+                el.setSelectionRange(t, t);
+                //el.focus();
+            }
+            else {
+                var range = el.createTextRange();
+                range.collapse(true);
+                range.moveEnd(  &#x27;character&#x27;, t);
+                range.moveStart(&#x27;character&#x27;, t);
+                range.select();
+            }
+        },
+
+        /**
+         * @method pageWidth
+         * @return {Number} page width
+         */
+        pageWidth: function() {
+            var xScroll;
+
+            if (window.innerWidth &amp;&amp; window.scrollMaxX) {
+                xScroll = window.innerWidth + window.scrollMaxX;
+            } else if (document.body.scrollWidth &gt; document.body.offsetWidth){
+                xScroll = document.body.scrollWidth;
+            } else {
+                xScroll = document.body.offsetWidth;
+            }
+
+            var windowWidth;
+
+            if (window.self.innerWidth) {
+                if(document.documentElement.clientWidth){
+                    windowWidth = document.documentElement.clientWidth;
+                } else {
+                    windowWidth = window.self.innerWidth;
+                }
+            } else if (document.documentElement &amp;&amp; document.documentElement.clientWidth) {
+                windowWidth = document.documentElement.clientWidth;
+            } else if (document.body) {
+                windowWidth = document.body.clientWidth;
+            }
+
+            if(xScroll &lt; windowWidth){
+                return xScroll;
+            } else {
+                return windowWidth;
+            }
+        },
+
+        /**
+         * @method pageHeight
+         * @return {Number} page height
+         */
+        pageHeight: function() {
+            var yScroll;
+
+            if (window.innerHeight &amp;&amp; window.scrollMaxY) {
+                yScroll = window.innerHeight + window.scrollMaxY;
+            } else if (document.body.scrollHeight &gt; document.body.offsetHeight){
+                yScroll = document.body.scrollHeight;
+            } else {
+                yScroll = document.body.offsetHeight;
+            }
+
+            var windowHeight;
+
+            if (window.self.innerHeight) {
+                windowHeight = window.self.innerHeight;
+            } else if (document.documentElement &amp;&amp; document.documentElement.clientHeight) {
+                windowHeight = document.documentElement.clientHeight;
+            } else if (document.body) {
+                windowHeight = document.body.clientHeight;
+            }
+
+            if(yScroll &lt; windowHeight){
+                return windowHeight;
+            } else {
+                return yScroll;
+            }
+        },
+
+       /**
+         * @method viewportWidth
+         * @return {Number} viewport width in pixels
+         */
+        viewportWidth: function() {
+            if(typeof window.innerWidth !== &quot;undefined&quot;) {
+                return window.innerWidth;
+            }
+            if (document.documentElement &amp;&amp; typeof document.documentElement.offsetWidth !== &quot;undefined&quot;) {
+                return document.documentElement.offsetWidth;
+            }
+        },
+
+        /**
+         * @method viewportHeight
+         * @return {Number} viewport height
+         */
+        viewportHeight: function() {
+            if (typeof window.innerHeight !== &quot;undefined&quot;) {
+                return window.innerHeight;
+            }
+            if (document.documentElement &amp;&amp; typeof document.documentElement.offsetHeight !== &quot;undefined&quot;) {
+                return document.documentElement.offsetHeight;
+            }
+        },
+
+        /**
+         * @method scrollWidth
+         * @return {Number} scroll width
+         */
+        scrollWidth: function() {
+            if (typeof window.self.pageXOffset !== &#x27;undefined&#x27;) {
+                return window.self.pageXOffset;
+            }
+            if (typeof document.documentElement !== &#x27;undefined&#x27; &amp;&amp; typeof document.documentElement.scrollLeft !== &#x27;undefined&#x27;) {
+                return document.documentElement.scrollLeft;
+            }
+            return document.body.scrollLeft;
+        },
+
+        /**
+         * @method scrollHeight
+         * @return {Number} scroll height
+         */
+        scrollHeight: function() {
+            if (typeof window.self.pageYOffset !== &#x27;undefined&#x27;) {
+                return window.self.pageYOffset;
+            }
+            if (typeof document.documentElement !== &#x27;undefined&#x27; &amp;&amp; typeof document.documentElement.scrollTop !== &#x27;undefined&#x27;) {
+                return document.documentElement.scrollTop;
+            }
+            return document.body.scrollTop;
+        }
+    };
+
+    return InkElement;
+
+});
+
+    </pre>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+</body>
+</html>

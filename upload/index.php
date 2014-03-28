@@ -77,6 +77,7 @@
 	
 
 	$Html  = '<head>';
+	$Html .= '	<title>.:Pagina de Inclusao de Contratos :.</title>';
 	$Html .= '	<link charset="utf-8" media="screen" type="text/css" href="../ink/css/ink.css" rel="stylesheet">';
 	$Html .= '	<script type="text/javascript" src="../ink/js/ink.js"></script>';
 	$Html .= '	<script type="text/javascript" src="../ink/js/ink.datepicker.pt.js"></script>';
@@ -151,31 +152,38 @@
 	            <button class="modal-close ink-dismiss"></button>
 	            <h4 style="color:orange;">Inclus&atilde;o Arquivo de Contratos</h4>  
 	        </div>
+	            
 	        <div class="modal-body" id="modalContent">
 	            <h5>Por favor selecione o arquivo para Upload</h5>
 	            <p>Informacoes sobre o tamanho do arquivo que sera realizado o Upload.</p>
 	        	<br>
-	        	<button class="ink-button orange" id="btinput"><i class="icon-plus-sign icon-medium"></i></button>
-	         	<span id = "msgCountQuote" style="display:none; margin-left: 15px; color: red;">Deve ter pelo menos um or&ccedil;amento ativo</span>
-                <form name="frmUploadfile" action="uploadfiles.php" method="POST" id="frmUploadfile"  class="ink-form" enctype="multipart/form-data">			       
-		         	<table style="width:80%;">
+	        	
+                <span id = "msgCountQuote" style="display:none; margin-left: 15px; color: red;">Deve ter pelo menos um or&ccedil;amento ativo</span>
+                	<form name="frmUploadfile" action="uploadfiles.php" method="POST" id="frmUploadfile"  class="ink-form" enctype="multipart/form-data">	
+                 		
+			        
+                 	<table style="width:80%;">
 			        	<tr>
 			        		<td>
 			        			<label for="responsavel">Respons&aacute;vel pela Inclus&atilde;o (*)</label>
 						        <div class="control">
 						           	<input type="text" id="inputresponsavel" name="inputresponsavel" class="ink-fv-required">                                    
                                     <span id = "msgResponsavel" style="display:none;color:red; margin-left:15px;"></span>
-						        </div>	
-					        	<table id="uploadtable"></table>
+						        </div>
+						        <br>	
+					        	<div id="uploadtable"></div>
 					        	<br>
-					        	<!--button class="ink-button orange" id="btnConfirm">Confirmar</button -->
-								<input type="submit" name="btnConfirm" id = "btnConfirm" value="Confirmar" class="ink-button success orange" />                                
-					        	<button class="ink-button ink-dismiss" id="btnCancel">Cancelar</button>
 			        		</td>
 			        	</tr>
-			        </table>
-			      </form>
+			        </table>     
 	        </div>
+	        <div class="modal-footer">
+	            <div class="push-right">
+					<input type="button" name="btn" id="btinput" value="Novo Arquivo" class="ink-button" />                               
+					<button class="ink-button ink-dismiss" id="btnCancel">Cancelar</button>		   
+					<input type="submit" name="btnConfirm" id = "btnConfirm" value="Confirmar" class="ink-button success orange" /> 
+	            </div>
+            </div>
 	    </div>
 	</div>
 <script>
@@ -193,13 +201,18 @@ $(document).ready(function(){
   $("#btinput").click(function(){
 	  id++;
     $("#uploadtable").append(
-		'<tr>' +
-		'<td><label for="codigoorcamento">C&oacute;digo Or&ccedil;amento</label>' +
-		'<div class="control"><input type="text" id="inputorcamento'+id.toString()+
-		'" name="inputorcamento'+id.toString()+'" class="ink-fv-required"></div></td>' +
-		'<td><div class="control-group large-33 medium-33 small-100"><label for="file-input">&nbsp</label>'+
-		'<input id="file-input'+id.toString()+'" name="inputfile'+id.toString()+'" type="file"></div></td>'+
-		'<td style="display:none; color:red" id="msg-error'+id.toString()+'">Or&ccedil;amento não pode ser vazio</td></tr>');
+    	'<div> ' +
+			'<label for="codigoorcamento">C&oacute;digo Or&ccedil;amento</label><br>' +
+			'<div class="control" style="float:left;">' +
+				'<input type="text" id="inputorcamento'+id.toString()+'" name="inputorcamento'+id.toString()+'" class="ink-fv-required">' +
+			'</div>' +
+			'<div class="control-group large-33 medium-33 small-100" style="float:right;">' +
+				'<label for="file-input">' +
+				'<input id="file-input'+id.toString()+'" name="inputfile'+id.toString()+'" type="file">' +
+			'</div>' +
+			'<div style="clear:both;"></div>'+
+			'<div style="clear:both;display:none;color:red;" id="msg-error'+id.toString()+'">Or&ccedil;amento não pode ser vazio</div>' +
+		'</div>');
   });
 
   $("#btnConfirm").click(function(event){	  
@@ -224,7 +237,7 @@ function validar(){
 		$('#msgResponsavel').hide();
 	
 	// Validate if there any file browser
-	if($('#uploadtable').find('tbody').length == 0) {
+	if($('#uploadtable').find('div').length == 0) {
 		//$('#msgCountQuote').html('Responsavel requerido');
 		$('#msgCountQuote').show();
 		valid = false;
@@ -233,7 +246,7 @@ function validar(){
 		$('#msgCountQuote').hide();
 			
 	//Validate each file browser individually
-	var quoteElement = $('#uploadtable').find('tbody > tr');
+	var quoteElement = $('#uploadtable').find('div');
 	
 	quoteElement.each(function(index, element) {
         var i = index + 1;
@@ -242,7 +255,7 @@ function validar(){
 		var msg_error = "#msg-error" + i.toString();
 		
 		if($(inputorcamento).val() == '' && $(inputfile).val() == ''){
-			$(msg_error).html("Or&ccedil;amento / Arquivo n&atilde;o pode ser vazio");
+			$(msg_error).html("Or&ccedil;amento e Arquivo n&atilde;o podem ser vazio");
 			$(msg_error).show();
 			valid = false;
 		}

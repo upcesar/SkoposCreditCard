@@ -226,8 +226,8 @@ function validatePayment()
 	var objCodigoSeguranca = document.getElementById('CodigoSeguranca');
 	
 	objMsgCreditNum.style.display = 'none';
-	objMsgMonth.style.display = 'none';
-	objMsgYear.style.display = 'none';
+	// objMsgMonth.style.display = 'none';
+	// objMsgYear.style.display = 'none';
 	objMsgSecNum.style.display = 'none';
 	
 	// Credit card nomber must have all digits
@@ -254,7 +254,11 @@ function validatePayment()
 		objNumDigitSec.innerHTML = objCodigoSeguranca.maxLength;
 		objMsgSecNum.style.display = 'block';
 		validated = false;
-	}	
+	}
+	
+	// Disable buitton if data are valid.
+	if(validated)
+		document.getElementById("btnProcessPayment").disabled = true;	
 
 	return (validated);
 }
@@ -274,9 +278,10 @@ function showPurchaseInfo(){
 	document.getElementById("lblValorDocumentoExibicao").innerHTML = document.getElementById("ValorDocumentoExibicao").value;
 	document.getElementById("lblQuantidadeParcelas").innerHTML = document.getElementById("QuantidadeParcelasExibicao").value;
 	document.getElementById("lblTipoVenda").innerHTML = document.getElementById("TipoVenda").value;
-	if (!document.getElementById("MesValidade").value || !document.getElementById("AnoValidade").value)
+	if (!document.getElementById("MesValidade").value !=="" || !document.getElementById("AnoValidade").value !=="")
 	document.getElementById("lblExpireDate").innerHTML = document.getElementById("MesValidade").value + " / " + document.getElementById("AnoValidade").value;
 }
+
 
 //-->
 </script>
@@ -306,6 +311,8 @@ function showPurchaseInfo(){
     <input type="hidden" id="AnoValidade" name="AnoValidade" value="<#AnoValidade>">
     <input type="hidden" id="MesValidade" name="MesValidade" value="<#MesValidade>">
     <input type="hidden" id="ValorParcela" name="ValorParcela" value="<#ValorParcela>">
+    <input type="hidden" id="EnderecoIPComprador" name="EnderecoIPComprador" value="<#EnderecoIPComprador>">
+    <input type="hidden" id="TransacaoAnt" name="TransacaoAnt" value="<#TransacaoAnt>">
 
 <table  width="50%" align="center">
 	<tr >
@@ -319,7 +326,7 @@ function showPurchaseInfo(){
 			<fieldset>
 				<legend>Dados da Compra</legend>
                 <div id="PaymentData">					
-                    <div id="PurchaseValue" class="InfoCartao">
+                    <div id="PurchaseValue" class="FonteFormulario">
                         <p id="TipoVendaValue">&nbsp;&nbsp;
                            Tipo Venda:&nbsp;<b id="lblTipoVenda"></b>
 						</p>
@@ -332,10 +339,6 @@ function showPurchaseInfo(){
 						<p>&nbsp;&nbsp;
                            N&uacute;mero de Parcelas:&nbsp;<b id="lblQuantidadeParcelas"></b>
 						</p>
-                            <script>
-                            	showPurchaseInfo();
-								formatSaleType();
-                            </script>
                     </div>
 				</div>
 			</fieldset>
@@ -488,6 +491,11 @@ function showPurchaseInfo(){
 		</td>
 	</tr>
 </table>
+<script>
+	showPurchaseInfo();
+	formatSaleType();
+</script>
+
 </form>
 </body>
 </html>

@@ -6,6 +6,36 @@ class Ometz_Default
 	public $validations;
 
 	
+	/**
+	 * Get log file location in the server 
+	 */
+	private function get_url_log(){
+		$url_log = str_replace('httpdocs', 'logs', $_SERVER['DOCUMENT_ROOT']);
+		
+		//Create or map to YEAR folder
+		if(!is_dir($url_log)){
+			mkdir($url_log);
+		}
+			
+		//Check year folder, if it doesn't exist, create it
+		if(!is_dir($url_log.strval(date('Y')) )){
+			mkdir($url_log.strval(date('Y')));
+		}
+		
+		//Check month folder, if it doesn't exist, create it
+		if(!is_dir($url_log.strval(date('Y/m')) )){
+			mkdir($url_log.strval(date('Y/m')));
+		}
+
+		//Check day folder, if it doesn't exist, create it
+		if(!is_dir($url_log.strval(date('Y/m/d')) )){
+			mkdir($url_log.strval(date('Y/m/d')));
+		}
+		
+		return ($url_log.strval(date('Y/m/d')).'/log_cartao_'.strval(date('Ymd')).'.txt');
+		
+	}
+	
 	public function Ometz_Default() {
 
 		$this->model=new Request();
@@ -119,5 +149,45 @@ class Ometz_Default
 			return $varDate->format('Ym').$cutoffDay;
 	}
 
+	/**
+	 * Write log to a TXT file locate in /log folder for further diagnostics.
+	 */
+	public function write_log($module, $description, $type){
+		$url = $this->get_url_log();
+		$str_content = '';
+		
+		if(!file_exists ( $url )){
+			$str_content .= "Date_Time\t\tModule\t\t\t\tDescription\t\t\t\t\t\tType\r\n";			
+			$str_content .= str_repeat("-", 3 * strlen($str_content))."\r\n";
+		}
+		
+		
+						
+		if(strlen($module) > 30)
+			$module = substr($module, 0, 30).'... ';
+		else
+			$module = $module.str_repeat(' ', 30 - strlen($module));
+
+		if(strlen($description) > 70)
+			$description = substr($description, 0, 70).'... ';
+		else
+			$description = $description.str_repeat(' ', 70 - strlen($description));
+
+		
+		$str_content .= strval(date('Y-m-d H:i:s')).str_repeat(' ', 5).$module.$description.$type."\r\n";
+		
+		/*
+		unlink($url);
+		echo($str_content);
+		exit();
+		*/	
+		$handle = fopen($url,'a');
+		
+		fwrite($handle, $str_content);
+		
+		fclose($handle);
+		 
+	}
+	
 	public function init(){}
 }

@@ -17,16 +17,21 @@
 				return $pValue;
 		}
 		
-		public function formatDate($pDate)
+		public function formatDate($pDate, $format = 'Ymd')
 		{
 			date_default_timezone_set("America/Sao_Paulo");
 			$varDate = $pDate; //$_POST["dtpTo"];
 			$varDateR = str_replace('/', '-', $varDate);
-			$ret = date('Ymd', strtotime($varDateR));
+			$ret = date($format, strtotime($varDateR));
 			return ($ret);
 		}
 		
-		function valorPorExtenso($valor=0, $usamoeda = false, $masculino = true, $unidadesingular = "", $unidadeplural = "") {
+		public function format_money($number){
+			setlocale(LC_MONETARY, 'pt_BR');	
+			return (money_format('%.2n', $number));
+		}
+		
+		public function valorPorExtenso($valor=0, $usamoeda = false, $masculino = true, $unidadesingular = "", $unidadeplural = "") {
 						
 			if($usamoeda){			
 				$unidadesingular = "real";

@@ -1,0 +1,1224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Ink/UI/FormValidator/2/lib.js - Ink.js</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+    <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><img src="../yuidoclogo.png" title="Ink.js"></h1>
+            
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: latest</em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <h2 class="off-left">APIs</h2>
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+            <li><a href="#api-modules">Modules</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="../classes/Ink.html">Ink</a></li>
+            
+                <li><a href="../classes/Ink.Dom.Browser.html">Ink.Dom.Browser</a></li>
+            
+                <li><a href="../classes/Ink.Dom.Css.html">Ink.Dom.Css</a></li>
+            
+                <li><a href="../classes/Ink.Dom.Element.html">Ink.Dom.Element</a></li>
+            
+                <li><a href="../classes/Ink.Dom.Event.html">Ink.Dom.Event</a></li>
+            
+                <li><a href="../classes/Ink.Dom.FormSerialize.html">Ink.Dom.FormSerialize</a></li>
+            
+                <li><a href="../classes/Ink.Dom.Loaded.html">Ink.Dom.Loaded</a></li>
+            
+                <li><a href="../classes/Ink.Dom.Selector.html">Ink.Dom.Selector</a></li>
+            
+                <li><a href="../classes/Ink.Namespace.ClassModule.html">Ink.Namespace.ClassModule</a></li>
+            
+                <li><a href="../classes/Ink.Namespace.StaticModule.html">Ink.Namespace.StaticModule</a></li>
+            
+                <li><a href="../classes/Ink.Net.Ajax.html">Ink.Net.Ajax</a></li>
+            
+                <li><a href="../classes/Ink.Net.JsonP.html">Ink.Net.JsonP</a></li>
+            
+                <li><a href="../classes/Ink.UI.Animate_1.html">Ink.UI.Animate_1</a></li>
+            
+                <li><a href="../classes/Ink.UI.Carousel_1.html">Ink.UI.Carousel_1</a></li>
+            
+                <li><a href="../classes/Ink.UI.Close.html">Ink.UI.Close</a></li>
+            
+                <li><a href="../classes/Ink.UI.Common.html">Ink.UI.Common</a></li>
+            
+                <li><a href="../classes/Ink.UI.DatePicker.html">Ink.UI.DatePicker</a></li>
+            
+                <li><a href="../classes/Ink.UI.Draggable.html">Ink.UI.Draggable</a></li>
+            
+                <li><a href="../classes/Ink.UI.Dropdown.html">Ink.UI.Dropdown</a></li>
+            
+                <li><a href="../classes/Ink.UI.Droppable.html">Ink.UI.Droppable</a></li>
+            
+                <li><a href="../classes/Ink.UI.FormValidator.html">Ink.UI.FormValidator</a></li>
+            
+                <li><a href="../classes/Ink.UI.FormValidator_2.html">Ink.UI.FormValidator_2</a></li>
+            
+                <li><a href="../classes/Ink.UI.ImageQuery.html">Ink.UI.ImageQuery</a></li>
+            
+                <li><a href="../classes/Ink.UI.Modal.html">Ink.UI.Modal</a></li>
+            
+                <li><a href="../classes/Ink.UI.Pagination.html">Ink.UI.Pagination</a></li>
+            
+                <li><a href="../classes/Ink.UI.ProgressBar.html">Ink.UI.ProgressBar</a></li>
+            
+                <li><a href="../classes/Ink.UI.SmoothScroller.html">Ink.UI.SmoothScroller</a></li>
+            
+                <li><a href="../classes/Ink.UI.SortableList.html">Ink.UI.SortableList</a></li>
+            
+                <li><a href="../classes/Ink.UI.Spy.html">Ink.UI.Spy</a></li>
+            
+                <li><a href="../classes/Ink.UI.Stacker_1.html">Ink.UI.Stacker_1</a></li>
+            
+                <li><a href="../classes/Ink.UI.Sticky.html">Ink.UI.Sticky</a></li>
+            
+                <li><a href="../classes/Ink.UI.Swipe.html">Ink.UI.Swipe</a></li>
+            
+                <li><a href="../classes/Ink.UI.Table.html">Ink.UI.Table</a></li>
+            
+                <li><a href="../classes/Ink.UI.Tabs.html">Ink.UI.Tabs</a></li>
+            
+                <li><a href="../classes/Ink.UI.TagField.html">Ink.UI.TagField</a></li>
+            
+                <li><a href="../classes/Ink.UI.Toggle.html">Ink.UI.Toggle</a></li>
+            
+                <li><a href="../classes/Ink.UI.Tooltip.html">Ink.UI.Tooltip</a></li>
+            
+                <li><a href="../classes/Ink.UI.TreeView.html">Ink.UI.TreeView</a></li>
+            
+                <li><a href="../classes/Ink.Util.Array.html">Ink.Util.Array</a></li>
+            
+                <li><a href="../classes/Ink.Util.BinPack.html">Ink.Util.BinPack</a></li>
+            
+                <li><a href="../classes/Ink.Util.Cookie.html">Ink.Util.Cookie</a></li>
+            
+                <li><a href="../classes/Ink.Util.Date.html">Ink.Util.Date</a></li>
+            
+                <li><a href="../classes/Ink.Util.Dumper.html">Ink.Util.Dumper</a></li>
+            
+                <li><a href="../classes/Ink.Util.I18n.html">Ink.Util.I18n</a></li>
+            
+                <li><a href="../classes/Ink.Util.Json.html">Ink.Util.Json</a></li>
+            
+                <li><a href="../classes/Ink.Util.String.html">Ink.Util.String</a></li>
+            
+                <li><a href="../classes/Ink.Util.Url.html">Ink.Util.Url</a></li>
+            
+                <li><a href="../classes/Ink.Util.Validator.html">Ink.Util.Validator</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+                <li><a href="../modules/Ink.Dom.Browser_1.html">Ink.Dom.Browser_1</a></li>
+            
+                <li><a href="../modules/Ink.Dom.Css_1.html">Ink.Dom.Css_1</a></li>
+            
+                <li><a href="../modules/Ink.Dom.Element_1.html">Ink.Dom.Element_1</a></li>
+            
+                <li><a href="../modules/Ink.Dom.Event_1.html">Ink.Dom.Event_1</a></li>
+            
+                <li><a href="../modules/Ink.Dom.FormSerialize.html">Ink.Dom.FormSerialize</a></li>
+            
+                <li><a href="../modules/Ink.Dom.Loaded_1.html">Ink.Dom.Loaded_1</a></li>
+            
+                <li><a href="../modules/Ink.Dom.Selector_1.html">Ink.Dom.Selector_1</a></li>
+            
+                <li><a href="../modules/Ink.Namespace.ClassModule_1.html">Ink.Namespace.ClassModule_1</a></li>
+            
+                <li><a href="../modules/Ink.Namespace.StaticModule_1.html">Ink.Namespace.StaticModule_1</a></li>
+            
+                <li><a href="../modules/Ink.Net.Ajax_1.html">Ink.Net.Ajax_1</a></li>
+            
+                <li><a href="../modules/Ink.Net.JsonP_1.html">Ink.Net.JsonP_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Animate_1.html">Ink.UI.Animate_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Carousel_1.html">Ink.UI.Carousel_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Close_1.html">Ink.UI.Close_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Common_1.html">Ink.UI.Common_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.DatePicker_1.html">Ink.UI.DatePicker_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Dropdown_1.html">Ink.UI.Dropdown_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Droppable_1.html">Ink.UI.Droppable_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.FormValidator_1.html">Ink.UI.FormValidator_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.FormValidator_2.html">Ink.UI.FormValidator_2</a></li>
+            
+                <li><a href="../modules/Ink.UI.ImageQuery_1.html">Ink.UI.ImageQuery_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Modal_1.html">Ink.UI.Modal_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Pagination_1.html">Ink.UI.Pagination_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.ProgressBar_1.html">Ink.UI.ProgressBar_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.SmoothScroller_1.html">Ink.UI.SmoothScroller_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.SortableList_1.html">Ink.UI.SortableList_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Spy_1.html">Ink.UI.Spy_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Stacker_1.html">Ink.UI.Stacker_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Sticky_1.html">Ink.UI.Sticky_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Swipe.html">Ink.UI.Swipe</a></li>
+            
+                <li><a href="../modules/Ink.UI.Table_1.html">Ink.UI.Table_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Tabs_1.html">Ink.UI.Tabs_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Toggle_1.html">Ink.UI.Toggle_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Tooltip_1.html">Ink.UI.Tooltip_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.TreeView_1.html">Ink.UI.TreeView_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Array_1.html">Ink.Util.Array_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.BinPack_1.html">Ink.Util.BinPack_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Cookie_1.html">Ink.Util.Cookie_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Date_1.html">Ink.Util.Date_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Dumper_1.html">Ink.Util.Dumper_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.I18n_1.html">Ink.Util.I18n_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Json_1.html">Ink.Util.Json_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.String_1.html">Ink.Util.String_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Url_1.html">Ink.Util.Url_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Validator_1.html">Ink.Util.Validator_1</a></li>
+            
+                <li><a href="../modules/Ink_1.html">Ink_1</a></li>
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+
+
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1 class="file-heading">File: Ink/UI/FormValidator/2/lib.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+/**
+ * @module Ink.UI.FormValidator_2
+ * @author inkdev AT sapo.pt
+ * @version 2
+ */
+Ink.createModule(&#x27;Ink.UI.FormValidator&#x27;, &#x27;2&#x27;, [ &#x27;Ink.UI.Common_1&#x27;,&#x27;Ink.Dom.Element_1&#x27;,&#x27;Ink.Dom.Event_1&#x27;,&#x27;Ink.Dom.Selector_1&#x27;,&#x27;Ink.Dom.Css_1&#x27;,&#x27;Ink.Util.Array_1&#x27;,&#x27;Ink.Util.I18n_1&#x27;,&#x27;Ink.Util.Validator_1&#x27;], function( Common, Element, Event, Selector, Css, InkArray, I18n, InkValidator ) {
+    &#x27;use strict&#x27;;
+
+    /**
+     * Validation Functions to be used
+     * Some functions are a port from PHP, others are the &#x27;best&#x27; solutions available
+     *
+     * @type {Object}
+     * @private
+     * @static
+     */
+    var validationFunctions = {
+
+        /**
+         * Checks if the value is actually defined and is not empty
+         *
+         * @method validationFunctions.required
+         * @param  {String} value Value to be checked
+         * @return {Boolean}       True case is defined, false if it&#x27;s empty or not defined.
+         */
+        &#x27;required&#x27;: function( value ){
+            return ( (typeof value !== &#x27;undefined&#x27;) &amp;&amp; ( !(/^\s*$/).test(value) ) );
+        },
+
+        /**
+         * Checks if the value has a minimum length
+         *
+         * @method validationFunctions.min_length
+         * @param  {String} value   Value to be checked
+         * @param  {String|Number} minSize Number of characters that the value at least must have.
+         * @return {Boolean}         True if the length of value is equal or bigger than the minimum chars defined. False if not.
+         */
+        &#x27;min_length&#x27;: function( value, minSize ){
+            return ( (typeof value === &#x27;string&#x27;) &amp;&amp; ( value.length &gt;= parseInt(minSize,10) ) );
+        },
+
+        /**
+         * Checks if the value has a maximum length
+         *
+         * @method validationFunctions.max_length
+         * @param  {String} value   Value to be checked
+         * @param  {String|Number} maxSize Number of characters that the value at maximum can have.
+         * @return {Boolean}         True if the length of value is equal or smaller than the maximum chars defined. False if not.
+         */
+        &#x27;max_length&#x27;: function( value, maxSize ){
+            return ( (typeof value === &#x27;string&#x27;) &amp;&amp; ( value.length &lt;= parseInt(maxSize,10) ) );
+        },
+
+        /**
+         * Checks if the value has an exact length
+         *
+         * @method validationFunctions.exact_length
+         * @param  {String} value   Value to be checked
+         * @param  {String|Number} exactSize Number of characters that the value must have.
+         * @return {Boolean}         True if the length of value is equal to the size defined. False if not.
+         */
+        &#x27;exact_length&#x27;: function( value, exactSize ){
+            return ( (typeof value === &#x27;string&#x27;) &amp;&amp; ( value.length === parseInt(exactSize,10) ) );
+        },
+
+        /**
+         * Checks if the value has a valid e-mail address
+         *
+         * @method validationFunctions.email
+         * @param  {String} value   Value to be checked
+         * @return {Boolean}         True if the value is a valid e-mail address. False if not.
+         */
+        &#x27;email&#x27;: function( value ){
+            return ( ( typeof value === &#x27;string&#x27; ) &amp;&amp; InkValidator.mail( value ) );
+        },
+
+        /**
+         * Checks if the value has a valid URL
+         *
+         * @method validationFunctions.url
+         * @param  {String} value   Value to be checked
+         * @param  {Boolean} fullCheck Flag that specifies if the value must be validated as a full url (with the protocol) or not.
+         * @return {Boolean}         True if the URL is considered valid. False if not.
+         */
+        &#x27;url&#x27;: function( value, fullCheck ){
+            fullCheck = fullCheck || false;
+            return ( (typeof value === &#x27;string&#x27;) &amp;&amp; InkValidator.url( value, fullCheck ) );
+        },
+
+        /**
+         * Checks if the value is a valid IP. Supports ipv4 and ipv6
+         *
+         * @method validationFunctions.ip
+         * @param  {String} value   Value to be checked
+         * @param  {String} ipType Type of IP to be validated. The values are: ipv4, ipv6. By default is ipv4.
+         * @return {Boolean}         True if the value is a valid IP address. False if not.
+         */
+        &#x27;ip&#x27;: function( value, ipType ){
+            if( typeof value !== &#x27;string&#x27; ){
+                return false;
+            }
+
+            return InkValidator.isIP(value, ipType);
+        },
+
+        /**
+         * Checks if the value is a valid phone number. Supports several countries, based in the Ink.Util.Validator class.
+         *
+         * @method validationFunctions.phone
+         * @param  {String} value   Value to be checked
+         * @param  {String} phoneType Country&#x27;s initials to specify the type of phone number to be validated. Ex: &#x27;AO&#x27;.
+         * @return {Boolean}         True if it&#x27;s a valid phone number. False if not.
+         */
+        &#x27;phone&#x27;: function( value, phoneType ){
+            if( typeof value !== &#x27;string&#x27; ){
+                return false;
+            }
+
+            var countryCode = phoneType ? phoneType.toUpperCase() : &#x27;&#x27;;
+
+            return InkValidator[&#x27;is&#x27; + countryCode + &#x27;Phone&#x27;](value);
+        },
+
+        /**
+         * Checks if it&#x27;s a valid credit card.
+         *
+         * @method validationFunctions.credit_card
+         * @param  {String} value   Value to be checked
+         * @param  {String} cardType Type of credit card to be validated. The card types available are in the Ink.Util.Validator class.
+         * @return {Boolean}         True if the value is a valid credit card number. False if not.
+         */
+        &#x27;credit_card&#x27;: function( value, cardType ){
+            if( typeof value !== &#x27;string&#x27; ){
+                return false;
+            }
+
+            return InkValidator.isCreditCard( value, cardType || &#x27;default&#x27; );
+        },
+
+        /**
+         * Checks if the value is a valid date.
+         *
+         * @method validationFunctions.date
+         * @param  {String} value   Value to be checked
+         * @param  {String} format Specific format of the date.
+         * @return {Boolean}         True if the value is a valid date. False if not.
+         */
+        &#x27;date&#x27;: function( value, format ){
+            return ( (typeof value === &#x27;string&#x27; ) &amp;&amp; InkValidator.isDate(format, value) );
+        },
+
+        /**
+         * Checks if the value only contains alphabetical values.
+         *
+         * @method validationFunctions.alpha
+         * @param  {String} value           Value to be checked
+         * @param  {Boolean} supportSpaces  Allow whitespace
+         * @return {Boolean}                True if the value is alphabetical-only. False if not.
+         */
+        &#x27;alpha&#x27;: function( value, supportSpaces ){
+            return InkValidator.ascii(value, {singleLineWhitespace: supportSpaces});
+        },
+
+        /*
+         * Check that the value contains only printable unicode text characters
+         * from the Basic Multilingual plane (BMP)
+         * Optionally allow punctuation and whitespace
+         *
+         * @method validationFunctions.text
+         * @param {String} value    Value to be checked
+         * @return {Boolean}        Whether the value only contains printable text characters
+         **/
+        &#x27;text&#x27;: function (value, whitespace, punctuation) {
+            return InkValidator.unicode(value, {
+                singleLineWhitespace: whitespace,
+                unicodePunctuation: punctuation});
+        },
+
+        /*
+         * Check that the value contains only printable text characters 
+         * available in the latin-1 encoding.
+         *
+         * Optionally allow punctuation and whitespace
+         *
+         * @method validationFunctions.text
+         * @param {String} value    Value to be checked
+         * @return {Boolean}        Whether the value only contains printable text characters
+         **/
+        &#x27;latin&#x27;: function (value, punctuation, whitespace) {
+            if ( typeof value !== &#x27;string&#x27;) { return false; }
+            return InkValidator.latin1(value, {latin1Punctuation: punctuation, singleLineWhitespace: whitespace});
+        },
+
+        /**
+         * Checks if the value only contains alphabetical and numerical characters.
+         *
+         * @method validationFunctions.alpha_numeric
+         * @param  {String} value   Value to be checked
+         * @return {Boolean}         True if the value is a valid alphanumerical. False if not.
+         */
+        &#x27;alpha_numeric&#x27;: function( value ){
+            return InkValidator.ascii(value, {numbers: true});
+        },
+
+        /**
+         * Checks if the value only contains alphabetical, dash or underscore characteres.
+         *
+         * @method validationFunctions.alpha_dashes
+         * @param  {String} value   Value to be checked
+         * @return {Boolean}         True if the value is a valid. False if not.
+         */
+        &#x27;alpha_dash&#x27;: function( value ){
+            return InkValidator.ascii(value, {dash: true, underscore: true});
+        },
+
+        /**
+         * Checks if the value is a digit (an integer of length = 1).
+         *
+         * @method validationFunctions.digit
+         * @param  {String} value   Value to be checked
+         * @return {Boolean}         True if the value is a valid digit. False if not.
+         */
+        &#x27;digit&#x27;: function( value ){
+            return ((typeof value === &#x27;string&#x27;) &amp;&amp; /^[0-9]{1}$/.test(value));
+        },
+
+        /**
+         * Checks if the value is a valid integer.
+         *
+         * @method validationFunctions.integer
+         * @param  {String} value   Value to be checked
+         * @param  {String} positive Flag that specifies if the integer is must be positive (unsigned).
+         * @return {Boolean}         True if the value is a valid integer. False if not.
+         */
+        &#x27;integer&#x27;: function( value, positive ){
+            return InkValidator.number(value, {
+                negative: !positive,
+                decimalPlaces: 0
+            });
+        },
+
+        /**
+         * Checks if the value is a valid decimal number.
+         *
+         * @method validationFunctions.decimal
+         * @param  {String} value   Value to be checked
+         * @param  {String} decimalSeparator Character that splits the integer part from the decimal one. By default is &#x27;.&#x27;.
+         * @param  {String} [decimalPlaces] Maximum number of digits that the decimal part must have.
+         * @param  {String} [leftDigits] Maximum number of digits that the integer part must have, when provided.
+         * @return {Boolean}         True if the value is a valid decimal number. False if not.
+         */
+        &#x27;decimal&#x27;: function( value, decimalSeparator, decimalPlaces, leftDigits ){
+            return InkValidator.number(value, {
+                decimalSep: decimalSeparator || &#x27;.&#x27;,
+                decimalPlaces: +decimalPlaces || null,
+                maxDigits: +leftDigits
+            });
+        },
+
+        /**
+         * Checks if it is a numeric value.
+         *
+         * @method validationFunctions.numeric
+         * @param  {String} value   Value to be checked
+         * @param  {String} decimalSeparator Verifies if it&#x27;s a valid decimal. Otherwise checks if it&#x27;s a valid integer.
+         * @param  {String} [decimalPlaces] (when the number is decimal) Maximum number of digits that the decimal part must have.
+         * @param  {String} [leftDigits] (when the number is decimal) Maximum number of digits that the integer part must have, when provided.
+         * @return {Boolean}         True if the value is numeric. False if not.
+         */
+        &#x27;numeric&#x27;: function( value, decimalSeparator, decimalPlaces, leftDigits ){
+            decimalSeparator = decimalSeparator || &#x27;.&#x27;;
+            if( value.indexOf(decimalSeparator) !== -1  ){
+                return validationFunctions.decimal( value, decimalSeparator, decimalPlaces, leftDigits );
+            } else {
+                return validationFunctions.integer( value );
+            }
+        },
+
+        /**
+         * Checks if the value is in a specific range of values. The parameters after the first one are used for specifying the range, and are similar in function to python&#x27;s range() function.
+         *
+         * @method validationFunctions.range
+         * @param  {String} value   Value to be checked
+         * @param  {String} minValue Left limit of the range.
+         * @param  {String} maxValue Right limit of the range.
+         * @param  {String} [multipleOf] In case you want numbers that are only multiples of another number.
+         * @return {Boolean}         True if the value is within the range. False if not.
+         */
+        &#x27;range&#x27;: function( value, minValue, maxValue, multipleOf ){
+            value = +value;
+            minValue = +minValue;
+            maxValue = +maxValue;
+
+            if (isNaN(value) || isNaN(minValue) || isNaN(maxValue)) {
+                return false;
+            }
+
+            if( value &lt; minValue || value &gt; maxValue ){
+                return false;
+            }
+
+            if (multipleOf) {
+                return (value - minValue) % multipleOf === 0;
+            } else {
+                return true;
+            }
+        },
+
+        /**
+         * Checks if the value is a valid color.
+         *
+         * @method validationFunctions.color
+         * @param  {String} value   Value to be checked
+         * @return {Boolean}         True if the value is a valid color. False if not.
+         */
+        &#x27;color&#x27;: function( value ){
+            return InkValidator.isColor(value);
+        },
+
+        /**
+         * Checks if the value matches the value of a different field.
+         *
+         * @method validationFunctions.matches
+         * @param  {String} value   Value to be checked
+         * @param  {String} fieldToCompare Name or ID of the field to compare.
+         * @return {Boolean}         True if the values match. False if not.
+         */
+        &#x27;matches&#x27;: function( value, fieldToCompare ){
+            return ( value === this.getFormElements()[fieldToCompare][0].getValue() );
+        }
+
+    };
+
+    /**
+     * Error messages for the validation functions above
+     * @type {Object}
+     * @private
+     * @static
+     */
+    var validationMessages = new I18n({
+        en_US: {
+            &#x27;formvalidator.required&#x27; : &#x27;The {field} filling is mandatory&#x27;,
+            &#x27;formvalidator.min_length&#x27;: &#x27;The {field} must have a minimum size of {param1} characters&#x27;,
+            &#x27;formvalidator.max_length&#x27;: &#x27;The {field} must have a maximum size of {param1} characters&#x27;,
+            &#x27;formvalidator.exact_length&#x27;: &#x27;The {field} must have an exact size of {param1} characters&#x27;,
+            &#x27;formvalidator.email&#x27;: &#x27;The {field} must have a valid e-mail address&#x27;,
+            &#x27;formvalidator.url&#x27;: &#x27;The {field} must have a valid URL&#x27;,
+            &#x27;formvalidator.ip&#x27;: &#x27;The {field} does not contain a valid {param1} IP address&#x27;,
+            &#x27;formvalidator.phone&#x27;: &#x27;The {field} does not contain a valid {param1} phone number&#x27;,
+            &#x27;formvalidator.credit_card&#x27;: &#x27;The {field} does not contain a valid {param1} credit card&#x27;,
+            &#x27;formvalidator.date&#x27;: &#x27;The {field} should contain a date in the {param1} format&#x27;,
+            &#x27;formvalidator.alpha&#x27;: &#x27;The {field} should only contain letters&#x27;,
+            &#x27;formvalidator.text&#x27;: &#x27;The {field} should only contain alphabetic characters&#x27;,
+            &#x27;formvalidator.latin&#x27;: &#x27;The {field} should only contain alphabetic characters&#x27;,
+            &#x27;formvalidator.alpha_numeric&#x27;: &#x27;The {field} should only contain letters or numbers&#x27;,
+            &#x27;formvalidator.alpha_dashes&#x27;: &#x27;The {field} should only contain letters or dashes&#x27;,
+            &#x27;formvalidator.digit&#x27;: &#x27;The {field} should only contain a digit&#x27;,
+            &#x27;formvalidator.integer&#x27;: &#x27;The {field} should only contain an integer&#x27;,
+            &#x27;formvalidator.decimal&#x27;: &#x27;The {field} should contain a valid decimal number&#x27;,
+            &#x27;formvalidator.numeric&#x27;: &#x27;The {field} should contain a number&#x27;,
+            &#x27;formvalidator.range&#x27;: &#x27;The {field} should contain a number between {param1} and {param2}&#x27;,
+            &#x27;formvalidator.color&#x27;: &#x27;The {field} should contain a valid color&#x27;,
+            &#x27;formvalidator.matches&#x27;: &#x27;The {field} should match the field {param1}&#x27;,
+            &#x27;formvalidator.validation_function_not_found&#x27;: &#x27;The rule {rule} has not been defined&#x27;
+        },
+        pt_PT: {
+            &#x27;formvalidator.required&#x27; : &#x27;Preencher {field} é obrigatório&#x27;,
+            &#x27;formvalidator.min_length&#x27;: &#x27;{field} deve ter no mínimo {param1} caracteres&#x27;,
+            &#x27;formvalidator.max_length&#x27;: &#x27;{field} tem um tamanho máximo de {param1} caracteres&#x27;,
+            &#x27;formvalidator.exact_length&#x27;: &#x27;{field} devia ter exactamente {param1} caracteres&#x27;,
+            &#x27;formvalidator.email&#x27;: &#x27;{field} deve ser um e-mail válido&#x27;,
+            &#x27;formvalidator.url&#x27;: &#x27;O {field} deve ser um URL válido&#x27;,
+            &#x27;formvalidator.ip&#x27;: &#x27;{field} não tem um endereço IP {param1} válido&#x27;,
+            &#x27;formvalidator.phone&#x27;: &#x27;{field} deve ser preenchido com um número de telefone {param1} válido.&#x27;,
+            &#x27;formvalidator.credit_card&#x27;: &#x27;{field} não tem um cartão de crédito {param1} válido&#x27;,
+            &#x27;formvalidator.date&#x27;: &#x27;{field} deve conter uma data no formato {param1}&#x27;,
+            &#x27;formvalidator.alpha&#x27;: &#x27;O campo {field} deve conter apenas caracteres alfabéticos&#x27;,
+            &#x27;formvalidator.text&#x27;: &#x27;O campo {field} deve conter apenas caracteres alfabéticos&#x27;,
+            &#x27;formvalidator.latin&#x27;: &#x27;O campo {field} deve conter apenas caracteres alfabéticos&#x27;,
+            &#x27;formvalidator.alpha_numeric&#x27;: &#x27;{field} deve conter apenas letras e números&#x27;,
+            &#x27;formvalidator.alpha_dashes&#x27;: &#x27;{field} deve conter apenas letras e traços&#x27;,
+            &#x27;formvalidator.digit&#x27;: &#x27;{field} destina-se a ser preenchido com apenas um dígito&#x27;,
+            &#x27;formvalidator.integer&#x27;: &#x27;{field} deve conter um número inteiro&#x27;,
+            &#x27;formvalidator.decimal&#x27;: &#x27;{field} deve conter um número válido&#x27;,
+            &#x27;formvalidator.numeric&#x27;: &#x27;{field} deve conter um número válido&#x27;,
+            &#x27;formvalidator.range&#x27;: &#x27;{field} deve conter um número entre {param1} e {param2}&#x27;,
+            &#x27;formvalidator.color&#x27;: &#x27;{field} deve conter uma cor válida&#x27;,
+            &#x27;formvalidator.matches&#x27;: &#x27;{field} deve corresponder ao campo {param1}&#x27;,
+            &#x27;formvalidator.validation_function_not_found&#x27;: &#x27;[A regra {rule} não foi definida]&#x27;
+        }
+    }, &#x27;en_US&#x27;);
+
+    /**
+     * Constructor of a FormElement.
+     * This type of object has particular methods to parse rules and validate them in a specific DOM Element.
+     *
+     * @param  {DOMElement} element DOM Element
+     * @param  {Object} options Object with configuration options
+     * @return {FormElement} FormElement object
+     */
+    var FormElement = function( element, options ){
+        this._element = Common.elOrSelector( element, &#x27;Invalid FormElement&#x27; );
+        this._errors = {};
+        this._rules = {};
+        this._value = null;
+
+        this._options = Ink.extendObj( {
+            label: this._getLabel()
+        }, Element.data(this._element) );
+
+        this._options = Ink.extendObj( this._options, options || {} );
+
+    };
+
+    /**
+     * FormElement&#x27;s prototype
+     */
+    FormElement.prototype = {
+
+        /**
+         * Function to get the label that identifies the field.
+         * If it can&#x27;t find one, it will use the name or the id
+         * (depending on what is defined)
+         *
+         * @method _getLabel
+         * @return {String} Label to be used in the error messages
+         * @private
+         */
+        _getLabel: function(){
+
+            var controlGroup = Element.findUpwardsByClass(this._element,&#x27;control-group&#x27;);
+            var label = Ink.s(&#x27;label&#x27;,controlGroup);
+            if( label ){
+                label = Element.textContent(label);
+            } else {
+                label = this._element.name || this._element.id || &#x27;&#x27;;
+            }
+
+            return label;
+        },
+
+        /**
+         * Function to parse a rules&#x27; string.
+         * Ex: required|number|max_length[30]
+         *
+         * @method _parseRules
+         * @param  {String} rules String with the rules
+         * @private
+         */
+        _parseRules: function( rules ){
+            this._rules = {};
+            rules = rules.split(&quot;|&quot;);
+            var i, rulesLength = rules.length, rule, params, paramStartPos ;
+            if( rulesLength &gt; 0 ){
+                for( i = 0; i &lt; rulesLength; i++ ){
+                    rule = rules[i];
+                    if( !rule ){
+                        continue;
+                    }
+
+                    if( ( paramStartPos = rule.indexOf(&#x27;[&#x27;) ) !== -1 ){
+                        params = rule.substr( paramStartPos+1 );
+                        params = params.split(&#x27;]&#x27;);
+                        params = params[0];
+                        params = params.split(&#x27;,&#x27;);
+                        for (var p = 0, len = params.length; p &lt; len; p++) {
+                            params[p] =
+                                params[p] === &#x27;true&#x27; ? true :
+                                params[p] === &#x27;false&#x27; ? false :
+                                params[p];
+                        }
+                        params.splice(0,0,this.getValue());
+
+                        rule = rule.substr(0,paramStartPos);
+
+                        this._rules[rule] = params;
+                    } else {
+                        this._rules[rule] = [this.getValue()];
+                    }
+                }
+            }
+        },
+
+        /**
+         * Function to add an error to the FormElement&#x27;s &#x27;errors&#x27; object.
+         * It basically receives the rule where the error occurred, the parameters passed to it (if any)
+         * and the error message.
+         * Then it replaces some tokens in the message for a more &#x27;custom&#x27; reading
+         *
+         * @method _addError
+         * @param  {String|null} rule    Rule that failed, or null if no rule was found.
+         * @private
+         * @static
+         */
+        _addError: function(rule){
+            var params = this._rules[rule] || [];
+
+            var paramObj = {
+                field: this._options.label,
+                value: this.getValue()
+            };
+
+            for( var i = 1; i &lt; params.length; i++ ){
+                paramObj[&#x27;param&#x27; + i] = params[i];
+            }
+
+            var i18nKey = &#x27;formvalidator.&#x27; + rule;
+
+            this._errors[rule] = validationMessages.text(i18nKey, paramObj);
+
+            if (this._errors[rule] === i18nKey) {
+                this._errors[rule] = &#x27;Validation message not found&#x27;;
+            }
+        },
+
+        /**
+         * Function to retrieve the element&#x27;s value
+         *
+         * @method getValue
+         * @return {mixed} The DOM Element&#x27;s value
+         * @public
+         */
+        getValue: function(){
+
+            switch(this._element.nodeName.toLowerCase()){
+                case &#x27;select&#x27;:
+                    return Ink.s(&#x27;option:selected&#x27;,this._element).value;
+                case &#x27;textarea&#x27;:
+                    return this._element.innerHTML;
+                case &#x27;input&#x27;:
+                    if( &quot;type&quot; in this._element ){
+                        if( (this._element.type === &#x27;radio&#x27;) &amp;&amp; (this._element.type === &#x27;checkbox&#x27;) ){
+                            if( this._element.checked ){
+                                return this._element.value;
+                            }
+                        } else if( this._element.type !== &#x27;file&#x27; ){
+                            return this._element.value;
+                        }
+                    } else {
+                        return this._element.value;
+                    }
+                    return;
+                default:
+                    return this._element.innerHTML;
+            }
+        },
+
+        /**
+         * Function that returns the constructed errors object.
+         *
+         * @method getErrors
+         * @return {Object} Errors&#x27; object
+         * @public
+         */
+        getErrors: function(){
+            return this._errors;
+        },
+
+        /**
+         * Function that returns the DOM element related to it.
+         *
+         * @method getElement
+         * @return {Object} DOM Element
+         * @public
+         */
+        getElement: function(){
+            return this._element;
+        },
+
+        /**
+         * Get other elements in the same form.
+         *
+         * @method getFormElements
+         * @return {Object} A mapping of keys to other elements in this form.
+         * @public
+         */
+        getFormElements: function () {
+            return this._options.form._formElements;
+        },
+
+        /**
+         * Function used to validate the element based on the rules defined.
+         * It parses the rules defined in the _options.rules property.
+         *
+         * @method validate
+         * @return {Boolean} True if every rule was valid. False if one fails.
+         * @public
+         */
+        validate: function(){
+            this._errors = {};
+
+            if( &quot;rules&quot; in this._options || 1){
+                this._parseRules( this._options.rules );
+            }
+            
+            if( (&quot;required&quot; in this._rules) || (this.getValue() !== &#x27;&#x27;) ){
+                for(var rule in this._rules) {
+                    if (this._rules.hasOwnProperty(rule)) {
+                        if( (typeof validationFunctions[rule] === &#x27;function&#x27;) ){
+                            if( validationFunctions[rule].apply(this, this._rules[rule] ) === false ){
+
+                                this._addError( rule );
+                                return false;
+
+                            }
+
+                        } else {
+
+                            this._addError( null );
+                            return false;
+                        }
+                    }
+                }
+            }
+
+            return true;
+
+        }
+    };
+
+
+
+    /**
+     * @class Ink.UI.FormValidator_2
+     * @version 2
+     * @constructor
+     * @param {String|DOMElement} selector Either a CSS Selector string, or the form&#x27;s DOMElement
+     * @param {String}   [options.eventTrigger=&#x27;submit&#x27;] What event do we listen for.
+     * @param {Boolean}  [options.neverSubmit=false]     Always cancel the event? Use this to avoid submitting the form.
+     * @param {Selector} [options.searchFor=&#x27;input, select, textarea, .control-group&#x27;] Look in these inputs for validation data-attributes.
+     * @param {Function} [options.beforeValidation]      Callback to be executed before validating the form
+     * @param {Function} [options.onError]               Validation error callback
+     * @param {Function} [options.onSuccess]             Validation success callback
+     *
+     * @example
+     *     Ink.requireModules( [&#x27;Ink.UI.FormValidator_2&#x27;], function( FormValidator ){
+     *         var myValidator = new FormValidator( &#x27;#my-form&#x27; );
+     *     });
+     */
+    var FormValidator = function( selector, options ){
+
+        /**
+         * DOMElement of the &lt;form&gt; being validated
+         *
+         * @property _rootElement
+         * @type {DOMElement}
+         */
+        this._rootElement = Common.elOrSelector( selector );
+
+        /**
+         * Object that will gather the form elements by name
+         *
+         * @property _formElements
+         * @type {Object}
+         */
+        this._formElements = {};
+
+        /**
+         * Error message DOMElements
+         * 
+         * @property _errorMessages
+         */
+        this._errorMessages = [];
+
+        /**
+         * Array of elements marked with validation errors
+         *
+         * @property _markedErrorElements
+         */
+        this._markedErrorElements = [];
+
+        /**
+         * Configuration options. Fetches the data attributes first, then the ones passed when executing the constructor.
+         * By doing that, the latter will be the one with highest priority.
+         *
+         * @property _options
+         * @type {Object}
+         */
+        this._options = Ink.extendObj({
+            eventTrigger: &#x27;submit&#x27;,
+            neverSubmit: &#x27;false&#x27;,
+            searchFor: &#x27;input, select, textarea, .control-group&#x27;,
+            beforeValidation: undefined,
+            onError: undefined,
+            onSuccess: undefined
+        },Element.data(this._rootElement));
+
+        this._options = Ink.extendObj( this._options, options || {} );
+
+        // Sets an event listener for a specific event in the form, if defined.
+        // By default is the &#x27;submit&#x27; event.
+        if( typeof this._options.eventTrigger === &#x27;string&#x27; ){
+            Event.observe( this._rootElement,this._options.eventTrigger, Ink.bindEvent(this.validate,this) );
+        }
+
+        this._init();
+    };
+
+    /**
+     * Method used to set validation functions (either custom or ovewrite the existent ones)
+     *
+     * @method setRule
+     * @param {String}   name         Name of the function. E.g. &#x27;required&#x27;
+     * @param {String}   errorMessage Error message to be displayed in case of returning false. E.g. &#x27;Oops, you passed {param1} as parameter1, lorem ipsum dolor...&#x27;
+     * @param {Function} cb           Function to be executed when calling this rule
+     * @public
+     * @static
+     */
+    FormValidator.setRule = function( name, errorMessage, cb ){
+        validationFunctions[ name ] = cb;
+        if (validationMessages.getKey(&#x27;formvalidator.&#x27; + name) !== errorMessage) {
+            var langObj = {}; langObj[&#x27;formvalidator.&#x27; + name] = errorMessage;
+            var dictObj = {}; dictObj[validationMessages.lang()] = langObj;
+            validationMessages.append(dictObj);
+        }
+    };
+
+    /**
+     * Get the i18n object in charge of the error messages
+     *
+     * @method getI18n
+     * @return {Ink.Util.I18n} The i18n object the FormValidator is using.
+     */
+    FormValidator.getI18n = function () {
+        return validationMessages;
+    };
+
+     /**
+     * Sets the I18n object for validation error messages
+     *
+     * @method setI18n
+     * @param {Ink.Util.I18n} i18n  The I18n object.
+     */
+    FormValidator.setI18n = function (i18n) {
+        validationMessages = i18n;
+    };
+
+   /**
+     * Add to the I18n dictionary. See &#x60;Ink.Util.I18n.append()&#x60; documentation.
+     *
+     * @method AppendI18n
+     */
+    FormValidator.appendI18n = function () {
+        validationMessages.append.apply(validationMessages, [].slice.call(arguments));
+    };
+
+    /**
+     * Sets the language of the error messages. pt_PT and en_US are available, but you can add new languages by using append()
+     *
+     * See the &#x60;Ink.Util.I18n.lang()&#x60; setter
+     *
+     * @method setLanguage
+     * @param language  The language to set i18n to.
+     */
+    FormValidator.setLanguage = function (language) {
+        validationMessages.lang(language);
+    };
+
+    /**
+     * Method used to get the existing defined validation functions
+     *
+     * @method getRules
+     * @return {Object} Object with the rules defined
+     * @public
+     * @static
+     */
+    FormValidator.getRules = function(){
+        return validationFunctions;
+    };
+
+    FormValidator.prototype = {
+        _init: function(){
+
+        },
+
+        /**
+         * Function that searches for the elements of the form, based in the
+         * this._options.searchFor configuration.
+         *
+         * @method getElements
+         * @return {Object} An object with the elements in the form, indexed by name/id
+         * @public
+         */
+        getElements: function(){
+            this._formElements = {};
+            var formElements = Selector.select( this._options.searchFor, this._rootElement );
+            if( formElements.length ){
+                var i, element;
+                for( i=0; i&lt;formElements.length; i+=1 ){
+                    element = formElements[i];
+
+                    var dataAttrs = Element.data( element );
+
+                    if( !(&quot;rules&quot; in dataAttrs) ){
+                        continue;
+                    }
+
+                    var options = {
+                        form: this
+                    };
+
+                    var key;
+                    if( (&quot;name&quot; in element) &amp;&amp; element.name ){
+                        key = element.name;
+                    } else if( (&quot;id&quot; in element) &amp;&amp; element.id ){
+                        key = element.id;
+                    } else {
+                        key = &#x27;element_&#x27; + Math.floor(Math.random()*100);
+                        element.id = key;
+                    }
+
+                    if( !(key in this._formElements) ){
+                        this._formElements[key] = [ new FormElement( element, options ) ];
+                    } else {
+                        this._formElements[key].push( new FormElement( element, options ) );
+                    }
+                }
+            }
+
+            return this._formElements;
+        },
+
+        /**
+         * Runs the validate function of each FormElement in the this._formElements
+         * object.
+         * Also, based on the this._options.beforeValidation, this._options.onError
+         * and this._options.onSuccess, this callbacks are executed when defined.
+         *
+         * @method validate
+         * @param  {Event} event window.event object
+         * @return {Boolean}
+         * @public
+         */
+        validate: function( event ) {
+
+            if(this._options.neverSubmit+&#x27;&#x27; === &#x27;true&#x27; &amp;&amp; event) {
+                Event.stopDefault(event);
+            }
+
+            if( typeof this._options.beforeValidation === &#x27;function&#x27; ){
+                this._options.beforeValidation();
+            }
+
+            InkArray.each( this._markedErrorElements, function (errorElement) {
+                Css.removeClassName(errorElement,  [&#x27;validation&#x27;, &#x27;error&#x27;]);
+            });
+            InkArray.each( this._errorMessages, Element.remove);
+
+            this.getElements();
+            var errorElements = [];
+
+            for( var key in this._formElements ){
+                if( this._formElements.hasOwnProperty(key) ){
+                    for( var counter = 0; counter &lt; this._formElements[key].length; counter+=1 ){
+                        if( !this._formElements[key][counter].validate() ) {
+                            errorElements.push(this._formElements[key][counter]);
+                        }
+                    }
+                }
+            }
+            
+            if( errorElements.length === 0 ){
+                if( typeof this._options.onSuccess === &#x27;function&#x27; ){
+                    this._options.onSuccess();
+                }
+
+                // [3.0.0] remove this, it&#x27;s a little backwards compat quirk
+                if(event &amp;&amp; this._options.cancelEventOnSuccess.toString() === &#x27;true&#x27;) {
+                    Event.stopDefault(event);
+                    return false;
+                }
+
+                return true;
+            } else {
+
+                if(event) {
+                    Event.stopDefault(event);
+                }
+
+                if( typeof this._options.onError === &#x27;function&#x27; ){
+                    this._options.onError( errorElements );
+                }
+                this._errorMessages = [];
+                this._markedErrorElements = [];
+
+                InkArray.each( errorElements, Ink.bind(function( formElement ){
+                    var controlGroupElement;
+                    var controlElement;
+                    if( Css.hasClassName(formElement.getElement(),&#x27;control-group&#x27;) ){
+                        controlGroupElement = formElement.getElement();
+                        controlElement = Ink.s(&#x27;.control&#x27;,formElement.getElement());
+                    } else {
+                        controlGroupElement = Element.findUpwardsByClass(formElement.getElement(),&#x27;control-group&#x27;);
+                        controlElement = Element.findUpwardsByClass(formElement.getElement(),&#x27;control&#x27;);
+                    }
+
+                    if(controlGroupElement) {
+                        Css.addClassName( controlGroupElement, [&#x27;validation&#x27;, &#x27;error&#x27;] );
+                        this._markedErrorElements.push(controlGroupElement);
+                    }
+
+                    var paragraph = document.createElement(&#x27;p&#x27;);
+                    Css.addClassName(paragraph,&#x27;tip&#x27;);
+                    if (controlElement || controlGroupElement) {
+                        (controlElement || controlGroupElement).appendChild(paragraph);
+                    } else {
+                        Element.insertAfter(paragraph, formElement.getElement());
+                    }
+
+                    var errors = formElement.getErrors();
+                    var errorArr = [];
+                    for (var k in errors) {
+                        if (errors.hasOwnProperty(k)) {
+                            errorArr.push(errors[k]);
+                        }
+                    }
+                    paragraph.innerHTML = errorArr.join(&#x27;&lt;br/&gt;&#x27;);
+                    this._errorMessages.push(paragraph);
+                }, this));
+                return false;
+            }
+        }
+    };
+
+    /**
+     * Returns the FormValidator&#x27;s Object
+     */
+    return FormValidator;
+
+});
+
+    </pre>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+</body>
+</html>

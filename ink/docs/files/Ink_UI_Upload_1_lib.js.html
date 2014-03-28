@@ -1,0 +1,1161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Ink/UI/Upload/1/lib.js - Ink.js</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+    <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><img src="../yuidoclogo.png" title="Ink.js"></h1>
+            
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: latest</em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <h2 class="off-left">APIs</h2>
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+            <li><a href="#api-modules">Modules</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="../classes/Ink.html">Ink</a></li>
+            
+                <li><a href="../classes/Ink.Dom.Browser.html">Ink.Dom.Browser</a></li>
+            
+                <li><a href="../classes/Ink.Dom.Css.html">Ink.Dom.Css</a></li>
+            
+                <li><a href="../classes/Ink.Dom.Element.html">Ink.Dom.Element</a></li>
+            
+                <li><a href="../classes/Ink.Dom.Event.html">Ink.Dom.Event</a></li>
+            
+                <li><a href="../classes/Ink.Dom.FormSerialize.html">Ink.Dom.FormSerialize</a></li>
+            
+                <li><a href="../classes/Ink.Dom.Loaded.html">Ink.Dom.Loaded</a></li>
+            
+                <li><a href="../classes/Ink.Dom.Selector.html">Ink.Dom.Selector</a></li>
+            
+                <li><a href="../classes/Ink.Namespace.ClassModule.html">Ink.Namespace.ClassModule</a></li>
+            
+                <li><a href="../classes/Ink.Namespace.StaticModule.html">Ink.Namespace.StaticModule</a></li>
+            
+                <li><a href="../classes/Ink.Net.Ajax.html">Ink.Net.Ajax</a></li>
+            
+                <li><a href="../classes/Ink.Net.JsonP.html">Ink.Net.JsonP</a></li>
+            
+                <li><a href="../classes/Ink.UI.Animate_1.html">Ink.UI.Animate_1</a></li>
+            
+                <li><a href="../classes/Ink.UI.Carousel_1.html">Ink.UI.Carousel_1</a></li>
+            
+                <li><a href="../classes/Ink.UI.Close.html">Ink.UI.Close</a></li>
+            
+                <li><a href="../classes/Ink.UI.Common.html">Ink.UI.Common</a></li>
+            
+                <li><a href="../classes/Ink.UI.DatePicker.html">Ink.UI.DatePicker</a></li>
+            
+                <li><a href="../classes/Ink.UI.Draggable.html">Ink.UI.Draggable</a></li>
+            
+                <li><a href="../classes/Ink.UI.Dropdown.html">Ink.UI.Dropdown</a></li>
+            
+                <li><a href="../classes/Ink.UI.Droppable.html">Ink.UI.Droppable</a></li>
+            
+                <li><a href="../classes/Ink.UI.FormValidator.html">Ink.UI.FormValidator</a></li>
+            
+                <li><a href="../classes/Ink.UI.FormValidator_2.html">Ink.UI.FormValidator_2</a></li>
+            
+                <li><a href="../classes/Ink.UI.ImageQuery.html">Ink.UI.ImageQuery</a></li>
+            
+                <li><a href="../classes/Ink.UI.Modal.html">Ink.UI.Modal</a></li>
+            
+                <li><a href="../classes/Ink.UI.Pagination.html">Ink.UI.Pagination</a></li>
+            
+                <li><a href="../classes/Ink.UI.ProgressBar.html">Ink.UI.ProgressBar</a></li>
+            
+                <li><a href="../classes/Ink.UI.SmoothScroller.html">Ink.UI.SmoothScroller</a></li>
+            
+                <li><a href="../classes/Ink.UI.SortableList.html">Ink.UI.SortableList</a></li>
+            
+                <li><a href="../classes/Ink.UI.Spy.html">Ink.UI.Spy</a></li>
+            
+                <li><a href="../classes/Ink.UI.Stacker_1.html">Ink.UI.Stacker_1</a></li>
+            
+                <li><a href="../classes/Ink.UI.Sticky.html">Ink.UI.Sticky</a></li>
+            
+                <li><a href="../classes/Ink.UI.Swipe.html">Ink.UI.Swipe</a></li>
+            
+                <li><a href="../classes/Ink.UI.Table.html">Ink.UI.Table</a></li>
+            
+                <li><a href="../classes/Ink.UI.Tabs.html">Ink.UI.Tabs</a></li>
+            
+                <li><a href="../classes/Ink.UI.TagField.html">Ink.UI.TagField</a></li>
+            
+                <li><a href="../classes/Ink.UI.Toggle.html">Ink.UI.Toggle</a></li>
+            
+                <li><a href="../classes/Ink.UI.Tooltip.html">Ink.UI.Tooltip</a></li>
+            
+                <li><a href="../classes/Ink.UI.TreeView.html">Ink.UI.TreeView</a></li>
+            
+                <li><a href="../classes/Ink.Util.Array.html">Ink.Util.Array</a></li>
+            
+                <li><a href="../classes/Ink.Util.BinPack.html">Ink.Util.BinPack</a></li>
+            
+                <li><a href="../classes/Ink.Util.Cookie.html">Ink.Util.Cookie</a></li>
+            
+                <li><a href="../classes/Ink.Util.Date.html">Ink.Util.Date</a></li>
+            
+                <li><a href="../classes/Ink.Util.Dumper.html">Ink.Util.Dumper</a></li>
+            
+                <li><a href="../classes/Ink.Util.I18n.html">Ink.Util.I18n</a></li>
+            
+                <li><a href="../classes/Ink.Util.Json.html">Ink.Util.Json</a></li>
+            
+                <li><a href="../classes/Ink.Util.String.html">Ink.Util.String</a></li>
+            
+                <li><a href="../classes/Ink.Util.Url.html">Ink.Util.Url</a></li>
+            
+                <li><a href="../classes/Ink.Util.Validator.html">Ink.Util.Validator</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+                <li><a href="../modules/Ink.Dom.Browser_1.html">Ink.Dom.Browser_1</a></li>
+            
+                <li><a href="../modules/Ink.Dom.Css_1.html">Ink.Dom.Css_1</a></li>
+            
+                <li><a href="../modules/Ink.Dom.Element_1.html">Ink.Dom.Element_1</a></li>
+            
+                <li><a href="../modules/Ink.Dom.Event_1.html">Ink.Dom.Event_1</a></li>
+            
+                <li><a href="../modules/Ink.Dom.FormSerialize.html">Ink.Dom.FormSerialize</a></li>
+            
+                <li><a href="../modules/Ink.Dom.Loaded_1.html">Ink.Dom.Loaded_1</a></li>
+            
+                <li><a href="../modules/Ink.Dom.Selector_1.html">Ink.Dom.Selector_1</a></li>
+            
+                <li><a href="../modules/Ink.Namespace.ClassModule_1.html">Ink.Namespace.ClassModule_1</a></li>
+            
+                <li><a href="../modules/Ink.Namespace.StaticModule_1.html">Ink.Namespace.StaticModule_1</a></li>
+            
+                <li><a href="../modules/Ink.Net.Ajax_1.html">Ink.Net.Ajax_1</a></li>
+            
+                <li><a href="../modules/Ink.Net.JsonP_1.html">Ink.Net.JsonP_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Animate_1.html">Ink.UI.Animate_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Carousel_1.html">Ink.UI.Carousel_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Close_1.html">Ink.UI.Close_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Common_1.html">Ink.UI.Common_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.DatePicker_1.html">Ink.UI.DatePicker_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Dropdown_1.html">Ink.UI.Dropdown_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Droppable_1.html">Ink.UI.Droppable_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.FormValidator_1.html">Ink.UI.FormValidator_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.FormValidator_2.html">Ink.UI.FormValidator_2</a></li>
+            
+                <li><a href="../modules/Ink.UI.ImageQuery_1.html">Ink.UI.ImageQuery_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Modal_1.html">Ink.UI.Modal_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Pagination_1.html">Ink.UI.Pagination_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.ProgressBar_1.html">Ink.UI.ProgressBar_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.SmoothScroller_1.html">Ink.UI.SmoothScroller_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.SortableList_1.html">Ink.UI.SortableList_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Spy_1.html">Ink.UI.Spy_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Stacker_1.html">Ink.UI.Stacker_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Sticky_1.html">Ink.UI.Sticky_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Swipe.html">Ink.UI.Swipe</a></li>
+            
+                <li><a href="../modules/Ink.UI.Table_1.html">Ink.UI.Table_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Tabs_1.html">Ink.UI.Tabs_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Toggle_1.html">Ink.UI.Toggle_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Tooltip_1.html">Ink.UI.Tooltip_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.TreeView_1.html">Ink.UI.TreeView_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Array_1.html">Ink.Util.Array_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.BinPack_1.html">Ink.Util.BinPack_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Cookie_1.html">Ink.Util.Cookie_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Date_1.html">Ink.Util.Date_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Dumper_1.html">Ink.Util.Dumper_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.I18n_1.html">Ink.Util.I18n_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Json_1.html">Ink.Util.Json_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.String_1.html">Ink.Util.String_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Url_1.html">Ink.Util.Url_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Validator_1.html">Ink.Util.Validator_1</a></li>
+            
+                <li><a href="../modules/Ink_1.html">Ink_1</a></li>
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+
+
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1 class="file-heading">File: Ink/UI/Upload/1/lib.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+Ink.createModule(&#x27;Ink.UI.Upload&#x27;, &#x27;1&#x27;, [
+    &#x27;Ink.Dom.Event_1&#x27;,
+    &#x27;Ink.Dom.Element_1&#x27;,
+    &#x27;Ink.Dom.Browser_1&#x27;,
+    &#x27;Ink.UI.Common_1&#x27;
+], function(Event, Element, Browser, Common) {
+    &#x27;use strict&#x27;;
+
+    var DirectoryReader = function(options) {
+        this.init(options);
+    };
+
+    DirectoryReader.prototype = {
+        init: function(options) {
+            this.options = Ink.extendObj({
+                entry:      undefined,
+                maxDepth:   10
+            }, options || {});
+
+            try {
+                this._read();
+            } catch(e) {
+                Ink.error(e);
+            }
+        },
+
+
+        _read: function() {
+            if(!this.options.entry) {
+                throw(&quot;The entry specify you must&quot;);
+            }
+
+            try {
+                this._readDirectories();
+            } catch(e) {
+                Ink.error(e);
+            }
+        },
+
+
+        _readDirectories: function() {
+            var entries         = [],
+                running         = false,
+                maxDepth        = 0;
+
+            /* TODO return as tree because much better well */
+            var _readEntries = Ink.bind(function(currentEntry) {
+                var dir     = currentEntry.createReader();
+                    running = true;
+
+                dir.readEntries(Ink.bind(function(res) {
+                    if(res.length &gt; 0) {
+                        for(var i = 0, len = res.length; i&lt;len; i++) {
+                            entries.push(res[i]);
+                            if(!res[i].isDirectory) {
+                                continue;
+                            }
+                            maxDepth = this.clearArray(res[i].fullPath.split(&#x27;/&#x27;));
+                            maxDepth.shift();
+                            maxDepth = maxDepth.length;
+                            if(maxDepth &lt;= this.options.maxDepth) {
+                                _readEntries(res[i]);
+                            }
+                        }
+                        if(this._stopActivityTimeout) {
+                            clearTimeout(this._stopActivityTimeout);
+                        }
+                        this._stopActivityTimeout = setTimeout(function() {
+                            running = false;
+                        }, 250);
+                    }
+                    if(!res.length) {
+                        running = false;
+                    }
+                }, this), Ink.bind(function(err) {
+                    this.options.readError(err, currentEntry);
+                }, this));
+            }, this);
+
+            _readEntries(this.options.entry);
+
+            var activity;
+            var checkActivity = function() {
+                if(running) {
+                    return false;
+                }
+                clearInterval(activity);
+                if(this.options.readComplete &amp;&amp; typeof this.options.readComplete === &#x27;function&#x27;) {
+                    this.options.readComplete(entries);
+                }
+                return true;
+            };
+
+            activity = setInterval(Ink.bind(checkActivity, this), 250);
+        },
+
+
+        clearArray: function(arr) {
+            for(var i = arr.length - 1; i&gt;=0; i--) {
+                if(typeof(arr[i]) === &#x27;undefined&#x27; || arr[i] === null || arr[i] === &#x27;&#x27;) {
+                    arr.splice(i, 1);
+                }
+            }
+            return arr;
+        }
+    };
+
+    var Queue = {
+        lists:  [],
+        items:  [],
+
+
+        /**
+         * @function {Public} ? Create new queue list
+         * @param {String} list name
+         * @param {Function} function to iterate on items
+         * @return {Object} list id
+        */
+        create: function(name) {
+            var id;
+                name = String(name);
+            this.lists.push({name: name});
+            id = this.lists.length - 1;
+            return id;
+        },
+
+
+        getItems: function(parentId) {
+            if(!parentId) {
+                return this.items;
+            }
+            var items = [];
+            for(var i = 0, len = this.items.length; i&lt;len; i++) {
+                if(this.items[i].parentId === parentId) {
+                    items.push(this.items[i]);
+                }
+            }
+
+            return items;
+        },
+
+
+        /**
+         * @function {Public} ? Delete list
+         * @param {String} List name
+         * @return {Object} removed list
+        */
+        purge: function(id, keepList) {
+            if(typeof(id) !== &#x27;number&#x27; || isNaN(Number(id))) {
+                return false;
+            }
+            try {
+                for(var i = this.items.length; i&gt;=0; i--) {
+                    if(this.items[i] &amp;&amp; id === this.items[i].parentId) {
+                        this.remove(this.items[i].parentId, this.items[i].pid);
+                    }
+                }
+                if(!keepList) {
+                    this.lists.splice(id, 1);
+                }
+                return true;
+            } catch(e) {
+                Ink.error(&#x27;Purge: invalid id&#x27;);
+                return false;
+            }
+        },
+
+
+        /**
+         * @function {Public} ? add an item to a list
+         * @param {String} name
+         * @param {Object} item
+         * @return {Number} pid
+        */
+        add: function(parentId, item, priority) {
+            if(!this.lists[parentId]) {
+                return false;
+            }
+            if(typeof(item) !== &#x27;object&#x27;) {
+                item = String(item);
+            }
+
+            var pid = parseInt(Math.round(Math.random() * 100000) + &quot;&quot; + Math.round(Math.random() * 100000), 10);
+            priority    = priority || 0;
+
+            this.items.push({parentId: parentId, item: item, priority: priority || 0, pid: pid});
+            return pid;
+        },
+
+
+        /**
+         * @function {Public} ? view list
+         * @param {Number} list id
+         * @param {Number} process id
+         * @return {Object} item
+        */
+        view: function(parentId, pid) {
+            var id = this._searchByPid(parentId, pid);
+            if(id === false) {
+                return false;
+            }
+            return this.items[id];
+        },
+
+
+        /**
+         * @function {Public} ? remove an item
+         * @param {Object} item
+         * @return {Object|Boolean} removed item or false if not found
+        */
+        remove: function(parentId, pid) {
+            try {
+                var id = this._searchByPid(parentId, pid);
+                if(id === false) {
+                    return false;
+                }
+                this.items.splice(id, 1);
+                return true;
+            } catch(e) {
+                Ink.error(&#x27;Remove: invalid id&#x27;);
+                return false;
+            }
+        },
+
+        _searchByPid: function(parentId, pid) {
+            if(!parentId &amp;&amp; typeof(parentId) === &#x27;boolean&#x27; || !pid) {
+                return false;
+            }
+
+            parentId    = parseInt(parentId, 10);
+            pid         = parseInt(pid, 10);
+
+            if(isNaN(parentId) || isNaN(pid)) {
+                return false;
+            }
+
+            for(var i = 0, len = this.items.length; i&lt;len; i++) {
+                if(this.items[i].parentId === parentId &amp;&amp; this.items[i].pid === pid) {
+                    return i;
+                }
+            }
+            return false;
+        }
+    };
+
+    var UI = function(Upload) {
+        this.Upload = Upload;
+        this.init();
+    };
+
+    UI.prototype = {
+        init: function() {
+            this._fileButton = this.Upload.options.fileButton;
+            this._dropzone = this.Upload.options.dropzone;
+            this._setDropEvent();
+            this._setFileButton();
+        },
+
+
+        _setDropEvent: function() {
+            var dropzones = this._dropzone;
+            for(var i = 0, len = dropzones.length; i&lt;len; i++) {
+                dropzones[i].ondrop        = Ink.bindEvent(this.Upload._dropEventHandler, this.Upload);
+                dropzones[i].ondragleave   = Ink.bindEvent(this._onDragLeave, this);
+                dropzones[i].ondragend     = Ink.bindEvent(this._onDragEndEventHandler, this);
+                dropzones[i].ondragenter   = Ink.bindEvent(this._onDragEnterHandler, this);
+                dropzones[i].ondragover    = Ink.bindEvent(this._onDragOverHandler, this);
+            }
+        },
+
+
+        _onDragEnterHandler: function(ev) {
+            if(ev &amp;&amp; ev.stopPropagation) {
+                ev.stopPropagation();
+            }
+            if(ev &amp;&amp; ev.preventDefault) {
+                ev.preventDefault();
+            }
+            if(ev) {
+                ev.returnValue = false;
+            }
+
+            this.Upload.publish(&#x27;DragEnter&#x27;, ev);
+            return false;
+        },
+
+
+        _onDragOverHandler: function(ev) {
+            if(!ev) {
+                return false;
+            }
+            ev.preventDefault();
+            ev.stopPropagation();
+            ev.returnValue = false;
+            return true;
+        },
+
+
+        _onDragLeave: function(ev) {
+            return this.Upload.publish(&#x27;DragLeave&#x27;, ev);
+        },
+
+
+        _onDragEndEventHandler: function(ev) {
+            return this.Upload.publish(&#x27;DragEnd&#x27;, ev);
+        },
+
+
+        _setFileButton: function() {
+            var btns = this._fileButton;
+            Event.observeMulti(btns, &#x27;change&#x27;, Ink.bindEvent(this._fileChangeHandler, this));
+        },
+
+
+        _fileChangeHandler: function(ev) {
+            var btn = Event.element(ev);
+            var files = btn.files;
+            var form = Element.findUpwardsByTag(btn, &#x27;form&#x27;);
+
+            if(!files || !window.FormData || !(&#x27;withCredentials&#x27; in new XMLHttpRequest())) {
+                form.parentNode.submit();
+                return false;
+            }
+            this.Upload._addFilesToQueue(files);
+            btn.value = &quot;&quot;;
+        }
+    };
+
+
+
+
+
+
+    var Upload = function(options) {
+        this.Queue = Queue;
+        this.init(options);
+        this._events = {};
+    };
+
+    Upload.prototype = {
+        //_events: {},
+
+        init: function(options) {
+            if (typeof options === &#x27;string&#x27;) {
+                options = Element.data(Common.elOrSelector(options, &#x27;1st argument&#x27;));
+            }
+            this.options = Ink.extendObj({
+                extraData:          {},
+                fileFormName:       &#x27;Ink_Filelist&#x27;,
+                dropzone:           undefined,
+                fileButton:         undefined,
+                endpoint:           &#x27;&#x27;,
+                endpointChunk:      &#x27;&#x27;,
+                endpointChunkCommit:&#x27;&#x27;,
+                maxFilesize:        300 &lt;&lt; 20, //300mb
+                chunkSize:          4194304,  // 4MB
+                minSizeToUseChunks: 20971520, // 20mb
+                INVALID_FILE_NAME:  undefined,
+                foldersEnabled:     true,
+                useChunks:          true,
+                directoryMaxDepth:  10
+            }, options || {});
+
+            this._queueId           = Queue.create(&#x27;Ink_UPLOAD&#x27;);
+            this._queueRunning      = false;
+            this._folders           = {};
+
+
+            if(this.options.dropzone) {
+                Common.elOrSelector(this.options.dropzone, &#x27;Upload - dropzone&#x27;);
+            }
+
+            if(this.options.fileButton) {
+                Common.elOrSelector(this.options.fileButton, &#x27;Upload - fileButton&#x27;);
+            }
+
+            if(!this.options.dropzone &amp;&amp; ! this.options.fileButton) {
+                throw new TypeError(&#x27;A file button or dropzone, specify you must, my young padawan&#x27;);
+            }
+
+            this.options.dropzone = Ink.ss(this.options.dropzone);
+            this.options.fileButton= Ink.ss(this.options.fileButton);
+
+            new UI(this);
+        },
+
+
+        _supportChunks: function(size) {
+            return this.options.useChunks &amp;&amp;
+                    &#x27;Blob&#x27; in window &amp;&amp;
+                    (new Blob()).slice &amp;&amp;
+                    size &gt; this.options.minSizeToUseChunks;
+        },
+
+
+        _dropEventHandler: function(ev) {
+            if(ev &amp;&amp; ev.stopPropagation) {
+                ev.stopPropagation();
+            }
+            if(ev &amp;&amp; ev.preventDefault) {
+                ev.preventDefault();
+            }
+            if(ev) {
+                ev.returnValue = false;
+            }
+
+            this.publish(&#x27;DropComplete&#x27;, ev.dataTransfer);
+
+            var data = ev.dataTransfer;
+
+            if(!data || !data.files || !data.files.length) {
+                return false;
+            }
+
+            this._files = data.files;
+            this._files = Array.prototype.slice.call(this._files || [], 0);
+
+            // check if webkitGetAsEntry exists on first item
+            if(data.items &amp;&amp; data.items[0] &amp;&amp; data.items[0].webkitGetAsEntry) {
+                if(!this.options.foldersEnabled) {
+                    return setTimeout(Ink.bind(this._addFilesToQueue, this, this._files), 0);
+                }
+                var entry, folders = [];
+                for(var i = ev.dataTransfer.items.length-1; i&gt;=0; i--) {
+                    entry = ev.dataTransfer.items[i].webkitGetAsEntry();
+                    if(entry &amp;&amp; entry.isDirectory) {
+                        folders.push(entry);
+                        this._files[i].isDirectory = true;
+                        this._files.splice(i, 1);
+                    }
+                }
+                // starting callback hell
+                this._addFolderToQueue(folders, Ink.bind(function() {
+                    setTimeout(Ink.bind(this._addFilesToQueue, this, this._files), 0);
+                }, this));
+            } else {
+                setTimeout(Ink.bind(this._addFilesToQueue, this, this._files), 0);
+            }
+
+            return true;
+        },
+
+
+        _addFolderToQueue: function(folders, cb) {
+            var files = [], invalidFolders = {};
+
+            if(!folders || !folders.length) {
+                cb();
+                return files;
+            }
+
+            var getFiles = function(entries) {
+                var files = [];
+                for(var i = 0, len = entries.length; i&lt;len; i++) {
+                    if(entries[i].isFile) {
+                        files.push(entries[i]);
+                    }
+                }
+                return files;
+            };
+
+            var convertToFile = function(cb, index) {
+                var fullPath;
+                index = index || 0;
+                if(!this._files[index]) {
+                    cb();
+                    return files;
+                }
+                if(this._files[index].constructor.name.toLowerCase() !== &#x27;fileentry&#x27;) {
+                    return convertToFile.apply(this, [cb, ++index]);
+                }
+                this._files[index].file(Ink.bind(function(res) {
+                    fullPath = this._files[index].fullPath; // bug
+                    this._files[index]              = res;
+                    this._files[index].hasParent    = true;
+
+                    // if browser don&#x27;t have it natively, set it
+                    if(!this._files[index].fullPath) {
+                        this._files[index].fullPath = fullPath;
+                    }
+                    convertToFile.apply(this, [cb, ++index]);
+                }, this), Ink.bind(function() {
+                    this._files.splice(index, 1);
+                    convertToFile.apply(this, [cb, index]);
+                }, this));
+            };
+
+            var getSubDirs = Ink.bind(function(index) {
+                if(!folders[index]) {
+                    this._files = this._files.concat(files);
+                    convertToFile.call(this, cb);
+                    return false;
+                }
+
+                new DirectoryReader({
+                    entry:      folders[index],
+                    maxDepth:   this.options.directoryMaxDepth,
+                    readComplete: Ink.bind(function(entries) {
+                        files = files.concat(getFiles(entries));
+                        // adding root dirs
+                        if(!folders[index] || folders[index].fullPath in this._folders) {
+                            return;
+                        }
+
+                        this._folders[folders[index].fullPath] = {
+                            items:      entries,
+                            files:      files,
+                            length:     entries.length,
+                            created:    false,
+                            root:       true
+                        };
+
+                        // adding sub dirs
+                        for(var i = 0, len = entries.length; i&lt;len; i++) {
+                            if(entries[i].isFile) {
+                                continue;
+                            }
+                            if(entries[i].fullPath in invalidFolders) {
+                                delete invalidFolders[entries[i].fullPath];
+                                continue;
+                            }
+                            this._folders[entries[i].fullPath] = {
+                                created:    false,
+                                root:       false
+                            };
+                        }
+                        getSubDirs(++index);
+                    }, this),
+                    readError: Ink.bind(function(err, dir) {
+                        invalidFolders[dir.fullPath] = {};
+                        invalidFolders[dir.fullPath].error = err;
+                    }, this)
+                });
+            }, this);
+
+            getSubDirs(0);
+            return files;
+        },
+
+
+        _addFilesToQueue: function(files) {
+            var file, fileID, o;
+            for(var i = 0, len = files.length; i&lt;len; i++) {
+                file = files[i];
+
+                if(!file.isDirectory) {
+                    // dirty hack to allow 0B files avoiding folders on GECKO
+                    if(file === null || (!file.type &amp;&amp; file.size % 4096 === 0 &amp;&amp; (!Browser.CHROME || !this.options.foldersEnabled))) {
+                        this.publish(&#x27;InvalidFile&#x27;, file, &#x27;size&#x27;);
+                        continue;
+                    }
+                }
+
+                if(file.size &gt; this.options.maxFilesize) {
+                    this.publish(&#x27;MaxSizeFailure&#x27;, file, this.options.maxFilesize);
+                    continue;
+                }
+
+                fileID = parseInt(Math.round(Math.random() * 100000) + &quot;&quot; + Math.round(Math.random() * 100000), 10);
+                o = { id: i, data: file, fileID: fileID, directory: file.isDirectory };
+                Queue.add(this._queueId, o);
+
+                this.publish(&#x27;FileAddedToQueue&#x27;, o);
+            }
+            this._processQueue(true);
+            this._files = [];
+        },
+
+
+        _processQueue: function(internalUpload) {
+            if(this._queueRunning) {
+                return false;
+            }
+
+            this.running = 0;
+            var max = 1, i = 0, items,
+                queueLen = Queue.items.length;
+            this._queueRunning = true;
+
+            this.interval = setInterval(Ink.bind(function() {
+                if(Queue.items.length === i &amp;&amp; this.running === 0) {
+                    Queue.purge(this._queueId, true);
+                    this._queueRunning = false;
+                    clearInterval(this.interval);
+                    this.publish(&#x27;QueueEnd&#x27;, this._queueId, queueLen);
+                }
+
+                items = Queue.getItems(this._queueId);
+
+                if(this.running &lt; max &amp;&amp; items[i]) {
+                    if(!items[i].canceled) {
+                        _doRequest.call(this, items[i].pid, items[i].item.data, items[i].item.fileID, items[i].item.directory, internalUpload);
+                        this.running++;
+                        i++;
+                    } else {
+                        var j = i;
+                        while(items[j] &amp;&amp; items[j].canceled) {
+                            i++;
+                            j++;
+                        }
+                    }
+                    return true;
+                }
+                return false;
+            }, this), 100);
+
+
+            var _doRequest = function(pid, data, fileID, directory, internalUpload) {
+                var o = {
+                    file:   data,
+                    fileID: fileID,
+                    cb: Ink.bind(function() {
+                        this.running--;
+                    }, this)
+                };
+                if(internalUpload) {
+                    if(directory) {
+                        // do magic
+                        o.cb();
+                    } else {
+                        this._upload(o);
+                    }
+                }
+            };
+
+            return true;
+        },
+
+
+        _upload: function(o) {
+            var file = o.file,
+                xhr = new XMLHttpRequest(),
+                fileID = o.fileID;
+
+            this.publish(&#x27;BeforeUpload&#x27;, file, this.options.extraData, fileID, xhr, this._supportChunks(file.size));
+
+            var forceAbort = function(showError) {
+                if(o.cb &amp;&amp; typeof(o.cb === &#x27;function&#x27;)) {
+                    o.cb();
+                }
+
+                this.publish(&#x27;OnProgress&#x27;, {
+                    length: file.size,
+                    lengthComputable: true,
+                    loaded: file.size,
+                    total: file.size
+                }, file, fileID);
+                this.publish(&#x27;EndUpload&#x27;, file, fileID, (showError ? { error: true } : true));
+                this.publish(&#x27;InvalidFile&#x27;, file, &#x27;name&#x27;);
+                xhr.abort();
+            };
+
+            if(this.options.INVALID_FILE_NAME &amp;&amp; this.options.INVALID_FILE_NAME instanceof RegExp) {
+                if(this.options.INVALID_FILE_NAME.test(o.file.name)) {
+                    forceAbort.call(this);
+                    return;
+                }
+            }
+
+            // If file was renamed, abort it
+            // FU OPERA: Opera always return lastModified date as null
+            if(!file.lastModifiedDate &amp;&amp; !Ink.Dom.Browser.OPERA) {
+                forceAbort.call(this, true);
+                return;
+            }
+
+            xhr.upload.onprogress = Ink.bind(this.publish, this, &#x27;OnProgress&#x27;, file, fileID);
+
+            var endpoint, method;
+            if(this._supportChunks(file.size)) {
+                if(file.size &lt;= file.chunk_offset) {
+                    endpoint = this.options.endpointChunkCommit;
+                    method = &#x27;POST&#x27;;
+                } else {
+                    endpoint = this.options.endpointChunk;
+                    if(file.chunk_upload_id) {
+                        endpoint += &#x27;?upload_id=&#x27; + file.chunk_upload_id;
+                    }
+                    if(file.chunk_offset) {
+                        endpoint += &#x27;&amp;offset=&#x27; + file.chunk_offset;
+                    }
+                    method = &#x27;PUT&#x27;;
+                }
+            } else {
+                endpoint = this.options.endpoint;
+                method = &#x27;POST&#x27;;
+            }
+
+            xhr.open(method, endpoint, true);
+            xhr.withCredentials = true;
+            xhr.setRequestHeader(&quot;x-requested-with&quot;, &quot;XMLHttpRequest&quot;);
+            if(this._supportChunks(file.size)) {
+                xhr.setRequestHeader(&#x27;Content-type&#x27;, &#x27;application/x-www-form-urlencoded&#x27;);
+            }
+
+            var fd = new FormData(),
+                blob;
+
+            if(&quot;Blob&quot; in window &amp;&amp; typeof Blob === &#x27;function&#x27;) {
+                blob = new Blob([file], { type: file.type });
+                if(this._supportChunks(file.size)) {
+                    file.chunk_offset = file.chunk_offset || 0;
+                    blob = blob.slice(file.chunk_offset, file.chunk_offset + this.options.chunkSize);
+                } else {
+                    fd.append(this.options.fileFormName, blob, file.name);
+                }
+            } else {
+                fd.append(this.options.fileFormName, file);
+            }
+
+            if(!this._supportChunks(file.size)) {
+                for(var k in this.options.extraData) {
+                    if(this.options.extraData.hasOwnProperty(k)) {
+                        fd.append(k, this.options.extraData[k]);
+                    }
+                }
+            } else {
+                fd.append(&#x27;upload_id&#x27;, file.chunk_upload_id);
+                fd.append(&#x27;path&#x27;, file.upload_path);
+            }
+
+            if(!file.hasParent) {
+                if(!this._supportChunks(file.size)) {
+                    xhr.send(fd);
+                } else {
+                    if(file.size &lt;= file.chunk_offset) {
+                        xhr.send(&#x27;upload_id=&#x27; + file.chunk_upload_id + &#x27;&amp;path=&#x27; + file.upload_path + &#x27;/&#x27; + file.name);
+                    } else {
+                        xhr.send(blob);
+                    }
+                }
+            } else {
+                this.publish(&#x27;cbCreateFolder&#x27;, file.parentID, file.fullPath, this.options.extraData, this._folders, file.rootPath, Ink.bind(function() {
+                    if(!this._supportChunks(file.size)) {
+                        xhr.send(fd);
+                    } else {
+                        if(file.size &lt;= file.chunk_offset) {
+                            xhr.send(&#x27;upload_id=&#x27; + file.chunk_upload_id + &#x27;&amp;path=&#x27; + file.upload_path + &#x27;/&#x27; + file.name);
+                        } else {
+                            xhr.send(blob);
+                        }
+                    }
+                }, this));
+            }
+
+
+            xhr.onload = Ink.bindEvent(function() {
+                /* jshint boss:true */
+                if(this._supportChunks(file.size) &amp;&amp; file.size &gt; file.chunk_offset) {
+                    if(xhr.response) {
+                        var response = JSON.parse(xhr.response);
+
+                        // check expected offset
+                        var invalidOffset = file.chunk_offset &amp;&amp; response.offset !== (file.chunk_offset + this.options.chunkSize) &amp;&amp; file.size !== response.offset;
+                        if(invalidOffset) {
+                            if(o.cb) {
+                                o.cb();
+                            }
+                            this.publish(&#x27;ErrorUpload&#x27;, file, fileID);
+                        } else {
+                            file.chunk_upload_id = response.upload_id;
+                            file.chunk_offset = response.offset;
+                            file.chunk_expires = response.expires;
+                            this._upload(o);
+                        }
+                    } else {
+                        if(o.cb) {
+                            o.cb();
+                        }
+                        this.publish(&#x27;ErrorUpload&#x27;, file, fileID);
+                    }
+                    return (xhr = null);
+                }
+
+                if(o.cb) {
+                    o.cb();
+                }
+
+                if(xhr.responseText &amp;&amp; xhr[&#x27;status&#x27;] &lt; 400) {
+                    this.publish(&#x27;EndUpload&#x27;, file, fileID, xhr.responseText);
+                } else {
+                    this.publish(&#x27;ErrorUpload&#x27;, file, fileID);
+                }
+                return (xhr = null);
+            }, this);
+
+
+            xhr.onerror = Ink.bindEvent(function() {
+                if(o.cb) {
+                    o.cb();
+                }
+                this.publish(&#x27;ErrorUpload&#x27;, file, fileID);
+            }, this);
+
+            xhr.onabort = Ink.bindEvent(function() {
+                if(o.cb) {
+                    o.cb();
+                }
+                this.publish(&#x27;AbortUpload&#x27;, file, fileID, {
+                    abortAll: Ink.bind(this.abortAll, this),
+                    abortOne: Ink.bind(this.abortOne, this)
+                });
+            }, this);
+        },
+
+
+        abortAll: function() {
+            if(!this._queueRunning) {
+                return false;
+            }
+            clearInterval(this.interval);
+            this._queueRunning = false;
+            Queue.purge(this._queueId, true);
+            return true;
+        },
+
+        abortOne: function(id, cb) {
+            var items = Queue.getItems(0),
+                o;
+            for(var i = 0, len = items.length; i&lt;len; i++) {
+                if(items[i].item.fileID === id) {
+                    o = {
+                        id:         items[i].item.fileID,
+                        name:       items[i].item.data.name,
+                        size:       items[i].item.data.size,
+                        hasParent:  items[i].item.data.hasParent
+                    };
+                    Queue.remove(0, items[i].pid);
+                    if(cb) {
+                        cb(o);
+                    }
+                    return true;
+                }
+            }
+            return false;
+        },
+
+
+        subscribe: function(eventName, fn) {
+            if(!this._events[eventName]) {
+                this._events[eventName] = [];
+            }
+            this._events[eventName].push(fn);
+            return this._events[eventName];
+        },
+
+
+        publish: function(eventName) {
+            var events = this._events[eventName],
+                args = Array.prototype.slice.call(arguments || [], 0);
+
+            if(!events) {
+                return;
+            }
+
+            for(var i = 0, len = events.length; i&lt;len; i++) {
+                try {
+                    events[i].apply(this, args.splice(1, args.length));
+                } catch(err) {
+                    Ink.error(eventName + &quot;: &quot; + err);
+                }
+            }
+        }
+    };
+
+    return Upload;
+});
+
+    </pre>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+</body>
+</html>

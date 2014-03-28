@@ -10,7 +10,7 @@ class ListBiling extends Ometz_Default {
 		
 		
 		$this->QryOrcamentos  = " SELECT ";
-		$this->QryOrcamentos .= " 	CJ_NUM ORCAMENTO, CJ_EMISSAO EMISSAO, CJ_CLIENTE ,  CJ_LOJA, A1_NOME, CJ_STATUS, VZK_DATA, VZK_NOMARQ,  VZK_CAMARQ, VZK_USER ";
+		$this->QryOrcamentos .= " 	CJ_NUM ORCAMENTO, CJ_EMISSAO EMISSAO, CJ_CLIENTE ,  CJ_LOJA, A1_NOME, CJ_STATUS, VZK_DATA DATA, VZK_NOMARQ,  VZK_CAMARQ, VZK_USER ";
 		$this->QryOrcamentos .= "	FROM ";
 		$this->QryOrcamentos .= "     DB2.SCJ500 SCJ ";
 		$this->QryOrcamentos .= "     INNER JOIN DB2.SA1500 SA1 ON (A1_COD = CJ_CLIENTE AND A1_LOJA = CJ_LOJA AND SA1.D_E_L_E_T_ = ' ') ";
@@ -25,10 +25,12 @@ class ListBiling extends Ometz_Default {
 		
 		$Itens = '';
 		for ($i = 0; $i <= count($response)-1; $i++) {
-			$emissao = substr($response[$i]['EMISSAO'],6,2).'/'.substr($response[$i]['EMISSAO'], 4,2).'/'.substr($response[$i]['EMISSAO'], 0,4);
+			$dataorcamento = substr($response[$i]['EMISSAO'],6,2).'/'.substr($response[$i]['EMISSAO'], 4,2).'/'.substr($response[$i]['EMISSAO'], 0,4);	
+			$emissao = substr($response[$i]['DATA'],6,2).'/'.substr($response[$i]['DATA'], 4,2).'/'.substr($response[$i]['DATA'], 0,4);
 			
 			$Itens .= '<tr>';
     		$Itens .= '	<td>'.$response[$i]['ORCAMENTO'].'</td>';
+    		$Itens .= '	<td>'.$dataorcamento.'</td>';
     		$Itens .= '	<td>'.$emissao.'</td>';
     		$Itens .= '	<td>'.$response[$i]['A1_NOME'].'</td>';
     		$Itens .= '	<td>'.$response[$i]['VZK_USER'].'</td>';
@@ -43,7 +45,6 @@ class ListBiling extends Ometz_Default {
     		}
     		$Itens .= '	<td><a href="'.trim($response[$i]['VZK_CAMARQ']).trim($response[$i]['VZK_NOMARQ']).'" target="_blank"><i class="icon-zoom-in icon-large"></i></a></td>';
     		$Itens .= '</tr>';
-
 		}
 		return $Itens;	
 	}
@@ -51,7 +52,7 @@ class ListBiling extends Ometz_Default {
 }
 
 
-$filter = " AND CJ_STATUS = 'A' ";
+$filter = " ";
 
 $DataAtual = date("Ymd");
 $EmissDe = '';
@@ -82,6 +83,7 @@ if (isset($_POST['orcamento'])){
 $ObjItens = new ListBiling();
 
 $Html  = '<head>';
+$Html .= '	<title>.:Pagina de Listado de Contratos :.</title>';
 $Html .= '	<link charset="utf-8" media="screen" type="text/css" href="../ink/css/ink.css" rel="stylesheet">';
 $Html .= '	<script type="text/javascript" src="../ink/js/ink.js"></script>';
 $Html .= '	<script type="text/javascript" src="../ink/js/ink.datepicker.pt.js"></script>';
@@ -125,7 +127,8 @@ $Html .= '				<td class="FonteFormulario">';
 $Html .= '						<table class="ink-table hover ">';
 $Html .= '							<thead>';
 $Html .= '								<td>N&uacute;mero Or&ccedil;amento</td>';
-$Html .= '								<td>Data de Inclus&atilde;o</td>';
+$Html .= '								<td>Data do Or&ccedil;amento</td>';
+$Html .= '								<td>Data de Inclus&atilde;o Documento</td>';
 $Html .= '								<td>Cliente</td>';
 $Html .= '								<td>Respons&aacute;vel</td>';
 $Html .= '								<td>Status</td>';

@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Ink/UI/SortableList/1/lib.js - Ink.js</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+    <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><img src="../yuidoclogo.png" title="Ink.js"></h1>
+            
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: latest</em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <h2 class="off-left">APIs</h2>
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+            <li><a href="#api-modules">Modules</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="../classes/Ink.html">Ink</a></li>
+            
+                <li><a href="../classes/Ink.Dom.Browser.html">Ink.Dom.Browser</a></li>
+            
+                <li><a href="../classes/Ink.Dom.Css.html">Ink.Dom.Css</a></li>
+            
+                <li><a href="../classes/Ink.Dom.Element.html">Ink.Dom.Element</a></li>
+            
+                <li><a href="../classes/Ink.Dom.Event.html">Ink.Dom.Event</a></li>
+            
+                <li><a href="../classes/Ink.Dom.FormSerialize.html">Ink.Dom.FormSerialize</a></li>
+            
+                <li><a href="../classes/Ink.Dom.Loaded.html">Ink.Dom.Loaded</a></li>
+            
+                <li><a href="../classes/Ink.Dom.Selector.html">Ink.Dom.Selector</a></li>
+            
+                <li><a href="../classes/Ink.Namespace.ClassModule.html">Ink.Namespace.ClassModule</a></li>
+            
+                <li><a href="../classes/Ink.Namespace.StaticModule.html">Ink.Namespace.StaticModule</a></li>
+            
+                <li><a href="../classes/Ink.Net.Ajax.html">Ink.Net.Ajax</a></li>
+            
+                <li><a href="../classes/Ink.Net.JsonP.html">Ink.Net.JsonP</a></li>
+            
+                <li><a href="../classes/Ink.UI.Animate_1.html">Ink.UI.Animate_1</a></li>
+            
+                <li><a href="../classes/Ink.UI.Carousel_1.html">Ink.UI.Carousel_1</a></li>
+            
+                <li><a href="../classes/Ink.UI.Close.html">Ink.UI.Close</a></li>
+            
+                <li><a href="../classes/Ink.UI.Common.html">Ink.UI.Common</a></li>
+            
+                <li><a href="../classes/Ink.UI.DatePicker.html">Ink.UI.DatePicker</a></li>
+            
+                <li><a href="../classes/Ink.UI.Draggable.html">Ink.UI.Draggable</a></li>
+            
+                <li><a href="../classes/Ink.UI.Dropdown.html">Ink.UI.Dropdown</a></li>
+            
+                <li><a href="../classes/Ink.UI.Droppable.html">Ink.UI.Droppable</a></li>
+            
+                <li><a href="../classes/Ink.UI.FormValidator.html">Ink.UI.FormValidator</a></li>
+            
+                <li><a href="../classes/Ink.UI.FormValidator_2.html">Ink.UI.FormValidator_2</a></li>
+            
+                <li><a href="../classes/Ink.UI.ImageQuery.html">Ink.UI.ImageQuery</a></li>
+            
+                <li><a href="../classes/Ink.UI.Modal.html">Ink.UI.Modal</a></li>
+            
+                <li><a href="../classes/Ink.UI.Pagination.html">Ink.UI.Pagination</a></li>
+            
+                <li><a href="../classes/Ink.UI.ProgressBar.html">Ink.UI.ProgressBar</a></li>
+            
+                <li><a href="../classes/Ink.UI.SmoothScroller.html">Ink.UI.SmoothScroller</a></li>
+            
+                <li><a href="../classes/Ink.UI.SortableList.html">Ink.UI.SortableList</a></li>
+            
+                <li><a href="../classes/Ink.UI.Spy.html">Ink.UI.Spy</a></li>
+            
+                <li><a href="../classes/Ink.UI.Stacker_1.html">Ink.UI.Stacker_1</a></li>
+            
+                <li><a href="../classes/Ink.UI.Sticky.html">Ink.UI.Sticky</a></li>
+            
+                <li><a href="../classes/Ink.UI.Swipe.html">Ink.UI.Swipe</a></li>
+            
+                <li><a href="../classes/Ink.UI.Table.html">Ink.UI.Table</a></li>
+            
+                <li><a href="../classes/Ink.UI.Tabs.html">Ink.UI.Tabs</a></li>
+            
+                <li><a href="../classes/Ink.UI.TagField.html">Ink.UI.TagField</a></li>
+            
+                <li><a href="../classes/Ink.UI.Toggle.html">Ink.UI.Toggle</a></li>
+            
+                <li><a href="../classes/Ink.UI.Tooltip.html">Ink.UI.Tooltip</a></li>
+            
+                <li><a href="../classes/Ink.UI.TreeView.html">Ink.UI.TreeView</a></li>
+            
+                <li><a href="../classes/Ink.Util.Array.html">Ink.Util.Array</a></li>
+            
+                <li><a href="../classes/Ink.Util.BinPack.html">Ink.Util.BinPack</a></li>
+            
+                <li><a href="../classes/Ink.Util.Cookie.html">Ink.Util.Cookie</a></li>
+            
+                <li><a href="../classes/Ink.Util.Date.html">Ink.Util.Date</a></li>
+            
+                <li><a href="../classes/Ink.Util.Dumper.html">Ink.Util.Dumper</a></li>
+            
+                <li><a href="../classes/Ink.Util.I18n.html">Ink.Util.I18n</a></li>
+            
+                <li><a href="../classes/Ink.Util.Json.html">Ink.Util.Json</a></li>
+            
+                <li><a href="../classes/Ink.Util.String.html">Ink.Util.String</a></li>
+            
+                <li><a href="../classes/Ink.Util.Url.html">Ink.Util.Url</a></li>
+            
+                <li><a href="../classes/Ink.Util.Validator.html">Ink.Util.Validator</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+                <li><a href="../modules/Ink.Dom.Browser_1.html">Ink.Dom.Browser_1</a></li>
+            
+                <li><a href="../modules/Ink.Dom.Css_1.html">Ink.Dom.Css_1</a></li>
+            
+                <li><a href="../modules/Ink.Dom.Element_1.html">Ink.Dom.Element_1</a></li>
+            
+                <li><a href="../modules/Ink.Dom.Event_1.html">Ink.Dom.Event_1</a></li>
+            
+                <li><a href="../modules/Ink.Dom.FormSerialize.html">Ink.Dom.FormSerialize</a></li>
+            
+                <li><a href="../modules/Ink.Dom.Loaded_1.html">Ink.Dom.Loaded_1</a></li>
+            
+                <li><a href="../modules/Ink.Dom.Selector_1.html">Ink.Dom.Selector_1</a></li>
+            
+                <li><a href="../modules/Ink.Namespace.ClassModule_1.html">Ink.Namespace.ClassModule_1</a></li>
+            
+                <li><a href="../modules/Ink.Namespace.StaticModule_1.html">Ink.Namespace.StaticModule_1</a></li>
+            
+                <li><a href="../modules/Ink.Net.Ajax_1.html">Ink.Net.Ajax_1</a></li>
+            
+                <li><a href="../modules/Ink.Net.JsonP_1.html">Ink.Net.JsonP_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Animate_1.html">Ink.UI.Animate_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Carousel_1.html">Ink.UI.Carousel_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Close_1.html">Ink.UI.Close_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Common_1.html">Ink.UI.Common_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.DatePicker_1.html">Ink.UI.DatePicker_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Dropdown_1.html">Ink.UI.Dropdown_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Droppable_1.html">Ink.UI.Droppable_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.FormValidator_1.html">Ink.UI.FormValidator_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.FormValidator_2.html">Ink.UI.FormValidator_2</a></li>
+            
+                <li><a href="../modules/Ink.UI.ImageQuery_1.html">Ink.UI.ImageQuery_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Modal_1.html">Ink.UI.Modal_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Pagination_1.html">Ink.UI.Pagination_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.ProgressBar_1.html">Ink.UI.ProgressBar_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.SmoothScroller_1.html">Ink.UI.SmoothScroller_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.SortableList_1.html">Ink.UI.SortableList_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Spy_1.html">Ink.UI.Spy_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Stacker_1.html">Ink.UI.Stacker_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Sticky_1.html">Ink.UI.Sticky_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Swipe.html">Ink.UI.Swipe</a></li>
+            
+                <li><a href="../modules/Ink.UI.Table_1.html">Ink.UI.Table_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Tabs_1.html">Ink.UI.Tabs_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Toggle_1.html">Ink.UI.Toggle_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.Tooltip_1.html">Ink.UI.Tooltip_1</a></li>
+            
+                <li><a href="../modules/Ink.UI.TreeView_1.html">Ink.UI.TreeView_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Array_1.html">Ink.Util.Array_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.BinPack_1.html">Ink.Util.BinPack_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Cookie_1.html">Ink.Util.Cookie_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Date_1.html">Ink.Util.Date_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Dumper_1.html">Ink.Util.Dumper_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.I18n_1.html">Ink.Util.I18n_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Json_1.html">Ink.Util.Json_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.String_1.html">Ink.Util.String_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Url_1.html">Ink.Util.Url_1</a></li>
+            
+                <li><a href="../modules/Ink.Util.Validator_1.html">Ink.Util.Validator_1</a></li>
+            
+                <li><a href="../modules/Ink_1.html">Ink_1</a></li>
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+
+
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1 class="file-heading">File: Ink/UI/SortableList/1/lib.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+/**
+ * @module Ink.UI.SortableList_1
+ * @author inkdev AT sapo.pt
+ * @version 1
+ */
+Ink.createModule(&#x27;Ink.UI.SortableList&#x27;, &#x27;1&#x27;, [&#x27;Ink.UI.Common_1&#x27;,&#x27;Ink.Dom.Css_1&#x27;,&#x27;Ink.Dom.Event_1&#x27;,&#x27;Ink.Dom.Element_1&#x27;,&#x27;Ink.Dom.Selector_1&#x27;], function( Common, Css, Events, Element, Selector ) {
+    &#x27;use strict&#x27;;
+    var hasTouch = ((&#x27;ontouchstart&#x27; in window) ||       // html5 browsers
+                    (navigator.maxTouchPoints &gt; 0) ||   // future IE
+                    (navigator.msMaxTouchPoints &gt; 0));
+
+    /**
+     * Adds sortable behaviour to any list!
+     * 
+     * @class Ink.UI.SortableList
+     * @constructor
+     * @version 1
+     * @param {String|DOMElement} selector
+     * @param {String} [options.placeholderClass=&#x27;placeholder&#x27;] CSS class to be added to the &quot;ghost&quot; element being dragged around
+     * @param {String} [options.draggedClass=&#x27;hide-all&#x27;] CSS class added to the original element.
+     * @param {String} [options.draggingClass=&#x27;dragging&#x27;] CSS class added to the html element when the user is dragging.
+     * @param {String} [options.dragSelector=&#x27;li&#x27;] CSS selector for the drag enabled nodes.
+     * @param {String} [options.handleSelector=null] CSS selector for the drag handle. If present, you can only drag nodes by this selector.
+     * @param {String} [options.moveSelector=null] CSS selector to validate a node move. If present, you can only move nodes into this selector.
+     * @param {Boolean} [options.swap=false] Flag to swap moving element with target element instead of changing its order.
+     * @param {Boolean} [options.cancelMouseOut=false] Flag to cancel moving if mouse leaves the container element.
+
+     * @example
+     *      &lt;ul class=&quot;unstyled ink-sortable-list&quot; id=&quot;slist&quot; data-handle-selector=&quot;.ink-label&quot;&gt;
+     *          &lt;li&gt;&lt;span class=&quot;ink-label info&quot;&gt;drag here&lt;/span&gt;primeiro&lt;/li&gt;
+     *          &lt;li&gt;&lt;span class=&quot;ink-label info&quot;&gt;drag here&lt;/span&gt;segundo&lt;/li&gt;
+     *          &lt;li&gt;&lt;span class=&quot;ink-label info&quot;&gt;drag here&lt;/span&gt;terceiro&lt;/li&gt;
+     *      &lt;/ul&gt;
+     *      &lt;script&gt;
+     *          Ink.requireModules( [&#x27;Ink.Dom.Selector_1&#x27;,&#x27;Ink.UI.SortableList_1&#x27;], function( Selector, SortableList ){
+     *              var sortableListElement = Ink.s(&#x27;.ink-sortable-list&#x27;);
+     *              var sortableListObj = new SortableList( sortableListElement );
+     *          });
+     *      &lt;\/script&gt;
+     */
+    var SortableList = function(selector, options) {
+
+        this._element = Common.elOrSelector(selector, &#x27;Ink.UI.SortableList&#x27;);
+
+        this._options = Common.options(&#x27;Sortable&#x27;, {
+            &#x27;placeholderClass&#x27;: [&#x27;String&#x27;, &#x27;placeholder&#x27;],
+            &#x27;draggedClass&#x27;: [&#x27;String&#x27;, &#x27;hide-all&#x27;],
+            &#x27;draggingClass&#x27;: [&#x27;String&#x27;, &#x27;dragging&#x27;],
+            &#x27;dragSelector&#x27;: [&#x27;String&#x27;, &#x27;li&#x27;],
+            &#x27;dragObject&#x27;: [&#x27;String&#x27;, null], // Deprecated. Use handleSelector instead.
+            &#x27;handleSelector&#x27;: [&#x27;String&#x27;, null],
+            &#x27;moveSelector&#x27;: [&#x27;String&#x27;, false],
+            &#x27;swap&#x27;: [&#x27;Boolean&#x27;, false],
+            &#x27;cancelMouseOut&#x27;: [&#x27;Boolean&#x27;, false]
+        }, options || {}, this._element);
+
+        if (this._options.dragObject != null) {
+            // [3.0.0] Remove this deprecation notice and stop providing backwards compatibility
+            Ink.warn(&#x27;Ink.UI.SortableList: options.dragObject is now deprecated. &#x27; +
+                    &#x27;Please use options.handleSelector instead.&#x27;);
+            this._options.handleSelector =
+                this._options.handleSelector || this._options.dragObject;
+        }
+
+        this._handlers = {
+            down: Ink.bind(this._onDown, this),
+            move: Ink.bind(this._onMove, this),
+            up:   Ink.bind(this._onUp, this)
+        };
+
+        this._isMoving = false;
+
+        this._init();
+    };
+
+    SortableList.prototype = {
+
+        /**
+         * Init function called by the constructor.
+         * 
+         * @method _init
+         * @private
+         */
+        _init: function() {
+            this._down = hasTouch ? &#x27;touchstart mousedown&#x27; : &#x27;mousedown&#x27;;
+            this._move = hasTouch ? &#x27;touchmove mousemove&#x27; : &#x27;mousemove&#x27;;
+            this._up   = hasTouch ? &#x27;touchend mouseup&#x27; : &#x27;mouseup&#x27;;
+
+            this._observe();
+            Common.registerInstance(this, this._element, &#x27;sortableList&#x27;);
+        },
+
+        /**
+         * Sets the event handlers.
+         * 
+         * @method _observe
+         * @private
+         */
+        _observe: function() {
+            Events.on(this._element, this._down, this._options.dragSelector, this._handlers.down);
+            Events.on(this._element, this._move, this._options.dragSelector, this._handlers.move);
+            if(this._options.cancelMouseOut) {
+                Events.on(this._element, &#x27;mouseleave&#x27;, Ink.bind(this.stopMoving, this));
+            }
+            Events.on(document.documentElement, this._up, this._handlers.up);
+        },
+
+        /**
+         * Mousedown or touchstart handler
+         * 
+         * @method _onDown
+         * @param {Event} ev
+         * @private
+         */
+        _onDown: function(ev) {
+            if (this._isMoving || this._placeholder) { return; }
+            if(this._options.handleSelector &amp;&amp; !Selector.matchesSelector(ev.target, this._options.handleSelector)) { return; }
+            var tgtEl = ev.currentTarget;
+            this._isMoving = tgtEl;
+            this._placeholder = tgtEl.cloneNode(true);
+            this._movePlaceholder(tgtEl);
+            this._addMovingClasses();
+            return false;
+        },
+
+        /**
+         * Mousemove or touchmove handler
+         * 
+         * @method _onMove
+         * @param {Event} ev
+         * @private
+         */
+        _onMove: function(ev) {
+            this.validateMove(ev.currentTarget);
+            return false;
+        },
+
+        /**
+         * Mouseup or touchend handler
+         * 
+         * @method _onUp
+         * @param {Event} ev
+         * @private
+         */
+        _onUp: function(ev) {
+            if (!this._isMoving || !this._placeholder) { return; }
+            if (ev.currentTarget === this._isMoving) { return; }
+            if (ev.currentTarget === this._placeholder) { return; }
+            Element.insertBefore(this._isMoving, this._placeholder);
+            this.stopMoving();
+            return false;
+        },
+
+        /**
+         * Adds the CSS classes to interactive elements
+         * 
+         * @method _addMovingClasses
+         * @private
+         */
+        _addMovingClasses: function(){
+            Css.addClassName(this._placeholder, this._options.placeholderClass);
+            Css.addClassName(this._isMoving, this._options.draggedClass);
+            Css.addClassName(document.documentElement, this._options.draggingClass);
+        },
+
+        /**
+         * Removes the CSS classes from interactive elements
+         * 
+         * @method _removeMovingClasses
+         * @private
+         */
+        _removeMovingClasses: function(){
+            if(this._isMoving) { Css.removeClassName(this._isMoving, this._options.draggedClass); }
+            if(this._placeholder) { Css.removeClassName(this._placeholder, this._options.placeholderClass); }
+            Css.removeClassName(document.documentElement, this._options.draggingClass);
+        },
+
+        /**
+         * Moves the placeholder element relative to the target element
+         * 
+         * @method _movePlaceholder
+         * @param {Element} target_position
+         * @private
+         */
+        _movePlaceholder: function(target){
+            var placeholder = this._placeholder,
+                target_position,
+                placeholder_position,
+                from_top,
+                from_left;
+            if(!placeholder) {
+                Element.insertAfter(placeholder, target);
+            } else if(this._options.swap){
+                Element.insertAfter(placeholder, target);
+                Element.insertBefore(target, this._isMoving);
+                Element.insertBefore(this._isMoving, placeholder);
+            } else {
+                target_position = Element.offset(target);
+                placeholder_position = Element.offset(this._placeholder);
+                from_top = target_position[1] &gt; placeholder_position[1];
+                from_left = target_position[0] &gt; placeholder_position[0];
+                if( ( from_top &amp;&amp; from_left ) || ( !from_top &amp;&amp; !from_left ) ) {
+                    Element.insertBefore(placeholder, target);
+                } else {
+                    Element.insertAfter(placeholder, target);
+                }
+                Element.insertBefore(this._isMoving, placeholder);
+            }
+        },
+
+        /**************
+         * PUBLIC API *
+         **************/
+
+        /**
+         * Unregisters the component and removes its markup from the DOM
+         * 
+         * @method destroy
+         * @public
+         */
+        destroy: Common.destroyComponent,
+
+        /**
+         * Visually stops moving. Removes the placeholder as well as the styling classes.
+         * 
+         * @method _movePlaceholder
+         * @public
+         */
+        stopMoving: function(){
+            this._removeMovingClasses();
+            Element.remove(this._placeholder);
+            this._placeholder = false;
+            this._isMoving = false;
+        },
+
+        /**
+         * Validation method for the move handler
+         * 
+         * @method _movePlaceholder
+         * @param {Element} elem
+         * @public
+         */
+        validateMove: function(elem){
+            if (!this._isMoving || !this._placeholder) { return; }
+            if (elem === this._placeholder) {  return; }
+            if (elem === this._isMoving) { return; }
+            if(!this._options.moveSelector || Selector.matchesSelector(elem, this._options.moveSelector)){
+                this._movePlaceholder(elem);
+            } else {
+                this.stopMoving();  
+            }
+        }
+
+    };
+
+    return SortableList;
+});
+
+    </pre>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+</body>
+</html>

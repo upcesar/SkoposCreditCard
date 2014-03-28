@@ -46,15 +46,32 @@ class viewContract extends Ometz_Default
 		echo $this->listYears;
 	}
 	
-	public function listAvailablesCurses(){
-		$sql = "SELECT 
-  					SB1.B1_COD, SB1.B1_DESC, SB1.B1_PRV1
-				FROM DB2.SB1500 AS SB1
-				WHERE SB1.B1_COD IN (
+	public function listAvailablesCourses($flag){
+			
+		//SELECT FLAG FOR QUERY
+		if(strtoupper($flag)== "Y"){	//YOU MOVE
+			$cod= "	
 					'101.00000000001',
 					'101.00000000351',
 					'101.00000000352',
-					'101.00000000353') 
+					'101.00000000353'
+			";			
+		}
+		else{		//YOU MOVE TEENS
+			$cod= "	
+			        '101.00000001020',
+			        '101.00000001062',
+			        '101.00000001063',
+			        '101.00000001064',
+			        '101.00000001065'
+			";			
+			
+		}
+			
+		$sql = "SELECT 
+  					SB1.B1_COD, SB1.B1_DESC, SB1.B1_PRV1
+				FROM DB2.SB1500 AS SB1
+				WHERE SB1.B1_COD IN (".$cod.") 
 				AND SB1.D_E_L_E_T_ = ''
 				ORDER BY SB1.B1_COD";
 		
@@ -87,7 +104,7 @@ $num_col_interest = abs($num_col_nointerest - $num_cols);
 	<tr >
 		<td colspan="2" class="FonteFormulario">
 			<p>
-            	<a href="http://www.ometzgroup.com.br/empresas/skopos"><img src="<?php echo (IMG_FOLDER); ?>logo_company.png" border=0 align="absmiddle" title="Descri&ccedil;&atilde;o da Sua Loja"></a>
+            	<a href="<?php echo (BASE_URL.'contrato/'); ?>"><img src="<?php echo (IMG_FOLDER); ?>logo_company.png" border=0 align="absmiddle" title="Descri&ccedil;&atilde;o da Sua Loja"></a>
 				<div class="version">Vers&atilde;o: <? echo(VERSION); ?></div>                
             </p>
 		</td>
@@ -107,6 +124,7 @@ $num_col_interest = abs($num_col_nointerest - $num_cols);
             <input type="hidden" name="emailcliente" id="emailcliente" value = "">
             <input type="hidden" name="selectedkit" id="selectedkit" value = "">
                                      
+            <input type="hidden" name="bandeira" id="bandeira" value = "3">
             <input type="hidden" name="quantidademodulos" id="quantidademodulos" value = "3">
             <input type="hidden" name="valormodulo" id="valormodulo" value = "">
             <input type="hidden" name="valorkit" id="valorkit" value = "">
@@ -132,6 +150,7 @@ $num_col_interest = abs($num_col_nointerest - $num_cols);
 			<input type="hidden" id="RatePerc" name="RatePerc" value="<?= RATE_PERC; ?>">
 			<input type="hidden" id="ServerMonth" name="ServerMonth" value="<? echo(date('m')); ?>">
 			<input type="hidden" id="ServerYear" name="ServerYear" value="<? echo (date('Y')); ?>">
+			<input type="hidden" id="ServerDay" name="ServerDay" value="<? echo (date('d')); ?>">
 			<input type="hidden" id="CutOffMonth" name="CutOffMonth" value="<? echo($objContract->getCutOffDate('m')); ?>">
 			<input type="hidden" id="CutOffYear" name="CutOffYear" value="<? echo ($objContract->getCutOffDate('Y')); ?>">
 			<input type="hidden" id="DiscountRegSale" name="DiscountRegSale" value="<?= DISC_REG_SALE_PERC ?>">
@@ -144,19 +163,22 @@ $num_col_interest = abs($num_col_nointerest - $num_cols);
 
             <fieldset>
 				<legend>DADOS DO CLIENTE</legend>
-                
-				<div class="PurchaseData">
-                	<label for="lblQuotation" class="textlabel"><b>N&Uacute;MERO CLIENTE / LOJA:</b></label>                    
-                    <input type="text" id="txtCustNum" name="txtCustNum" size="20" maxlength="6" autocomplete="off" class="TextBoxCompras">
-                    <input type="text" id="txtNumBrand" name="txtNumBrand" size="2" maxlength="2" autocomplete="off" class="TextBoxCompras">
-                    
-                    <span class="marginButton"><button id="btnSearchCust"><img src="<?= BASE_URL ?>img/find.png" width="16px" height="16px" style="padding-right:5px;margin-top:-2px">Busca</button></span>
-                    <span id="imgLoading">
-                    	<img src="<?= BASE_URL ?>img/loading.gif" />&nbsp;
-                        <span id="msgWait">Procurando cliente...</span>
-                    </span>                    
-                </div>                
-                
+                <form action="" method="post" id="frmCustomerParam" >
+					<div class="PurchaseData" id = "CustomerParams">
+	                	
+		                	<label for="lblQuotation" class="textlabel"><b>N&Uacute;MERO CLIENTE / LOJA:</b></label>                    
+		                    <input type="text" id="txtCustNum" name="txtCustNum" size="20" maxlength="6" autocomplete="off" class="TextBoxCompras">
+		                    <input type="text" id="txtNumBrand" name="txtNumBrand" size="2" maxlength="2" autocomplete="off" class="TextBoxCompras">
+		                    
+		                    <span class="marginButton"><button id="btnSearchCust"><img src="<?= BASE_URL ?>img/find.png" width="16px" height="16px" style="padding-right:5px;margin-top:-2px">Busca</button></span>
+		                    <span id="imgLoading">
+		                    	<img src="<?= BASE_URL ?>img/loading.gif" />&nbsp;
+		                        <span id="msgWait">Procurando cliente...</span>
+		                    </span>
+	                </div>
+
+	           	</form>                    
+
                 <div id="divMsgContractSearch" class="smallError">Deve digitar o n&uacute;mero de Cliente</div>
 				
                 <div id="ContractData">                                        
@@ -219,18 +241,36 @@ $num_col_interest = abs($num_col_nointerest - $num_cols);
                         <b class="textlabel">DATA EMISS&Atilde;O CONTRATO:</b>
                         <span id="levels_ammount" class="CustomerData">
 							<input type="text" id="dataemissaocontrato" name = "dataemissaocontrato" value="<? echo ( date('d/m/Y') ); ?>">
+							<span id="divMsgIssueDate" class="smallError">Data emissa&atilde;o n&atilde;o deve estar vazio.</span>
                         </span>
                     </div>
-
-
+                                        
+	                <!-- SCHOOL FLAG SELECTOR -->
+	                <div class="PurchaseData">
+						<label for="lblFlag" class="textlabel"><b>BANDEIRA ESCOLA:</b></label>
+	                	<span id="schoolSection" class="CustomerData">
+		                	<select id="cboFlag" name="cboFlag">
+		                		<option selected value=""></option>
+		                		<option value="Y ">YOU MOVE</option>
+		                		<option value="YT">YOU MOVE TEENS</option>
+		                	</select>
+		                	<span id="divSchoolFlag" class="smallError">Deve selecionar uma escola.</span>
+	                	</span>
+					</div>
+                    
+                    
                     <!-- LEVELS LIST -->
-                    <div class="PurchaseData">                
+                    <div class="PurchaseData" id="productChosser">                
 						<b class="textlabel">MODULO / CURSO:</b>
-                        <span id="num_levels2" class="CustomerData">                            
-                            <div style="display:table">
-                                <?php echo ($objContract->listAvailablesCurses()); ?>
+                        <span id="productChecks" class="CustomerData">                            
+                            <div style="display:none" id="youmoveProd">
+                                <?php echo ($objContract->listAvailablesCourses("Y")); ?>
                             </div>
-                        </span>
+                            <div style="display:none" id="youmoveteensProd">
+                                <?php echo ($objContract->listAvailablesCourses("YT")); ?>
+                            </div>
+
+                        </span>                        
                     </div>
 
 
@@ -239,9 +279,36 @@ $num_col_interest = abs($num_col_nointerest - $num_cols);
                     <div class="PurchaseData">                
                         <b class="textlabel">TOTAL MODULOS:</b>
                         <span id="levels_ammount" class="CustomerData">
-	                        <input type="text" autocomplete="off" name="txtValorDocumento" id="txtValorDocumento" size="20" readonly>
+	                        <input type="text" autocomplete="off" name="txtValorDocumento" id="txtValorDocumento" size="20">
+	                        <span id="divMsgValuePayment" class="smallError">Pagamento deve conter um valor maior que zero</span>
                         </span>
                     </div>
+
+                    <!-- CREDIT CARD FLAG / BRAND -->
+                    <div class="PurchaseData">                
+                        <b class="textlabel">BANDEIRA CART&Atilde;O:</b>
+                        <span id="levels_ammount" class="CustomerData">
+                        	<select id="cboCCIssuer" name = "cboCCIssuer">
+                            	<option selected value=""></option>
+                                <option value="VISA">VISA</option>
+                                <option value="MASTER CARD">MASTER CARD</option>
+                                <option alue="AMEX">AMEX</option>                                
+                            </select>
+                            <span id="divCreditFlag" class="smallError">Deve selecionar uma bandeira</span>
+                        </span>
+                    </div>
+
+                    <!-- CREDIT CARD NUMBER -->
+                    <div class="PurchaseData">                
+                        <b class="textlabel">N&Uacute;MERO CART&Atilde;O:</b>
+                        <span id="levels_ammount" class="CustomerData">
+                        	<input type="text" name="firstCCNum" id="firstCCNum" maxlength="4" size="2">
+                            - XXXX - XXXX -
+                            <input type="text" name="lastCCNum" id="lastCCNum" maxlength="4" size="2">                        
+                        	<span id="divMsgCreditCard" class="smallError">Valor cart&atilde;o n&atilde;o dever estar vazio</span>
+                        </span>
+                    </div>
+
 
                     
 					<!-- EXPIRE CREDIT CARD -->
@@ -267,10 +334,12 @@ $num_col_interest = abs($num_col_nointerest - $num_cols);
 							<?= $objContract->printYears();?>
 						</select>
 
-                        <span style="margin-left:75px">
+                        <span style="margin-left:15px">
 	                        <button id="btnSelectQuota">
 	                            <img src="<?php echo(BASE_URL); ?>img/fee_number.png" width="20px" height="20px">&nbsp;Selecionar Parcelas
 	                        </button>
+	                        <span class="smallError" id="divMsgValueFee">Deve Selecionar Parcelas</span>
+	                        
                         </span>
 
 
@@ -280,34 +349,8 @@ $num_col_interest = abs($num_col_nointerest - $num_cols);
                     
                     <div class="PurchaseData">                        
                         <input type="hidden" id="txtQuantidadeParcelas" name="txtQuantidadeParcelas" size="2" class="TextBoxCompras" maxlength="2" readonly >
-                        
-                        <span id="divMsgValueFee" class="smallError">Deve digitar o valor para N&uacute;mero de Parcelas</span>						
                     </div>                    
                     
-                    <!-- CREDIT CARD FLAG / BRAND -->
-                    <div class="PurchaseData">                
-                        <b class="textlabel">BANDEIRA CART&Atilde;O:</b>
-                        <span id="levels_ammount" class="CustomerData">
-                        	<select id="cboCCIssuer" name = "cboCCIssuer">
-                            	<option selected value=""></option>
-                                <option value="VISA">VISA</option>
-                                <option value="MASTER CARD">MASTER CARD</option>
-                                <option alue="AMEX">AMEX</option>                                
-                            </select>
-                        </span>
-                    </div>
-
-                    <!-- CREDIT CARD NUMBER -->
-                    <div class="PurchaseData">                
-                        <b class="textlabel">N&Uacute;MERO CART&Atilde;O:</b>
-                        <span id="levels_ammount" class="CustomerData">
-                        	<input type="text" name="firstCCNum" id="firstCCNum" maxlength="4" size="4">
-                            ********
-                            <input type="text" name="lastCCNum" id="lastCCNum" maxlength="4" size="4">                        
-                        
-                        </span>
-                    </div>
-
                     
                     <hr />
                     

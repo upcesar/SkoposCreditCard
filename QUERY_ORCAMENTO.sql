@@ -1,19 +1,41 @@
-SELECT 
-        CJ_NUM ORCAMENTO,
-        A1_COD COD_CLIENTE,
-        A1_NUMRA,
-        A1_NOME AS CLIENTE,        
-        Case 
-                When A1_PESSOA  = 'F' Then 'CPF'
-                Else    'CNPJ'
-        End TIPODOC,        
-        A1_CGC NUM_DOC,         
-        A1_END,
-        CJ_VALORD TOTAL_CARTAO, 
-        CJ_TOTPAG TOTAL_ORCAMENTO
-FROM 
-        SA1500 AS SA1
-INNER JOIN  SCJ500   AS SCJ ON SA1.A1_LOJA = SCJ.CJ_LOJA  AND SA1.A1_COD = SCJ.CJ_CLIENTE AND SA1.D_E_L_E_T_ = SCJ.D_E_L_E_T_ AND SA1.D_E_L_E_T_ = ''
+			SELECT 
+					CJ_NUM ORCAMENTO,
+					MT3.MT3_CODFIL,					
+					UPPER(MT3.MT3_FIL) AS MT3_FIL,
+					SA1.A1_COD COD_CLIENTE,
+					SA1.A1_NUMRA,
+					SA1.A1_NOME AS CLIENTE,        
+					Case 
+							When SA1.A1_PESSOA  = 'F' Then 'CPF'
+							Else    'CNPJ'
+					End TIPODOC,
+					SA1.A1_CGC NUM_DOC,
+					CASE
+						WHEN SA1.A1_END IS NOT NULL THEN UPPER(SA1.A1_END)
+						ELSE 'NAO INFORMADO'
+					END AS ENDERECO,
+					SCJ.CJ_VALORD TOTAL_CARTAO, 
+					SCJ.CJ_TOTPAG TOTAL_ORCAMENTO,
+					(
+					SELECT  
+						CASE
+							WHEN  SUM(SZ0.Z0_VALCRE) IS NULL THEN 0
+							ELSE    SUM(SZ0.Z0_VALCRE) 
+						END AS SUM_PAYMENT
+					FROM DB2.SZ0500 AS SZ0
+					WHERE SZ0.Z0_DONOCH IN ('4', '5') 
+					AND SZ0.Z0_CODORCA = SCJ.CJ_NUM
+					AND SZ0.D_E_L_E_T_ = ''
+					) + SCJ.CJ_DESCONT AS TOTAL_PAGO,
+					SCJ.CJ_STATUS STATUS
+        			FROM 
+                        DB2.SA1500 AS SA1
+        			INNER JOIN  DB2.SCJ500 AS SCJ ON 
+						SA1.A1_LOJA = SCJ.CJ_LOJA  AND SA1.A1_COD = SCJ.CJ_CLIENTE AND
+						SA1.D_E_L_E_T_ = SCJ.D_E_L_E_T_ AND SA1.D_E_L_E_T_ = ''                        
+			        INNER JOIN DB2.MT3500 AS MT3 ON 
+						MT3.MT3_CODEMP = SCJ.CJ_CEMPANT AND
+						MT3.MT3_CODFIL = SCJ.CJ_MSFIL
 WHERE 
         SCJ.CJ_NUM in ( '058742', '000336' )
 

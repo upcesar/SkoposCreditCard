@@ -6,6 +6,14 @@ $(function($){
 	$("#divMsgContractSearch").hide();
 	$("#btnPrintContract").button();
 
+	$("#divCreditFlag").hide();
+	$("#divMsgCreditCard").hide();
+	$("#divSchoolFlag").hide();
+	
+	$("#divMsgIssueDate").hide();
+	$("#productChosser").hide();
+	
+
 	$(".ammountProduct").autoNumeric();
 
 	$("#txtCustNum").val('');		//Clear Quote value for new input.
@@ -19,6 +27,24 @@ $(function($){
     });
 			
 
+	$("#firstCCNum").autoNumeric(
+		{aSep: '', 
+		 mDec : 0,
+		 vMin : 0,
+		 vMax : 9999
+		}
+
+	);
+
+	$("#lastCCNum").autoNumeric(
+		{aSep: '', 
+		 mDec : 0,
+		 vMin : 0,
+		 vMax : 9999
+		}
+	);
+
+
 	$("#txtValorDocumento").autoNumeric('set', 0);
 
 	$("#btnSearchCust").click(
@@ -30,7 +56,7 @@ $(function($){
 			else{
 				$("#CustomerData").hide();				
 			}
-				
+			clearControls();
 			event.preventDefault();
 		}
 	);
@@ -102,22 +128,33 @@ $(function($){
 
 	$("#btnPrintContract").click(
 		function(event){
-			// Hardcoded
-			var valorModulo = $('#product_101_00000000351').find('.ammountProduct').autoNumeric('get');
 			
-			var valorEntrada = 0;
-			var valorParcela = $('#outputFeeAmmount').autoNumeric('get');
-			var operadoraCartao = $('#cboCCIssuer').val();
-			
-			if($('body').find('#outputDownPayment').length > 0)
-				valorEntrada = $('#outputDownPayment').autoNumeric('get');
-			
-			$('#valormodulo').val(valorModulo);
-			$('#valorentrada').val(valorEntrada);
-			$('#valorparcelas').val(valorParcela);
-			$('#operadoracartao').val(operadoraCartao);
-
-			$("#dialogPrint").dialog( "open" );
+			//Validate data
+			var valid = validateContract();
+			if(valid){
+				// Hardcoded				
+				var selectedKit = $("#cboFlag").val() == "Y " ? "#product_101_00000000351" : "#product_101_00000001062";			
+				
+				// Find by product			
+				var valorModulo = 	$(selectedKit).find('.ammountProduct').autoNumeric('get');
+				
+				var valorEntrada = 0;
+				var valorParcela = $('#outputFeeAmmount').autoNumeric('get');
+				var operadoraCartao = $('#cboCCIssuer').val();
+				//$('#cboFlag > [value = "YT"]').text()
+				var bandeiraEscola = $('#cboFlag > [value = "'+ $('#cboFlag').val() + '"]').text();
+				
+				if($('body').find('#outputDownPayment').length > 0)
+					valorEntrada = $('#outputDownPayment').autoNumeric('get');
+				
+				$('#valormodulo').val(valorModulo);
+				$('#valorentrada').val(valorEntrada);
+				$('#valorparcelas').val(valorParcela);
+				$('#operadoracartao').val(operadoraCartao);
+				$('#bandeira').val(bandeiraEscola);
+								
+				$("#dialogPrint").dialog( "open" );
+			}
 			event.preventDefault();
 		}
 	);
@@ -125,77 +162,24 @@ $(function($){
 	
 	$('.chkProduct').change(
 		function(event){
-			checked_kit = false;
-			ammount = 0;
-			$('.chkProduct').each(function(){
-				var productCode = $(this).val();
-				var checked = $(this).prop('checked');
-				var divProduct = $('#product_' + productCode.toString().replace('.','_') );
-
-				// productCode == '101.00000000001'
-				if(checked && productCode == '101.00000000001'){
-					checked_kit = true;					
-					
-					ammount = parseFloat(divProduct.find('.ammountProduct').autoNumeric('get') );
-				}
-				else{
-					if(checked_kit){
-						$(this).prop('checked', false);
-					}
-					else{
-						if(checked){
-							
-							ammount += parseFloat( divProduct.find('.ammountProduct').autoNumeric('get') );
-						}
-					}
-				}
-				
-			});
-			$("#txtValorDocumento").autoNumeric("set", ammount);
+			checkProduct();
 		}
 	);
 	
-	$("#cboCourse").change(
-			function(event){				
+	$("#cboFlag").change(
+			function(event){								
 				
-				var productCode = $("#cboCourse").serialize();
-				if($("#cboCourse").val() == ""){
-					$("#txtValorDocumento").autoNumeric('set', 0);
-					return;
+				if($( this ).val () != "" ){				
+					$("#productChosser").show();
+					showProductList($( this ).val());
 				}
-				// Load contract from template.
-				$.ajax(
-						{
-						url: "searchProduct.php",
-						type: "POST",
-						timeout: 600000, 
-						data: productCode, 
-						dataType: "json"						
-						}
-			
-					)
-					.done(function(returnData) { 			
-						var rs = returnData.queryresult;
-						var price = 0;
-						if(returnData.reccount > 0)
-							price = rs[0]["B1_PRV1"];
-						
-						$("#txtValorDocumento").autoNumeric('set', price);
-						
-					})
-					.fail(function(xhr, ajaxOptions, thrownError) {
-						var msgerr = "<h1 class = 'mediumError'>Erro carregando a p&aacute;gina solicitada. <br>" + 
-												"Status: " + xhr.status + "<br>" +
-												"Detalhe Erro: " + thrownError +
-
-						$("#textContract").html(msgerr);
-					})
-					.always(function() { 						
-						});				  			  
-
+				else
+					$("#productChosser").hide();
 				
+				$('.chkProduct').prop('checked', false);
+				checkProduct();				
 			}
-		)
+	);
 
 					
 }).bind("keyup keydown", function(e){
@@ -203,6 +187,7 @@ $(function($){
         return printContract();
     }
 });;
+
 
 function printContract(){
 	var opt = { mode : "iframe", 
@@ -217,16 +202,63 @@ function printContract(){
 
 }
 
-function searchCustomer(){
+function validateContract(){
+		
+
+	var valDoc = $("#txtValorDocumento").autoNumeric('get') !="" ? parseFloat( $("#txtValorDocumento").autoNumeric('get') ) : "";
+	var validZeroValDoc = checkNoZeroValue("#divMsgValuePayment", valDoc, "Pagamento");
+	var validEmptyExpDate =  validateEmptyExpireDate();
+	var validExpDate =  validateExpireDate();
+	var isvalid = true; 
+
+	if($("#dataemissaocontrato").val()=="") {
+		showError("#divMsgIssueDate");
+		isvalid = false;
+	}	
+
+
+	if(!(validZeroValDoc && validEmptyExpDate && validExpDate)) {
+		isvalid = false;
+	}	
+
+	if($("#cboFlag").val()==""){
+		showError("#divSchoolFlag");
+		isvalid = false;
+	}
+		
+	// Validate credit card flag.
+	if($("#cboCCIssuer").val()==""){
+		showError("#divCreditFlag");
+		isvalid = false;
+	}
+	
+	//Validate credit card
+	if($("#firstCCNum").val()=="" || $("#lastCCNum").val()==""){
+		showError("#divMsgCreditCard");
+		isvalid = false;
+	}
+	
+	// Validate installment
+	if($("#txtQuantidadeParcelas").val()=="" || $("#txtQuantidadeParcelas").val()=="0"){
+		showError("#divMsgValueFee");
+		isvalid = false;
+	}
+		
+	return (isvalid);
+
+}
+
+function searchCustomer(withTransaction){
 	//Pad quotation before sending
 	var padded_cust = $("#txtCustNum").val().lpad("0", 6);
 	var padded_brand = $("#txtNumBrand").val().lpad("0", 2);
+		
+	withTransaction = (withTransaction === undefined) ? false : withTransaction; 
 	
 	$("#txtCustNum").val(padded_cust);
 	$("#txtNumBrand").val(padded_brand);
-	//var ser_data = $("#txtCustNum").serialize();	
-	var ser_data = $("input").serialize();
-	
+
+	var ser_data = $("#frmCustomerParam").serialize();	
 	
 	$("#divMsgQuotation").hide();
 	$("#msgWait").html("Procurando cliente...");
@@ -248,18 +280,31 @@ function searchCustomer(){
 		.done(function(returnData) { 			
 			var rs = returnData.queryresult;
 			
-			var nl2br = function(str, is_xhtml) {
+			var nl2br = (function(str, is_xhtml) {
 				var breakTag = (is_xhtml || typeof is_xhtml === 'undefined') ? '<br />' : '<br>';
 				return (str + '').replace(/([^>\r\n]?)(\r\n|\n\r|\r|\n)/g, '$1' + breakTag + '$2');
-			}			
+			});	
+					
 			if(returnData.reccount > 0){			
+				
 				populateCustomer(rs);
-				$("#ContractData").show();				
+				
+				if(withTransaction == false){
+					$("#ContractData").show();
+					$("#txtCustNum").val('');		//Clear Quote value for new input.
+					$("#txtNumBrand").val('');		//Store value for payment process.
+				}					
+				else			
+					searchTransaction();
+					
+					
 			}
 			else{
 				$("#divMsgContractSearch").html(rs);
-				$("#divMsgContractSearch").show();				
+				$("#divMsgContractSearch").show();
+				$("#custcode").html("");		
 			}
+			
 		})
 		.fail(function(xhr, ajaxOptions, thrownError) {
 			var msgerr = "<h1 class = 'mediumError'>Erro carregando a p&aacute;gina solicitada. <br>" + 
@@ -268,15 +313,38 @@ function searchCustomer(){
 									"</h1>";
 			alert(msgerr);
 			$('#divMsgCustomer').html("");
-			$('#divMsgCustomer').html(msgerr);			
+			$('#divMsgCustomer').html(msgerr);
+			$("#custcode").html("");
 		})
-		.always(function() { 						
-			$("#imgLoading").hide();
-			$("#txtCustNum").select();
+		.always(function() {
+			if(withTransaction == false){ 						
+				$("#imgLoading").hide();
+				$("#txtCustNum").select();
+			}
 			});	
 
 
 
+}
+
+function showProductList(flag){
+	var selectorModules = "";
+	if(flag.toUpperCase()  =="YT"){
+		$("#youmoveProd").hide();
+		$("#youmoveteensProd").css('display','table');
+		$("#quantidademodulos").val("3");
+		selectorModules = '#youmoveteensProd';
+		
+	}
+	else{
+		$("#youmoveProd").css('display','table');
+		$("#youmoveteensProd").hide();
+		selectorModules = '#youmoveProd';		
+	}
+	
+	var countModules = $(selectorModules).children().length - 1;
+	$("#quantidademodulos").val(countModules);
+	
 }
 
 function validateCustomer(){
@@ -308,7 +376,7 @@ function validateCustomer(){
 function populateCustomer(rs){
 	var frow = rs[0];
 	var numdoc = "";
-	var branch = frow["MT3_CODFIL"] + ' - ' +frow["MT3_FIL"];
+	var branch = frow["MT3_CODFIL"] + ' - ' + frow["MT3_FIL"];
 	
 	$("#branch").html(branch);
 	
@@ -332,8 +400,6 @@ function populateCustomer(rs){
 	$("#county").html(frow["BAIRRO"]);
 	$("#city_state").html(frow["CIDADE"] + ' / ' + frow["ESTADO"]);
 	
-	$("#txtCustNum").val('');					//Clear Quote value for new input.
-	$("#txtNumBrand").val('');		//Store value for payment process.
 
 	// Populate hidden tags
 	$("#nomecliente").val(frow["CLIENTE"]);
@@ -347,4 +413,69 @@ function populateCustomer(rs){
 	$("#cidadecliente").val(frow["CIDADE"]);	
 	$("#estadocliente").val(frow["ESTADO"]);		
 	$("#emailcliente").val(frow["E_MAIL"]);
+}
+
+function checkProduct(){
+	checked_kit = false;
+	ammount = 0;
+	$('.chkProduct').each(function(){
+		var productCode = $(this).val();
+		var checked = $(this).prop('checked');
+		var divProduct = $('#product_' + productCode.toString().replace('.','_') );
+
+		// KIT YOUMOVE OR KIT YOU MOVE TEENS
+		if(checked && (productCode == '101.00000000001' || productCode == '101.00000001020') ){
+			checked_kit = true;					
+			
+			ammount = parseFloat(divProduct.find('.ammountProduct').autoNumeric('get') );
+		}
+		else{
+			if(checked_kit){
+				$(this).prop('checked', false);
+			}
+			else{
+				if(checked){
+					
+					ammount += parseFloat( divProduct.find('.ammountProduct').autoNumeric('get') );
+				}
+			}
+		}
+		
+	});
+	$("#txtValorDocumento").autoNumeric("set", ammount);
+	updatePayment();	
+}
+
+function clearControls(){
+	
+	$('#cboFlag').val("");	
+	$('.chkProduct').prop('checked','false');	
+	$('.ammountDialog').prop('checked','false');
+	checkProduct();
+	
+	$('.optNumParcela').prop('checked','false');
+	
+	$('#cboCCIssuer').val("");
+	$('#firstCCNum').val("");
+	$('#lastCCNum').val("");
+	$('#cboExpireMonth').val("");
+	$('#cboExpireYear').val("");
+	
+	
+	
+	$('#dataemissaocontrato').val(
+		$('#ServerDay').val() + "/" + 
+		$('#ServerMonth').val() + "/" +
+		$('#ServerYear').val() 
+	);
+	
+	
+	$("#productChosser").hide();
+	$("#youmoveProd").hide();
+	$("#youmoveteensProd").hide();
+
+	
+		
+	$('.chkProduct').prop('checked', false);
+	checkProduct();					
 }
