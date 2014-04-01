@@ -46,17 +46,20 @@ define('VALIDATE_WS_ONSTART', false);
 
 if(AMBIENTE_DB == 'HOM'){
 	define ('P10_WSDL','http://187.94.60.37:8002/ws/WS_DETALHE_CARTAO.apw?WSDL');
+	define ('P08_WSDL','http://187.94.60.37:8006/ws/WS_DETALHE_CARTAO.apw?WSDL');
 	define ('PAYMENT_GATEWAY', 'https://teste.aprovafacil.com/cgi-bin/STAC/skoposeditora/');
 	define ('RECURRING_GATEWAY', 'https://teste.aprovafacil.com/cgi-bin/APFW/skoposeditora/APC');
 }
 else{
 	define ('P10_WSDL','http://187.94.60.35:8002/ws/WS_DETALHE_CARTAO.apw?WSDL');
+	define ('P08_WSDL','http://187.94.60.36:8006/ws/WS_DETALHE_CARTAO.apw?WSDL');
 	define ('PAYMENT_GATEWAY', 'https://www.aprovafacil.com/cgi-bin/STAC/skoposeditora/');
 	define ('RECURRING_GATEWAY', 'https://teste.aprovafacil.com/cgi-bin/APFW/skoposeditora/APC');
 }
 
 //CONSTANT FOR CONTRACT WEB SERVICE.
 define ('P10_WSDL_CONTRACT', str_replace('WS_DETALHE_CARTAO','WS_CONTRATO_CARTAO', P10_WSDL));
+define ('P08_WSDL_CONTRACT', str_replace('WS_DETALHE_CARTAO','WS_CONTRATO_CARTAO', P08_WSDL));
 
 set_include_path(CLASS_PATH.PATH_SEPARATOR.get_include_path());
 //define ('PAYMENT_GATEWAY', BASE_URL.'processpayment/');

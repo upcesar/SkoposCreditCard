@@ -1,9 +1,10 @@
-<html>
+
 <?php
 
 ini_set('default_socket_timeout', 180);
 
 require_once '../conf.php';
+require_once '../discount_rules.php';
 require_once 'wsdl_detalhe_cartao.php';
 
 class returnPayment extends Ometz_Default
@@ -27,6 +28,9 @@ class returnPayment extends Ometz_Default
 	private $discountValue;					// Discount value when regular sale applies.
 	private $result;			//Web Service Response (REST).
 	private $soapMessage;		//Web Service Response (SOAP). 
+	private $wsdl_add_payment;	//Add new payment WSDL (P10 or P8 depending of Quote Code)
+	private $wsdl_edit_payment; //Add new payment WSDL (P10 or P8 depending of Quote Code)
+	private $erp_type = "P10";	//Select ERP type;
 	
 	private function checkVarPOST() {
 		if (isset($_POST)){
@@ -48,6 +52,21 @@ class returnPayment extends Ometz_Default
 			$this->valTotalCred = $this->applyDiscountCreditAmmount();
 			$this->feeAmmount = $this->getFeeAmmount();
 			$this->transCodeAnt = $this->getTransCodeAnt();
+			$this->checkQUoteType();
+		}		
+	}
+	
+	//Choose WS por P10 or P8. 
+	private function checkQuoteType(){
+		if(is_numeric($this->docNumber)){
+			$this->wsdl_add_payment  = P10_WSDL;
+			$this->wsdl_edit_payment = P10_WSDL_CONTRACT;
+			$this->erp_type = "P10";
+		}
+		else{
+			$this->wsdl_add_payment  = P08_WSDL;
+			$this->wsdl_edit_payment = P08_WSDL_CONTRACT;
+			$this->erp_type = "P08"; 				
 		}		
 	}
 	
@@ -172,10 +191,10 @@ class returnPayment extends Ometz_Default
 	
 	private function recollectSOAP(){
 		if($this->status == "True"){
-			if($this->validations->validateSOAP()){
+			if($this->validations->validateSOAP($this->wsdl_edit_payment)){
 				$rowRecorrencia = $this->get_unique_receive_acc($this->getTransCodeAnt());				
 				if($rowRecorrencia != false) {
-					$wsdl = new WS_DETALHE_CARTAO();
+					$wsdl = new WS_DETALHE_CARTAO($this->wsdl_edit_payment);
 					$data = new RECORRENCIA();				
 					$data->SVZL_CODEMP = "05"; // string (hardcoded temporally)
 					$data->SVZL_CODFIL = strval($rowRecorrencia['FILIAL']); // string
@@ -203,8 +222,8 @@ class returnPayment extends Ometz_Default
 	
 	private function addPaymentSOAP(){
 		if($this->status == "True"){
-			if($this->validations->validateSOAP()){
-				$wsdl = new WS_DETALHE_CARTAO();
+			if($this->validations->validateSOAP($this->wsdl_add_payment)){
+				$wsdl = new WS_DETALHE_CARTAO($this->wsdl_add_payment);
 				$data = new INCLUI();
 	
 				
@@ -238,7 +257,7 @@ class returnPayment extends Ometz_Default
 			exit;
 		}
 		*/
-				
+		echo("<html>\n");		
 		$this->showDefaultHeader();
 		$this->checkVarPOST();			
 
@@ -413,8 +432,15 @@ class returnPayment extends Ometz_Default
 	//Discount Value
 	public function getDiscountValue() {
 		if($this->codSaleType == "4") {
+				
+			$rule = new DiscountRule();
+			
 			$baseAmmount = floatval( $this->valTotalCred );
-			$discountApply = DISC_REG_SALE_PERC / 100;
+			$feeNumbers = intval($this->getFeeNumbers());
+			
+			//$discountApply = DISC_REG_SALE_PERC / 100;
+			$discountApply = $rule->getRules($feeNumbers) / 100;
+			
 			return ( round ($baseAmmount * $discountApply, 2) );
 		}
 		else
@@ -454,6 +480,7 @@ class returnPayment extends Ometz_Default
 	private function send_mail_sz0(){
 		
 		$message = "Dados para inserir na SZ0:<br>			
+			ERP  = ".$this->erp_type."<br>
 			SZ0_CODORCA  = ".$this->docNumber."<br>
 			SZ0_VENCTO   = ".$this->chooseCutOffDate()."<br>						
 			NZ0_VALENT 	= ".$this->valPaydown."<br>
@@ -508,13 +535,27 @@ class returnPayment extends Ometz_Default
 	
 	private function verifySavedData(){
 		
+		if($this->erp_type == "P10"){
+			
 		$sql= "
 			SELECT 1					 
 			FROM DB2.SZ0500 AS SZ0
 			WHERE SZ0.Z0_CODORCA  = '".$this->docNumber."'
 			AND SZ0.Z0_HIST LIKE '%TRASACAO: ".$this->transCode."%'
 		";
-		
+			$this->database->connectToP10();
+		}
+		else if($this->erp_type == "P08"){
+			$sql= "
+				SELECT 1					 
+				FROM DB2.SZ0010 AS SZ0
+				WHERE SZ0.Z0_CODORCA  = '".$this->docNumber."'
+				AND SZ0.Z0_HIST LIKE '%TRASACAO: ".$this->transCode."%'
+			";
+			$this->database->connectToP08();
+		}
+		else
+			die("ERP desconhecido...");
 		//die($sql);
 				
 		$rs = $this->database->fetchAll($sql);

@@ -11,9 +11,12 @@ class SearchQuotation extends Ometz_Default
 		$charset="";		
 		// Change to P08 database		
 		
-		if($this->get_erp() == "P08"){	
+		
+		if(!is_numeric($this->getNumQuote())){
 			$this->database->connectToP08();
 		}
+		
+		
 		if($this->validateSOAP())
 			$this->makeContent($charset);
 		else
@@ -21,6 +24,28 @@ class SearchQuotation extends Ometz_Default
 		
 	}
 
+	private function get_erp($txtNumQuote = ""){
+		
+		$erp = "P10";
+
+		if(isset($_GET["erp"]))			
+			$erp = strval($_GET["erp"]);			
+		else if (!is_numeric($txtNumQuote))
+			$erp = "P08";
+		
+		return strtoupper($erp);
+		
+	}
+
+	private function getNumQuote(){
+		if(isset($_POST['txtNumQuote']))
+			$txtNumQuotation = $_POST["txtNumQuote"];
+		else
+			$txtNumQuotation = $this->get_default_num_quote();
+		
+		return $txtNumQuotation;
+				
+	}
 	
 	private function validateSOAP(){		
 		return 	(
@@ -53,21 +78,10 @@ class SearchQuotation extends Ometz_Default
 		return($sql2);
 	}
 
-	
-	private function get_erp(){
-		
-		$erp = "P10";
-		
-		if(isset($_GET["erp"]))
-			$erp = strval($_GET["erp"]);			
-		
-		return strtoupper($erp);
-		
-	}
-	
 	private function getOriginalQuery($txtNumQuotation){
-			
-		if($this->get_erp() == "P10"){
+		
+		// Query P8 if Quotation nomber is alphanumeric 	
+		if(is_numeric($this->getNumQuote())){
 			$sql3= $this->getOriginalQueryP10($txtNumQuotation);
 			$field_num_quote = "SCJ.CJ_NUM";
 		}
@@ -139,8 +153,17 @@ class SearchQuotation extends Ometz_Default
 		$sql3="
 			SELECT 
 					Z6_NUM ORCAMENTO,
-					MT3.MT3_CODFIL,					
-					UPPER(MT3.MT3_FIL) AS MT3_FIL,
+					
+					CASE 
+			            WHEN NOT MT3.MT3_CODFIL IS NULL THEN MT3.MT3_CODFIL 
+			            ELSE 'N/A'
+			        END AS MT3_CODFIL,
+					
+					CASE 
+			            WHEN NOT MT3.MT3_FIL IS NULL THEN UPPER(MT3.MT3_FIL) 
+			            ELSE 'NAO ATRIBUIDO'
+			        END AS MT3_FIL,					
+					
 					SA1.A1_COD COD_CLIENTE,
 					SA1.A1_NUMRA,
 					SA1.A1_NOME AS CLIENTE,        
@@ -154,7 +177,7 @@ class SearchQuotation extends Ometz_Default
 						ELSE 'NAO INFORMADO'
 					END AS ENDERECO,
 					SZ6.Z6_VALORD TOTAL_CARTAO, 
-					SZ6.Z6_TOTPAG2 TOTAL_ORCAMENTO,
+					SZ6.Z6_PRV01 + SZ6.Z6_PRV02 + SZ6.Z6_PRV03 TOTAL_ORCAMENTO,
 					(
 					SELECT  
 						CASE
@@ -165,7 +188,7 @@ class SearchQuotation extends Ometz_Default
 					WHERE SZ0.Z0_DONOCH IN ('4', '5') 
 					AND SZ0.Z0_CODORCA = SZ6.Z6_NUM
 					AND SZ0.D_E_L_E_T_ = ''
-					) AS TOTAL_PAGO, -- + SZ6.Z6_DESCONT AS TOTAL_PAGO,
+					) + SZ6.Z6_DESCONT AS TOTAL_PAGO,
 					SZ6.Z6_STATUS STATUS,					
 					0 AS ENABLE_RECURRING
         			FROM 
@@ -173,27 +196,29 @@ class SearchQuotation extends Ometz_Default
         			INNER JOIN  DB2.SZ6010 AS SZ6 ON 
 						SA1.A1_LOJA = SZ6.Z6_LOJA  AND SA1.A1_COD = SZ6.Z6_CLIENTE AND
 						SA1.D_E_L_E_T_ = SZ6.D_E_L_E_T_ AND SA1.D_E_L_E_T_ = ''                        
-			        INNER JOIN DB2.MT3010 AS MT3 ON 
+			        LEFT JOIN DB2.MT3010 AS MT3 ON 
 						MT3.MT3_CODEMP = SZ6.Z6_CODEMP AND
 						MT3.MT3_CODFIL = SZ6.Z6_MSFIL			
 		";
 				
+		//die($sql3);
+		
 		return($sql3);
 
 	}
 		
 	private function get_default_num_quote(){
-		
-		return $this->get_erp()== "P08" ? "AAIL06" : "058742";
-		
+			
+		return $this->get_erp() == "P08" ? "AAIL06" : "058742";
+				
 	}
 	
 	public function makeContentError(){
 		$result = "";
 		$result .= $this->validations->_getErrorMessageWS();
-
+		
 		$arrpage = array(
-				"erp"			=> $this->get_erp(),
+				"erp"			=> $this->get_erp($this->getNumQuote()),
 				"reccount"  	=> 0,
 				"pagecount"		=> 0,
 				"queryresult"	=> $result
@@ -211,11 +236,8 @@ class SearchQuotation extends Ometz_Default
 		$title = 'Busca de Orcamentos';
 
 		// Init Filters
-		if(isset($_POST['txtNumQuote']))
-			$txtNumQuotation = $_POST["txtNumQuote"];
-		else
-			$txtNumQuotation = $this->get_default_num_quote();			
-
+		$txtNumQuotation = $this->getNumQuote();
+		
 		//Init pager
 		if (isset($_GET["numpage"]))
 			$numpage = $_GET["numpage"];

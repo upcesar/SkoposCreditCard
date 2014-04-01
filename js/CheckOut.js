@@ -339,6 +339,11 @@ function populateCustomerQuote(rs){
 	$("#txtNumQuote").val('');					//Clear Quote value for new input.
 	$("#NumeroDocumento").val(numQuote);		//Store value for payment process.
 	$("#txtQuantidadeParcelas").val('');		//Clear num quotes.
+	$("#outputPayment").html('');
+	$("#outputPayment").hide();
+	
+	$("#cboExpireMonth").val('');
+	$("#cboExpireYear").val('');
 	
 
 }
@@ -353,7 +358,7 @@ function searchQuotation(){
 	}
 	else{
 		$("#txtNumQuote").val($("#txtNumQuote").val().toUpperCase());
-		url_param = "?erp = p8";
+		url_param = "?erp=p8";
 	}
 	var ser_data = $("#txtNumQuote").serialize();	
 	
@@ -367,7 +372,7 @@ function searchQuotation(){
 
 	$.ajax(
 			{
-			url: "searchQuotation.php" + url_param,
+			url: "searchQuotation.php",
 			type: "POST",
 			timeout: 600000, 
 			data: ser_data, 
@@ -393,7 +398,7 @@ function searchQuotation(){
 				else if(rs[0]["SALDO_RESTANTE"] <= 0){
 					showMsgInvalidQuote("N&atilde;o tem saldo pendente para pagar com cart&atilde;o");
 				}
-				else if(rs[0]["STATUS"] != 'A' && rs[0]["STATUS"] != 'S'){
+				else if(rs[0]["STATUS"] != 'A' && rs[0]["STATUS"] != 'S' && rs[0]["STATUS"] != '1'){
 					showMsgInvalidQuote("Orçamento deve estar em Aberto.");
 				}
 				else{
@@ -688,10 +693,11 @@ function updatePayment(numQuotes, valPayment) {
 		setBillingType(this, "1");
 	}
 	else {
-		principalAmmount = valPayment - calculatePercent(valPayment, $("#DiscountRegSale").val());
+		getDiscount =  checkDiscountRule(numQuotes);
+		principalAmmount = valPayment - calculatePercent(valPayment, getDiscount);
 		curFeeSTAC = principalAmmount;
 		setBillingType(this, "0");
-		$('#DiscountRegSale').val(checkDiscountRule(numQuotes));
+		$('#DiscountRegSale').val(getDiscount);
 	}
 
 	feeAmmount = calculateQuoteValue(principalAmmount, numQuotes, recurrentPayment);
@@ -710,6 +716,8 @@ function checkDiscountRule(installmentNum){
 
 	$.ajax({
 	  url: "discount_rules.php",
+	  type: "POST",
+	  data: { output: "json" },
 	  async: false,
 	  dataType:"json"
 	  
